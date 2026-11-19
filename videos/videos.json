@@ -6,5 +6,13 @@
     "titulo": "Vídeos con Claude en 7 pasos",
     "texto": "Vídeo de prueba (ejemplo de estilo)",
     "tema": "Prueba"
+  },
+  {
+    "id": "cesa-tt-vs-tn",
+    "archivo": "cesa-tt-vs-tn.mp4",
+    "poster": "cesa-tt-vs-tn.jpg",
+    "titulo": "TT vs TN: el cable que lo cambia todo",
+    "texto": "Por qué tu casa tiene diferencial",
+    "tema": "CESA · Protecciones"
   }
 ]
