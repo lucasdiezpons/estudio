@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Estudio</title>
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Estudio">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Barra superior -->
+  <header id="top">
+    <button id="btn-tema" class="pill">Para ti ▾</button>
+    <button id="btn-sonido" class="icon" aria-label="Sonido">🔇</button>
+  </header>
+
+  <!-- Feed -->
+  <main id="feed" aria-label="Vídeos"></main>
+
+  <!-- Lista de títulos -->
+  <section id="lista" hidden>
+    <div class="lista-head">
+      <h1>Todos los vídeos</h1>
+      <input id="buscar" type="search" placeholder="Buscar…" autocomplete="off">
+    </div>
+    <div id="lista-contenido"></div>
+  </section>
+
+  <!-- Selector de tema -->
+  <div id="sheet" hidden>
+    <div class="sheet-box">
+      <div class="sheet-title">Filtrar por tema <small>(se quita al cerrar la app)</small></div>
+      <div id="sheet-temas"></div>
+    </div>
+  </div>
+
+  <!-- Barra inferior -->
+  <nav id="bottom">
+    <button data-vista="feed" class="activo">🏠<span>Inicio</span></button>
+    <button data-vista="lista">📚<span>Lista</span></button>
+  </nav>
+
+  <div id="toast" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>
