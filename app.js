@@ -7,13 +7,15 @@
 
 const PROB_VISTO_INTERCALADO = 0.15; // 15 % de las veces se cuela un vídeo ya visto
 const UMBRAL_VISTO = 0.6;            // visto = has visto el 60 % del vídeo
-const PRECARGA = 1;                  // cuántos vídeos alrededor se cargan
 
 const $ = (s) => document.querySelector(s);
 const feed = $("#feed");
 let videos = [];
 let filtroTema = null;   // NO se guarda: al cerrar la app vuelve a "Para ti"
-let muted = true;        // iOS solo permite autoplay en silencio; tocas 🔇 y ya
+let muted = false;       // sonido activado por defecto
+let bloqueado = false;   // iOS: hasta el primer toque solo deja reproducir en silencio
+const player = document.createElement("video");
+player.playsInline = true; player.setAttribute("webkit-playsinline", ""); player.loop = true; player.preload = "auto";
 let cola = [];           // vídeos en el feed (en orden)
 let activo = -1;
 
@@ -78,7 +80,6 @@ function crearSlide(v, i) {
   s.dataset.i = i;
   if (v.poster) s.style.backgroundImage = `url("videos/${v.poster}")`;
   s.innerHTML = `
-    <video playsinline webkit-playsinline loop muted preload="none"></video>
     <div class="pausa">▶</div>
     <div class="info">
       ${v.tema ? `<span class="tema">${esc(v.tema)}</span>` : ""}
@@ -86,16 +87,12 @@ function crearSlide(v, i) {
       ${v.texto ? `<p>${esc(v.texto)}</p>` : ""}
     </div>
     <div class="barra"><i></i></div>`;
-  const vid = s.querySelector("video");
-  vid.addEventListener("timeupdate", () => {
-    if (!vid.duration) return;
-    const p = vid.currentTime / vid.duration;
-    s.querySelector(".barra i").style.width = p * 100 + "%";
-    if (p >= UMBRAL_VISTO) marcarVisto(v.id);
-  });
   s.addEventListener("click", () => {
-    if (vid.paused) { vid.play().catch(() => {}); s.classList.remove("pausado"); }
-    else { vid.pause(); s.classList.add("pausado"); }
+    if (+s.dataset.i !== activo) return;
+    if (bloqueado) { desbloquear(); return; }
+    if (Date.now() - desbloqueadoEn < 600) return; // ese toque solo activaba el sonido
+    if (player.paused) { player.play().catch(() => {}); s.classList.remove("pausado"); }
+    else { player.pause(); s.classList.add("pausado"); }
   });
   obs.observe(s);
   return s;
@@ -108,32 +105,53 @@ const obs = new IntersectionObserver((entries) => {
 function activar(i) {
   if (i === activo) return;
   activo = i;
-  const slides = feed.querySelectorAll(".slide");
-  slides.forEach((s, j) => {
-    const vid = s.querySelector("video");
-    const v = cola[j];
-    if (Math.abs(j - i) <= PRECARGA) {
-      if (!vid.src) { vid.src = "videos/" + v.archivo; vid.preload = "auto"; }
-    } else if (vid.src) {
-      vid.pause(); vid.removeAttribute("src"); vid.load(); // libera memoria
-    }
-    if (j === i) {
-      vid.muted = muted; vid.currentTime = 0;
-      s.classList.remove("pausado");
-      vid.play().catch(() => { vid.muted = true; vid.play().catch(() => {}); });
-    } else if (vid.src) vid.pause();
-  });
+  const s = feed.querySelector(`.slide[data-i="${i}"]`);
+  if (!s) return;
+  s.classList.remove("pausado");
+  s.insertBefore(player, s.firstChild);
+  const src = "videos/" + cola[i].archivo;
+  if (!player.src.endsWith(src)) player.src = src;
+  player.currentTime = 0;
+  reproducir();
+  // precarga el siguiente
+  const sig = cola[i + 1];
+  if (sig) { const l = document.createElement("link"); l.rel = "prefetch"; l.href = "videos/" + sig.archivo; document.head.appendChild(l); }
   // feed infinito: cuando quedan 2, se añade otra ronda
   if (i >= cola.length - 2) añadir(ronda(listaActual()));
 }
+
+function reproducir() {
+  player.muted = muted || bloqueado;
+  player.play().catch(() => {
+    if (!player.muted) { bloqueado = true; player.muted = true; player.play().catch(() => {}); toast("🔊 Toca la pantalla para activar el sonido"); }
+  });
+  $("#btn-sonido").textContent = muted ? "🔇" : "🔊";
+}
+
+let desbloqueadoEn = 0;
+function desbloquear() {
+  bloqueado = false;
+  desbloqueadoEn = Date.now();
+  player.muted = muted;
+  player.play().catch(() => {});
+}
+// el primer toque en cualquier sitio desbloquea el sonido
+["touchend", "click"].forEach((ev) => document.addEventListener(ev, () => { if (bloqueado) desbloquear(); }, { once: false, passive: true }));
+
+player.addEventListener("timeupdate", () => {
+  if (!player.duration || activo < 0) return;
+  const p = player.currentTime / player.duration;
+  const bar = feed.querySelector(`.slide[data-i="${activo}"] .barra i`);
+  if (bar) bar.style.width = p * 100 + "%";
+  if (p >= UMBRAL_VISTO) marcarVisto(cola[activo].id);
+});
 
 // ---------- Sonido ----------
 $("#btn-sonido").addEventListener("click", (e) => {
   e.stopPropagation();
   muted = !muted;
-  $("#btn-sonido").textContent = muted ? "🔇" : "🔊";
-  const s = feed.querySelector(`.slide[data-i="${activo}"] video`);
-  if (s) { s.muted = muted; s.play().catch(() => {}); }
+  bloqueado = false;
+  reproducir();
 });
 
 // ---------- Filtro por tema ----------
@@ -192,8 +210,7 @@ function vista(n) {
   const enFeed = n === "feed";
   $("#lista").hidden = enFeed;
   $("#top").style.display = enFeed ? "" : "none";
-  const v = feed.querySelector(`.slide[data-i="${activo}"] video`);
-  if (v) enFeed ? v.play().catch(() => {}) : v.pause();
+  if (enFeed) player.play().catch(() => {}); else player.pause();
   if (!enFeed) pintarLista();
 }
 document.querySelectorAll("#bottom button").forEach((b) => b.addEventListener("click", () => vista(b.dataset.vista)));
