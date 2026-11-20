@@ -5,7 +5,8 @@
     "poster": "cesa-balanceo-baterias.jpg",
     "titulo": "Cómo se igualan las celdas de una batería",
     "texto": "Balanceo pasivo vs activo",
-    "tema": "CESA · Baterías"
+    "tema": "CESA · Baterías",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-celda-por-dentro",
@@ -13,7 +14,8 @@
     "poster": "cesa-celda-por-dentro.jpg",
     "titulo": "Una placa solar a oscuras es un diodo",
     "texto": "Qué pasa dentro de una celda solar",
-    "tema": "CESA · Fotovoltaica"
+    "tema": "CESA · Fotovoltaica",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-celdas-y-sombras",
@@ -21,7 +23,8 @@
     "poster": "cesa-celdas-y-sombras.jpg",
     "titulo": "Una hoja puede calentar tu placa solar",
     "texto": "Sombras, diodos y celdas en serie",
-    "tema": "CESA · Fotovoltaica"
+    "tema": "CESA · Fotovoltaica",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-como-cargar-baterias",
@@ -29,7 +32,8 @@
     "poster": "cesa-como-cargar-baterias.jpg",
     "titulo": "Cada batería se carga a su manera",
     "texto": "Plomo, litio y níquel",
-    "tema": "CESA · Baterías"
+    "tema": "CESA · Baterías",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-inclinacion-placas",
@@ -37,7 +41,8 @@
     "poster": "cesa-inclinacion-placas.jpg",
     "titulo": "Cuánto inclinar una placa solar",
     "texto": "Verano, invierno y hemisferio sur",
-    "tema": "CESA · Fotovoltaica"
+    "tema": "CESA · Fotovoltaica",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-normas-reglamentos-ce",
@@ -45,7 +50,8 @@
     "poster": "cesa-normas-reglamentos-ce.jpg",
     "titulo": "Norma, reglamento y marcado CE",
     "texto": "Qué es obligatorio y qué no",
-    "tema": "CESA · Normativa"
+    "tema": "CESA · Normativa",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-placa-y-calor",
@@ -53,7 +59,8 @@
     "poster": "cesa-placa-y-calor.jpg",
     "titulo": "Por qué una placa solar odia el calor",
     "texto": "Temperatura, MPPT y Fill Factor",
-    "tema": "CESA · Fotovoltaica"
+    "tema": "CESA · Fotovoltaica",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-protectores-tipo-1-2-3",
@@ -61,7 +68,8 @@
     "poster": "cesa-protectores-tipo-1-2-3.jpg",
     "titulo": "Protectores tipo 1, 2 y 3",
     "texto": "Cómo proteger un ordenador de un rayo",
-    "tema": "CESA · Protecciones"
+    "tema": "CESA · Protecciones",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-rayo-vs-neutro",
@@ -69,7 +77,8 @@
     "poster": "cesa-rayo-vs-neutro.jpg",
     "titulo": "Un rayo vs un neutro cortado",
     "texto": "Dos sobretensiones muy distintas",
-    "tema": "CESA · Protecciones"
+    "tema": "CESA · Protecciones",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-supercondensador",
@@ -77,7 +86,8 @@
     "poster": "cesa-supercondensador.jpg",
     "titulo": "Supercondensador vs batería",
     "texto": "Química, iones y autodescarga",
-    "tema": "CESA · Baterías"
+    "tema": "CESA · Baterías",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-tipos-de-bateria",
@@ -85,7 +95,8 @@
     "poster": "cesa-tipos-de-bateria.jpg",
     "titulo": "Batería de coche vs carrito de golf",
     "texto": "Arranque, tracción y estacionaria",
-    "tema": "CESA · Baterías"
+    "tema": "CESA · Baterías",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-tipos-de-placa",
@@ -93,7 +104,8 @@
     "poster": "cesa-tipos-de-placa.jpg",
     "titulo": "Mono, poli y amorfa: cuál es mejor",
     "texto": "Los 3 tipos de placa solar",
-    "tema": "CESA · Fotovoltaica"
+    "tema": "CESA · Fotovoltaica",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-varistor-bimetal-pptc",
@@ -101,7 +113,8 @@
     "poster": "cesa-varistor-bimetal-pptc.jpg",
     "titulo": "Varistor, bimetal y PPTC",
     "texto": "Los pequeños guardianes de un circuito",
-    "tema": "CESA · Protecciones"
+    "tema": "CESA · Protecciones",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-tt-vs-tn",
@@ -109,7 +122,8 @@
     "poster": "cesa-tt-vs-tn.jpg",
     "titulo": "TT vs TN: el cable que lo cambia todo",
     "texto": "Por qué tu casa tiene diferencial",
-    "tema": "CESA · Protecciones"
+    "tema": "CESA · Protecciones",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-familias-y-rendimiento",
@@ -117,7 +131,8 @@
     "poster": "cesa-familias-y-rendimiento.jpg",
     "titulo": "Las 4 familias de un cargador",
     "texto": "Qué entra, qué sale y cuánto se pierde",
-    "tema": "CESA · Conversión de energía"
+    "tema": "CESA · Conversión de energía",
+    "examen": "MQ"
   },
   {
     "id": "cesa-condensador-rectificador",
@@ -125,7 +140,8 @@
     "poster": "cesa-condensador-rectificador.jpg",
     "titulo": "El condensador que castiga a los diodos",
     "texto": "Menos rizado... a un precio",
-    "tema": "CESA · Rectificadores"
+    "tema": "CESA · Rectificadores",
+    "examen": "MQ"
   },
   {
     "id": "cesa-graetz-vs-toma-media",
@@ -133,7 +149,8 @@
     "poster": "cesa-graetz-vs-toma-media.jpg",
     "titulo": "Puente de Graetz o toma media",
     "texto": "Dos rectificadores, dos trampas",
-    "tema": "CESA · Rectificadores"
+    "tema": "CESA · Rectificadores",
+    "examen": "MQ"
   },
   {
     "id": "cesa-regulador-lineal",
@@ -141,7 +158,8 @@
     "poster": "cesa-regulador-lineal.jpg",
     "titulo": "El regulador lineal es un grifo",
     "texto": "Salida limpia, pero quema lo que sobra",
-    "tema": "CESA · Reguladores lineales"
+    "tema": "CESA · Reguladores lineales",
+    "examen": "MQ"
   },
   {
     "id": "cesa-shunt-y-regulacion",
@@ -149,7 +167,8 @@
     "poster": "cesa-shunt-y-regulacion.jpg",
     "titulo": "El regulador que se traga lo que sobra",
     "texto": "Shunt, línea y carga",
-    "tema": "CESA · Reguladores lineales"
+    "tema": "CESA · Reguladores lineales",
+    "examen": "MQ"
   },
   {
     "id": "cesa-lm317",
@@ -157,7 +176,8 @@
     "poster": "cesa-lm317.jpg",
     "titulo": "El truco del LM317",
     "texto": "Siempre 1,25 voltios",
-    "tema": "CESA · Reguladores lineales"
+    "tema": "CESA · Reguladores lineales",
+    "examen": "MQ"
   },
   {
     "id": "cesa-calor-regulador",
@@ -165,7 +185,8 @@
     "poster": "cesa-calor-regulador.jpg",
     "titulo": "La ley de Ohm del calor",
     "texto": "Cuánto aguanta un chip antes de quemarse",
-    "tema": "CESA · Térmica"
+    "tema": "CESA · Térmica",
+    "examen": "MQ"
   },
   {
     "id": "cesa-conmutados",
@@ -173,7 +194,8 @@
     "poster": "cesa-conmutados.jpg",
     "titulo": "El truco de los conmutados",
     "texto": "Encender y apagar muy rápido",
-    "tema": "CESA · Conmutados"
+    "tema": "CESA · Conmutados",
+    "examen": "MQ"
   },
   {
     "id": "cesa-flyback-forward",
@@ -181,7 +203,8 @@
     "poster": "cesa-flyback-forward.jpg",
     "titulo": "Flyback y Forward",
     "texto": "El transformador que también es bobina",
-    "tema": "CESA · Conmutados"
+    "tema": "CESA · Conmutados",
+    "examen": "MQ"
   },
   {
     "id": "cesa-mosfet-diodo",
@@ -189,7 +212,8 @@
     "poster": "cesa-mosfet-diodo.jpg",
     "titulo": "El diodo escondido del MOSFET",
     "texto": "Canal N, canal P y su diodo",
-    "tema": "CESA · Conmutados"
+    "tema": "CESA · Conmutados",
+    "examen": "MQ"
   },
   {
     "id": "cesa-bombas-de-carga",
@@ -197,7 +221,8 @@
     "poster": "cesa-bombas-de-carga.jpg",
     "titulo": "Convertidores sin bobinas",
     "texto": "Las bombas de carga",
-    "tema": "CESA · Bombas de carga"
+    "tema": "CESA · Bombas de carga",
+    "examen": "MQ"
   },
   {
     "id": "cesa-inversores",
@@ -205,7 +230,8 @@
     "poster": "cesa-inversores.jpg",
     "titulo": "De continua a alterna",
     "texto": "Onda cuadrada, bipolar y unipolar",
-    "tema": "CESA · Inversores"
+    "tema": "CESA · Inversores",
+    "examen": "MQ"
   },
   {
     "id": "cesa-g-arranque-proteccion-lenta",
@@ -213,7 +239,8 @@
     "poster": "cesa-g-arranque-proteccion-lenta.jpg",
     "titulo": "Por qué no salta al arrancar un motor",
     "texto": "Protecciones lentas",
-    "tema": "CESA · Protecciones"
+    "tema": "CESA · Protecciones",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-arranque-traccion-estacionaria",
@@ -221,7 +248,8 @@
     "poster": "cesa-g-arranque-traccion-estacionaria.jpg",
     "titulo": "Arranque, tracción y estacionaria",
     "texto": "Tres baterías para tres trabajos",
-    "tema": "CESA · Baterías"
+    "tema": "CESA · Baterías",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-autodescarga-y-modelo",
@@ -229,7 +257,8 @@
     "poster": "cesa-g-autodescarga-y-modelo.jpg",
     "titulo": "Por qué se descarga una batería guardada",
     "texto": "Autodescarga y su modelo",
-    "tema": "CESA · Baterías"
+    "tema": "CESA · Baterías",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-balanceo-en-un-minuto",
@@ -237,7 +266,8 @@
     "poster": "cesa-g-balanceo-en-un-minuto.jpg",
     "titulo": "Balanceo pasivo y activo",
     "texto": "Quemar o repartir",
-    "tema": "CESA · Baterías"
+    "tema": "CESA · Baterías",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-calor-directa-vs-mppt",
@@ -245,7 +275,8 @@
     "poster": "cesa-g-calor-directa-vs-mppt.jpg",
     "titulo": "Cuándo el calor da más energía",
     "texto": "Conexión directa contra MPPT",
-    "tema": "CESA · Fotovoltaica"
+    "tema": "CESA · Fotovoltaica",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-calor-isc-voc",
@@ -253,7 +284,8 @@
     "poster": "cesa-g-calor-isc-voc.jpg",
     "titulo": "Qué le hace el calor a una placa",
     "texto": "Corriente y tensión no van igual",
-    "tema": "CESA · Fotovoltaica"
+    "tema": "CESA · Fotovoltaica",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-capacidad-bateria",
@@ -261,7 +293,8 @@
     "poster": "cesa-g-capacidad-bateria.jpg",
     "titulo": "Qué batería necesita tu placa",
     "texto": "Días, consumo y descarga",
-    "tema": "CESA · Dimensionado FV"
+    "tema": "CESA · Dimensionado FV",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-carga-segun-quimica",
@@ -269,7 +302,8 @@
     "poster": "cesa-g-carga-segun-quimica.jpg",
     "titulo": "Cómo se carga cada batería",
     "texto": "Plomo, litio y níquel",
-    "tema": "CESA · Baterías"
+    "tema": "CESA · Baterías",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-celda-a-oscuras",
@@ -277,7 +311,8 @@
     "poster": "cesa-g-celda-a-oscuras.jpg",
     "titulo": "Una placa solar a oscuras",
     "texto": "Se convierte en otra cosa",
-    "tema": "CESA · Fotovoltaica"
+    "tema": "CESA · Fotovoltaica",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-consumo-diario",
@@ -285,7 +320,8 @@
     "poster": "cesa-g-consumo-diario.jpg",
     "titulo": "Cuánta energía gasta un aparato al día",
     "texto": "Potencia por tiempo, y sumar",
-    "tema": "CESA · Dimensionado FV"
+    "tema": "CESA · Dimensionado FV",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-cuantas-celdas-en-serie",
@@ -293,7 +329,8 @@
     "poster": "cesa-g-cuantas-celdas-en-serie.jpg",
     "titulo": "Cuántas celdas para cargar una batería",
     "texto": "El peor caso manda",
-    "tema": "CESA · Fotovoltaica"
+    "tema": "CESA · Fotovoltaica",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-declaracion-conformidad",
@@ -301,7 +338,8 @@
     "poster": "cesa-g-declaracion-conformidad.jpg",
     "titulo": "La Declaración de Conformidad",
     "texto": "Para qué productos y por qué",
-    "tema": "CESA · Normativa"
+    "tema": "CESA · Normativa",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-difusion-y-arrastre",
@@ -309,7 +347,8 @@
     "poster": "cesa-g-difusion-y-arrastre.jpg",
     "titulo": "Las dos corrientes de una celda",
     "texto": "Difusión y arrastre",
-    "tema": "CESA · Fotovoltaica"
+    "tema": "CESA · Fotovoltaica",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-energia-con-mppt",
@@ -317,7 +356,8 @@
     "poster": "cesa-g-energia-con-mppt.jpg",
     "titulo": "La energía de una placa con MPPT",
     "texto": "Rendimiento, potencia y horas",
-    "tema": "CESA · Dimensionado FV"
+    "tema": "CESA · Dimensionado FV",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-energia-directa",
@@ -325,7 +365,8 @@
     "poster": "cesa-g-energia-directa.jpg",
     "titulo": "La energía de una placa en directa",
     "texto": "Aquí manda la batería",
-    "tema": "CESA · Dimensionado FV"
+    "tema": "CESA · Dimensionado FV",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-fill-factor",
@@ -333,7 +374,8 @@
     "poster": "cesa-g-fill-factor.jpg",
     "titulo": "El Fill Factor de una placa",
     "texto": "Qué tan cuadrada es su curva",
-    "tema": "CESA · Fotovoltaica"
+    "tema": "CESA · Fotovoltaica",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-formula-temperatura",
@@ -341,7 +383,8 @@
     "poster": "cesa-g-formula-temperatura.jpg",
     "titulo": "Corregir una placa por temperatura",
     "texto": "Una fórmula para todo",
-    "tema": "CESA · Dimensionado FV"
+    "tema": "CESA · Dimensionado FV",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-horas-sol-pico",
@@ -349,7 +392,8 @@
     "poster": "cesa-g-horas-sol-pico.jpg",
     "titulo": "Las horas de sol pico",
     "texto": "Pasar radiación a horas",
-    "tema": "CESA · Dimensionado FV"
+    "tema": "CESA · Dimensionado FV",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-inclinacion-hemisferios",
@@ -357,7 +401,8 @@
     "poster": "cesa-g-inclinacion-hemisferios.jpg",
     "titulo": "Junio no es verano en todas partes",
     "texto": "Inclinar placas en el hemisferio sur",
-    "tema": "CESA · Fotovoltaica"
+    "tema": "CESA · Fotovoltaica",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-marcado-ce",
@@ -365,7 +410,8 @@
     "poster": "cesa-g-marcado-ce.jpg",
     "titulo": "Lo que de verdad significa el CE",
     "texto": "No lo pone ningún laboratorio",
-    "tema": "CESA · Normativa"
+    "tema": "CESA · Normativa",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-mejor-de-los-peores",
@@ -373,7 +419,8 @@
     "poster": "cesa-g-mejor-de-los-peores.jpg",
     "titulo": "Cómo elegir la inclinación de todo el año",
     "texto": "El mejor de los peores",
-    "tema": "CESA · Dimensionado FV"
+    "tema": "CESA · Dimensionado FV",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-mono-poli-amorfo",
@@ -381,7 +428,8 @@
     "poster": "cesa-g-mono-poli-amorfo.jpg",
     "titulo": "Mono, poli y amorfo",
     "texto": "El orden que nunca cambia",
-    "tema": "CESA · Fotovoltaica"
+    "tema": "CESA · Fotovoltaica",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-norma-o-reglamento",
@@ -389,7 +437,8 @@
     "poster": "cesa-g-norma-o-reglamento.jpg",
     "titulo": "Norma no es lo mismo que ley",
     "texto": "Quién las dicta y cuáles obligan",
-    "tema": "CESA · Normativa"
+    "tema": "CESA · Normativa",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-paises-tt-tn",
@@ -397,7 +446,8 @@
     "poster": "cesa-g-paises-tt-tn.jpg",
     "titulo": "Italia o Alemania",
     "texto": "Qué red usa cada país",
-    "tema": "CESA · Protecciones"
+    "tema": "CESA · Protecciones",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-placa-hacia-el-norte",
@@ -405,7 +455,8 @@
     "poster": "cesa-g-placa-hacia-el-norte.jpg",
     "titulo": "Placas que miran al norte",
     "texto": "En el hemisferio sur",
-    "tema": "CESA · Fotovoltaica"
+    "tema": "CESA · Fotovoltaica",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-proteger-un-ordenador",
@@ -413,7 +464,8 @@
     "poster": "cesa-g-proteger-un-ordenador.jpg",
     "titulo": "Cómo proteger un ordenador de un rayo",
     "texto": "Directo o indirecto",
-    "tema": "CESA · Protecciones"
+    "tema": "CESA · Protecciones",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-punto-caliente-paralelo",
@@ -421,7 +473,8 @@
     "poster": "cesa-g-punto-caliente-paralelo.jpg",
     "titulo": "Una celda a la sombra en paralelo",
     "texto": "Aquí la solución es al revés",
-    "tema": "CESA · Fotovoltaica"
+    "tema": "CESA · Fotovoltaica",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-punto-caliente-serie",
@@ -429,7 +482,8 @@
     "poster": "cesa-g-punto-caliente-serie.jpg",
     "titulo": "Una celda a la sombra en serie",
     "texto": "El punto caliente",
-    "tema": "CESA · Fotovoltaica"
+    "tema": "CESA · Fotovoltaica",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-quimica-o-no",
@@ -437,7 +491,8 @@
     "poster": "cesa-g-quimica-o-no.jpg",
     "titulo": "Qué guarda energía con química",
     "texto": "Baterías, pilas de combustible y supercondensadores",
-    "tema": "CESA · Baterías"
+    "tema": "CESA · Baterías",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-radiacion-tf",
@@ -445,7 +500,8 @@
     "poster": "cesa-g-radiacion-tf.jpg",
     "titulo": "La radiación sobre una placa inclinada",
     "texto": "El factor de la tabla",
-    "tema": "CESA · Dimensionado FV"
+    "tema": "CESA · Dimensionado FV",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-rayo-o-neutro-cortado",
@@ -453,7 +509,8 @@
     "poster": "cesa-g-rayo-o-neutro-cortado.jpg",
     "titulo": "Rayo o neutro cortado",
     "texto": "Sobretensión corta o larga",
-    "tema": "CESA · Protecciones"
+    "tema": "CESA · Protecciones",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-real-decreto-o-une",
@@ -461,7 +518,8 @@
     "poster": "cesa-g-real-decreto-o-une.jpg",
     "titulo": "Real Decreto o UNE",
     "texto": "Cómo saber si algo obliga solo por su nombre",
-    "tema": "CESA · Normativa"
+    "tema": "CESA · Normativa",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-serie-o-paralelo-protecciones",
@@ -469,7 +527,8 @@
     "poster": "cesa-g-serie-o-paralelo-protecciones.jpg",
     "titulo": "En serie o en paralelo",
     "texto": "La regla de las protecciones",
-    "tema": "CESA · Protecciones"
+    "tema": "CESA · Protecciones",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-supercondensador-ventajas",
@@ -477,7 +536,8 @@
     "poster": "cesa-g-supercondensador-ventajas.jpg",
     "titulo": "Supercondensador contra batería",
     "texto": "Quién gana en qué",
-    "tema": "CESA · Baterías"
+    "tema": "CESA · Baterías",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-tipos-1-2-3",
@@ -485,7 +545,8 @@
     "poster": "cesa-g-tipos-1-2-3.jpg",
     "titulo": "Protectores tipo 1, 2 y 3",
     "texto": "Quién aguanta qué",
-    "tema": "CESA · Protecciones"
+    "tema": "CESA · Protecciones",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-tt-tn-en-un-minuto",
@@ -493,7 +554,8 @@
     "poster": "cesa-g-tt-tn-en-un-minuto.jpg",
     "titulo": "Redes TT y TN",
     "texto": "A tierra o al neutro",
-    "tema": "CESA · Protecciones"
+    "tema": "CESA · Protecciones",
+    "examen": "Control 2"
   },
   {
     "id": "cesa-g-zona-carga-espacial",
@@ -501,6 +563,7 @@
     "poster": "cesa-g-zona-carga-espacial.jpg",
     "titulo": "Dónde atrapa la luz una placa",
     "texto": "La zona de carga espacial",
-    "tema": "CESA · Fotovoltaica"
+    "tema": "CESA · Fotovoltaica",
+    "examen": "Control 2"
   }
 ]

@@ -29,7 +29,7 @@ R = "en resumen"; RT = "EN *RESUMEN*"; C = "la curiosidad"
 V = []
 
 V.append({"id": "cesa-familias-y-rendimiento", "titulo": "Las 4 familias de un cargador",
- "texto": "Qué entra, qué sale y cuánto se pierde", "tema": "CESA · Conversión de energía", "etiqueta": "conversión",
+ "texto": "Qué entra, qué sale y cuánto se pierde", "examen": "MQ", "tema": "CESA · Conversión de energía", "etiqueta": "conversión",
  "pron": {"AC": "alterna", "DC": "continua"},
  "segmentos": [
   S(C, "¿Sabías que convertir energía tiene solo *cuatro* familias... según lo que entra y lo que sale?", "4 *FAMILIAS*",
@@ -49,7 +49,7 @@ V.append({"id": "cesa-familias-y-rendimiento", "titulo": "Las 4 familias de un c
  ]})
 
 V.append({"id": "cesa-condensador-rectificador", "titulo": "El condensador que castiga a los diodos",
- "texto": "Menos rizado... a un precio", "tema": "CESA · Rectificadores", "etiqueta": "rectificadores",
+ "texto": "Menos rizado... a un precio", "examen": "MQ", "tema": "CESA · Rectificadores", "etiqueta": "rectificadores",
  "pron": {},
  "segmentos": [
   S(C, "¿Sabías que poner un condensador más *grande* en una fuente... hace sufrir más a los *diodos?*", "MÁS C, *MÁS PICO*",
@@ -69,7 +69,7 @@ V.append({"id": "cesa-condensador-rectificador", "titulo": "El condensador que c
  ]})
 
 V.append({"id": "cesa-graetz-vs-toma-media", "titulo": "Puente de Graetz o toma media",
- "texto": "Dos rectificadores, dos trampas", "tema": "CESA · Rectificadores", "etiqueta": "rectificadores",
+ "texto": "Dos rectificadores, dos trampas", "examen": "MQ", "tema": "CESA · Rectificadores", "etiqueta": "rectificadores",
  "pron": {"Graetz": "grets"},
  "segmentos": [
   S(C, "¿Sabías que hay dos formas de aprovechar las *dos* mitades de la onda... y cada una tiene su *trampa?*", "ONDA *COMPLETA*",
@@ -87,7 +87,7 @@ V.append({"id": "cesa-graetz-vs-toma-media", "titulo": "Puente de Graetz o toma 
  ]})
 
 V.append({"id": "cesa-regulador-lineal", "titulo": "El regulador lineal es un grifo",
- "texto": "Salida limpia, pero quema lo que sobra", "tema": "CESA · Reguladores lineales", "etiqueta": "reguladores",
+ "texto": "Salida limpia, pero quema lo que sobra", "examen": "MQ", "tema": "CESA · Reguladores lineales", "etiqueta": "reguladores",
  "pron": {"dropout": "drop aut", "LDO": "ele de o", "LDOs": "ele de os"},
  "segmentos": [
   S(C, "¿Sabías que un regulador lineal funciona como un *grifo?* Deja pasar la corriente [(intensidad)]... y se come lo que sobra.", "UN *GRIFO*",
@@ -107,7 +107,7 @@ V.append({"id": "cesa-regulador-lineal", "titulo": "El regulador lineal es un gr
  ]})
 
 V.append({"id": "cesa-shunt-y-regulacion", "titulo": "El regulador que se traga lo que sobra",
- "texto": "Shunt, línea y carga", "tema": "CESA · Reguladores lineales", "etiqueta": "reguladores",
+ "texto": "Shunt, línea y carga", "examen": "MQ", "tema": "CESA · Reguladores lineales", "etiqueta": "reguladores",
  "pron": {"shunt": "shant"},
  "segmentos": [
   S(C, "¿Sabías que hay reguladores que, en vez de cortar... se *tragan* la corriente [(intensidad)] que sobra?", "SE LA *TRAGA*",
@@ -127,7 +127,7 @@ V.append({"id": "cesa-shunt-y-regulacion", "titulo": "El regulador que se traga 
  ]})
 
 V.append({"id": "cesa-lm317", "titulo": "El truco del LM317",
- "texto": "Siempre 1,25 voltios", "tema": "CESA · Reguladores lineales", "etiqueta": "reguladores",
+ "texto": "Siempre 1,25 voltios", "examen": "MQ", "tema": "CESA · Reguladores lineales", "etiqueta": "reguladores",
  "pron": {"LM317": "ele eme tres uno siete"},
  "segmentos": [
   S(C, "¿Sabías que el LM317 tiene una manía? Entre dos de sus patas... *siempre* mantiene uno coma veinticinco voltios.", "SIEMPRE *1,25 V*",
@@ -145,7 +145,7 @@ V.append({"id": "cesa-lm317", "titulo": "El truco del LM317",
  ]})
 
 V.append({"id": "cesa-calor-regulador", "titulo": "La ley de Ohm del calor",
- "texto": "Cuánto aguanta un chip antes de quemarse", "tema": "CESA · Térmica", "etiqueta": "calor",
+ "texto": "Cuánto aguanta un chip antes de quemarse", "examen": "MQ", "tema": "CESA · Térmica", "etiqueta": "calor",
  "pron": {},
  "segmentos": [
   S(C, "¿Sabías que el calor de un chip se calcula igual que la ley de *Ohm?*", "LEY DE OHM *DEL CALOR*",
@@ -165,7 +165,7 @@ V.append({"id": "cesa-calor-regulador", "titulo": "La ley de Ohm del calor",
  ]})
 
 V.append({"id": "cesa-conmutados", "titulo": "El truco de los conmutados",
- "texto": "Encender y apagar muy rápido", "tema": "CESA · Conmutados", "etiqueta": "conmutados",
+ "texto": "Encender y apagar muy rápido", "examen": "MQ", "tema": "CESA · Conmutados", "etiqueta": "conmutados",
  "pron": {"D": "de", "Buck": "bak", "Boost": "bust"},
  "segmentos": [
   S(C, "¿Sabías que los cargadores modernos encienden y apagan un transistor... cientos de miles de veces por *segundo?*", "*CONMUTAR*",
@@ -185,7 +185,7 @@ V.append({"id": "cesa-conmutados", "titulo": "El truco de los conmutados",
  ]})
 
 V.append({"id": "cesa-flyback-forward", "titulo": "Flyback y Forward",
- "texto": "El transformador que también es bobina", "tema": "CESA · Conmutados", "etiqueta": "conmutados",
+ "texto": "El transformador que también es bobina", "examen": "MQ", "tema": "CESA · Conmutados", "etiqueta": "conmutados",
  "pron": {"Flyback": "flái bak", "Forward": "fórguard", "Buck": "bak"},
  "segmentos": [
   S(C, "¿Sabías que el cargador de tu portátil lleva un transformador... que también hace de *bobina?*", "EL *FLYBACK*",
@@ -205,7 +205,7 @@ V.append({"id": "cesa-flyback-forward", "titulo": "Flyback y Forward",
  ]})
 
 V.append({"id": "cesa-mosfet-diodo", "titulo": "El diodo escondido del MOSFET",
- "texto": "Canal N, canal P y su diodo", "tema": "CESA · Conmutados", "etiqueta": "transistores",
+ "texto": "Canal N, canal P y su diodo", "examen": "MQ", "tema": "CESA · Conmutados", "etiqueta": "transistores",
  "pron": {"MOSFET": "mos fet", "N": "ene", "P": "pe"},
  "segmentos": [
   S(C, "¿Sabías que todos los MOSFET llevan un *diodo* escondido dentro?", "UN DIODO *ESCONDIDO*",
@@ -225,7 +225,7 @@ V.append({"id": "cesa-mosfet-diodo", "titulo": "El diodo escondido del MOSFET",
  ]})
 
 V.append({"id": "cesa-bombas-de-carga", "titulo": "Convertidores sin bobinas",
- "texto": "Las bombas de carga", "tema": "CESA · Bombas de carga", "etiqueta": "bombas de carga",
+ "texto": "Las bombas de carga", "examen": "MQ", "tema": "CESA · Bombas de carga", "etiqueta": "bombas de carga",
  "pron": {},
  "segmentos": [
   S(C, "¿Sabías que se puede subir una tensión [(voltaje)] usando solo *condensadores*... sin ninguna bobina?", "SOLO *CONDENSADORES*",
@@ -243,7 +243,7 @@ V.append({"id": "cesa-bombas-de-carga", "titulo": "Convertidores sin bobinas",
  ]})
 
 V.append({"id": "cesa-inversores", "titulo": "De continua a alterna",
- "texto": "Onda cuadrada, bipolar y unipolar", "tema": "CESA · Inversores", "etiqueta": "inversores",
+ "texto": "Onda cuadrada, bipolar y unipolar", "examen": "MQ", "tema": "CESA · Inversores", "etiqueta": "inversores",
  "pron": {},
  "segmentos": [
   S(C, "¿Sabías que para sacar un enchufe de casa de una batería... hay que *trocear* la continua?", "*TROCEAR*",

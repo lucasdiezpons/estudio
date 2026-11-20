@@ -35,7 +35,7 @@ V = []
 
 def vid(id, titulo, texto, tema, etiqueta, segs, pron=None):
     p = dict(P_COM); p.update(pron or {})
-    V.append({"id": "cesa-g-" + id, "titulo": titulo, "texto": texto, "tema": tema, "etiqueta": etiqueta,
+    V.append({"id": "cesa-g-" + id, "titulo": titulo, "texto": texto, "tema": tema, "etiqueta": etiqueta, "examen": "Control 2",
               "pron": p, "voz": "gratis", "segmentos": segs})
 
 # ======================= NORMATIVA =======================

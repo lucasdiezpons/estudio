@@ -1,7 +1,7 @@
 // =============================================================
 //  Estudio — feed tipo TikTok con vídeos fijos
 //  · Orden: primero lo no visto (mezclado) + algún visto al azar
-//  · Filtro por tema: solo dura mientras la app está abierta
+//  · Filtro Asignatura › Examen › Tema: interruptores guardados en el móvil
 //  · "Visto" se guarda en el móvil (localStorage)
 // =============================================================
 
@@ -11,7 +11,6 @@ const UMBRAL_VISTO = 0.6;            // visto = has visto el 60 % del vídeo
 const $ = (s) => document.querySelector(s);
 const feed = $("#feed");
 let videos = [];
-let filtroTema = null;   // NO se guarda: al cerrar la app vuelve a "Para ti"
 let muted = false;       // sonido activado por defecto
 let bloqueado = false;
 let desbloqueadoEn = 0;   // iOS: hasta el primer toque solo deja reproducir en silencio
@@ -45,20 +44,18 @@ function ronda(lista) {
   }
   return out.concat(siVistos);
 }
-// Grupos de temas (aparecen arriba del todo en el filtro)
-const GRUPOS = {
-  "📝 CESA · Control 2": ["CESA · Normativa", "CESA · Fotovoltaica", "CESA · Dimensionado FV", "CESA · Baterías", "CESA · Protecciones"],
-  "📘 CESA · Tema 1 (examen MQ)": ["CESA · Conversión de energía", "CESA · Rectificadores", "CESA · Reguladores lineales",
-    "CESA · Térmica", "CESA · Conmutados", "CESA · Bombas de carga", "CESA · Inversores"],
-};
-// Grupos que NO salen en "Para ti" (solo si los eliges en el filtro). Vaciar tras el Control 2.
-const OCULTOS_EN_PARA_TI = ["📘 CESA · Tema 1 (examen MQ)"];
-const enGrupo = (v, g) => GRUPOS[g].includes(v.tema);
-const listaActual = () => {
-  if (!filtroTema) return videos.filter((v) => !OCULTOS_EN_PARA_TI.some((g) => enGrupo(v, g)));
-  if (GRUPOS[filtroTema]) return videos.filter((v) => enGrupo(v, filtroTema));
-  return videos.filter((v) => v.tema === filtroTema);
-};
+// ---------- Asignatura › Examen › Tema (interruptores guardados en el móvil) ----------
+const asig = (v) => v.asignatura || (v.tema || "Otros").split(" · ")[0];
+const exam = (v) => v.examen || "General";
+const tem = (v) => (v.tema || "Sin tema").split(" · ").slice(1).join(" · ") || v.tema || "Sin tema";
+const claves = (v) => [`A:${asig(v)}`, `E:${asig(v)}/${exam(v)}`, `T:${asig(v)}/${exam(v)}/${tem(v)}`];
+const apagados = new Set(leerApagados());
+function leerApagados() {
+  try { const x = localStorage.getItem("apagados"); return x ? JSON.parse(x) : ["E:CESA/MQ"]; } catch { return ["E:CESA/MQ"]; }
+}
+function guardarApagados() { try { localStorage.setItem("apagados", JSON.stringify([...apagados])); } catch {} }
+const activoV = (v) => !claves(v).some((k) => apagados.has(k));
+const listaActual = () => videos.filter(activoV);
 
 // ---------- Feed ----------
 function montarFeed(primero = null) {
@@ -205,26 +202,44 @@ $("#btn-sonido").addEventListener("click", (e) => {
   reproducir();
 });
 
-// ---------- Filtro por tema ----------
-const temas = () => [...new Set(videos.map((v) => v.tema).filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
-$("#btn-tema").addEventListener("click", () => {
+// ---------- Filtro: árbol de interruptores ----------
+function arbol(lista) {
+  const t = {};
+  for (const v of lista) (((t[asig(v)] ??= {})[exam(v)] ??= {})[tem(v)] ??= []).push(v);
+  return t;
+}
+const ord = (o) => Object.keys(o).sort((a, b) => a.localeCompare(b, "es"));
+function etiquetaFiltro() {
+  const on = new Set(listaActual().map((v) => `${asig(v)} · ${exam(v)}`));
+  const n = listaActual().length;
+  $("#btn-tema").textContent = (on.size === 1 ? [...on][0] : on.size ? `${on.size} exámenes` : "Nada") + ` (${n}) ▾`;
+}
+function pintarFiltro() {
   const box = $("#sheet-temas");
   box.innerHTML = "";
-  [null, ...Object.keys(GRUPOS), ...temas()].forEach((t) => {
+  const t = arbol(videos);
+  const fila = (clave, texto, n, nivel, padreOff) => {
     const b = document.createElement("button");
-    b.textContent = t ?? "Para ti (sin Tema 1)";
-    if (t === filtroTema) b.classList.add("on");
-    b.onclick = () => {
-      filtroTema = t;
-      $("#btn-tema").textContent = (t ?? "Para ti") + " ▾";
-      $("#sheet").hidden = true;
-      montarFeed();
-    };
+    b.className = `nodo n${nivel}` + (apagados.has(clave) ? "" : " on") + (padreOff ? " gris" : "");
+    b.innerHTML = `<span class="sw"></span><span class="txt">${esc(texto)}</span><span class="cnt">${n}</span>`;
+    b.onclick = () => { apagados.has(clave) ? apagados.delete(clave) : apagados.add(clave); guardarApagados(); pintarFiltro(); };
     box.appendChild(b);
-  });
-  $("#sheet").hidden = false;
+  };
+  const cuenta = (o) => Array.isArray(o) ? o.length : Object.values(o).reduce((s, x) => s + cuenta(x), 0);
+  for (const A of ord(t)) {
+    const kA = `A:${A}`; fila(kA, A, cuenta(t[A]), 0, false);
+    for (const E of ord(t[A])) {
+      const kE = `E:${A}/${E}`; const offA = apagados.has(kA);
+      fila(kE, E, cuenta(t[A][E]), 1, offA);
+      for (const T of ord(t[A][E])) fila(`T:${A}/${E}/${T}`, T, t[A][E][T].length, 2, offA || apagados.has(kE));
+    }
+  }
+}
+$("#btn-tema").addEventListener("click", () => { pintarFiltro(); $("#sheet").hidden = false; });
+$("#sheet").addEventListener("click", (e) => {
+  if (e.target.id !== "sheet" && e.target.id !== "sheet-ok") return;
+  $("#sheet").hidden = true; etiquetaFiltro(); montarFeed();
 });
-$("#sheet").addEventListener("click", (e) => { if (e.target.id === "sheet") $("#sheet").hidden = true; });
 
 // ---------- Lista ----------
 function pintarLista() {
@@ -234,7 +249,7 @@ function pintarLista() {
   const grupos = {};
   for (const v of videos) {
     if (q && !`${v.titulo} ${v.texto} ${v.tema}`.toLowerCase().includes(q)) continue;
-    (grupos[v.tema || "Sin tema"] ??= []).push(v);
+    (grupos[`${asig(v)} › ${exam(v)} › ${tem(v)}`] ??= []).push(v);
   }
   const nombres = Object.keys(grupos).sort((a, b) => a.localeCompare(b, "es"));
   if (!nombres.length) { cont.innerHTML = `<p style="opacity:.6;margin-top:20px">Nada por aquí.</p>`; return; }
@@ -247,7 +262,7 @@ function pintarLista() {
       b.className = "item";
       b.innerHTML = `<img loading="lazy" src="${v.poster ? "videos/" + v.poster : ""}" alt="">
         <div><b>${esc(v.titulo || v.archivo)}</b><small>${vistos.has(v.id) ? "✓ visto" : "● nuevo"}${v.texto ? " · " + esc(v.texto) : ""}</small></div>`;
-      b.onclick = () => { filtroTema = null; $("#btn-tema").textContent = "Para ti ▾"; vista("feed"); montarFeed(v); };
+      b.onclick = () => { vista("feed"); montarFeed(v); };
       g.appendChild(b);
     });
     cont.appendChild(g);
@@ -274,5 +289,5 @@ function toast(t) { const el = $("#toast"); el.textContent = t; el.hidden = fals
 // ---------- Arranque ----------
 fetch("videos/videos.json", { cache: "no-cache" })
   .then((r) => r.json())
-  .then((data) => { videos = data.filter((v) => v && v.archivo).map((v) => ({ ...v, id: v.id || v.archivo })); montarFeed(); })
+  .then((data) => { videos = data.filter((v) => v && v.archivo).map((v) => ({ ...v, id: v.id || v.archivo })); etiquetaFiltro(); montarFeed(); })
   .catch(() => { feed.innerHTML = `<div class="vacio">⚠️ No se pudo leer videos/videos.json</div>`; });

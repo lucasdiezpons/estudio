@@ -12,7 +12,7 @@ for ext in ("mp4", "jpg"):
 js = vid / "videos.json"
 data = [d for d in json.loads(js.read_text("utf-8")) if d["id"] != spec["id"]]
 data.append({"id": spec["id"], "archivo": spec["id"] + ".mp4", "poster": spec["id"] + ".jpg",
-             "titulo": spec["titulo"], "texto": spec.get("texto", ""), "tema": spec["tema"]})
+             "titulo": spec["titulo"], "texto": spec.get("texto", ""), "tema": spec["tema"], "examen": spec.get("examen", "")})
 js.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", "utf-8")
 g = lambda *a: subprocess.run(["git", "-C", str(REPO), *a], check=True)
 g("add", "videos")

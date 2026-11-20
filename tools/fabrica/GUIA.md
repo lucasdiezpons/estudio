@@ -80,8 +80,11 @@ git add -A && git commit -m "Añade vídeos de ..." && git -c push.negotiate=tru
 - `tools/fabrica/guiones/` = `hooks.json` (21 fórmulas de gancho) + `hookscore.py` (puntúa ganchos) del plugin MIT Jakeschincariol/youtube-agent-skill.
 - Uso: escribir 5 ganchos por TikTok → `python3 tools/fabrica/guiones/hookscore.py --hook "frase"` → quedarse con el mejor.
 - Ojo: está pensado para YouTube en inglés; la puntuación en español es orientativa.
-## Grupos en la app
-- `app.js` → `GRUPOS` (Control 2 / Tema 1) y `OCULTOS_EN_PARA_TI` (ahora oculta el Tema 1 en "Para ti"; vaciarlo tras el Control 2). Temas nuevos: añadirlos a su grupo.
+## Filtro de la app (Asignatura › Examen › Tema)
+- Asignatura = lo que va antes de " · " en `tema`; examen = campo `examen` del spec (se copia a videos.json); tema = lo de después de " · ".
+- CESA: `examen` = "Control 2" (Normativa, Fotovoltaica, Dimensionado FV, Baterías, Protecciones) o "MQ" (Tema 1).
+- Lucas activa/desactiva cada nivel con interruptores; se guarda en el móvil (localStorage "apagados"; por defecto MQ apagado).
+- Spec nuevo: pon SIEMPRE `examen`. Asignatura nueva: `tema` = "ASIG · Tema".
 
 ## Voz gratis (edge-tts)
 - `tts_gratis.py` = igual que `tts.py` pero con `es-MX-DaliaNeural` (edge-tts, WordBoundary). `VOZ_FAKE=1` → silencio para probar sin internet.
