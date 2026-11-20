@@ -1,0 +1,105 @@
+{
+ "id": "cesa-g-calor-directa-vs-mppt",
+ "titulo": "Cuándo el calor da más energía",
+ "texto": "Conexión directa contra MPPT",
+ "tema": "CESA · Fotovoltaica",
+ "etiqueta": "temperatura",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe",
+  "Vbat": "uve bat",
+  "Icc": "i ce ce",
+  "Pmpp": "pe eme pe pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que una placa caliente puede dar *más* energía... o menos, según cómo la conectes?",
+   "titulo": "MÁS... *O MENOS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔌",
+    "linea1": "depende de la conexión",
+    "linea2": "DIRECTA O MPPT"
+   }
+  },
+  {
+   "tag": "directa",
+   "sub": "En conexión *directa,* la batería fija la tensión [(voltaje)]... y la energía depende de la corriente [(intensidad)]. Con calor, *sube.*",
+   "titulo": "DIRECTA: *SUBE*",
+   "visual": {
+    "tipo": "big",
+    "big": "Vbat · Icc",
+    "small": "conexión directa: manda la corriente"
+   },
+   "num": 1
+  },
+  {
+   "tag": "MPPT",
+   "sub": "Con un *MPPT,* sacas la potencia máxima. Y esa, con calor... *baja.*",
+   "titulo": "MPPT: *BAJA*",
+   "visual": {
+    "tipo": "big",
+    "big": "REND · Pmpp",
+    "small": "MPPT: manda la potencia máxima"
+   },
+   "num": 1
+  },
+  {
+   "tag": "peor caso",
+   "sub": "Por eso el peor caso cambia: en directa, el día más *frío.* Con MPPT, el día más *caluroso.*",
+   "titulo": "EL *PEOR* CASO",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🥶",
+      "izq": "Directa",
+      "der": "TEMPERATURA MÍNIMA",
+      "en": "frío."
+     },
+     {
+      "icono": "🥵",
+      "izq": "MPPT",
+      "der": "TEMPERATURA MÁXIMA",
+      "rojo": true,
+      "en": "caluroso."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Con calor, la directa *gana*... y el MPPT *pierde.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔌",
+      "izq": "Directa",
+      "der": "MÁS ENERGÍA",
+      "en": "gana..."
+     },
+     {
+      "icono": "📉",
+      "izq": "MPPT",
+      "der": "MENOS ENERGÍA",
+      "rojo": true,
+      "en": "pierde."
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,103 @@
+{
+ "id": "cesa-g-mejor-de-los-peores",
+ "titulo": "Cómo elegir la inclinación de todo el año",
+ "texto": "El mejor de los peores",
+ "tema": "CESA · Dimensionado FV",
+ "etiqueta": "inclinación",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que la mejor inclinación para todo el año se elige pensando en el *peor* mes?",
+   "titulo": "EL *PEOR* MES",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📅",
+    "linea1": "sistema autónomo",
+    "linea2": "TODO EL AÑO"
+   }
+  },
+  {
+   "tag": "paso uno",
+   "sub": "Para cada inclinación, calculas cuántas placas harían falta en cada *mes.*",
+   "titulo": "PASO *1*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧮",
+    "linea1": "inclinación × mes",
+    "linea2": "N = CONSUMO / ENERGÍA"
+   },
+   "num": 1
+  },
+  {
+   "tag": "paso dos",
+   "sub": "En cada fila te quedas con el peor mes: el que pide *más* placas. Ese es el que manda.",
+   "titulo": "PASO *2*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📉",
+    "linea1": "en cada inclinación",
+    "linea2": "EL MES QUE PIDE MÁS"
+   },
+   "num": 2
+  },
+  {
+   "tag": "paso tres",
+   "sub": "Y entre esas inclinaciones, eliges la que pide *menos.* El mejor... de los *peores.*",
+   "titulo": "PASO *3*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏆",
+    "linea1": "comparas las filas",
+    "linea2": "EL MEJOR DE LOS PEORES"
+   },
+   "num": 3
+  },
+  {
+   "tag": "redondeo",
+   "sub": "Por último, el número de placas siempre hacia *arriba:* cero coma siete... es *una* placa.",
+   "titulo": "HACIA *ARRIBA*",
+   "visual": {
+    "tipo": "big",
+    "big": "0,73 → 1",
+    "small": "placas: siempre hacia arriba"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. El peor mes de cada inclinación... y de ahí, el *mejor.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📉",
+      "izq": "Por fila",
+      "der": "EL PEOR MES",
+      "en": "inclinación..."
+     },
+     {
+      "icono": "🏆",
+      "izq": "Entre filas",
+      "der": "EL MEJOR",
+      "rojo": true,
+      "en": "mejor."
+     }
+    ]
+   }
+  }
+ ]
+}

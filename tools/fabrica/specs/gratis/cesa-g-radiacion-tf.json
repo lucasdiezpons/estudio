@@ -1,0 +1,118 @@
+{
+ "id": "cesa-g-radiacion-tf",
+ "titulo": "La radiación sobre una placa inclinada",
+ "texto": "El factor de la tabla",
+ "tema": "CESA · Dimensionado FV",
+ "etiqueta": "radiación",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe",
+  "TF": "te efe",
+  "H₀": "hache cero"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que inclinar la placa cambia la energía que recibe... y una *tabla* te dice cuánto?",
+   "titulo": "UNA *TABLA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📋",
+    "linea1": "mes × inclinación",
+    "linea2": "FACTOR TF"
+   }
+  },
+  {
+   "tag": "la fórmula",
+   "sub": "La radiación sobre la placa es la radiación en horizontal... por un factor de *corrección.*",
+   "titulo": "LA *FÓRMULA*",
+   "visual": {
+    "tipo": "big",
+    "big": "H = TF · H0",
+    "small": "radiación sobre la placa inclinada"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la tabla",
+   "sub": "Ese factor lo sacas de la tabla: buscas tu *mes* en la columna... y tu inclinación en la *fila.*",
+   "titulo": "LA *TABLA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📅",
+      "izq": "Columna",
+      "der": "EL MES",
+      "en": "mes"
+     },
+     {
+      "icono": "📐",
+      "izq": "Fila",
+      "der": "LA INCLINACIÓN",
+      "rojo": true,
+      "en": "fila."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "hemisferio sur",
+   "sub": "Truco del hemisferio sur: los meses van *desplazados* seis meses. Diciembre en el sur... es la columna de *junio.*",
+   "titulo": "HEMISFERIO *SUR*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔄",
+    "linea1": "diciembre sur → columna junio",
+    "linea2": "+6 MESES",
+    "stamp": "¡OJO!"
+   },
+   "num": 3
+  },
+  {
+   "tag": "la mejor",
+   "sub": "Y si te piden la inclinación óptima de un mes... es la fila con el factor más *grande* de esa columna.",
+   "titulo": "LA *ÓPTIMA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏆",
+    "linea1": "en la columna del mes",
+    "linea2": "EL TF MÁS GRANDE"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Radiación en horizontal por el *factor*... y en el sur, seis meses *desplazados.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📋",
+      "izq": "Radiación",
+      "der": "TF · H0",
+      "en": "factor..."
+     },
+     {
+      "icono": "🔄",
+      "izq": "Sur",
+      "der": "+6 MESES",
+      "rojo": true,
+      "en": "desplazados."
+     }
+    ]
+   }
+  }
+ ]
+}

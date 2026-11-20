@@ -1,0 +1,88 @@
+{
+ "id": "cesa-g-horas-sol-pico",
+ "titulo": "Las horas de sol pico",
+ "texto": "Pasar radiación a horas",
+ "tema": "CESA · Dimensionado FV",
+ "etiqueta": "radiación",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que la radiación de un día entero... se puede contar en *horas?*",
+   "titulo": "EN *HORAS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⏱️",
+    "linea1": "horas de sol pico",
+    "linea2": "HSP"
+   }
+  },
+  {
+   "tag": "la idea",
+   "sub": "Una hora de sol pico es una hora con mil watios por metro cuadrado: el sol *perfecto.*",
+   "titulo": "EL SOL *PERFECTO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "☀️",
+    "linea1": "1000 W/m² durante 1 hora",
+    "linea2": "1 HORA DE SOL PICO"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la cuenta",
+   "sub": "Así que coges la radiación del día... y la divides entre *mil.*",
+   "titulo": "LA *CUENTA*",
+   "visual": {
+    "tipo": "big",
+    "big": "HSP = H / 1000",
+    "small": "H en Wh/m² · resultado en horas"
+   },
+   "num": 2
+  },
+  {
+   "tag": "ejemplo",
+   "sub": "Mil novecientos cuarenta y cuatro entre mil... casi dos horas de sol *perfecto.*",
+   "titulo": "*EJEMPLO*",
+   "visual": {
+    "tipo": "big",
+    "big": "1944 / 1000 = 1,94 h",
+    "small": "horas de sol pico"
+   },
+   "num": 2
+  },
+  {
+   "tag": "para qué",
+   "sub": "Y lo bueno: las placas dan su potencia nominal con ese sol. Así que energía es potencia por esas *horas.*",
+   "titulo": "PARA *QUÉ*",
+   "visual": {
+    "tipo": "big",
+    "big": "E = P · HSP",
+    "small": "energía de la placa en un día"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Radiación entre *mil*... y ya tienes las horas de sol *pico.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "H / 1000",
+    "small": "horas de sol pico"
+   }
+  }
+ ]
+}

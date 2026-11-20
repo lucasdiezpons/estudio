@@ -1,0 +1,103 @@
+{
+ "id": "cesa-g-proteger-un-ordenador",
+ "titulo": "Cómo proteger un ordenador de un rayo",
+ "texto": "Directo o indirecto",
+ "tema": "CESA · Protecciones",
+ "etiqueta": "sobretensiones",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que para proteger un ordenador de un rayo... a veces basta con *uno* y a veces hacen falta *dos?*",
+   "titulo": "¿UNO O *DOS?*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "💻",
+    "linea1": "ordenador",
+    "linea2": "¿QUÉ PROTECTOR?"
+   }
+  },
+  {
+   "tag": "indirecto",
+   "sub": "Si el rayo es *indirecto,* basta un *tipo 3* junto al ordenador: aguanta indirectos y protege la categoría uno.",
+   "titulo": "RAYO *INDIRECTO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "3️⃣",
+    "linea1": "rayo indirecto",
+    "linea2": "BASTA UN TIPO 3"
+   },
+   "num": 1
+  },
+  {
+   "tag": "directo",
+   "sub": "Si es *directo,* el tipo 3 no aguanta. Necesitas un *tipo 1* en la entrada para el golpe gordo.",
+   "titulo": "RAYO *DIRECTO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "1️⃣",
+    "linea1": "en la entrada",
+    "linea2": "TIPO 1 PARA EL GOLPE"
+   },
+   "num": 2
+  },
+  {
+   "tag": "los dos",
+   "sub": "Pero el tipo 1 deja pasar demasiado para el ordenador... así que también el tipo 3. Hacen falta los *dos.*",
+   "titulo": "LOS *DOS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "1️⃣",
+      "izq": "Entrada",
+      "der": "TIPO 1"
+     },
+     {
+      "icono": "3️⃣",
+      "izq": "Junto al ordenador",
+      "der": "TIPO 3",
+      "rojo": true,
+      "en": "dos."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Indirecto: tipo *tres.* Directo: tipo uno más tipo *tres.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "☁️",
+      "izq": "Indirecto",
+      "der": "TIPO 3",
+      "en": "tres."
+     },
+     {
+      "icono": "⚡",
+      "izq": "Directo",
+      "der": "TIPO 1 + TIPO 3",
+      "rojo": true,
+      "en": "tres."
+     }
+    ]
+   }
+  }
+ ]
+}

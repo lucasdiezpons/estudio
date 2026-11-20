@@ -1,0 +1,94 @@
+{
+ "id": "cesa-g-capacidad-bateria",
+ "titulo": "Qué batería necesita tu placa",
+ "texto": "Días, consumo y descarga",
+ "tema": "CESA · Dimensionado FV",
+ "etiqueta": "batería",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe",
+  "Q": "cu",
+  "E": "e",
+  "Vbat": "uve bat",
+  "PD": "pe de"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que una batería solar se calcula para aguantar *días* sin sol?",
+   "titulo": "DÍAS *SIN SOL*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "☁️",
+    "linea1": "días de autonomía",
+    "linea2": "LA BATERÍA AGUANTA"
+   }
+  },
+  {
+   "tag": "la fórmula",
+   "sub": "Capacidad: días de autonomía por consumo diario... entre tensión de batería por profundidad de *descarga.*",
+   "titulo": "LA *FÓRMULA*",
+   "visual": {
+    "tipo": "big",
+    "big": "Q ≥ días · E / (Vbat · PD)",
+    "small": "capacidad en amperios hora"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la profundidad",
+   "sub": "La profundidad de descarga es cuánto la dejas *vaciar.* Si es el setenta por ciento... divides entre cero coma *siete.*",
+   "titulo": "LA *PROFUNDIDAD*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🪫",
+    "linea1": "cuánto la dejas vaciar",
+    "linea2": "PD = 0,7 → ÷ 0,7"
+   },
+   "num": 2
+  },
+  {
+   "tag": "ejemplo",
+   "sub": "Seis días, treinta y dos watios hora, doce voltios, setenta por ciento: veintidós coma nueve amperios *hora.*",
+   "titulo": "*EJEMPLO*",
+   "visual": {
+    "tipo": "big",
+    "big": "6·32 / (12·0,7) = 22,9 Ah",
+    "small": "capacidad mínima"
+   },
+   "num": 3
+  },
+  {
+   "tag": "peor caso",
+   "sub": "Y el peor caso: la tensión de batería *mínima*... porque con menos voltios necesitas más amperios hora.",
+   "titulo": "EL *PEOR* CASO",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔋",
+    "linea1": "si la tensión varía",
+    "linea2": "USA LA MÍNIMA",
+    "stamp": "¡OJO!"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Días por consumo, entre tensión por *profundidad* de descarga.",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "días · E / (V · PD)",
+    "small": "capacidad de la batería"
+   }
+  }
+ ]
+}

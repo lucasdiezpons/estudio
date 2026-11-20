@@ -1,0 +1,104 @@
+{
+ "id": "cesa-g-paises-tt-tn",
+ "titulo": "Italia o Alemania",
+ "texto": "Qué red usa cada país",
+ "tema": "CESA · Protecciones",
+ "etiqueta": "redes",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que en Alemania y en Italia los enchufes están protegidos de forma *distinta?*",
+   "titulo": "DOS *PAÍSES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🗺️",
+    "linea1": "Alemania vs Italia",
+    "linea2": "TN O TT"
+   }
+  },
+  {
+   "tag": "cálidos",
+   "sub": "En países *cálidos,* como Italia o España, se suele usar la red *TT*... con interruptores diferenciales.",
+   "titulo": "PAÍSES *CÁLIDOS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "☀️",
+    "linea1": "Italia, España",
+    "linea2": "TT + DIFERENCIAL"
+   },
+   "num": 1
+  },
+  {
+   "tag": "fríos",
+   "sub": "En países *fríos,* como Alemania, se usa la red *TN*... y el magnetotérmico protege también de los choques.",
+   "titulo": "PAÍSES *FRÍOS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "❄️",
+    "linea1": "Alemania",
+    "linea2": "TN + MAGNETOTÉRMICO"
+   },
+   "num": 2
+  },
+  {
+   "tag": "truco",
+   "sub": "Truco para acordarte: el *diferencial,* con el calor del sur. El *magnetotérmico,* con el frío del norte.",
+   "titulo": "EL *TRUCO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "☀️",
+      "izq": "Cálido",
+      "der": "TT · DIFERENCIAL",
+      "en": "diferencial,"
+     },
+     {
+      "icono": "❄️",
+      "izq": "Frío",
+      "der": "TN · MAGNETOTÉRMICO",
+      "rojo": true,
+      "en": "magnetotérmico,"
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Italia, TT y *diferencial.* Alemania, TN y *magnetotérmico.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "☀️",
+      "izq": "Italia",
+      "der": "TT + DIFERENCIAL",
+      "en": "diferencial."
+     },
+     {
+      "icono": "❄️",
+      "izq": "Alemania",
+      "der": "TN + MAGNETOTÉRMICO",
+      "rojo": true,
+      "en": "magnetotérmico."
+     }
+    ]
+   }
+  }
+ ]
+}

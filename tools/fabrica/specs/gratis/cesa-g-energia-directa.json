@@ -1,0 +1,104 @@
+{
+ "id": "cesa-g-energia-directa",
+ "titulo": "La energía de una placa en directa",
+ "texto": "Aquí manda la batería",
+ "tema": "CESA · Dimensionado FV",
+ "etiqueta": "directa",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe",
+  "Pmpp": "pe eme pe pe",
+  "Icc": "i ce ce"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que en conexión directa a la batería... la potencia máxima de la placa *no* sirve?",
+   "titulo": "SIN *MPPT*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔌",
+    "linea1": "placa directa a batería",
+    "linea2": "NO SIRVE Pmpp"
+   }
+  },
+  {
+   "tag": "por qué",
+   "sub": "La batería *obliga* a la placa a ir a su tensión [(voltaje)]... y ahí la placa da casi su corriente de *cortocircuito.*",
+   "titulo": "MANDA LA *BATERÍA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔋",
+    "linea1": "la placa trabaja a la tensión de la batería",
+    "linea2": "DA CASI Icc"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la fórmula",
+   "sub": "Así que energía es tensión de batería... por corriente de cortocircuito... por horas de *sol.* Sin rendimiento.",
+   "titulo": "LA *FÓRMULA*",
+   "visual": {
+    "tipo": "big",
+    "big": "E = Vbat · Icc(T) · HSP",
+    "small": "sin rendimiento · por cada columna en serie"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el peor caso",
+   "sub": "El peor caso: la tensión de batería *mínima*... y la temperatura más *baja,* porque con frío la corriente baja.",
+   "titulo": "EL *PEOR* CASO",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔋",
+      "izq": "Batería",
+      "der": "TENSIÓN MÍNIMA",
+      "en": "mínima..."
+     },
+     {
+      "icono": "🥶",
+      "izq": "Temperatura",
+      "der": "MÍNIMA",
+      "rojo": true,
+      "en": "baja,"
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "en serie",
+   "sub": "Y poner más placas en serie de las necesarias *no* da más energía: la tensión la sigue fijando la batería.",
+   "titulo": "MÁS EN SERIE *NO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🚫",
+    "linea1": "más placas en serie",
+    "linea2": "NO DA MÁS ENERGÍA"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Directa: tensión de batería por corriente de *cortocircuito*... y sin *rendimiento.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "Vbat · Icc · HSP",
+    "small": "energía en directa"
+   }
+  }
+ ]
+}

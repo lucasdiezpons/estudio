@@ -1,0 +1,93 @@
+{
+ "id": "cesa-g-marcado-ce",
+ "titulo": "Lo que de verdad significa el CE",
+ "texto": "No lo pone ningún laboratorio",
+ "tema": "CESA · Normativa",
+ "etiqueta": "normativa",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que el *CE* de tus aparatos... no lo pone ningún laboratorio?",
+   "titulo": "EL *CE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏷️",
+    "linea1": "marcado CE",
+    "linea2": "¿QUIÉN LO PONE?"
+   }
+  },
+  {
+   "tag": "obligatorio",
+   "sub": "Para vender un producto en Europa, el marcado CE y la *Declaración de Conformidad* son obligatorios.",
+   "titulo": "*OBLIGATORIO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🇪🇺",
+    "linea1": "para vender en Europa",
+    "linea2": "CE + DECLARACIÓN"
+   },
+   "num": 1
+  },
+  {
+   "tag": "quién",
+   "sub": "Pero lo pone el propio *fabricante*... o el importador. Nadie tiene que probarlo antes.",
+   "titulo": "LO PONE EL *FABRICANTE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏭",
+    "linea1": "fabricante o importador",
+    "linea2": "SE LO PONE ÉL MISMO"
+   },
+   "num": 2
+  },
+  {
+   "tag": "qué significa",
+   "sub": "Con eso firma que cumple la ley... y que se hace *responsable* si hay un accidente por no cumplirla.",
+   "titulo": "SE HACE *RESPONSABLE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✍️",
+    "linea1": "si hay un accidente",
+    "linea2": "RESPONDE ÉL",
+    "stamp": "¡OJO!"
+   },
+   "num": 2
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. El CE es obligatorio... y significa que el fabricante se hace *responsable.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🏷️",
+      "izq": "CE",
+      "der": "OBLIGATORIO",
+      "en": "obligatorio..."
+     },
+     {
+      "icono": "✍️",
+      "izq": "Significa",
+      "der": "EL FABRICANTE RESPONDE",
+      "rojo": true,
+      "en": "responsable."
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "id": "cesa-g-cuantas-celdas-en-serie",
+ "titulo": "Cuántas celdas para cargar una batería",
+ "texto": "El peor caso manda",
+ "tema": "CESA · Fotovoltaica",
+ "etiqueta": "dimensionado",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe",
+  "Vbat": "uve bat",
+  "Vcelda": "uve celda"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que para cargar una batería directamente con una placa... hay que contar las celdas con el *peor* caso?",
+   "titulo": "EL *PEOR* CASO",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔋",
+    "linea1": "placa directa a batería",
+    "linea2": "¿CUÁNTAS CELDAS?"
+   }
+  },
+  {
+   "tag": "la regla",
+   "sub": "La placa tiene que superar la tensión [(voltaje)] *máxima* de la batería... aunque cada celda dé su tensión *mínima.*",
+   "titulo": "LA *REGLA*",
+   "visual": {
+    "tipo": "big",
+    "big": "Vbat máx / Vcelda mín",
+    "small": "y redondeas hacia arriba"
+   },
+   "num": 1
+  },
+  {
+   "tag": "ejemplo",
+   "sub": "Batería hasta 4,2 voltios, celdas de 0,5 como mínimo: 4,2 entre 0,5... 8,4. Necesitas *más* de ocho.",
+   "titulo": "*EJEMPLO*",
+   "visual": {
+    "tipo": "big",
+    "big": "4,2 / 0,5 = 8,4",
+    "small": "con 8 solo llegas a 4 V"
+   },
+   "num": 2
+  },
+  {
+   "tag": "la respuesta",
+   "sub": "Con ocho solo llegas a 4 voltios: no carga. Así que la siguiente opción... *diez.*",
+   "titulo": "*DIEZ*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔟",
+    "linea1": "8 · 0,5 = 4 V < 4,2 V",
+    "linea2": "10 CELDAS"
+   },
+   "num": 2
+  },
+  {
+   "tag": "otro",
+   "sub": "Y si la batería llega a 3,6: 3,6 entre 0,5 da 7,2... así que *ocho.*",
+   "titulo": "OTRO *EJEMPLO*",
+   "visual": {
+    "tipo": "big",
+    "big": "3,6 / 0,5 = 7,2 → 8",
+    "small": "8 · 0,5 = 4 V > 3,6 V"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Tensión máxima de la batería, entre la mínima de la celda... y *hacia arriba.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "Vbat máx / Vcelda mín",
+    "small": "número de celdas en serie"
+   }
+  }
+ ]
+}

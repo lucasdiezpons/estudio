@@ -1,0 +1,108 @@
+{
+ "id": "cesa-g-calor-isc-voc",
+ "titulo": "Qué le hace el calor a una placa",
+ "texto": "Corriente y tensión no van igual",
+ "tema": "CESA · Fotovoltaica",
+ "etiqueta": "temperatura",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que cuando una placa se calienta... una cosa sube y otra *baja?*",
+   "titulo": "UNA SUBE, *OTRA BAJA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🌡️",
+    "linea1": "placa caliente",
+    "linea2": "¿QUÉ CAMBIA?"
+   }
+  },
+  {
+   "tag": "la corriente",
+   "sub": "La corriente [(intensidad)] de cortocircuito *sube...* pero solo un poquito.",
+   "titulo": "LA CORRIENTE *SUBE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⬆️",
+    "linea1": "corriente de cortocircuito",
+    "linea2": "SUBE UN POCO"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la tensión",
+   "sub": "La tensión [(voltaje)] de circuito abierto *baja...* y bastante más.",
+   "titulo": "LA TENSIÓN *BAJA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⬇️",
+    "linea1": "tensión de circuito abierto",
+    "linea2": "BAJA BASTANTE"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la potencia",
+   "sub": "Como baja más la tensión de lo que sube la corriente... la potencia máxima *baja.*",
+   "titulo": "LA POTENCIA *BAJA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬆️",
+      "izq": "Corriente",
+      "der": "+ UN POCO"
+     },
+     {
+      "icono": "⬇️",
+      "izq": "Tensión",
+      "der": "− BASTANTE"
+     },
+     {
+      "icono": "🔥",
+      "izq": "Potencia máxima",
+      "der": "BAJA",
+      "rojo": true,
+      "en": "baja."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Con calor... corriente *arriba,* tensión *abajo.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬆️",
+      "izq": "Isc",
+      "der": "SUBE",
+      "en": "arriba,"
+     },
+     {
+      "icono": "⬇️",
+      "izq": "Voc",
+      "der": "BAJA",
+      "rojo": true,
+      "en": "abajo."
+     }
+    ]
+   }
+  }
+ ]
+}

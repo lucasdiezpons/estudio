@@ -1,0 +1,81 @@
+{
+ "id": "cesa-g-fill-factor",
+ "titulo": "El Fill Factor de una placa",
+ "texto": "Qué tan cuadrada es su curva",
+ "tema": "CESA · Fotovoltaica",
+ "etiqueta": "celdas",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe",
+  "Fill": "fil",
+  "Factor": "fáctor",
+  "Voc": "uve o ce",
+  "Isc": "i ese ce",
+  "Pmpp": "pe eme pe pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que las placas solares tienen una nota de *calidad*... que se llama Fill Factor?",
+   "titulo": "EL *FILL FACTOR*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📏",
+    "linea1": "factor de forma",
+    "linea2": "FILL FACTOR"
+   }
+  },
+  {
+   "tag": "el sueño",
+   "sub": "Lo ideal sería sacar a la vez la tensión [(voltaje)] de circuito *abierto*... y la corriente [(intensidad)] de *cortocircuito.*",
+   "titulo": "EL *SUEÑO*",
+   "visual": {
+    "tipo": "big",
+    "big": "Voc · Isc",
+    "small": "lo imposible: las dos a la vez"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la realidad",
+   "sub": "Pero eso es imposible. Lo máximo que sacas de verdad es la potencia del punto de máxima *potencia.*",
+   "titulo": "LA *REALIDAD*",
+   "visual": {
+    "tipo": "big",
+    "big": "Pmpp",
+    "small": "lo que sacas de verdad"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la fórmula",
+   "sub": "El Fill Factor es la potencia máxima... entre ese producto *imposible.* Cuanto más cerca de uno, *mejor.*",
+   "titulo": "LA *FÓRMULA*",
+   "visual": {
+    "tipo": "big",
+    "big": "FF = Pmpp / (Voc · Isc)",
+    "small": "cuanto más cerca de 1, mejor"
+   },
+   "num": 2
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Fill Factor: potencia máxima, entre tensión de vacío por corriente de *cortocircuito.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "Pmpp / (Voc · Isc)",
+    "small": "Fill Factor"
+   }
+  }
+ ]
+}

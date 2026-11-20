@@ -1,0 +1,116 @@
+{
+ "id": "cesa-g-tt-tn-en-un-minuto",
+ "titulo": "Redes TT y TN",
+ "texto": "A tierra o al neutro",
+ "tema": "CESA · Protecciones",
+ "etiqueta": "redes",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que el cable de tierra de tu enchufe no va al mismo sitio en *todos* los países?",
+   "titulo": "¿A DÓNDE *VA?*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔌",
+    "linea1": "conductor de protección",
+    "linea2": "TT O TN"
+   }
+  },
+  {
+   "tag": "TT",
+   "sub": "En la red TT, la protección va a *tierra.* Un defecto da poca corriente [(intensidad)]... y la detecta el *diferencial.*",
+   "titulo": "RED *TT*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🌍",
+      "izq": "Protección a",
+      "der": "TIERRA",
+      "en": "tierra."
+     },
+     {
+      "icono": "🛡️",
+      "izq": "Choques eléctricos",
+      "der": "DIFERENCIAL",
+      "rojo": true,
+      "en": "diferencial."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "TN",
+   "sub": "En una red TN va al *neutro.* Un defecto es un cortocircuito... y salta el *magnetotérmico.*",
+   "titulo": "RED *TN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔵",
+      "izq": "Protección a",
+      "der": "NEUTRO",
+      "en": "neutro."
+     },
+     {
+      "icono": "⚡",
+      "izq": "Choques eléctricos",
+      "der": "MAGNETOTÉRMICO",
+      "rojo": true,
+      "en": "magnetotérmico."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "sobrecorrientes",
+   "sub": "Y las sobrecorrientes, en las dos redes, siempre con *magnetotérmico.*",
+   "titulo": "SOBRE*CORRIENTES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚡",
+    "linea1": "en TT y en TN",
+    "linea2": "MAGNETOTÉRMICO"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. TT: tierra y *diferencial.* TN: neutro y *magnetotérmico.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🌍",
+      "izq": "TT",
+      "der": "TIERRA + DIFERENCIAL",
+      "en": "diferencial."
+     },
+     {
+      "icono": "🔵",
+      "izq": "TN",
+      "der": "NEUTRO + MAGNETOTÉRMICO",
+      "rojo": true,
+      "en": "magnetotérmico."
+     }
+    ]
+   }
+  }
+ ]
+}

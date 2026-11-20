@@ -1,0 +1,93 @@
+{
+ "id": "cesa-g-autodescarga-y-modelo",
+ "titulo": "Por qué se descarga una batería guardada",
+ "texto": "Autodescarga y su modelo",
+ "tema": "CESA · Baterías",
+ "etiqueta": "baterías",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe",
+  "R": "erre",
+  "C": "ce"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que una batería guardada en un cajón... se va *vaciando* sola?",
+   "titulo": "SE VACÍA *SOLA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🗄️",
+    "linea1": "sin usarla",
+    "linea2": "AUTODESCARGA"
+   }
+  },
+  {
+   "tag": "por qué",
+   "sub": "Es la autodescarga: pequeñas reacciones *químicas* que siguen ocurriendo dentro, aunque no la uses.",
+   "titulo": "REACCIONES *QUÍMICAS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧪",
+    "linea1": "siguen ocurriendo",
+    "linea2": "AUTODESCARGA"
+   },
+   "num": 1
+  },
+  {
+   "tag": "el frío",
+   "sub": "Y como toda reacción química, con *frío* va más lenta. Por eso la autodescarga baja al bajar la *temperatura.*",
+   "titulo": "CON FRÍO, *MENOS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🥶",
+    "linea1": "menos temperatura",
+    "linea2": "MENOS AUTODESCARGA"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el modelo",
+   "sub": "Otra cosa: por dentro, una batería se modela como una resistencia en *serie*... con grupos de resistencia y condensador en *paralelo.*",
+   "titulo": "EL *MODELO*",
+   "visual": {
+    "tipo": "big",
+    "big": "R + RC + RC",
+    "small": "R en serie con grupos RC en paralelo"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Autodescarga: baja con el *frío.* Y el modelo: R en serie con grupos R C en *paralelo.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🥶",
+      "izq": "Autodescarga",
+      "der": "BAJA CON FRÍO",
+      "en": "frío."
+     },
+     {
+      "icono": "🔧",
+      "izq": "Modelo",
+      "der": "R + GRUPOS RC",
+      "rojo": true,
+      "en": "paralelo."
+     }
+    ]
+   }
+  }
+ ]
+}

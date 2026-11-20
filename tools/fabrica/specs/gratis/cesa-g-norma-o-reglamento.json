@@ -1,0 +1,117 @@
+{
+ "id": "cesa-g-norma-o-reglamento",
+ "titulo": "Norma no es lo mismo que ley",
+ "texto": "Quién las dicta y cuáles obligan",
+ "tema": "CESA · Normativa",
+ "etiqueta": "normativa",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que una *norma* técnica... no te obliga a nada?",
+   "titulo": "LAS NORMAS *NO OBLIGAN*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📘",
+    "linea1": "UNE, CEN, IEC...",
+    "linea2": "VOLUNTARIAS"
+   }
+  },
+  {
+   "tag": "quién las hace",
+   "sub": "Las normas las escriben *comités técnicos:* expertos que se ponen de acuerdo en cómo hacer bien las cosas.",
+   "titulo": "COMITÉS *TÉCNICOS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "👷",
+    "linea1": "expertos del sector",
+    "linea2": "COMITÉS TÉCNICOS"
+   },
+   "num": 1
+  },
+  {
+   "tag": "qué son",
+   "sub": "Por eso son *recomendaciones.* Cumplirlas ayuda... pero nadie te multa por no seguirlas.",
+   "titulo": "SOLO *RECOMIENDAN*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "💡",
+    "linea1": "seguirlas ayuda",
+    "linea2": "RECOMENDACIONES"
+   },
+   "num": 1
+  },
+  {
+   "tag": "los reglamentos",
+   "sub": "Lo que sí obliga son los *reglamentos:* los dicta un gobierno o la Unión Europea... y son ley.",
+   "titulo": "LOS *REGLAMENTOS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📘",
+      "izq": "Norma",
+      "der": "COMITÉ · VOLUNTARIA",
+      "en": "obliga"
+     },
+     {
+      "icono": "⚖️",
+      "izq": "Reglamento",
+      "der": "GOBIERNO · OBLIGATORIO",
+      "rojo": true,
+      "en": "ley."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "la trampa",
+   "sub": "Y ojo: la Comisión Europea no dicta normas. Las normas siempre salen de un *comité.*",
+   "titulo": "LA *TRAMPA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🚫",
+    "linea1": "la Comisión Europea no dicta normas",
+    "linea2": "SIEMPRE UN COMITÉ",
+    "stamp": "¡OJO!"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Norma: comité y *voluntaria.* Reglamento: gobierno y *obligatorio.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📘",
+      "izq": "Norma",
+      "der": "COMITÉ · VOLUNTARIA",
+      "en": "voluntaria."
+     },
+     {
+      "icono": "⚖️",
+      "izq": "Reglamento",
+      "der": "GOBIERNO · OBLIGATORIO",
+      "rojo": true,
+      "en": "obligatorio."
+     }
+    ]
+   }
+  }
+ ]
+}

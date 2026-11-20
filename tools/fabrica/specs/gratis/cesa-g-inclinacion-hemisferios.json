@@ -1,0 +1,128 @@
+{
+ "id": "cesa-g-inclinacion-hemisferios",
+ "titulo": "Junio no es verano en todas partes",
+ "texto": "Inclinar placas en el hemisferio sur",
+ "tema": "CESA · Fotovoltaica",
+ "etiqueta": "inclinación",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que en Buenos Aires, en junio... la placa se inclina como en *invierno?*",
+   "titulo": "JUNIO = *INVIERNO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🌎",
+    "linea1": "hemisferio sur",
+    "linea2": "ESTACIONES AL REVÉS"
+   }
+  },
+  {
+   "tag": "la regla",
+   "sub": "Verano: el sol va *alto,* la placa casi plana. Invierno: el sol va *bajo,* la placa muy de pie.",
+   "titulo": "LA *REGLA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "☀️",
+      "izq": "Verano",
+      "der": "≈ 15 GRADOS",
+      "en": "alto,"
+     },
+     {
+      "icono": "❄️",
+      "izq": "Invierno",
+      "der": "≈ 55 GRADOS",
+      "rojo": true,
+      "en": "bajo,"
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "al norte",
+   "sub": "En el hemisferio norte: junio, verano... unos *quince* grados. Diciembre, invierno... unos *cincuenta y cinco.*",
+   "titulo": "HEMISFERIO *NORTE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "☀️",
+      "izq": "Junio",
+      "der": "≈ 15°",
+      "en": "quince"
+     },
+     {
+      "icono": "❄️",
+      "izq": "Diciembre",
+      "der": "≈ 55°",
+      "rojo": true,
+      "en": "cinco."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "al sur",
+   "sub": "En el sur, *al revés:* junio es invierno, cincuenta y cinco... y diciembre es verano, *quince.*",
+   "titulo": "HEMISFERIO *SUR*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "❄️",
+      "izq": "Junio",
+      "der": "≈ 55°",
+      "rojo": true,
+      "en": "invierno,"
+     },
+     {
+      "icono": "☀️",
+      "izq": "Diciembre",
+      "der": "≈ 15°",
+      "en": "quince."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Primero mira el *hemisferio*... y luego si es verano o *invierno.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🌎",
+      "izq": "Primero",
+      "der": "EL HEMISFERIO",
+      "en": "hemisferio..."
+     },
+     {
+      "icono": "❄️",
+      "izq": "Invierno",
+      "der": "MÁS INCLINADA",
+      "rojo": true,
+      "en": "invierno."
+     }
+    ]
+   }
+  }
+ ]
+}

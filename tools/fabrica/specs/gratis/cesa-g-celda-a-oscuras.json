@@ -1,0 +1,96 @@
+{
+ "id": "cesa-g-celda-a-oscuras",
+ "titulo": "Una placa solar a oscuras",
+ "texto": "Se convierte en otra cosa",
+ "tema": "CESA · Fotovoltaica",
+ "etiqueta": "celdas",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe",
+  "PN": "pe ene"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que una celda solar a oscuras... se convierte en un componente de lo más *normal?*",
+   "titulo": "A *OSCURAS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🌑",
+    "linea1": "sin nada de luz",
+    "linea2": "¿QUÉ QUEDA?"
+   }
+  },
+  {
+   "tag": "qué es",
+   "sub": "Una celda es una unión PN muy grande. Sin luz, no genera nada... y lo que queda es un *diodo.*",
+   "titulo": "UN *DIODO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔻",
+    "linea1": "unión PN sin luz",
+    "linea2": "UN DIODO"
+   },
+   "num": 1
+  },
+  {
+   "tag": "las trampas",
+   "sub": "No es un circuito abierto, ni una resistencia, ni un transistor. Es un *diodo.*",
+   "titulo": "NI ABIERTO *NI* RESISTENCIA",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "❌",
+      "izq": "Circuito abierto",
+      "der": "NO"
+     },
+     {
+      "icono": "❌",
+      "izq": "Resistencia",
+      "der": "NO"
+     },
+     {
+      "icono": "✅",
+      "izq": "Diodo",
+      "der": "SÍ",
+      "rojo": true,
+      "en": "diodo."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "con luz",
+   "sub": "Con luz, es ese mismo diodo... con una fuente de corriente [(intensidad)] en paralelo que crece con la *luz.*",
+   "titulo": "CON *LUZ*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "☀️",
+    "linea1": "diodo + fuente de corriente",
+    "linea2": "LA LUZ AÑADE CORRIENTE"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Celda a oscuras... *diodo.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "A OSCURAS = DIODO",
+    "small": "una unión PN"
+   }
+  }
+ ]
+}

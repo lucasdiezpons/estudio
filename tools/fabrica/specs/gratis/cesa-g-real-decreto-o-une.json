@@ -1,0 +1,104 @@
+{
+ "id": "cesa-g-real-decreto-o-une",
+ "titulo": "Real Decreto o UNE",
+ "texto": "Cómo saber si algo obliga solo por su nombre",
+ "tema": "CESA · Normativa",
+ "etiqueta": "normativa",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que con leer el *nombre* de un documento ya sabes si es obligatorio?",
+   "titulo": "MIRA EL *NOMBRE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔎",
+    "linea1": "solo con el nombre",
+    "linea2": "¿OBLIGA O NO?"
+   }
+  },
+  {
+   "tag": "UNE",
+   "sub": "Si empieza por *UNE*... es una norma. La escribe un comité técnico... y no es obligatoria.",
+   "titulo": "SI DICE *UNE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📘",
+    "linea1": "UNE 20503, por ejemplo",
+    "linea2": "NORMA · VOLUNTARIA"
+   },
+   "num": 1
+  },
+  {
+   "tag": "Real Decreto",
+   "sub": "Si dice *Real Decreto*... es un reglamento. Lo dicta el Gobierno... y hay que cumplirlo sí o sí.",
+   "titulo": "SI DICE *REAL DECRETO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚖️",
+    "linea1": "Real Decreto 1580 de 2006, por ejemplo",
+    "linea2": "GOBIERNO · OBLIGATORIO"
+   },
+   "num": 2
+  },
+  {
+   "tag": "mismo tema",
+   "sub": "Pueden hablar del mismo tema, como la compatibilidad *electromagnética*... y aun así uno obliga y el otro no.",
+   "titulo": "MISMO *TEMA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📘",
+      "izq": "UNE 20503",
+      "der": "NO OBLIGA",
+      "en": "obliga"
+     },
+     {
+      "icono": "⚖️",
+      "izq": "Real Decreto 1580",
+      "der": "OBLIGA",
+      "rojo": true,
+      "en": "no."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. UNE, *voluntaria.* Real Decreto, *obligatorio.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📘",
+      "izq": "UNE",
+      "der": "VOLUNTARIA",
+      "en": "voluntaria."
+     },
+     {
+      "icono": "⚖️",
+      "izq": "Real Decreto",
+      "der": "OBLIGATORIO",
+      "rojo": true,
+      "en": "obligatorio."
+     }
+    ]
+   }
+  }
+ ]
+}

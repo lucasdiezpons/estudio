@@ -1,0 +1,105 @@
+{
+ "id": "cesa-g-supercondensador-ventajas",
+ "titulo": "Supercondensador contra batería",
+ "texto": "Quién gana en qué",
+ "tema": "CESA · Baterías",
+ "etiqueta": "almacenamiento",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que el supercondensador gana a la batería en algunas cosas... pero en otras *pierde?*",
+   "titulo": "QUIÉN *GANA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🥊",
+    "linea1": "supercondensador vs batería",
+    "linea2": "CARA A CARA"
+   }
+  },
+  {
+   "tag": "gana",
+   "sub": "Gana en *ciclos:* aguanta cientos de miles de cargas. Y su resistencia interna es más *baja.*",
+   "titulo": "GANA EN",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "♾️",
+      "izq": "Ciclos de vida",
+      "der": "MUCHOS MÁS",
+      "rojo": true,
+      "en": "ciclos:"
+     },
+     {
+      "icono": "⚡",
+      "izq": "Resistencia interna",
+      "der": "MÁS BAJA",
+      "en": "baja."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "pierde",
+   "sub": "Pierde en *energía:* para el mismo tamaño guarda mucha menos que una batería.",
+   "titulo": "PIERDE EN",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🪫",
+    "linea1": "densidad de energía",
+    "linea2": "MUCHO MENOR"
+   },
+   "num": 2
+  },
+  {
+   "tag": "la descarga",
+   "sub": "Y su tensión [(voltaje)] no es constante: al descargarse va cayendo en *línea* recta, como un condensador.",
+   "titulo": "LA *DESCARGA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📉",
+    "linea1": "la tensión cae en recta",
+    "linea2": "NO ES CONSTANTE",
+    "stamp": "¡OJO!"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Su gran ventaja son los *ciclos*... no la *energía.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "✅",
+      "izq": "Ventaja",
+      "der": "MÁS CICLOS",
+      "rojo": true,
+      "en": "ciclos..."
+     },
+     {
+      "icono": "❌",
+      "izq": "No",
+      "der": "MÁS ENERGÍA",
+      "en": "energía."
+     }
+    ]
+   }
+  }
+ ]
+}

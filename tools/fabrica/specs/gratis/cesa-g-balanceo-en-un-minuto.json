@@ -1,0 +1,93 @@
+{
+ "id": "cesa-g-balanceo-en-un-minuto",
+ "titulo": "Balanceo pasivo y activo",
+ "texto": "Quemar o repartir",
+ "tema": "CESA · Baterías",
+ "etiqueta": "balanceo",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que las celdas de una batería nunca se cargan exactamente *igual?*",
+   "titulo": "NUNCA *IGUALES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚖️",
+    "linea1": "celdas en serie",
+    "linea2": "HAY QUE IGUALARLAS"
+   }
+  },
+  {
+   "tag": "pasivo",
+   "sub": "El balanceo *pasivo* es el bruto: a la celda más cargada le pone una resistencia... y *quema* lo que le sobra.",
+   "titulo": "*PASIVO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔥",
+    "linea1": "resistencia en la más cargada",
+    "linea2": "DISIPA ENERGÍA"
+   },
+   "num": 1
+  },
+  {
+   "tag": "activo",
+   "sub": "El *activo* es el listo: con un convertidor conmutado *pasa* energía de la más cargada a la menos.",
+   "titulo": "*ACTIVO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔁",
+    "linea1": "convertidor conmutado",
+    "linea2": "TRANSFIERE ENERGÍA"
+   },
+   "num": 2
+  },
+  {
+   "tag": "la trampa",
+   "sub": "No tiene nada que ver con corrientes de sostenimiento ni con descansos durante la carga. Eso es *otra* cosa.",
+   "titulo": "LA *TRAMPA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🚫",
+    "linea1": "ni sostenimiento ni descansos",
+    "linea2": "NO ES BALANCEO",
+    "stamp": "¡OJO!"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Pasivo, *quema.* Activo, *reparte.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔥",
+      "izq": "Pasivo",
+      "der": "QUEMA EN UNA RESISTENCIA",
+      "en": "quema."
+     },
+     {
+      "icono": "🔁",
+      "izq": "Activo",
+      "der": "REPARTE CON UN CONVERTIDOR",
+      "rojo": true,
+      "en": "reparte."
+     }
+    ]
+   }
+  }
+ ]
+}

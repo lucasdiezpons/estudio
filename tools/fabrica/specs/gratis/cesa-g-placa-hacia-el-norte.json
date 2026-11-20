@@ -1,0 +1,103 @@
+{
+ "id": "cesa-g-placa-hacia-el-norte",
+ "titulo": "Placas que miran al norte",
+ "texto": "En el hemisferio sur",
+ "tema": "CESA · Fotovoltaica",
+ "etiqueta": "inclinación",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que en Argentina las placas solares miran al *norte?*",
+   "titulo": "MIRAN AL *NORTE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧭",
+    "linea1": "hemisferio sur",
+    "linea2": "HACIA EL NORTE"
+   }
+  },
+  {
+   "tag": "por qué",
+   "sub": "La placa siempre mira hacia el *ecuador,* que es por donde pasa el sol. Al sur del ecuador... eso es el *norte.*",
+   "titulo": "HACIA EL *ECUADOR*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🌍",
+      "izq": "Hemisferio norte",
+      "der": "MIRA AL SUR",
+      "en": "ecuador,"
+     },
+     {
+      "icono": "🌎",
+      "izq": "Hemisferio sur",
+      "der": "MIRA AL NORTE",
+      "rojo": true,
+      "en": "norte."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "cómo se escribe",
+   "sub": "Por eso verás inclinaciones como diez grados *norte* o cincuenta y cinco grados *norte.*",
+   "titulo": "GRADOS *NORTE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📐",
+    "linea1": "inclinación + hacia dónde mira",
+    "linea2": "10°N · 55°N"
+   },
+   "num": 2
+  },
+  {
+   "tag": "ejemplo",
+   "sub": "Buenos Aires en diciembre, verano: poca inclinación, unos *diez* grados norte. En junio, invierno: unos *cincuenta y cinco.*",
+   "titulo": "BUENOS *AIRES*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "☀️",
+      "izq": "Diciembre",
+      "der": "≈ 10°N",
+      "en": "diez"
+     },
+     {
+      "icono": "❄️",
+      "izq": "Junio",
+      "der": "≈ 55°N",
+      "rojo": true,
+      "en": "cinco."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. La placa mira siempre hacia el *ecuador.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "MIRA AL ECUADOR",
+    "small": "sur → norte · norte → sur"
+   }
+  }
+ ]
+}

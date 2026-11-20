@@ -1,0 +1,90 @@
+{
+ "id": "cesa-g-arranque-proteccion-lenta",
+ "titulo": "Por qué no salta al arrancar un motor",
+ "texto": "Protecciones lentas",
+ "tema": "CESA · Protecciones",
+ "etiqueta": "dispositivos",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que al encender un motor hay un pico de corriente [(intensidad)] enorme... y la protección *no* debe saltar?",
+   "titulo": "QUE *NO* SALTE",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚙️",
+    "linea1": "transitorio de arranque",
+    "linea2": "PICO NORMAL"
+   }
+  },
+  {
+   "tag": "el problema",
+   "sub": "Ese pico es *normal:* dura un momento. Si la protección fuera rápida... saltaría cada vez que *enciendes.*",
+   "titulo": "EL *PROBLEMA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⏱️",
+    "linea1": "dura un momento",
+    "linea2": "PICO NORMAL"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la solución",
+   "sub": "Por eso se usan dispositivos *lentos*... que suelen ser *térmicos:* necesitan tiempo para calentarse.",
+   "titulo": "*LENTOS* Y TÉRMICOS",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔥",
+    "linea1": "necesitan tiempo para calentarse",
+    "linea2": "LENTO = TÉRMICO"
+   },
+   "num": 2
+  },
+  {
+   "tag": "los rápidos",
+   "sub": "Los *rápidos* suelen ser magnéticos: esos son para los cortocircuitos de verdad.",
+   "titulo": "LOS *RÁPIDOS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🐢",
+      "izq": "Lento",
+      "der": "TÉRMICO · ARRANQUES"
+     },
+     {
+      "icono": "⚡",
+      "izq": "Rápido",
+      "der": "MAGNÉTICO · CORTOCIRCUITOS",
+      "rojo": true,
+      "en": "magnéticos:"
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Arranques, protección *lenta* y *térmica.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "LENTO = TÉRMICO",
+    "small": "para los transitorios de arranque"
+   }
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "id": "cesa-g-punto-caliente-paralelo",
+ "titulo": "Una celda a la sombra en paralelo",
+ "texto": "Aquí la solución es al revés",
+ "tema": "CESA · Fotovoltaica",
+ "etiqueta": "sombras",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que si las celdas van en *paralelo*... la solución a la sombra es justo la contraria?",
+   "titulo": "AL *REVÉS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔀",
+    "linea1": "celdas en paralelo",
+    "linea2": "OTRA SOLUCIÓN"
+   }
+  },
+  {
+   "tag": "qué pasa",
+   "sub": "La celda tapada no genera... y las demás le *meten* corriente [(intensidad)] a ella. Se calienta: punto *caliente.*",
+   "titulo": "LE METEN *CORRIENTE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔥",
+    "linea1": "las demás la alimentan",
+    "linea2": "PUNTO CALIENTE"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la solución",
+   "sub": "Para cortarlo, un diodo en *serie* con cada celda: deja salir la corriente... pero no la deja *entrar.*",
+   "titulo": "DIODO EN *SERIE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⛔",
+    "linea1": "deja salir, no entrar",
+    "linea2": "DIODO DE BLOQUEO"
+   },
+   "num": 2
+  },
+  {
+   "tag": "la regla",
+   "sub": "La regla es fácil: en serie, diodo en *paralelo.* En paralelo, diodo en *serie.*",
+   "titulo": "LA *REGLA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔗",
+      "izq": "Celdas en serie",
+      "der": "DIODO EN PARALELO",
+      "en": "paralelo."
+     },
+     {
+      "icono": "🔀",
+      "izq": "Celdas en paralelo",
+      "der": "DIODO EN SERIE",
+      "rojo": true,
+      "en": "serie."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Siempre punto caliente... y el diodo, al *revés* que las celdas.",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "SERIE / PARALELO",
+    "small": "el diodo, al revés que las celdas"
+   }
+  }
+ ]
+}

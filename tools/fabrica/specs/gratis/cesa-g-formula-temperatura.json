@@ -1,0 +1,102 @@
+{
+ "id": "cesa-g-formula-temperatura",
+ "titulo": "Corregir una placa por temperatura",
+ "texto": "Una fórmula para todo",
+ "tema": "CESA · Dimensionado FV",
+ "etiqueta": "temperatura",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que una sola fórmula corrige la potencia, la tensión [(voltaje)] y la corriente [(intensidad)] por temperatura?",
+   "titulo": "UNA *FÓRMULA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🌡️",
+    "linea1": "potencia, tensión, corriente",
+    "linea2": "LA MISMA FÓRMULA"
+   }
+  },
+  {
+   "tag": "la fórmula",
+   "sub": "El valor a veinticinco grados... por uno, más el coeficiente por la diferencia de *temperatura.*",
+   "titulo": "LA *FÓRMULA*",
+   "visual": {
+    "tipo": "big",
+    "big": "X(T) = X(25)·(1 + c·(T−25))",
+    "small": "c en tanto por uno por grado"
+   },
+   "num": 1
+  },
+  {
+   "tag": "el signo",
+   "sub": "El coeficiente lleva su *signo:* la corriente es positivo, y la tensión y la potencia, *negativo.*",
+   "titulo": "EL *SIGNO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "➕",
+      "izq": "Corriente",
+      "der": "COEFICIENTE +",
+      "en": "positivo,"
+     },
+     {
+      "icono": "➖",
+      "izq": "Tensión y potencia",
+      "der": "COEFICIENTE −",
+      "rojo": true,
+      "en": "negativo."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "ejemplo",
+   "sub": "Ejemplo: treinta watios a cuarenta y cinco grados, con menos cero coma treinta y ocho por ciento: veintisiete coma *siete.*",
+   "titulo": "*EJEMPLO*",
+   "visual": {
+    "tipo": "big",
+    "big": "30·(1 − 0,0038·20) = 27,7 W",
+    "small": "potencia a 45 °C"
+   },
+   "num": 3
+  },
+  {
+   "tag": "ojo",
+   "sub": "Y ojo: el porcentaje, pásalo a tanto por *uno.* Cero coma treinta y ocho por ciento... es cero coma cero cero treinta y *ocho.*",
+   "titulo": "TANTO POR *UNO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "➗",
+    "linea1": "−0,38 % → −0,0038",
+    "linea2": "DIVIDE ENTRE 100",
+    "stamp": "¡OJO!"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Valor a veinticinco... por uno más coeficiente por la *diferencia.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "X(25)·(1 + c·ΔT)",
+    "small": "corrección por temperatura"
+   }
+  }
+ ]
+}

@@ -1,0 +1,115 @@
+{
+ "id": "cesa-g-consumo-diario",
+ "titulo": "Cuánta energía gasta un aparato al día",
+ "texto": "Potencia por tiempo, y sumar",
+ "tema": "CESA · Dimensionado FV",
+ "etiqueta": "consumo",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe",
+  "E": "e"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que para dimensionar una instalación solar... todo empieza por una *suma?*",
+   "titulo": "UNA *SUMA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "➕",
+    "linea1": "consumo de un día",
+    "linea2": "EMPIEZA AQUÍ"
+   }
+  },
+  {
+   "tag": "la fórmula",
+   "sub": "Energía es potencia por *tiempo.* Haces eso para cada modo del aparato... y lo *sumas.*",
+   "titulo": "POTENCIA × *TIEMPO*",
+   "visual": {
+    "tipo": "big",
+    "big": "E = Σ P · t",
+    "small": "y sumas cada modo"
+   },
+   "num": 1
+  },
+  {
+   "tag": "eventos",
+   "sub": "Si te dan la energía de cada *evento,* como una transmisión... la multiplicas por las veces que pasa.",
+   "titulo": "LOS *EVENTOS*",
+   "visual": {
+    "tipo": "big",
+    "big": "+ E evento · nº",
+    "small": "energía por las veces"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la trampa",
+   "sub": "Ojo: si dicen potencia *total,* ese tiempo se lo restas al reposo. Si dicen potencia *extra,* lo sumas encima.",
+   "titulo": "TOTAL O *EXTRA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "➖",
+      "izq": "Potencia total",
+      "der": "RESTA AL REPOSO",
+      "rojo": true,
+      "en": "total,"
+     },
+     {
+      "icono": "➕",
+      "izq": "Potencia extra",
+      "der": "SUMA ENCIMA",
+      "en": "extra,"
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "unidades",
+   "sub": "Y cuidado con las unidades: los miliwatios hora entre mil... son watios *hora.*",
+   "titulo": "LAS *UNIDADES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📏",
+    "linea1": "mWh / 1000 = Wh",
+    "linea2": "UNIDADES"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Potencia por tiempo, más eventos... y *total* se resta, *extra* se suma.",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "➕",
+      "izq": "Consumo",
+      "der": "Σ P · t + EVENTOS",
+      "en": "eventos..."
+     },
+     {
+      "icono": "⚠️",
+      "izq": "Total / extra",
+      "der": "RESTA / SUMA",
+      "rojo": true,
+      "en": "suma."
+     }
+    ]
+   }
+  }
+ ]
+}

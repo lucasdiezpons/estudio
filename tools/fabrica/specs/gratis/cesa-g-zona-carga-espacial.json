@@ -1,0 +1,91 @@
+{
+ "id": "cesa-g-zona-carga-espacial",
+ "titulo": "Dónde atrapa la luz una placa",
+ "texto": "La zona de carga espacial",
+ "tema": "CESA · Fotovoltaica",
+ "etiqueta": "celdas",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe",
+  "P": "pe",
+  "N": "ene",
+  "PN": "pe ene"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que en una placa solar... no todo el silicio sirve para generar electricidad?",
+   "titulo": "NO TODO *SIRVE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "☀️",
+    "linea1": "dentro de una celda",
+    "linea2": "¿DÓNDE SE GENERA?"
+   }
+  },
+  {
+   "tag": "la unión",
+   "sub": "Una celda es una unión de silicio *P* con silicio *N.* Justo en la frontera aparece una zona especial.",
+   "titulo": "LA *UNIÓN PN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🟥",
+      "izq": "Zona P",
+      "der": "SILICIO P"
+     },
+     {
+      "icono": "🟦",
+      "izq": "Zona N",
+      "der": "SILICIO N"
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "la zona",
+   "sub": "Es la zona de carga *espacial:* allí hay un campo eléctrico que separa los electrones de los huecos.",
+   "titulo": "CARGA *ESPACIAL*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚡",
+    "linea1": "aquí hay campo eléctrico",
+    "linea2": "ZONA DE CARGA ESPACIAL"
+   },
+   "num": 2
+  },
+  {
+   "tag": "por qué",
+   "sub": "Si la luz crea un par lejos de ahí... se vuelve a juntar y se pierde. Solo en esa zona se *aprovecha.*",
+   "titulo": "SOLO AHÍ *SIRVE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎯",
+    "linea1": "el campo separa el par",
+    "linea2": "ZONA FOTOSENSIBLE"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. La zona fotosensible no es la P ni la N... es la zona de carga *espacial.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "ZONA DE CARGA ESPACIAL",
+    "small": "= zona fotosensible"
+   }
+  }
+ ]
+}

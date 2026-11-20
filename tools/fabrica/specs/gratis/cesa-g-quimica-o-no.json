@@ -1,0 +1,104 @@
+{
+ "id": "cesa-g-quimica-o-no",
+ "titulo": "Qué guarda energía con química",
+ "texto": "Baterías, pilas de combustible y supercondensadores",
+ "tema": "CESA · Baterías",
+ "etiqueta": "almacenamiento",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que un supercondensador guarda energía... *sin* ninguna reacción química?",
+   "titulo": "SIN *QUÍMICA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧪",
+    "linea1": "¿química o no?",
+    "linea2": "3 DISPOSITIVOS"
+   }
+  },
+  {
+   "tag": "con química",
+   "sub": "Las *baterías* y las pilas de *combustible* sí funcionan con reacciones químicas.",
+   "titulo": "CON *QUÍMICA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔋",
+      "izq": "Baterías",
+      "der": "QUÍMICA",
+      "en": "baterías"
+     },
+     {
+      "icono": "⛽",
+      "izq": "Pilas de combustible",
+      "der": "QUÍMICA",
+      "rojo": true,
+      "en": "combustible"
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "sin química",
+   "sub": "El supercondensador no: solo *desplaza* iones, que se pegan a sus placas. Nada se transforma.",
+   "titulo": "SIN *QUÍMICA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚡",
+    "linea1": "solo desplaza iones",
+    "linea2": "SUPERCONDENSADOR"
+   },
+   "num": 2
+  },
+  {
+   "tag": "la consecuencia",
+   "sub": "Y como no se desgasta con reacciones... aguanta muchísimos más *ciclos* que una batería.",
+   "titulo": "MÁS *CICLOS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "♾️",
+    "linea1": "no hay reacción que lo gaste",
+    "linea2": "VIDA ÚTIL MAYOR"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Baterías y pilas de combustible, química. Supercondensador, *iones*... y más *vida.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🧪",
+      "izq": "Baterías y pilas",
+      "der": "QUÍMICA",
+      "en": "química."
+     },
+     {
+      "icono": "⚡",
+      "izq": "Supercondensador",
+      "der": "IONES · MÁS VIDA",
+      "rojo": true,
+      "en": "vida."
+     }
+    ]
+   }
+  }
+ ]
+}

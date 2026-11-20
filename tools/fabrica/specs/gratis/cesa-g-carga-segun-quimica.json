@@ -1,0 +1,99 @@
+{
+ "id": "cesa-g-carga-segun-quimica",
+ "titulo": "Cómo se carga cada batería",
+ "texto": "Plomo, litio y níquel",
+ "tema": "CESA · Baterías",
+ "etiqueta": "carga",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe",
+  "CC/CV": "ce ce, ce uve"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que cada tipo de batería tiene su propia forma de *cargarse?*",
+   "titulo": "CADA UNA *A SU MANERA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔌",
+    "linea1": "plomo, litio, níquel",
+    "linea2": "3 FORMAS"
+   }
+  },
+  {
+   "tag": "plomo",
+   "sub": "La de *plomo* es la más flexible: a tensión [(voltaje)] constante... o corriente constante y luego tensión constante.",
+   "titulo": "*PLOMO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🚗",
+    "linea1": "tensión constante o CC/CV",
+    "linea2": "DOS OPCIONES"
+   },
+   "num": 1
+  },
+  {
+   "tag": "litio",
+   "sub": "La de *litio* solo admite una: corriente [(intensidad)] constante y luego tensión constante. Solo esa.",
+   "titulo": "*LITIO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📱",
+    "linea1": "corriente constante → tensión constante",
+    "linea2": "SOLO CC/CV"
+   },
+   "num": 2
+  },
+  {
+   "tag": "níquel",
+   "sub": "Y la de níquel metal hidruro, al revés: solo corriente *constante,* y se corta por temperatura.",
+   "titulo": "*NÍQUEL*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔋",
+    "linea1": "y se corta por temperatura",
+    "linea2": "SOLO CORRIENTE CONSTANTE"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Plomo, las *dos.* Litio, CC/CV. Níquel, corriente *constante.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🚗",
+      "izq": "Plomo",
+      "der": "CV o CC/CV",
+      "en": "dos."
+     },
+     {
+      "icono": "📱",
+      "izq": "Litio",
+      "der": "SOLO CC/CV",
+      "rojo": true,
+      "en": "CC/CV."
+     },
+     {
+      "icono": "🔋",
+      "izq": "NiMH",
+      "der": "SOLO CC",
+      "en": "constante."
+     }
+    ]
+   }
+  }
+ ]
+}

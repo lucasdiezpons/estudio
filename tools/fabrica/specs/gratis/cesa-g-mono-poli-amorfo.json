@@ -1,0 +1,98 @@
+{
+ "id": "cesa-g-mono-poli-amorfo",
+ "titulo": "Mono, poli y amorfo",
+ "texto": "El orden que nunca cambia",
+ "tema": "CESA · Fotovoltaica",
+ "etiqueta": "paneles",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que con *un* solo orden ya sabes qué placa rinde más... y cuál es más cara?",
+   "titulo": "UN SOLO *ORDEN*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🥇",
+    "linea1": "rendimiento y coste",
+    "linea2": "MISMO ORDEN"
+   }
+  },
+  {
+   "tag": "el orden",
+   "sub": "Monocristalino... policristalino... y amorfo. Más orden en el cristal, *más* rendimiento.",
+   "titulo": "EL *ORDEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🥇",
+      "izq": "Monocristalino",
+      "der": "UN CRISTAL",
+      "rojo": true,
+      "en": "Monocristalino..."
+     },
+     {
+      "icono": "🥈",
+      "izq": "Policristalino",
+      "der": "MUCHOS CRISTALES",
+      "en": "policristalino..."
+     },
+     {
+      "icono": "🥉",
+      "izq": "Amorfo",
+      "der": "SIN RED CRISTALINA",
+      "en": "amorfo."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "el precio",
+   "sub": "Y el precio va *igual:* el mono es el más caro... y el amorfo el más *barato.*",
+   "titulo": "EL *PRECIO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "💶",
+    "linea1": "de mayor a menor",
+    "linea2": "MONO > POLI > AMORFO"
+   },
+   "num": 2
+  },
+  {
+   "tag": "la trampa",
+   "sub": "Ojo cuando te lo pidan al revés, de *menor* a mayor: amorfo, poli... y mono.",
+   "titulo": "AL *REVÉS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔄",
+    "linea1": "de menor a mayor",
+    "linea2": "AMORFO < POLI < MONO",
+    "stamp": "¡OJO!"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Mono, poli, amorfo... en rendimiento y en *precio.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "MONO > POLI > AMORFO",
+    "small": "rendimiento y coste"
+   }
+  }
+ ]
+}

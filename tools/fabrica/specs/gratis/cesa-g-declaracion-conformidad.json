@@ -1,0 +1,114 @@
+{
+ "id": "cesa-g-declaracion-conformidad",
+ "titulo": "La Declaración de Conformidad",
+ "texto": "Para qué productos y por qué",
+ "tema": "CESA · Normativa",
+ "etiqueta": "normativa",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que *todos* los productos que se venden necesitan un papel firmado por el fabricante?",
+   "titulo": "UN *PAPEL*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📄",
+    "linea1": "Declaración de Conformidad",
+    "linea2": "PARA TODOS"
+   }
+  },
+  {
+   "tag": "cuáles",
+   "sub": "No solo los peligrosos: *todos.* Del cargador del móvil a una tostadora.",
+   "titulo": "*TODOS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⚠️",
+      "izq": "Solo los peligrosos",
+      "der": "NO"
+     },
+     {
+      "icono": "✅",
+      "izq": "Todos los productos",
+      "der": "SÍ",
+      "rojo": true,
+      "en": "todos."
+     }
+    ]
+   }
+  },
+  {
+   "tag": "por qué",
+   "sub": "Y se entrega para responder de los *reglamentos*... que son lo obligatorio. No de las normas.",
+   "titulo": "LOS *REGLAMENTOS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📘",
+      "izq": "Normas",
+      "der": "NO",
+      "en": "normas."
+     },
+     {
+      "icono": "⚖️",
+      "izq": "Reglamentos",
+      "der": "SÍ",
+      "rojo": true,
+      "en": "reglamentos..."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "a quién",
+   "sub": "Se entrega a la administración pública... y con ella el fabricante se hace *responsable.*",
+   "titulo": "LA *ADMINISTRACIÓN*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏛️",
+    "linea1": "se entrega a",
+    "linea2": "LA ADMINISTRACIÓN"
+   },
+   "num": 2
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Para *todos* los productos... y por los *reglamentos.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📄",
+      "izq": "Para",
+      "der": "TODOS LOS PRODUCTOS",
+      "en": "todos"
+     },
+     {
+      "icono": "⚖️",
+      "izq": "Por",
+      "der": "LOS REGLAMENTOS",
+      "rojo": true,
+      "en": "reglamentos."
+     }
+    ]
+   }
+  }
+ ]
+}

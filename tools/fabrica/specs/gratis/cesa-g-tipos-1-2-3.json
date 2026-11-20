@@ -1,0 +1,134 @@
+{
+ "id": "cesa-g-tipos-1-2-3",
+ "titulo": "Protectores tipo 1, 2 y 3",
+ "texto": "Quién aguanta qué",
+ "tema": "CESA · Protecciones",
+ "etiqueta": "sobretensiones",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que el protector que aguanta un rayo directo... no sirve para proteger tu *ordenador?*",
+   "titulo": "AGUANTA, *PERO...*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🛡️",
+    "linea1": "protectores de sobretensión",
+    "linea2": "TIPO 1, 2 Y 3"
+   }
+  },
+  {
+   "tag": "tipo 1",
+   "sub": "El *tipo 1* aguanta rayos directos... pero deja pasar demasiada tensión [(voltaje)] para los equipos sensibles, los de categoría *uno.*",
+   "titulo": "TIPO *1*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⚡",
+      "izq": "Rayo directo",
+      "der": "SÍ",
+      "en": "directos..."
+     },
+     {
+      "icono": "💻",
+      "izq": "Categoría I",
+      "der": "NO",
+      "rojo": true,
+      "en": "uno."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "tipo 2",
+   "sub": "El *tipo 2* solo aguanta rayos indirectos... y tampoco protege la categoría *uno.*",
+   "titulo": "TIPO *2*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⚡",
+      "izq": "Rayo directo",
+      "der": "NO",
+      "en": "indirectos..."
+     },
+     {
+      "icono": "💻",
+      "izq": "Categoría I",
+      "der": "NO",
+      "rojo": true,
+      "en": "uno."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "tipo 3",
+   "sub": "El *tipo 3* solo aguanta indirectos... pero es el único que sí protege la categoría *uno.*",
+   "titulo": "TIPO *3*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⚡",
+      "izq": "Rayo directo",
+      "der": "NO",
+      "en": "indirectos..."
+     },
+     {
+      "icono": "💻",
+      "izq": "Categoría I",
+      "der": "SÍ",
+      "rojo": true,
+      "en": "uno."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Tipo uno, el *rayo.* Tipo tres, el *equipo.* Y el dos, ninguna de las dos.",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "1️⃣",
+      "izq": "Tipo 1",
+      "der": "AGUANTA EL DIRECTO",
+      "en": "rayo."
+     },
+     {
+      "icono": "2️⃣",
+      "izq": "Tipo 2",
+      "der": "SOLO INDIRECTOS",
+      "en": "dos."
+     },
+     {
+      "icono": "3️⃣",
+      "izq": "Tipo 3",
+      "der": "PROTEGE CATEGORÍA I",
+      "rojo": true,
+      "en": "equipo."
+     }
+    ]
+   }
+  }
+ ]
+}

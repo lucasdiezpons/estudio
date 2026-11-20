@@ -1,0 +1,97 @@
+{
+ "id": "cesa-g-difusion-y-arrastre",
+ "titulo": "Las dos corrientes de una celda",
+ "texto": "Difusión y arrastre",
+ "tema": "CESA · Fotovoltaica",
+ "etiqueta": "celdas",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que dentro de una celda solar hay dos corrientes [(intensidades)] que se mueven por motivos *distintos?*",
+   "titulo": "DOS *CORRIENTES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔀",
+    "linea1": "dentro de la celda",
+    "linea2": "DOS MOTIVOS"
+   }
+  },
+  {
+   "tag": "difusión",
+   "sub": "La de *difusión:* los portadores van de donde hay muchos... a donde hay pocos. Como el olor de un perfume.",
+   "titulo": "*DIFUSIÓN*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🌸",
+    "linea1": "de mucha concentración a poca",
+    "linea2": "DIFUSIÓN"
+   },
+   "num": 1
+  },
+  {
+   "tag": "arrastre",
+   "sub": "La de *arrastre:* la empuja un campo eléctrico, como el de la zona de carga espacial.",
+   "titulo": "*ARRASTRE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚡",
+    "linea1": "la empuja un campo eléctrico",
+    "linea2": "ARRASTRE"
+   },
+   "num": 2
+  },
+  {
+   "tag": "no confundir",
+   "sub": "No confundas: difusión es por *concentración*... arrastre es por *campo.* Y la de la luz es la fotogenerada.",
+   "titulo": "NO LAS *CONFUNDAS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🌸",
+      "izq": "Difusión",
+      "der": "CONCENTRACIÓN",
+      "en": "concentración..."
+     },
+     {
+      "icono": "⚡",
+      "izq": "Arrastre",
+      "der": "CAMPO ELÉCTRICO",
+      "rojo": true,
+      "en": "campo."
+     },
+     {
+      "icono": "☀️",
+      "izq": "Fotogenerada",
+      "der": "LA LUZ",
+      "en": "fotogenerada."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Difusión: los portadores se reparten de donde hay más... a donde hay *menos.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "DIFUSIÓN",
+    "small": "= diferencias de concentración"
+   }
+  }
+ ]
+}

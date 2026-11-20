@@ -1,0 +1,117 @@
+{
+ "id": "cesa-g-rayo-o-neutro-cortado",
+ "titulo": "Rayo o neutro cortado",
+ "texto": "Sobretensión corta o larga",
+ "tema": "CESA · Protecciones",
+ "etiqueta": "sobretensiones",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que hay sobretensiones que duran *microsegundos*... y otras que no se van?",
+   "titulo": "CORTAS Y *LARGAS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚡",
+    "linea1": "dos tipos de sobretensión",
+    "linea2": "CORTA O LARGA"
+   }
+  },
+  {
+   "tag": "el rayo",
+   "sub": "Un rayo sobre una línea da una sobretensión *corta.* Y es más probable en líneas *aéreas,* que están expuestas.",
+   "titulo": "EL *RAYO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⏱️",
+      "izq": "Duración",
+      "der": "CORTA",
+      "rojo": true,
+      "en": "corta."
+     },
+     {
+      "icono": "🗼",
+      "izq": "Más probable en",
+      "der": "LÍNEAS AÉREAS",
+      "en": "aéreas,"
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "cómo se para",
+   "sub": "Como es corta, se para con limitadores o descargadores en *paralelo* con la carga.",
+   "titulo": "EN *PARALELO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🛡️",
+    "linea1": "limitadores o descargadores",
+    "linea2": "EN PARALELO"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el neutro",
+   "sub": "Si se corta el *neutro,* la sobretensión se queda: es *larga.* Ningún limitador aguanta eso.",
+   "titulo": "EL *NEUTRO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✂️",
+    "linea1": "neutro desconectado",
+    "linea2": "SOBRETENSIÓN LARGA"
+   },
+   "num": 3
+  },
+  {
+   "tag": "la solución",
+   "sub": "La única solución es *desconectar* la red.",
+   "titulo": "*DESCONECTAR*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔌",
+    "linea1": "sobretensión larga",
+    "linea2": "DESCONECTAR LA RED",
+    "stamp": "¡OJO!"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Rayo: corta y *limitador.* Neutro cortado: larga y *desconectar.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⚡",
+      "izq": "Rayo",
+      "der": "CORTA · LIMITADOR",
+      "en": "limitador."
+     },
+     {
+      "icono": "✂️",
+      "izq": "Neutro",
+      "der": "LARGA · DESCONECTAR",
+      "rojo": true,
+      "en": "desconectar."
+     }
+    ]
+   }
+  }
+ ]
+}

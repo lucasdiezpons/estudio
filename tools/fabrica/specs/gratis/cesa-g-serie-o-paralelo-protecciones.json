@@ -1,0 +1,110 @@
+{
+ "id": "cesa-g-serie-o-paralelo-protecciones",
+ "titulo": "En serie o en paralelo",
+ "texto": "La regla de las protecciones",
+ "tema": "CESA · Protecciones",
+ "etiqueta": "dispositivos",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que con saber de qué protege un dispositivo... ya sabes cómo se *conecta?*",
+   "titulo": "UNA *REGLA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔌",
+    "linea1": "protecciones",
+    "linea2": "¿SERIE O PARALELO?"
+   }
+  },
+  {
+   "tag": "sobretensión",
+   "sub": "Contra *sobretensiones,* en *paralelo:* el dispositivo se pone a conducir y desvía el exceso.",
+   "titulo": "SOBRETENSIÓN → *PARALELO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚡",
+    "linea1": "desvía el exceso",
+    "linea2": "EN PARALELO"
+   },
+   "num": 1
+  },
+  {
+   "tag": "sobrecorriente",
+   "sub": "Contra *sobrecorrientes,* en *serie:* toda la corriente [(intensidad)] pasa por él, y él la corta.",
+   "titulo": "SOBRECORRIENTE → *SERIE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔗",
+    "linea1": "corta el paso",
+    "linea2": "EN SERIE"
+   },
+   "num": 2
+  },
+  {
+   "tag": "ejemplos",
+   "sub": "El varistor, o MOV, es un *limitador* de sobretensión: en paralelo. El bimetal y el PPTC protegen de sobrecorriente: en *serie.*",
+   "titulo": "LOS *EJEMPLOS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⚡",
+      "izq": "MOV / varistor",
+      "der": "PARALELO · LIMITADOR",
+      "en": "limitador"
+     },
+     {
+      "icono": "🔥",
+      "izq": "Bimetal",
+      "der": "SERIE",
+      "rojo": true
+     },
+     {
+      "icono": "♻️",
+      "izq": "PPTC",
+      "der": "SERIE",
+      "rojo": true,
+      "en": "serie."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Tensión, en *paralelo.* Corriente, en *serie.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⚡",
+      "izq": "Sobretensión",
+      "der": "EN PARALELO",
+      "en": "paralelo."
+     },
+     {
+      "icono": "🔗",
+      "izq": "Sobrecorriente",
+      "der": "EN SERIE",
+      "rojo": true,
+      "en": "serie."
+     }
+    ]
+   }
+  }
+ ]
+}

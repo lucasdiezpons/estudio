@@ -1,0 +1,110 @@
+{
+ "id": "cesa-g-arranque-traccion-estacionaria",
+ "titulo": "Arranque, tracción y estacionaria",
+ "texto": "Tres baterías para tres trabajos",
+ "tema": "CESA · Baterías",
+ "etiqueta": "tipos",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que la batería de un coche y la de un carrito de golf... están hechas *distinto?*",
+   "titulo": "HECHAS *DISTINTO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🚗",
+    "linea1": "arranque, tracción, estacionaria",
+    "linea2": "3 TRABAJOS"
+   }
+  },
+  {
+   "tag": "arranque",
+   "sub": "La de *arranque* da mucha corriente [(intensidad)] de golpe: placas finas, más superficie... y menos electrolito.",
+   "titulo": "*ARRANQUE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⚡",
+      "izq": "Necesita",
+      "der": "ALTA CORRIENTE",
+      "rojo": true,
+      "en": "golpe:"
+     },
+     {
+      "icono": "📄",
+      "izq": "Por dentro",
+      "der": "+ SUPERFICIE, − ELECTROLITO",
+      "en": "electrolito."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "tracción",
+   "sub": "La de *tracción* mueve vehículos durante horas: lo suyo es la descarga *profunda.*",
+   "titulo": "*TRACCIÓN*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🛺",
+    "linea1": "carritos, carretillas...",
+    "linea2": "DESCARGA PROFUNDA"
+   },
+   "num": 2
+  },
+  {
+   "tag": "estacionaria",
+   "sub": "Y para una instalación solar aislada, la *estacionaria:* ciclos lentos y profundos, día tras día.",
+   "titulo": "*ESTACIONARIA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏠",
+    "linea1": "instalación solar autónoma",
+    "linea2": "ESTACIONARIA"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Arranque, *corriente.* Tracción, *profundidad.* Y la solar, *estacionaria.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⚡",
+      "izq": "Arranque",
+      "der": "CORRIENTE",
+      "en": "corriente."
+     },
+     {
+      "icono": "🛺",
+      "izq": "Tracción",
+      "der": "PROFUNDIDAD",
+      "en": "profundidad."
+     },
+     {
+      "icono": "🏠",
+      "izq": "Solar",
+      "der": "ESTACIONARIA",
+      "rojo": true,
+      "en": "estacionaria."
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,106 @@
+{
+ "id": "cesa-g-punto-caliente-serie",
+ "titulo": "Una celda a la sombra en serie",
+ "texto": "El punto caliente",
+ "tema": "CESA · Fotovoltaica",
+ "etiqueta": "sombras",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe",
+  "bypass": "bai pas"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que una sola hoja encima de una placa... puede *quemar* una celda?",
+   "titulo": "UNA *HOJA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🍂",
+    "linea1": "una celda tapada",
+    "linea2": "PUNTO CALIENTE"
+   }
+  },
+  {
+   "tag": "en serie",
+   "sub": "Si las celdas van en *serie,* todas comparten la misma corriente [(intensidad)]. La tapada no la puede generar.",
+   "titulo": "EN *SERIE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔗",
+    "linea1": "misma corriente para todas",
+    "linea2": "LA TAPADA NO PUEDE"
+   },
+   "num": 1
+  },
+  {
+   "tag": "qué pasa",
+   "sub": "Las demás la empujan igual... queda en *inverso* y se come la energía. Se calienta: un punto *caliente.*",
+   "titulo": "PUNTO *CALIENTE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔥",
+    "linea1": "polarizada en inverso",
+    "linea2": "SE CALIENTA",
+    "stamp": "¡OJO!"
+   },
+   "num": 2
+  },
+  {
+   "tag": "la solución",
+   "sub": "La solución: un diodo de *bypass* en paralelo con las celdas. La corriente se va por el diodo... y la celda se *salva.*",
+   "titulo": "DIODO EN *PARALELO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔗",
+      "izq": "Celdas en serie",
+      "der": "DIODO EN PARALELO",
+      "rojo": true,
+      "en": "bypass"
+     },
+     {
+      "icono": "🛟",
+      "izq": "La corriente",
+      "der": "SE DESVÍA",
+      "en": "salva."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Celda tapada en serie: punto caliente... y diodo en *paralelo.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔗",
+      "izq": "En serie",
+      "der": "PUNTO CALIENTE",
+      "en": "caliente..."
+     },
+     {
+      "icono": "🛟",
+      "izq": "Solución",
+      "der": "DIODO EN PARALELO",
+      "rojo": true,
+      "en": "paralelo."
+     }
+    ]
+   }
+  }
+ ]
+}

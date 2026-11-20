@@ -1,0 +1,92 @@
+{
+ "id": "cesa-g-energia-con-mppt",
+ "titulo": "La energía de una placa con MPPT",
+ "texto": "Rendimiento, potencia y horas",
+ "tema": "CESA · Dimensionado FV",
+ "etiqueta": "MPPT",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "TT": "te te",
+  "TN": "te ene",
+  "MPPT": "eme pe pe te",
+  "PPTC": "pe pe te ce",
+  "MOV": "mof",
+  "NiMH": "níquel metal hidruro",
+  "Li-ion": "litio ion",
+  "HSP": "hache ese pe",
+  "Pmpp(T)": "pe eme pe pe"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que con un MPPT la energía de una placa sale de multiplicar solo *tres* cosas?",
+   "titulo": "TRES *COSAS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧮",
+    "linea1": "con MPPT",
+    "linea2": "3 FACTORES"
+   }
+  },
+  {
+   "tag": "la fórmula",
+   "sub": "Rendimiento del MPPT... por la potencia máxima a esa temperatura... por las horas de sol *pico.*",
+   "titulo": "LA *FÓRMULA*",
+   "visual": {
+    "tipo": "big",
+    "big": "E = REND · Pmpp(T) · HSP",
+    "small": "energía de una placa al día"
+   },
+   "num": 1
+  },
+  {
+   "tag": "el peor caso",
+   "sub": "La temperatura, la más *alta:* con calor la potencia máxima baja, y ese es el peor caso.",
+   "titulo": "EL *PEOR* CASO",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🥵",
+    "linea1": "con MPPT",
+    "linea2": "TEMPERATURA MÁXIMA"
+   },
+   "num": 2
+  },
+  {
+   "tag": "serie o paralelo",
+   "sub": "Y con MPPT da *igual* poner las placas en serie o en paralelo: la energía total es la misma.",
+   "titulo": "SERIE = *PARALELO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🟰",
+    "linea1": "con MPPT",
+    "linea2": "SERIE = PARALELO"
+   },
+   "num": 3
+  },
+  {
+   "tag": "ojo",
+   "sub": "Ojo: si el MPPT consume, su potencia por veinticuatro horas se *suma* al consumo.",
+   "titulo": "SU *CONSUMO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "➕",
+    "linea1": "P del MPPT · 24 h",
+    "linea2": "SE SUMA AL CONSUMO",
+    "stamp": "¡OJO!"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Rendimiento, por potencia máxima, por horas de *sol.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "REND · Pmpp · HSP",
+    "small": "energía con MPPT"
+   }
+  }
+ ]
+}
