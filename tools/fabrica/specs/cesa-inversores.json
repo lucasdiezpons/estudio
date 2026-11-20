@@ -1,0 +1,116 @@
+{
+ "id": "cesa-inversores",
+ "titulo": "De continua a alterna",
+ "texto": "Onda cuadrada, bipolar y unipolar",
+ "tema": "CESA · Inversores",
+ "etiqueta": "inversores",
+ "pron": {},
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que para sacar un enchufe de casa de una batería... hay que *trocear* la continua?",
+   "titulo": "*TROCEAR*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔋",
+    "linea1": "de continua a alterna",
+    "linea2": "INVERSOR"
+   }
+  },
+  {
+   "tag": "onda cuadrada",
+   "sub": "Lo más simple es la onda *cuadrada:* los transistores cambian una vez por semiciclo... pero sale muy *distorsionada.*",
+   "titulo": "ONDA *CUADRADA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🐢",
+      "izq": "Onda cuadrada",
+      "der": "CONMUTA LENTO",
+      "en": "cuadrada:"
+     },
+     {
+      "icono": "〰️",
+      "izq": "Salida",
+      "der": "MUCHA DISTORSIÓN",
+      "rojo": true,
+      "en": "distorsionada."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "bipolar",
+   "sub": "Para una senoide limpia se conmuta muy rápido. Con control *bipolar,* la entrada del filtro salta de un extremo al *otro.*",
+   "titulo": "*BIPOLAR*",
+   "visual": {
+    "tipo": "big",
+    "big": "+Vin → −Vin",
+    "small": "salta de un extremo al otro"
+   },
+   "num": 2
+  },
+  {
+   "tag": "unipolar",
+   "sub": "Con control *unipolar,* solo va a un lado y a cero. Saltos más pequeños... y un filtro más *pequeño.*",
+   "titulo": "*UNIPOLAR*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "↕️",
+      "izq": "Bipolar",
+      "der": "FILTRO GRANDE",
+      "en": "unipolar,"
+     },
+     {
+      "icono": "↗️",
+      "izq": "Unipolar",
+      "der": "FILTRO PEQUEÑO",
+      "rojo": true,
+      "en": "pequeño."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "el puente",
+   "sub": "En el puente, los transistores se encienden por *diagonales*... nunca los dos del mismo lado: sería un *cortocircuito.*",
+   "titulo": "POR *DIAGONALES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✖️",
+    "linea1": "nunca los dos del mismo lado",
+    "linea2": "POR DIAGONALES",
+    "stamp": "¡OJO!"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Cuadrada, lenta y sucia... y unipolar, con el filtro más *pequeño.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🐢",
+      "izq": "Onda cuadrada",
+      "der": "LENTA Y DISTORSIONADA",
+      "en": "sucia..."
+     },
+     {
+      "icono": "↗️",
+      "izq": "Unipolar",
+      "der": "FILTRO PEQUEÑO",
+      "rojo": true,
+      "en": "pequeño."
+     }
+    ]
+   }
+  }
+ ]
+}

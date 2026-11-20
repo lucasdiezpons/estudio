@@ -1,0 +1,129 @@
+{
+ "id": "cesa-familias-y-rendimiento",
+ "titulo": "Las 4 familias de un cargador",
+ "texto": "Qué entra, qué sale y cuánto se pierde",
+ "tema": "CESA · Conversión de energía",
+ "etiqueta": "conversión",
+ "pron": {
+  "AC": "alterna",
+  "DC": "continua"
+ },
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que convertir energía tiene solo *cuatro* familias... según lo que entra y lo que sale?",
+   "titulo": "4 *FAMILIAS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔌",
+    "linea1": "alterna o continua, a la entrada y a la salida",
+    "linea2": "4 FAMILIAS"
+   }
+  },
+  {
+   "tag": "alterna y continua",
+   "sub": "De alterna a continua... un *rectificador.* De continua a alterna... un *inversor.*",
+   "titulo": "AC *Y* DC",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔁",
+      "izq": "Alterna → continua",
+      "der": "RECTIFICADOR",
+      "en": "rectificador."
+     },
+     {
+      "icono": "🔁",
+      "izq": "Continua → alterna",
+      "der": "INVERSOR",
+      "rojo": true,
+      "en": "inversor."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "las otras dos",
+   "sub": "De continua a continua... un *regulador.* Y de alterna a alterna, cambiando la frecuencia... un *cicloconvertidor.*",
+   "titulo": "LAS *OTRAS* DOS",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⚙️",
+      "izq": "Continua → continua",
+      "der": "REGULADOR",
+      "en": "regulador."
+     },
+     {
+      "icono": "🔄",
+      "izq": "Alterna → alterna",
+      "der": "CICLOCONVERTIDOR",
+      "rojo": true,
+      "en": "cicloconvertidor."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "rendimiento",
+   "sub": "Lo que importa es el *rendimiento:* la potencia que sale... entre la que entra. Lo que falta se convierte en *calor.*",
+   "titulo": "*RENDIMIENTO*",
+   "visual": {
+    "tipo": "big",
+    "big": "SALE / ENTRA",
+    "small": "lo que falta = calor"
+   },
+   "num": 2
+  },
+  {
+   "tag": "en cadena",
+   "sub": "Y si pones dos en cadena... los rendimientos se *multiplican.* Noventa por ciento por ochenta... setenta y dos por *ciento.*",
+   "titulo": "SE *MULTIPLICAN*",
+   "visual": {
+    "tipo": "big",
+    "big": "0,9 · 0,8 = 0,72",
+    "small": "dos convertidores en cadena"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el tamaño",
+   "sub": "Por eso un cargador *pequeño* necesita mucho rendimiento: si casi no hay calor... no hace falta *radiador.*",
+   "titulo": "PEQUEÑO = *EFICIENTE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔥",
+    "linea1": "poco calor, sin radiador",
+    "linea2": "PEQUEÑO = RENDIMIENTO ALTO"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Cuatro familias según lo que entra y sale... y los rendimientos en cadena se *multiplican.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔌",
+      "izq": "Clasificar",
+      "der": "QUÉ ENTRA → QUÉ SALE",
+      "en": "sale..."
+     },
+     {
+      "icono": "✖️",
+      "izq": "En cadena",
+      "der": "SE MULTIPLICAN",
+      "rojo": true,
+      "en": "multiplican."
+     }
+    ]
+   }
+  }
+ ]
+}

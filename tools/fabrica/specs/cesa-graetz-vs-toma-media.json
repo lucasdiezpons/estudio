@@ -1,0 +1,142 @@
+{
+ "id": "cesa-graetz-vs-toma-media",
+ "titulo": "Puente de Graetz o toma media",
+ "texto": "Dos rectificadores, dos trampas",
+ "tema": "CESA · Rectificadores",
+ "etiqueta": "rectificadores",
+ "pron": {
+  "Graetz": "grets"
+ },
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que hay dos formas de aprovechar las *dos* mitades de la onda... y cada una tiene su *trampa?*",
+   "titulo": "ONDA *COMPLETA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🌊",
+    "linea1": "aprovechar los dos semiciclos",
+    "linea2": "DOS FORMAS"
+   }
+  },
+  {
+   "tag": "Graetz",
+   "sub": "El puente de *Graetz* usa cuatro diodos en rombo. En cada mitad de la onda... conducen *dos* a la vez.",
+   "titulo": "PUENTE DE *GRAETZ*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔷",
+      "izq": "Puente de Graetz",
+      "der": "4 DIODOS",
+      "en": "rombo."
+     },
+     {
+      "icono": "⚡",
+      "izq": "Conducen a la vez",
+      "der": "DOS",
+      "rojo": true,
+      "en": "vez."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "toma media",
+   "sub": "La toma media usa un transformador partido en dos... y solo dos diodos. Aquí conduce *uno* cada vez.",
+   "titulo": "TOMA *MEDIA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔌",
+      "izq": "Toma media",
+      "der": "2 DIODOS",
+      "en": "diodos."
+     },
+     {
+      "icono": "⚡",
+      "izq": "Conduce cada vez",
+      "der": "UNO",
+      "rojo": true,
+      "en": "cada"
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "trampa uno",
+   "sub": "Primera trampa: cada diodo que conduce se come unos cero coma siete voltios. En Graetz pierdes el *doble.*",
+   "titulo": "TRAMPA *1*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔷",
+      "izq": "Graetz",
+      "der": "PIERDE 2 × 0,7 V",
+      "rojo": true,
+      "en": "Graetz"
+     },
+     {
+      "icono": "🔌",
+      "izq": "Toma media",
+      "der": "PIERDE 0,7 V",
+      "en": "voltios."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "trampa dos",
+   "sub": "Segunda trampa, al revés: el diodo apagado de la toma media aguanta *dos* veces la tensión [(voltaje)] de salida. En Graetz... solo *una.*",
+   "titulo": "TRAMPA *2*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔌",
+      "izq": "Toma media aguanta",
+      "der": "≈ 2 × Vo",
+      "rojo": true,
+      "en": "aguanta"
+     },
+     {
+      "icono": "🔷",
+      "izq": "Graetz aguanta",
+      "der": "≈ Vo",
+      "en": "una."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Graetz pierde más tensión [(voltaje)]... y la toma media hace sufrir más a sus *diodos.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔷",
+      "izq": "Graetz",
+      "der": "−2 DIODOS DE TENSIÓN",
+      "en": "Graetz"
+     },
+     {
+      "icono": "🔌",
+      "izq": "Toma media",
+      "der": "DIODOS AGUANTAN 2×",
+      "rojo": true,
+      "en": "diodos."
+     }
+    ]
+   }
+  }
+ ]
+}

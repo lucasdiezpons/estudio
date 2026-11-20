@@ -1,0 +1,130 @@
+{
+ "id": "cesa-calor-regulador",
+ "titulo": "La ley de Ohm del calor",
+ "texto": "Cuánto aguanta un chip antes de quemarse",
+ "tema": "CESA · Térmica",
+ "etiqueta": "calor",
+ "pron": {},
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que el calor de un chip se calcula igual que la ley de *Ohm?*",
+   "titulo": "LEY DE OHM *DEL CALOR*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔥",
+    "linea1": "calor, temperatura y resistencia térmica",
+    "linea2": "LA LEY DE OHM DEL CALOR"
+   }
+  },
+  {
+   "tag": "las piezas",
+   "sub": "La potencia hace de corriente [(intensidad)]... la temperatura, de tensión [(voltaje)]... y la resistencia *térmica,* de resistencia.",
+   "titulo": "LAS *PIEZAS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⚡",
+      "izq": "Potencia",
+      "der": "HACE DE CORRIENTE"
+     },
+     {
+      "icono": "🌡️",
+      "izq": "Temperatura",
+      "der": "HACE DE TENSIÓN"
+     },
+     {
+      "icono": "🧱",
+      "izq": "Resistencia térmica",
+      "der": "HACE DE RESISTENCIA",
+      "rojo": true,
+      "en": "térmica,"
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "la fórmula",
+   "sub": "Así que la temperatura del chip es la del ambiente... más la resistencia térmica por la *potencia.*",
+   "titulo": "LA *FÓRMULA*",
+   "visual": {
+    "tipo": "big",
+    "big": "Tj = Ta + Rth · P",
+    "small": "temperatura de la unión"
+   },
+   "num": 1
+  },
+  {
+   "tag": "con radiador",
+   "sub": "Sin radiador, el calor va directo al *aire.* Con radiador hace tres saltos... y la pasta térmica facilita el del *medio.*",
+   "titulo": "CON *RADIADOR*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🌬️",
+      "izq": "Sin radiador",
+      "der": "DIRECTO AL AIRE",
+      "en": "aire."
+     },
+     {
+      "icono": "🧊",
+      "izq": "Con radiador",
+      "der": "3 SALTOS EN SERIE",
+      "rojo": true,
+      "en": "medio."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "el peor día",
+   "sub": "Y para ver cuánto aguanta, piensa en el peor día: el más *caluroso.* Con cincuenta grados aguanta menos... que con *cero.*",
+   "titulo": "EL *PEOR* DÍA",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🌡️",
+    "linea1": "temperatura ambiente máxima",
+    "linea2": "PEOR CASO"
+   },
+   "num": 3
+  },
+  {
+   "tag": "cuándo se calienta",
+   "sub": "Y el chip se calienta más con mucha entrada, mucha corriente [(intensidad)]... y la salida lo más *baja* posible.",
+   "titulo": "MÁS *CALIENTE*",
+   "visual": {
+    "tipo": "big",
+    "big": "(Vin − Vo) · I",
+    "small": "entrada alta, corriente alta, salida baja"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Ambiente más resistencia por potencia... y siempre el día más *caluroso.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔥",
+      "izq": "Temperatura del chip",
+      "der": "Ta + Rth · P",
+      "en": "potencia..."
+     },
+     {
+      "icono": "🌡️",
+      "izq": "Peor caso",
+      "der": "AMBIENTE MÁXIMO",
+      "rojo": true,
+      "en": "caluroso."
+     }
+    ]
+   }
+  }
+ ]
+}

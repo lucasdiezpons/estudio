@@ -1,0 +1,132 @@
+{
+ "id": "cesa-mosfet-diodo",
+ "titulo": "El diodo escondido del MOSFET",
+ "texto": "Canal N, canal P y su diodo",
+ "tema": "CESA · Conmutados",
+ "etiqueta": "transistores",
+ "pron": {
+  "MOSFET": "mos fet",
+  "N": "ene",
+  "P": "pe"
+ },
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que todos los MOSFET llevan un *diodo* escondido dentro?",
+   "titulo": "UN DIODO *ESCONDIDO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🕵️",
+    "linea1": "entre drenador y fuente",
+    "linea2": "DIODO PARÁSITO"
+   }
+  },
+  {
+   "tag": "el umbral",
+   "sub": "El de canal N se enciende con la puerta por *encima* de la fuente: umbral positivo. El de canal P... al *revés.*",
+   "titulo": "EL *UMBRAL*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "➕",
+      "izq": "Canal N",
+      "der": "UMBRAL > 0",
+      "en": "encima"
+     },
+     {
+      "icono": "➖",
+      "izq": "Canal P",
+      "der": "UMBRAL < 0",
+      "rojo": true,
+      "en": "revés."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "canal N",
+   "sub": "En el de canal N, el diodo tiene el ánodo en la fuente... así que conduce cuando la tensión [(voltaje)] drenador fuente es *negativa.*",
+   "titulo": "EL DIODO *DEL N*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔽",
+    "linea1": "ánodo en la fuente",
+    "linea2": "CONDUCE SI VDS < 0"
+   },
+   "num": 2
+  },
+  {
+   "tag": "canal P",
+   "sub": "En el de canal P, todo al revés: el ánodo en el drenador... y conduce con esa tensión [(voltaje)] *positiva.*",
+   "titulo": "EL DIODO *DEL P*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔼",
+    "linea1": "ánodo en el drenador",
+    "linea2": "CONDUCE SI VDS > 0"
+   },
+   "num": 2
+  },
+  {
+   "tag": "cómo se pone",
+   "sub": "Por eso se coloca para que, apagado, el diodo quede en *inverso*... si no, el interruptor nunca se apagaría del *todo.*",
+   "titulo": "EN *INVERSO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚠️",
+    "linea1": "con el transistor apagado",
+    "linea2": "DIODO EN INVERSO",
+    "stamp": "¡OJO!"
+   },
+   "num": 3
+  },
+  {
+   "tag": "el truco",
+   "sub": "Y un truco: si el interruptor va arriba, pegado a la entrada... mejor uno de canal *P.* Se enciende poniendo la puerta a *cero.*",
+   "titulo": "ARRIBA, *CANAL P*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬆️",
+      "izq": "Interruptor arriba",
+      "der": "CANAL P",
+      "rojo": true,
+      "en": "P."
+     },
+     {
+      "icono": "⬇️",
+      "izq": "Interruptor abajo",
+      "der": "CANAL N"
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Todo MOSFET lleva su diodo... y hay que ponerlo para que, apagado, *bloquee.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🕵️",
+      "izq": "Todo MOSFET",
+      "der": "LLEVA UN DIODO",
+      "en": "diodo..."
+     },
+     {
+      "icono": "⚠️",
+      "izq": "Apagado",
+      "der": "QUE BLOQUEE",
+      "rojo": true,
+      "en": "bloquee."
+     }
+    ]
+   }
+  }
+ ]
+}

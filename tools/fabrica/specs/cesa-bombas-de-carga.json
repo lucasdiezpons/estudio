@@ -1,0 +1,115 @@
+{
+ "id": "cesa-bombas-de-carga",
+ "titulo": "Convertidores sin bobinas",
+ "texto": "Las bombas de carga",
+ "tema": "CESA · Bombas de carga",
+ "etiqueta": "bombas de carga",
+ "pron": {},
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que se puede subir una tensión [(voltaje)] usando solo *condensadores*... sin ninguna bobina?",
+   "titulo": "SOLO *CONDENSADORES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🫙",
+    "linea1": "condensadores + interruptores",
+    "linea2": "BOMBA DE CARGA"
+   }
+  },
+  {
+   "tag": "el truco",
+   "sub": "Primero cargas un condensador a la tensión de entrada... y luego lo *apilas* encima de ella. Resultado: el *doble.*",
+   "titulo": "EL *DOBLE*",
+   "visual": {
+    "tipo": "big",
+    "big": "2 · Vin",
+    "small": "un condensador apilado sobre la entrada"
+   },
+   "num": 1
+  },
+  {
+   "tag": "en un chip",
+   "sub": "Los interruptores son transistores... y como no hay bobinas, todo cabe dentro de un *chip.*",
+   "titulo": "CABE EN UN *CHIP*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔘",
+      "izq": "Interruptores",
+      "der": "TRANSISTORES",
+      "en": "transistores..."
+     },
+     {
+      "icono": "🧩",
+      "izq": "Sin bobinas",
+      "der": "INTEGRABLE",
+      "rojo": true,
+      "en": "chip."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "versátil",
+   "sub": "Puede subir, bajar o invertir la tensión [(voltaje)]... según cómo conecte los *condensadores.*",
+   "titulo": "*VERSÁTIL*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔀",
+    "linea1": "es un convertidor conmutado",
+    "linea2": "SUBE, BAJA O INVIERTE"
+   },
+   "num": 2
+  },
+  {
+   "tag": "la pérdida",
+   "sub": "Y un detalle curioso: al conectar dos condensadores a distinta tensión, siempre se pierde energía... y no depende de la *resistencia.*",
+   "titulo": "LA *PÉRDIDA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📦",
+      "izq": "Depende de",
+      "der": "CAPACIDADES Y TENSIONES",
+      "en": "energía..."
+     },
+     {
+      "icono": "🚫",
+      "izq": "No depende de",
+      "der": "LA RESISTENCIA",
+      "rojo": true,
+      "en": "resistencia."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Solo condensadores e interruptores... y por eso caben en un *chip.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🫙",
+      "izq": "Bomba de carga",
+      "der": "SIN BOBINAS",
+      "en": "interruptores..."
+     },
+     {
+      "icono": "🧩",
+      "izq": "Por eso",
+      "der": "CABE EN UN CHIP",
+      "rojo": true,
+      "en": "chip."
+     }
+    ]
+   }
+  }
+ ]
+}

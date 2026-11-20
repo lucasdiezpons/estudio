@@ -1,0 +1,144 @@
+{
+ "id": "cesa-conmutados",
+ "titulo": "El truco de los conmutados",
+ "texto": "Encender y apagar muy rápido",
+ "tema": "CESA · Conmutados",
+ "etiqueta": "conmutados",
+ "pron": {
+  "D": "de",
+  "Buck": "bak",
+  "Boost": "bust"
+ },
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que los cargadores modernos encienden y apagan un transistor... cientos de miles de veces por *segundo?*",
+   "titulo": "*CONMUTAR*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚡",
+    "linea1": "el transistor trabaja como interruptor",
+    "linea2": "ON / OFF MUY RÁPIDO"
+   }
+  },
+  {
+   "tag": "las piezas",
+   "sub": "La energía la guarda una *bobina*... y un condensador la suaviza. Así casi no se pierde nada en *calor.*",
+   "titulo": "BOBINA Y *CONDENSADOR*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🌀",
+      "izq": "Bobina",
+      "der": "GUARDA ENERGÍA",
+      "rojo": true,
+      "en": "bobina..."
+     },
+     {
+      "icono": "🔋",
+      "izq": "Condensador",
+      "der": "SUAVIZA LA SALIDA",
+      "en": "suaviza."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "la clave",
+   "sub": "El truco está en *D:* la fracción de tiempo que el transistor está encendido. Cambiando D... cambias la *salida.*",
+   "titulo": "EL TRUCO: *D*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⏱️",
+    "linea1": "ciclo de trabajo",
+    "linea2": "D = TIEMPO ON / PERIODO"
+   },
+   "num": 1
+  },
+  {
+   "tag": "bajar o subir",
+   "sub": "El Buck *baja:* la salida es D por la entrada. El Boost *sube:* la entrada entre uno menos *D.*",
+   "titulo": "BUCK Y *BOOST*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬇️",
+      "izq": "Buck",
+      "der": "Vo = D · Vin",
+      "en": "baja:"
+     },
+     {
+      "icono": "⬆️",
+      "izq": "Boost",
+      "der": "Vo = Vin / (1 − D)",
+      "rojo": true,
+      "en": "sube:"
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "quién decide",
+   "sub": "¿Y quién decide D? Un control que mide la salida, la compara con la *referencia*... y corrige el *error.*",
+   "titulo": "EL *CONTROL*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎛️",
+    "linea1": "error → PID → D → PWM",
+    "linea2": "LAZO DE CONTROL"
+   },
+   "num": 3
+  },
+  {
+   "tag": "la trampa",
+   "sub": "Una trampa: si la corriente [(intensidad)] de la bobina llega a *cero,* el diodo se apaga y aparece un tercer estado. Es el modo *discontinuo.*",
+   "titulo": "MODO *DISCONTINUO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "✅",
+      "izq": "Continuo",
+      "der": "NUNCA LLEGA A CERO",
+      "en": "cero,"
+     },
+     {
+      "icono": "⚠️",
+      "izq": "Discontinuo",
+      "der": "TERCER ESTADO",
+      "rojo": true,
+      "en": "discontinuo."
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. La bobina guarda, D decide la salida... y si la corriente toca *cero,* aparece el *discontinuo.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⏱️",
+      "izq": "La salida la decide",
+      "der": "D",
+      "en": "salida..."
+     },
+     {
+      "icono": "⚠️",
+      "izq": "Si toca cero",
+      "der": "DISCONTINUO",
+      "rojo": true,
+      "en": "discontinuo."
+     }
+    ]
+   }
+  }
+ ]
+}

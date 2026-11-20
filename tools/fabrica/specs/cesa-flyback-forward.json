@@ -1,0 +1,132 @@
+{
+ "id": "cesa-flyback-forward",
+ "titulo": "Flyback y Forward",
+ "texto": "El transformador que también es bobina",
+ "tema": "CESA · Conmutados",
+ "etiqueta": "conmutados",
+ "pron": {
+  "Flyback": "flái bak",
+  "Forward": "fórguard",
+  "Buck": "bak"
+ },
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que el cargador de tu portátil lleva un transformador... que también hace de *bobina?*",
+   "titulo": "EL *FLYBACK*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "💻",
+    "linea1": "transformador que guarda energía",
+    "linea2": "FLYBACK"
+   }
+  },
+  {
+   "tag": "Forward",
+   "sub": "El *Forward* es un Buck con un transformador delante. Tiene dos piezas magnéticas: el trafo... y la *bobina.*",
+   "titulo": "EL *FORWARD*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔌",
+      "izq": "Forward",
+      "der": "TRAFO + BOBINA",
+      "en": "Forward"
+     },
+     {
+      "icono": "🔢",
+      "izq": "Piezas magnéticas",
+      "der": "DOS",
+      "rojo": true,
+      "en": "bobina."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "Flyback",
+   "sub": "El *Flyback* solo tiene una: un transformador que guarda la energía... como una bobina partida en *dos.*",
+   "titulo": "EL *FLYBACK*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔌",
+      "izq": "Flyback",
+      "der": "SOLO EL TRAFO",
+      "en": "Flyback"
+     },
+     {
+      "icono": "🔢",
+      "izq": "Piezas magnéticas",
+      "der": "UNA",
+      "rojo": true,
+      "en": "dos."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "encendido",
+   "sub": "Mientras el transistor está encendido, el Flyback *guarda* energía... y el diodo de salida está *apagado.*",
+   "titulo": "ON: *GUARDA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📥",
+    "linea1": "transistor encendido, diodo apagado",
+    "linea2": "GUARDA ENERGÍA"
+   },
+   "num": 2
+  },
+  {
+   "tag": "apagado",
+   "sub": "Cuando lo apagas, el diodo se *enciende*... y toda esa energía pasa a la *salida.*",
+   "titulo": "OFF: *ENTREGA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📤",
+    "linea1": "transistor apagado, diodo encendido",
+    "linea2": "ENTREGA ENERGÍA"
+   },
+   "num": 2
+  },
+  {
+   "tag": "en común",
+   "sub": "Y los dos tienen algo en común: el transformador separa la entrada de la salida. Es el aislamiento *galvánico.*",
+   "titulo": "*AISLAMIENTO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🛡️",
+    "linea1": "sin conexión eléctrica directa",
+    "linea2": "AISLAMIENTO GALVÁNICO"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Forward, trafo más bobina... Flyback, solo el trafo, que *guarda* y luego *entrega.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔌",
+      "izq": "Forward",
+      "der": "TRAFO + BOBINA",
+      "en": "bobina..."
+     },
+     {
+      "icono": "🔌",
+      "izq": "Flyback",
+      "der": "GUARDA Y ENTREGA",
+      "rojo": true,
+      "en": "entrega."
+     }
+    ]
+   }
+  }
+ ]
+}

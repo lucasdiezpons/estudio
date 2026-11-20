@@ -1,0 +1,142 @@
+{
+ "id": "cesa-shunt-y-regulacion",
+ "titulo": "El regulador que se traga lo que sobra",
+ "texto": "Shunt, línea y carga",
+ "tema": "CESA · Reguladores lineales",
+ "etiqueta": "reguladores",
+ "pron": {
+  "shunt": "shant"
+ },
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que hay reguladores que, en vez de cortar... se *tragan* la corriente [(intensidad)] que sobra?",
+   "titulo": "SE LA *TRAGA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🍽️",
+    "linea1": "en paralelo con la carga",
+    "linea2": "REGULADOR SHUNT"
+   }
+  },
+  {
+   "tag": "cómo va",
+   "sub": "Va en *paralelo* con la carga, con una resistencia en serie. Por la resistencia entra todo... y luego se *reparte.*",
+   "titulo": "EN *PARALELO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔗",
+      "izq": "Resistencia",
+      "der": "EN SERIE",
+      "en": "serie."
+     },
+     {
+      "icono": "🔀",
+      "izq": "Shunt",
+      "der": "EN PARALELO",
+      "rojo": true,
+      "en": "reparte."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "la regla",
+   "sub": "Por esa resistencia tiene que entrar siempre más de lo que pide la carga en su peor *momento.* Lo que sobra... se lo traga el *shunt.*",
+   "titulo": "LA *REGLA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📏",
+    "linea1": "corriente de la resistencia > máxima de la carga",
+    "linea2": "SIEMPRE MÁS QUE LA MÁXIMA"
+   },
+   "num": 1
+  },
+  {
+   "tag": "sus límites",
+   "sub": "Por eso la resistencia tiene un *máximo,* para que siempre llegue... y un *mínimo,* para que el shunt no se *queme.*",
+   "titulo": "MÁXIMO Y *MÍNIMO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬆️",
+      "izq": "Resistencia máxima",
+      "der": "QUE SIEMPRE LLEGUE",
+      "en": "máximo,"
+     },
+     {
+      "icono": "🔥",
+      "izq": "Resistencia mínima",
+      "der": "QUE NO SE QUEME",
+      "rojo": true,
+      "en": "mínimo,"
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "calidad",
+   "sub": "Y para saber si un regulador es bueno se miran dos cosas: la regulación de *línea,* y la de *carga.*",
+   "titulo": "LÍNEA Y *CARGA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔍",
+    "linea1": "cuánto se mueve la salida",
+    "linea2": "DOS REGULACIONES"
+   },
+   "num": 3
+  },
+  {
+   "tag": "la diferencia",
+   "sub": "La de línea: cuánto se mueve la salida si cambia la *entrada.* La de carga: si cambia la corriente [(intensidad)] que *consume.*",
+   "titulo": "NO LAS *CONFUNDAS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔌",
+      "izq": "Línea",
+      "der": "CAMBIA LA ENTRADA",
+      "en": "entrada."
+     },
+     {
+      "icono": "💡",
+      "izq": "Carga",
+      "der": "CAMBIA LO QUE CONSUME",
+      "rojo": true,
+      "en": "consume."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. El shunt se traga lo que sobra... y línea es la *entrada,* carga es lo que *consume.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🍽️",
+      "izq": "Shunt",
+      "der": "SE TRAGA LO QUE SOBRA",
+      "en": "sobra..."
+     },
+     {
+      "icono": "🔌",
+      "izq": "Línea / carga",
+      "der": "ENTRADA / CONSUMO",
+      "rojo": true,
+      "en": "consume."
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -110,5 +110,101 @@
     "titulo": "TT vs TN: el cable que lo cambia todo",
     "texto": "Por qué tu casa tiene diferencial",
     "tema": "CESA · Protecciones"
+  },
+  {
+    "id": "cesa-familias-y-rendimiento",
+    "archivo": "cesa-familias-y-rendimiento.mp4",
+    "poster": "cesa-familias-y-rendimiento.jpg",
+    "titulo": "Las 4 familias de un cargador",
+    "texto": "Qué entra, qué sale y cuánto se pierde",
+    "tema": "CESA · Conversión de energía"
+  },
+  {
+    "id": "cesa-condensador-rectificador",
+    "archivo": "cesa-condensador-rectificador.mp4",
+    "poster": "cesa-condensador-rectificador.jpg",
+    "titulo": "El condensador que castiga a los diodos",
+    "texto": "Menos rizado... a un precio",
+    "tema": "CESA · Rectificadores"
+  },
+  {
+    "id": "cesa-graetz-vs-toma-media",
+    "archivo": "cesa-graetz-vs-toma-media.mp4",
+    "poster": "cesa-graetz-vs-toma-media.jpg",
+    "titulo": "Puente de Graetz o toma media",
+    "texto": "Dos rectificadores, dos trampas",
+    "tema": "CESA · Rectificadores"
+  },
+  {
+    "id": "cesa-regulador-lineal",
+    "archivo": "cesa-regulador-lineal.mp4",
+    "poster": "cesa-regulador-lineal.jpg",
+    "titulo": "El regulador lineal es un grifo",
+    "texto": "Salida limpia, pero quema lo que sobra",
+    "tema": "CESA · Reguladores lineales"
+  },
+  {
+    "id": "cesa-shunt-y-regulacion",
+    "archivo": "cesa-shunt-y-regulacion.mp4",
+    "poster": "cesa-shunt-y-regulacion.jpg",
+    "titulo": "El regulador que se traga lo que sobra",
+    "texto": "Shunt, línea y carga",
+    "tema": "CESA · Reguladores lineales"
+  },
+  {
+    "id": "cesa-lm317",
+    "archivo": "cesa-lm317.mp4",
+    "poster": "cesa-lm317.jpg",
+    "titulo": "El truco del LM317",
+    "texto": "Siempre 1,25 voltios",
+    "tema": "CESA · Reguladores lineales"
+  },
+  {
+    "id": "cesa-calor-regulador",
+    "archivo": "cesa-calor-regulador.mp4",
+    "poster": "cesa-calor-regulador.jpg",
+    "titulo": "La ley de Ohm del calor",
+    "texto": "Cuánto aguanta un chip antes de quemarse",
+    "tema": "CESA · Térmica"
+  },
+  {
+    "id": "cesa-conmutados",
+    "archivo": "cesa-conmutados.mp4",
+    "poster": "cesa-conmutados.jpg",
+    "titulo": "El truco de los conmutados",
+    "texto": "Encender y apagar muy rápido",
+    "tema": "CESA · Conmutados"
+  },
+  {
+    "id": "cesa-flyback-forward",
+    "archivo": "cesa-flyback-forward.mp4",
+    "poster": "cesa-flyback-forward.jpg",
+    "titulo": "Flyback y Forward",
+    "texto": "El transformador que también es bobina",
+    "tema": "CESA · Conmutados"
+  },
+  {
+    "id": "cesa-mosfet-diodo",
+    "archivo": "cesa-mosfet-diodo.mp4",
+    "poster": "cesa-mosfet-diodo.jpg",
+    "titulo": "El diodo escondido del MOSFET",
+    "texto": "Canal N, canal P y su diodo",
+    "tema": "CESA · Conmutados"
+  },
+  {
+    "id": "cesa-bombas-de-carga",
+    "archivo": "cesa-bombas-de-carga.mp4",
+    "poster": "cesa-bombas-de-carga.jpg",
+    "titulo": "Convertidores sin bobinas",
+    "texto": "Las bombas de carga",
+    "tema": "CESA · Bombas de carga"
+  },
+  {
+    "id": "cesa-inversores",
+    "archivo": "cesa-inversores.mp4",
+    "poster": "cesa-inversores.jpg",
+    "titulo": "De continua a alterna",
+    "texto": "Onda cuadrada, bipolar y unipolar",
+    "tema": "CESA · Inversores"
   }
 ]

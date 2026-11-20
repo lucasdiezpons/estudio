@@ -1,0 +1,118 @@
+{
+ "id": "cesa-regulador-lineal",
+ "titulo": "El regulador lineal es un grifo",
+ "texto": "Salida limpia, pero quema lo que sobra",
+ "tema": "CESA · Reguladores lineales",
+ "etiqueta": "reguladores",
+ "pron": {
+  "dropout": "drop aut",
+  "LDO": "ele de o",
+  "LDOs": "ele de os"
+ },
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que un regulador lineal funciona como un *grifo?* Deja pasar la corriente [(intensidad)]... y se come lo que sobra.",
+   "titulo": "UN *GRIFO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🚰",
+    "linea1": "un transistor que se abre más o menos",
+    "linea2": "UN GRIFO"
+   }
+  },
+  {
+   "tag": "el calor",
+   "sub": "Todo lo que sobra entre entrada y salida... se convierte en *calor.* Por eso su rendimiento es la salida entre la *entrada.*",
+   "titulo": "QUEMA LO QUE *SOBRA*",
+   "visual": {
+    "tipo": "big",
+    "big": "Vo / Vin",
+    "small": "rendimiento de un lineal"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la ventaja",
+   "sub": "Su gran ventaja: no conmuta... así que da una salida *limpia,* sin rizado. Pero solo sabe *bajar* la tensión [(voltaje)].",
+   "titulo": "SALIDA *LIMPIA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "✨",
+      "izq": "Salida",
+      "der": "SIN RIZADO",
+      "en": "limpia,"
+     },
+     {
+      "icono": "⬇️",
+      "izq": "Solo puede",
+      "der": "REDUCIR",
+      "rojo": true,
+      "en": "bajar"
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "dropout",
+   "sub": "Eso sí, necesita un colchón mínimo entre entrada y salida: el *dropout.* Si la entrada baja de ahí... deja de regular.",
+   "titulo": "EL *DROPOUT*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🛏️",
+    "linea1": "diferencia mínima entre entrada y salida",
+    "linea2": "DROPOUT"
+   },
+   "num": 3
+  },
+  {
+   "tag": "LDO",
+   "sub": "Los LDO son lineales con un colchón *pequeñito:* siguen regulando con la entrada casi pegada a la *salida.*",
+   "titulo": "LOS *LDO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🤏",
+    "linea1": "low dropout: lineal serie",
+    "linea2": "LDO"
+   },
+   "num": 3
+  },
+  {
+   "tag": "su consumo",
+   "sub": "Y ojo: el regulador gasta su propia corriente [(intensidad)]... que se va a masa. Por eso entra *más* de lo que sale.",
+   "titulo": "ENTRA *MÁS*",
+   "visual": {
+    "tipo": "big",
+    "big": "Iin = Io + Ignd",
+    "small": "el regulador también consume"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Salida limpia, pero quema lo que *sobra*... y siempre necesita su *dropout.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🚰",
+      "izq": "Lineal",
+      "der": "QUEMA LO QUE SOBRA",
+      "en": "sobra..."
+     },
+     {
+      "icono": "🛏️",
+      "izq": "Siempre necesita",
+      "der": "SU DROPOUT",
+      "rojo": true,
+      "en": "dropout."
+     }
+    ]
+   }
+  }
+ ]
+}

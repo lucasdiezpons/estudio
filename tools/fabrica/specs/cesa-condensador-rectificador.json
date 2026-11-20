@@ -1,0 +1,124 @@
+{
+ "id": "cesa-condensador-rectificador",
+ "titulo": "El condensador que castiga a los diodos",
+ "texto": "Menos rizado... a un precio",
+ "tema": "CESA · Rectificadores",
+ "etiqueta": "rectificadores",
+ "pron": {},
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que poner un condensador más *grande* en una fuente... hace sufrir más a los *diodos?*",
+   "titulo": "MÁS C, *MÁS PICO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔋",
+    "linea1": "más condensador en el filtro",
+    "linea2": "MÁS PICO EN LOS DIODOS"
+   }
+  },
+  {
+   "tag": "el pico",
+   "sub": "El condensador se carga hasta el *pico* de la onda... no hasta el valor eficaz. Por eso siempre aparece la raíz de *dos.*",
+   "titulo": "HASTA EL *PICO*",
+   "visual": {
+    "tipo": "big",
+    "big": "√2 · Vef",
+    "small": "230 V eficaces → unos 325 V de pico"
+   },
+   "num": 1
+  },
+  {
+   "tag": "el rizado",
+   "sub": "Entre pico y pico, el condensador alimenta él solo a la carga... y se va *vaciando.* Eso es el *rizado.*",
+   "titulo": "EL *RIZADO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📉",
+    "linea1": "entre picos, el condensador se descarga",
+    "linea2": "RIZADO"
+   },
+   "num": 1
+  },
+  {
+   "tag": "más condensador",
+   "sub": "Con más condensador se vacía menos... y el diodo solo conduce un instante, en la *puntita* del pico.",
+   "titulo": "UN *INSTANTE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔋",
+      "izq": "Más condensador",
+      "der": "MENOS RIZADO"
+     },
+     {
+      "icono": "⏱️",
+      "izq": "El diodo conduce",
+      "der": "UN INSTANTE",
+      "rojo": true,
+      "en": "puntita"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "el precio",
+   "sub": "Pero tiene que reponer la misma carga... en mucho menos tiempo. Resultado: un pico de corriente [(intensidad)] *enorme.*",
+   "titulo": "PICO *ENORME*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚡",
+    "linea1": "misma carga en menos tiempo",
+    "linea2": "PICO ENORME",
+    "stamp": "¡OJO!"
+   },
+   "num": 2
+  },
+  {
+   "tag": "media onda",
+   "sub": "Y en media onda es peor: recarga una sola vez por ciclo... así que el rizado y el pico salen el *doble.*",
+   "titulo": "MEDIA *ONDA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "1️⃣",
+      "izq": "Media onda: se descarga",
+      "der": "UN PERIODO",
+      "rojo": true
+     },
+     {
+      "icono": "2️⃣",
+      "izq": "Onda completa: se descarga",
+      "der": "MEDIO PERIODO"
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Más condensador... menos rizado, pero más pico en los *diodos.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📉",
+      "izq": "Más condensador",
+      "der": "MENOS RIZADO",
+      "en": "rizado,"
+     },
+     {
+      "icono": "⚡",
+      "izq": "Pero",
+      "der": "MÁS PICO EN LOS DIODOS",
+      "rojo": true,
+      "en": "diodos."
+     }
+    ]
+   }
+  }
+ ]
+}

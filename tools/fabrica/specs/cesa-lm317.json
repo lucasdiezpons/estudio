@@ -1,0 +1,106 @@
+{
+ "id": "cesa-lm317",
+ "titulo": "El truco del LM317",
+ "texto": "Siempre 1,25 voltios",
+ "tema": "CESA · Reguladores lineales",
+ "etiqueta": "reguladores",
+ "pron": {
+  "LM317": "ele eme tres uno siete"
+ },
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que el LM317 tiene una manía? Entre dos de sus patas... *siempre* mantiene uno coma veinticinco voltios.",
+   "titulo": "SIEMPRE *1,25 V*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎯",
+    "linea1": "entre la salida y el pin de ajuste",
+    "linea2": "SIEMPRE 1,25 V"
+   }
+  },
+  {
+   "tag": "la de arriba",
+   "sub": "Esos voltios caen justo en la resistencia de *arriba*... así que por ella pasa una corriente [(intensidad)] *fija.*",
+   "titulo": "CORRIENTE *FIJA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📌",
+      "izq": "Resistencia de arriba",
+      "der": "1,25 V",
+      "en": "arriba..."
+     },
+     {
+      "icono": "➡️",
+      "izq": "Por ella pasa",
+      "der": "CORRIENTE FIJA",
+      "rojo": true,
+      "en": "fija."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "la de abajo",
+   "sub": "Por el pin de ajuste casi no entra nada... así que esa misma corriente baja también por la resistencia de *abajo.*",
+   "titulo": "LA *MISMA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⬇️",
+    "linea1": "por el pin de ajuste casi no entra nada",
+    "linea2": "MISMA CORRIENTE ABAJO"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la fórmula",
+   "sub": "Sumas lo que cae en las dos... y sale la fórmula: uno coma veinticinco, por uno más R dos entre R *uno.*",
+   "titulo": "LA *FÓRMULA*",
+   "visual": {
+    "tipo": "big",
+    "big": "1,25·(1 + R2/R1)",
+    "small": "tensión de salida del LM317"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el detalle",
+   "sub": "Ojo con un detalle: ese mismo factor *multiplica* los defectos del chip. Si vale dieciséis... el error sale dieciséis veces más *grande.*",
+   "titulo": "LO *AMPLIFICA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔍",
+    "linea1": "el factor (1 + R2/R1) también multiplica",
+    "linea2": "LA REGULACIÓN ×16",
+    "stamp": "¡OJO!"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Uno coma veinticinco en la de arriba... y la misma corriente baja por la de *abajo.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📌",
+      "izq": "Arriba",
+      "der": "SIEMPRE 1,25 V",
+      "en": "arriba..."
+     },
+     {
+      "icono": "⬇️",
+      "izq": "Abajo",
+      "der": "LA MISMA CORRIENTE",
+      "rojo": true,
+      "en": "abajo."
+     }
+    ]
+   }
+  }
+ ]
+}
