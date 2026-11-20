@@ -206,5 +206,301 @@
     "titulo": "De continua a alterna",
     "texto": "Onda cuadrada, bipolar y unipolar",
     "tema": "CESA · Inversores"
+  },
+  {
+    "id": "cesa-g-arranque-proteccion-lenta",
+    "archivo": "cesa-g-arranque-proteccion-lenta.mp4",
+    "poster": "cesa-g-arranque-proteccion-lenta.jpg",
+    "titulo": "Por qué no salta al arrancar un motor",
+    "texto": "Protecciones lentas",
+    "tema": "CESA · Protecciones"
+  },
+  {
+    "id": "cesa-g-arranque-traccion-estacionaria",
+    "archivo": "cesa-g-arranque-traccion-estacionaria.mp4",
+    "poster": "cesa-g-arranque-traccion-estacionaria.jpg",
+    "titulo": "Arranque, tracción y estacionaria",
+    "texto": "Tres baterías para tres trabajos",
+    "tema": "CESA · Baterías"
+  },
+  {
+    "id": "cesa-g-autodescarga-y-modelo",
+    "archivo": "cesa-g-autodescarga-y-modelo.mp4",
+    "poster": "cesa-g-autodescarga-y-modelo.jpg",
+    "titulo": "Por qué se descarga una batería guardada",
+    "texto": "Autodescarga y su modelo",
+    "tema": "CESA · Baterías"
+  },
+  {
+    "id": "cesa-g-balanceo-en-un-minuto",
+    "archivo": "cesa-g-balanceo-en-un-minuto.mp4",
+    "poster": "cesa-g-balanceo-en-un-minuto.jpg",
+    "titulo": "Balanceo pasivo y activo",
+    "texto": "Quemar o repartir",
+    "tema": "CESA · Baterías"
+  },
+  {
+    "id": "cesa-g-calor-directa-vs-mppt",
+    "archivo": "cesa-g-calor-directa-vs-mppt.mp4",
+    "poster": "cesa-g-calor-directa-vs-mppt.jpg",
+    "titulo": "Cuándo el calor da más energía",
+    "texto": "Conexión directa contra MPPT",
+    "tema": "CESA · Fotovoltaica"
+  },
+  {
+    "id": "cesa-g-calor-isc-voc",
+    "archivo": "cesa-g-calor-isc-voc.mp4",
+    "poster": "cesa-g-calor-isc-voc.jpg",
+    "titulo": "Qué le hace el calor a una placa",
+    "texto": "Corriente y tensión no van igual",
+    "tema": "CESA · Fotovoltaica"
+  },
+  {
+    "id": "cesa-g-capacidad-bateria",
+    "archivo": "cesa-g-capacidad-bateria.mp4",
+    "poster": "cesa-g-capacidad-bateria.jpg",
+    "titulo": "Qué batería necesita tu placa",
+    "texto": "Días, consumo y descarga",
+    "tema": "CESA · Dimensionado FV"
+  },
+  {
+    "id": "cesa-g-carga-segun-quimica",
+    "archivo": "cesa-g-carga-segun-quimica.mp4",
+    "poster": "cesa-g-carga-segun-quimica.jpg",
+    "titulo": "Cómo se carga cada batería",
+    "texto": "Plomo, litio y níquel",
+    "tema": "CESA · Baterías"
+  },
+  {
+    "id": "cesa-g-celda-a-oscuras",
+    "archivo": "cesa-g-celda-a-oscuras.mp4",
+    "poster": "cesa-g-celda-a-oscuras.jpg",
+    "titulo": "Una placa solar a oscuras",
+    "texto": "Se convierte en otra cosa",
+    "tema": "CESA · Fotovoltaica"
+  },
+  {
+    "id": "cesa-g-consumo-diario",
+    "archivo": "cesa-g-consumo-diario.mp4",
+    "poster": "cesa-g-consumo-diario.jpg",
+    "titulo": "Cuánta energía gasta un aparato al día",
+    "texto": "Potencia por tiempo, y sumar",
+    "tema": "CESA · Dimensionado FV"
+  },
+  {
+    "id": "cesa-g-cuantas-celdas-en-serie",
+    "archivo": "cesa-g-cuantas-celdas-en-serie.mp4",
+    "poster": "cesa-g-cuantas-celdas-en-serie.jpg",
+    "titulo": "Cuántas celdas para cargar una batería",
+    "texto": "El peor caso manda",
+    "tema": "CESA · Fotovoltaica"
+  },
+  {
+    "id": "cesa-g-declaracion-conformidad",
+    "archivo": "cesa-g-declaracion-conformidad.mp4",
+    "poster": "cesa-g-declaracion-conformidad.jpg",
+    "titulo": "La Declaración de Conformidad",
+    "texto": "Para qué productos y por qué",
+    "tema": "CESA · Normativa"
+  },
+  {
+    "id": "cesa-g-difusion-y-arrastre",
+    "archivo": "cesa-g-difusion-y-arrastre.mp4",
+    "poster": "cesa-g-difusion-y-arrastre.jpg",
+    "titulo": "Las dos corrientes de una celda",
+    "texto": "Difusión y arrastre",
+    "tema": "CESA · Fotovoltaica"
+  },
+  {
+    "id": "cesa-g-energia-con-mppt",
+    "archivo": "cesa-g-energia-con-mppt.mp4",
+    "poster": "cesa-g-energia-con-mppt.jpg",
+    "titulo": "La energía de una placa con MPPT",
+    "texto": "Rendimiento, potencia y horas",
+    "tema": "CESA · Dimensionado FV"
+  },
+  {
+    "id": "cesa-g-energia-directa",
+    "archivo": "cesa-g-energia-directa.mp4",
+    "poster": "cesa-g-energia-directa.jpg",
+    "titulo": "La energía de una placa en directa",
+    "texto": "Aquí manda la batería",
+    "tema": "CESA · Dimensionado FV"
+  },
+  {
+    "id": "cesa-g-fill-factor",
+    "archivo": "cesa-g-fill-factor.mp4",
+    "poster": "cesa-g-fill-factor.jpg",
+    "titulo": "El Fill Factor de una placa",
+    "texto": "Qué tan cuadrada es su curva",
+    "tema": "CESA · Fotovoltaica"
+  },
+  {
+    "id": "cesa-g-formula-temperatura",
+    "archivo": "cesa-g-formula-temperatura.mp4",
+    "poster": "cesa-g-formula-temperatura.jpg",
+    "titulo": "Corregir una placa por temperatura",
+    "texto": "Una fórmula para todo",
+    "tema": "CESA · Dimensionado FV"
+  },
+  {
+    "id": "cesa-g-horas-sol-pico",
+    "archivo": "cesa-g-horas-sol-pico.mp4",
+    "poster": "cesa-g-horas-sol-pico.jpg",
+    "titulo": "Las horas de sol pico",
+    "texto": "Pasar radiación a horas",
+    "tema": "CESA · Dimensionado FV"
+  },
+  {
+    "id": "cesa-g-inclinacion-hemisferios",
+    "archivo": "cesa-g-inclinacion-hemisferios.mp4",
+    "poster": "cesa-g-inclinacion-hemisferios.jpg",
+    "titulo": "Junio no es verano en todas partes",
+    "texto": "Inclinar placas en el hemisferio sur",
+    "tema": "CESA · Fotovoltaica"
+  },
+  {
+    "id": "cesa-g-marcado-ce",
+    "archivo": "cesa-g-marcado-ce.mp4",
+    "poster": "cesa-g-marcado-ce.jpg",
+    "titulo": "Lo que de verdad significa el CE",
+    "texto": "No lo pone ningún laboratorio",
+    "tema": "CESA · Normativa"
+  },
+  {
+    "id": "cesa-g-mejor-de-los-peores",
+    "archivo": "cesa-g-mejor-de-los-peores.mp4",
+    "poster": "cesa-g-mejor-de-los-peores.jpg",
+    "titulo": "Cómo elegir la inclinación de todo el año",
+    "texto": "El mejor de los peores",
+    "tema": "CESA · Dimensionado FV"
+  },
+  {
+    "id": "cesa-g-mono-poli-amorfo",
+    "archivo": "cesa-g-mono-poli-amorfo.mp4",
+    "poster": "cesa-g-mono-poli-amorfo.jpg",
+    "titulo": "Mono, poli y amorfo",
+    "texto": "El orden que nunca cambia",
+    "tema": "CESA · Fotovoltaica"
+  },
+  {
+    "id": "cesa-g-norma-o-reglamento",
+    "archivo": "cesa-g-norma-o-reglamento.mp4",
+    "poster": "cesa-g-norma-o-reglamento.jpg",
+    "titulo": "Norma no es lo mismo que ley",
+    "texto": "Quién las dicta y cuáles obligan",
+    "tema": "CESA · Normativa"
+  },
+  {
+    "id": "cesa-g-paises-tt-tn",
+    "archivo": "cesa-g-paises-tt-tn.mp4",
+    "poster": "cesa-g-paises-tt-tn.jpg",
+    "titulo": "Italia o Alemania",
+    "texto": "Qué red usa cada país",
+    "tema": "CESA · Protecciones"
+  },
+  {
+    "id": "cesa-g-placa-hacia-el-norte",
+    "archivo": "cesa-g-placa-hacia-el-norte.mp4",
+    "poster": "cesa-g-placa-hacia-el-norte.jpg",
+    "titulo": "Placas que miran al norte",
+    "texto": "En el hemisferio sur",
+    "tema": "CESA · Fotovoltaica"
+  },
+  {
+    "id": "cesa-g-proteger-un-ordenador",
+    "archivo": "cesa-g-proteger-un-ordenador.mp4",
+    "poster": "cesa-g-proteger-un-ordenador.jpg",
+    "titulo": "Cómo proteger un ordenador de un rayo",
+    "texto": "Directo o indirecto",
+    "tema": "CESA · Protecciones"
+  },
+  {
+    "id": "cesa-g-punto-caliente-paralelo",
+    "archivo": "cesa-g-punto-caliente-paralelo.mp4",
+    "poster": "cesa-g-punto-caliente-paralelo.jpg",
+    "titulo": "Una celda a la sombra en paralelo",
+    "texto": "Aquí la solución es al revés",
+    "tema": "CESA · Fotovoltaica"
+  },
+  {
+    "id": "cesa-g-punto-caliente-serie",
+    "archivo": "cesa-g-punto-caliente-serie.mp4",
+    "poster": "cesa-g-punto-caliente-serie.jpg",
+    "titulo": "Una celda a la sombra en serie",
+    "texto": "El punto caliente",
+    "tema": "CESA · Fotovoltaica"
+  },
+  {
+    "id": "cesa-g-quimica-o-no",
+    "archivo": "cesa-g-quimica-o-no.mp4",
+    "poster": "cesa-g-quimica-o-no.jpg",
+    "titulo": "Qué guarda energía con química",
+    "texto": "Baterías, pilas de combustible y supercondensadores",
+    "tema": "CESA · Baterías"
+  },
+  {
+    "id": "cesa-g-radiacion-tf",
+    "archivo": "cesa-g-radiacion-tf.mp4",
+    "poster": "cesa-g-radiacion-tf.jpg",
+    "titulo": "La radiación sobre una placa inclinada",
+    "texto": "El factor de la tabla",
+    "tema": "CESA · Dimensionado FV"
+  },
+  {
+    "id": "cesa-g-rayo-o-neutro-cortado",
+    "archivo": "cesa-g-rayo-o-neutro-cortado.mp4",
+    "poster": "cesa-g-rayo-o-neutro-cortado.jpg",
+    "titulo": "Rayo o neutro cortado",
+    "texto": "Sobretensión corta o larga",
+    "tema": "CESA · Protecciones"
+  },
+  {
+    "id": "cesa-g-real-decreto-o-une",
+    "archivo": "cesa-g-real-decreto-o-une.mp4",
+    "poster": "cesa-g-real-decreto-o-une.jpg",
+    "titulo": "Real Decreto o UNE",
+    "texto": "Cómo saber si algo obliga solo por su nombre",
+    "tema": "CESA · Normativa"
+  },
+  {
+    "id": "cesa-g-serie-o-paralelo-protecciones",
+    "archivo": "cesa-g-serie-o-paralelo-protecciones.mp4",
+    "poster": "cesa-g-serie-o-paralelo-protecciones.jpg",
+    "titulo": "En serie o en paralelo",
+    "texto": "La regla de las protecciones",
+    "tema": "CESA · Protecciones"
+  },
+  {
+    "id": "cesa-g-supercondensador-ventajas",
+    "archivo": "cesa-g-supercondensador-ventajas.mp4",
+    "poster": "cesa-g-supercondensador-ventajas.jpg",
+    "titulo": "Supercondensador contra batería",
+    "texto": "Quién gana en qué",
+    "tema": "CESA · Baterías"
+  },
+  {
+    "id": "cesa-g-tipos-1-2-3",
+    "archivo": "cesa-g-tipos-1-2-3.mp4",
+    "poster": "cesa-g-tipos-1-2-3.jpg",
+    "titulo": "Protectores tipo 1, 2 y 3",
+    "texto": "Quién aguanta qué",
+    "tema": "CESA · Protecciones"
+  },
+  {
+    "id": "cesa-g-tt-tn-en-un-minuto",
+    "archivo": "cesa-g-tt-tn-en-un-minuto.mp4",
+    "poster": "cesa-g-tt-tn-en-un-minuto.jpg",
+    "titulo": "Redes TT y TN",
+    "texto": "A tierra o al neutro",
+    "tema": "CESA · Protecciones"
+  },
+  {
+    "id": "cesa-g-zona-carga-espacial",
+    "archivo": "cesa-g-zona-carga-espacial.mp4",
+    "poster": "cesa-g-zona-carga-espacial.jpg",
+    "titulo": "Dónde atrapa la luz una placa",
+    "texto": "La zona de carga espacial",
+    "tema": "CESA · Fotovoltaica"
   }
 ]
