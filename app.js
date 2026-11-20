@@ -16,7 +16,7 @@ let muted = false;       // sonido activado por defecto
 let bloqueado = false;
 let desbloqueadoEn = 0;   // iOS: hasta el primer toque solo deja reproducir en silencio
 const player = document.createElement("video");
-player.playsInline = true; player.setAttribute("webkit-playsinline", ""); player.loop = true; player.preload = "auto";
+player.playsInline = true; player.setAttribute("webkit-playsinline", ""); player.loop = false; // al acabar pasa solo al siguiente player.preload = "auto";
 let cola = [];           // vídeos en el feed (en orden)
 let activo = -1;
 
@@ -166,6 +166,15 @@ function desbloquear() {
 }
 // el primer toque en cualquier sitio desbloquea el sonido
 ["touchend", "click"].forEach((ev) => document.addEventListener(ev, () => { if (bloqueado) desbloquear(); }, { once: false, passive: true }));
+
+// deslizamiento automático: al terminar un vídeo, baja al siguiente
+player.addEventListener("ended", () => {
+  if ($("#lista").hidden === false) return; // si estás en la lista, no
+  marcarVisto(cola[activo].id);
+  const sig = feed.querySelector(`.slide[data-i="${activo + 1}"]`);
+  if (sig) sig.scrollIntoView({ behavior: "smooth" });
+  else { player.currentTime = 0; player.play().catch(() => {}); }
+});
 
 player.addEventListener("timeupdate", () => {
   if (!player.duration || activo < 0) return;
