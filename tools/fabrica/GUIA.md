@@ -75,3 +75,8 @@ git add -A && git commit -m "Añade vídeos de ..." && git -c push.negotiate=tru
 - No programar un aviso por vídeo (gasta mucho Claude): hacer la asignatura entera de golpe.
 - No generar muchas muestras de voz: ya está elegida.
 - No subir la API key ni archivos `out/` al repo.
+
+## Ganchos (opcional)
+- `tools/fabrica/guiones/` = `hooks.json` (21 fórmulas de gancho) + `hookscore.py` (puntúa ganchos) del plugin MIT Jakeschincariol/youtube-agent-skill.
+- Uso: escribir 5 ganchos por TikTok → `python3 tools/fabrica/guiones/hookscore.py --hook "frase"` → quedarse con el mejor.
+- Ojo: está pensado para YouTube en inglés; la puntuación en español es orientativa.
