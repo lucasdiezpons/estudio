@@ -1,0 +1,113 @@
+{
+ "id": "cesa-tipos-de-bateria",
+ "titulo": "Batería de coche vs carrito de golf",
+ "texto": "Arranque, tracción y estacionaria",
+ "tema": "CESA · Baterías",
+ "etiqueta": "baterías",
+ "pron": {},
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que la batería de un coche y la de un carrito de golf son *totalmente* distintas por dentro?",
+   "titulo": "ARRANQUE *VS* TRACCIÓN",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🚗",
+    "linea1": "parecen iguales por fuera",
+    "linea2": "POR DENTRO, NO"
+   }
+  },
+  {
+   "tag": "arranque",
+   "sub": "La de *arranque* tiene que dar un chute de corriente [(intensidad)] *enorme...* durante unos segundos, para mover el motor.",
+   "titulo": "*ARRANQUE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚡",
+    "linea1": "corriente (intensidad) muy alta, muy poco rato",
+    "linea2": "MUCHA CORRIENTE"
+   },
+   "num": 1
+  },
+  {
+   "tag": "arranque",
+   "sub": "Por eso lleva muchas placas *finas:* más superficie de electrodos... y menos *electrolito.*",
+   "titulo": "PLACAS *FINAS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📄",
+      "izq": "Electrodos",
+      "der": "MÁS SUPERFICIE",
+      "rojo": true,
+      "en": "finas:"
+     },
+     {
+      "icono": "💧",
+      "izq": "Electrolito",
+      "der": "MENOS VOLUMEN",
+      "rojo": null,
+      "en": "electrolito."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "tracción",
+   "sub": "La de *tracción,* la de un carrito o una carretilla, tiene que aguantar horas... y descargarse casi *entera.*",
+   "titulo": "*TRACCIÓN*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏌️",
+    "linea1": "horas de uso seguidas",
+    "linea2": "DESCARGA PROFUNDA"
+   },
+   "num": 2
+  },
+  {
+   "tag": "estacionaria",
+   "sub": "Y para guardar la energía de unas placas solares, se usa la *estacionaria:* ciclos lentos y profundos, sin moverse de *sitio.*",
+   "titulo": "*ESTACIONARIA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "☀️",
+    "linea1": "sistema solar autónomo",
+    "linea2": "CICLOS LENTOS Y PROFUNDOS"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Arranque: *corriente.* Tracción: *profundidad.* Y para el sol... *estacionaria.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🚗",
+      "izq": "Arranque",
+      "der": "MUCHA CORRIENTE",
+      "rojo": true,
+      "en": "corriente."
+     },
+     {
+      "icono": "🏌️",
+      "izq": "Tracción",
+      "der": "DESCARGA PROFUNDA",
+      "rojo": null,
+      "en": "profundidad."
+     },
+     {
+      "icono": "☀️",
+      "izq": "Placas solares",
+      "der": "ESTACIONARIA",
+      "rojo": null,
+      "en": "estacionaria."
+     }
+    ]
+   }
+  }
+ ]
+}

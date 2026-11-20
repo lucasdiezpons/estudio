@@ -1,0 +1,149 @@
+{
+ "id": "cesa-protectores-tipo-1-2-3",
+ "titulo": "Protectores tipo 1, 2 y 3",
+ "texto": "Cómo proteger un ordenador de un rayo",
+ "tema": "CESA · Protecciones",
+ "etiqueta": "protecciones",
+ "pron": {
+  "1": "uno",
+  "2": "dos",
+  "3": "tres",
+  "1,": "uno,",
+  "3.": "tres.",
+  "*tipo": "tipo"
+ },
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que para proteger un ordenador de un rayo... a veces necesitas *dos* protectores?",
+   "titulo": "TIPO *1, 2 Y 3*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "💻",
+    "linea1": "protección contra sobretensiones",
+    "linea2": "TIPO 1, 2 Y 3"
+   }
+  },
+  {
+   "tag": "tipo 1",
+   "sub": "El tipo 1 aguanta hasta un rayo *directo.* Pero deja pasar demasiada tensión [(voltaje)] para los equipos *delicados.*",
+   "titulo": "*TIPO 1*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🌩️",
+      "izq": "Rayo directo",
+      "der": "LO AGUANTA",
+      "rojo": null,
+      "en": "directo."
+     },
+     {
+      "icono": "💻",
+      "izq": "Equipos delicados (cat. I)",
+      "der": "NO LOS PROTEGE",
+      "rojo": true,
+      "en": "delicados."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "tipo 2",
+   "sub": "El tipo 2 solo aguanta rayos *indirectos...* y tampoco protege los equipos *delicados.*",
+   "titulo": "*TIPO 2*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "☁️",
+      "izq": "Rayo indirecto",
+      "der": "LO AGUANTA",
+      "rojo": null,
+      "en": "indirectos..."
+     },
+     {
+      "icono": "💻",
+      "izq": "Equipos delicados (cat. I)",
+      "der": "NO LOS PROTEGE",
+      "rojo": true,
+      "en": "delicados."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "tipo 3",
+   "sub": "El tipo 3 también es solo para rayos indirectos... pero este sí protege los equipos *delicados.* Va pegado al aparato.",
+   "titulo": "*TIPO 3*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "☁️",
+      "izq": "Rayo indirecto",
+      "der": "LO AGUANTA"
+     },
+     {
+      "icono": "💻",
+      "izq": "Equipos delicados (cat. I)",
+      "der": "SÍ LOS PROTEGE",
+      "rojo": true,
+      "en": "delicados."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "qué pongo",
+   "sub": "Entonces... ¿rayo *indirecto?* Con un tipo 3 junto al ordenador te basta. ¿Rayo *directo?* Tipo 1 para el golpe gordo... y tipo 3 para el ordenador.",
+   "titulo": "¿QUÉ *PONGO*?",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "☁️",
+      "izq": "Rayo indirecto",
+      "der": "TIPO 3",
+      "rojo": null,
+      "en": "indirecto?"
+     },
+     {
+      "icono": "🌩️",
+      "izq": "Rayo directo",
+      "der": "TIPO 1 + TIPO 3",
+      "rojo": true,
+      "en": "directo?"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. El tipo 1 aguanta el *golpe.* El tipo 3 protege el *aparato.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🥊",
+      "izq": "Tipo 1",
+      "der": "AGUANTA EL RAYO DIRECTO",
+      "rojo": null,
+      "en": "golpe."
+     },
+     {
+      "icono": "💻",
+      "izq": "Tipo 3",
+      "der": "PROTEGE EL APARATO",
+      "rojo": true,
+      "en": "aparato."
+     }
+    ]
+   }
+  }
+ ]
+}

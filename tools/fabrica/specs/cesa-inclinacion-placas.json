@@ -1,0 +1,107 @@
+{
+ "id": "cesa-inclinacion-placas",
+ "titulo": "Cuánto inclinar una placa solar",
+ "texto": "Verano, invierno y hemisferio sur",
+ "tema": "CESA · Fotovoltaica",
+ "etiqueta": "energía solar",
+ "pron": {
+  "55°.": "cincuenta y cinco grados.",
+  "15°.": "quince grados.",
+  "55°": "cincuenta y cinco grados",
+  "15°": "quince grados"
+ },
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que la misma placa solar hay que inclinarla *distinto* en verano que en *invierno?*",
+   "titulo": "¿CUÁNTO *INCLINO*?",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📐",
+    "linea1": "depende de la estación del año",
+    "linea2": "VERANO VS INVIERNO"
+   }
+  },
+  {
+   "tag": "invierno",
+   "sub": "En *invierno,* el sol va muy bajo. Así que la placa se pone muy *inclinada...* unos 55°.",
+   "titulo": "INVIERNO: *55°*",
+   "visual": {
+    "tipo": "big",
+    "big": "55°",
+    "small": "sol bajo · placa muy inclinada"
+   },
+   "num": 1
+  },
+  {
+   "tag": "verano",
+   "sub": "En *verano,* el sol va alto. Así que la placa va casi *tumbada...* unos 15°.",
+   "titulo": "VERANO: *15°*",
+   "visual": {
+    "tipo": "big",
+    "big": "15°",
+    "small": "sol alto · placa casi plana"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el hemisferio sur",
+   "sub": "Pero ojo... en el hemisferio *sur,* las estaciones van al revés. En Buenos Aires, *junio* es pleno invierno.",
+   "titulo": "EL SUR, *AL REVÉS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "❄️",
+      "izq": "Buenos Aires · junio",
+      "der": "INVIERNO · 55°",
+      "rojo": true,
+      "en": "junio"
+     },
+     {
+      "icono": "☀️",
+      "izq": "Buenos Aires · diciembre",
+      "der": "VERANO · 15°"
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "el hemisferio sur",
+   "sub": "Y allí la placa no mira al sur... mira al *norte,* porque es por donde pasa el sol.",
+   "titulo": "MIRA AL *NORTE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧭",
+    "linea1": "en el hemisferio sur",
+    "linea2": "ORIENTADA AL NORTE"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Sol bajo, placa *inclinada.* Sol alto, placa *tumbada.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "❄️",
+      "izq": "Invierno · sol bajo",
+      "der": "UNOS 55°",
+      "rojo": true,
+      "en": "inclinada."
+     },
+     {
+      "icono": "☀️",
+      "izq": "Verano · sol alto",
+      "der": "UNOS 15°",
+      "rojo": null,
+      "en": "tumbada."
+     }
+    ]
+   }
+  }
+ ]
+}

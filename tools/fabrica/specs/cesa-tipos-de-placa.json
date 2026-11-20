@@ -1,0 +1,134 @@
+{
+ "id": "cesa-tipos-de-placa",
+ "titulo": "Mono, poli y amorfa: cuál es mejor",
+ "texto": "Los 3 tipos de placa solar",
+ "tema": "CESA · Fotovoltaica",
+ "etiqueta": "energía solar",
+ "pron": {},
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que no todas las placas solares son iguales? Hay tres tipos... y se distinguen a simple *vista.*",
+   "titulo": "3 TIPOS DE *PLACA*",
+   "visual": {
+    "tipo": "big",
+    "big": "3",
+    "small": "tipos de placa solar"
+   }
+  },
+  {
+   "tag": "monocristalina",
+   "sub": "La *monocristalina:* un solo cristal perfecto. Es la que más rinde... y la más *cara.*",
+   "titulo": "*MONO*CRISTALINA",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🥇",
+      "izq": "Rendimiento",
+      "der": "EL MÁS ALTO",
+      "rojo": true,
+      "en": "rinde..."
+     },
+     {
+      "icono": "💸",
+      "izq": "Precio",
+      "der": "LA MÁS CARA",
+      "rojo": null,
+      "en": "cara."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "policristalina",
+   "sub": "La *policristalina:* muchos cristales pequeños juntos. Rinde un poco menos... y es más *barata.*",
+   "titulo": "*POLI*CRISTALINA",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🥈",
+      "izq": "Rendimiento",
+      "der": "INTERMEDIO",
+      "rojo": null,
+      "en": "menos..."
+     },
+     {
+      "icono": "💰",
+      "izq": "Precio",
+      "der": "INTERMEDIO",
+      "rojo": null,
+      "en": "barata."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "amorfa",
+   "sub": "Y la *amorfa:* sin red cristalina, átomos desordenados. Es la que menos rinde... pero la más *barata.*",
+   "titulo": "*AMORFA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🥉",
+      "izq": "Rendimiento",
+      "der": "EL MÁS BAJO",
+      "rojo": null,
+      "en": "rinde..."
+     },
+     {
+      "icono": "🪙",
+      "izq": "Precio",
+      "der": "LA MÁS BARATA",
+      "rojo": true,
+      "en": "barata."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "el truco",
+   "sub": "El truco: cuanto más *ordenado* el cristal... más rinde, y más *cuesta.*",
+   "titulo": "EL *TRUCO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧩",
+    "linea1": "más orden en el cristal",
+    "linea2": "MÁS RINDE Y MÁS CUESTA"
+   }
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. De mejor a peor, y de más cara a más barata... mono, poli y *amorfa.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "1️⃣",
+      "izq": "La mejor y más cara",
+      "der": "MONO",
+      "rojo": true
+     },
+     {
+      "icono": "2️⃣",
+      "izq": "En medio",
+      "der": "POLI"
+     },
+     {
+      "icono": "3️⃣",
+      "izq": "La peor y más barata",
+      "der": "AMORFA",
+      "rojo": null,
+      "en": "amorfa."
+     }
+    ]
+   }
+  }
+ ]
+}

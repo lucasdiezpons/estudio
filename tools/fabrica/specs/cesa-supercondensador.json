@@ -1,0 +1,131 @@
+{
+ "id": "cesa-supercondensador",
+ "titulo": "Supercondensador vs batería",
+ "texto": "Química, iones y autodescarga",
+ "tema": "CESA · Baterías",
+ "etiqueta": "baterías",
+ "pron": {},
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que hay algo que se carga y descarga cientos de miles de veces... casi sin gastarse? Se llama *supercondensador.*",
+   "titulo": "*SUPER*CONDENSADOR",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚡",
+    "linea1": "cientos de miles de ciclos",
+    "linea2": "SUPERCONDENSADOR"
+   }
+  },
+  {
+   "tag": "la batería",
+   "sub": "Una batería, o una pila de combustible, funcionan con reacciones *químicas.* Y la química... se va *desgastando.*",
+   "titulo": "BATERÍA = *QUÍMICA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔋",
+      "izq": "Batería",
+      "der": "REACCIÓN QUÍMICA",
+      "rojo": null,
+      "en": "químicas."
+     },
+     {
+      "icono": "⛽",
+      "izq": "Pila de combustible",
+      "der": "REACCIÓN QUÍMICA",
+      "rojo": true,
+      "en": "desgastando."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "el supercondensador",
+   "sub": "El supercondensador no tiene química. Solo mueve *iones* de un lado a otro. Por eso aguanta muchísimos más *ciclos.*",
+   "titulo": "SIN *QUÍMICA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔁",
+    "linea1": "solo desplaza iones",
+    "linea2": "MUCHOS MÁS CICLOS"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el pero",
+   "sub": "¿El precio? Guarda mucha menos *energía* que una batería. Y al descargarse, su tensión [(voltaje)] cae en *línea* recta.",
+   "titulo": "EL *PERO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📉",
+      "izq": "Energía guardada",
+      "der": "MUCHA MENOS",
+      "rojo": null,
+      "en": "energía"
+     },
+     {
+      "icono": "📏",
+      "izq": "Tensión (voltaje) al descargar",
+      "der": "CAE EN LÍNEA RECTA",
+      "rojo": true,
+      "en": "línea"
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "autodescarga",
+   "sub": "Otra curiosidad: una batería se descarga *sola,* aunque no la uses. Pero si la guardas en *frío...* se descarga más despacio.",
+   "titulo": "*AUTO*DESCARGA",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧊",
+    "linea1": "las reacciones van más lentas",
+    "linea2": "FRÍO = MENOS AUTODESCARGA"
+   },
+   "num": 3
+  },
+  {
+   "tag": "el modelo",
+   "sub": "Y por dentro, una batería se modela como una resistencia en *serie...* con grupos de resistencia y condensador en *paralelo.*",
+   "titulo": "EL *MODELO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧮",
+    "linea1": "su respuesta cambia con el tiempo",
+    "linea2": "R EN SERIE + GRUPOS R Y C"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Batería: *química.* Supercondensador: *iones...* y muchos más ciclos.",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔋",
+      "izq": "Batería",
+      "der": "QUÍMICA",
+      "rojo": null,
+      "en": "química."
+     },
+     {
+      "icono": "⚡",
+      "izq": "Supercondensador",
+      "der": "IONES · MÁS CICLOS",
+      "rojo": true,
+      "en": "iones..."
+     }
+    ]
+   }
+  }
+ ]
+}

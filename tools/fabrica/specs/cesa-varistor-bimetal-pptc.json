@@ -1,0 +1,121 @@
+{
+ "id": "cesa-varistor-bimetal-pptc",
+ "titulo": "Varistor, bimetal y PPTC",
+ "texto": "Los pequeños guardianes de un circuito",
+ "tema": "CESA · Protecciones",
+ "etiqueta": "protecciones",
+ "pron": {
+  "MOV,": "o eme o uve,",
+  "PPTC": "pe pe te ce",
+  "*PPTC*": "pe pe te ce",
+  "PPTC,": "pe pe te ce,",
+  "PPTC.": "pe pe te ce."
+ },
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que hay protecciones que se *rearman* solas... y otras que solo cambian su *resistencia?*",
+   "titulo": "PEQUEÑOS *GUARDIANES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🛡️",
+    "linea1": "varistor, bimetal y PPTC",
+    "linea2": "3 PROTECCIONES"
+   }
+  },
+  {
+   "tag": "varistor",
+   "sub": "El *varistor,* o MOV, protege de *sobretensiones.* Va en paralelo: cuando la tensión [(voltaje)] sube, su resistencia cae... y se come el pico.",
+   "titulo": "*VARISTOR*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⚡",
+      "izq": "Protege de",
+      "der": "SOBRETENSIONES",
+      "rojo": true,
+      "en": "sobretensiones."
+     },
+     {
+      "icono": "🔀",
+      "izq": "Conexión",
+      "der": "EN PARALELO · LIMITADOR"
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "bimetal",
+   "sub": "El *bimetal* protege de *sobrecorrientes.* Va en serie: la corriente [(intensidad)] lo calienta, se dobla... y abre el circuito.",
+   "titulo": "*BIMETAL*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔥",
+      "izq": "Protege de",
+      "der": "SOBRECORRIENTES",
+      "rojo": true,
+      "en": "sobrecorrientes."
+     },
+     {
+      "icono": "➡️",
+      "izq": "Conexión",
+      "der": "EN SERIE"
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "PPTC",
+   "sub": "El PPTC es un fusible que se *rearma* solo. También protege de *sobrecorrientes.*",
+   "titulo": "*PPTC*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "♻️",
+    "linea1": "fusible rearmable",
+    "linea2": "SOBRECORRIENTES"
+   },
+   "num": 3
+  },
+  {
+   "tag": "arrancar un motor",
+   "sub": "¿Y al arrancar un motor? Hay picos de corriente [(intensidad)] *normales.* Por eso se usa algo *lento,* como un térmico... que no salte por nada.",
+   "titulo": "ARRANQUE *LENTO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🐢",
+    "linea1": "picos normales al arrancar",
+    "linea2": "TÉRMICO LENTO"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Sobretensión: *varistor,* en paralelo. Sobrecorriente: *bimetal* o PPTC, en serie.",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⚡",
+      "izq": "Sobretensión",
+      "der": "VARISTOR · PARALELO",
+      "rojo": null,
+      "en": "varistor,"
+     },
+     {
+      "icono": "🔥",
+      "izq": "Sobrecorriente",
+      "der": "BIMETAL / PPTC · SERIE",
+      "rojo": true,
+      "en": "bimetal"
+     }
+    ]
+   }
+  }
+ ]
+}

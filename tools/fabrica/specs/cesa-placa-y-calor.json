@@ -1,0 +1,109 @@
+{
+ "id": "cesa-placa-y-calor",
+ "titulo": "Por qué una placa solar odia el calor",
+ "texto": "Temperatura, MPPT y Fill Factor",
+ "tema": "CESA · Fotovoltaica",
+ "etiqueta": "energía solar",
+ "pron": {
+  "MPPT,": "eme pe pe te,",
+  "MPPT": "eme pe pe te"
+ },
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que una placa solar produce *menos* en un día de mucho calor? Aunque haga un sol *espectacular.*",
+   "titulo": "EL CALOR *RESTA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🥵",
+    "linea1": "más temperatura",
+    "linea2": "MENOS POTENCIA"
+   }
+  },
+  {
+   "tag": "qué cambia",
+   "sub": "Con el calor, la corriente [(intensidad)] de cortocircuito *sube* un poquito. Pero la tensión [(voltaje)] de circuito abierto *baja* bastante.",
+   "titulo": "SUBE Y *BAJA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬆️",
+      "izq": "Corriente (intensidad) · Isc",
+      "der": "SUBE UN POCO",
+      "rojo": null,
+      "en": "sube"
+     },
+     {
+      "icono": "⬇️",
+      "izq": "Tensión (voltaje) · Voc",
+      "der": "BAJA BASTANTE",
+      "rojo": true,
+      "en": "baja"
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "con MPPT",
+   "sub": "Si usas un *MPPT,* que busca siempre el punto de máxima potencia... la potencia *baja* con el calor.",
+   "titulo": "CON *MPPT*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🌡️",
+    "linea1": "busca el punto de máxima potencia",
+    "linea2": "LA POTENCIA BAJA"
+   },
+   "num": 2
+  },
+  {
+   "tag": "conexión directa",
+   "sub": "Pero si conectas la placa *directa* a la batería, manda la corriente [(intensidad).] Y como la corriente sube... ¡la potencia también *sube!*",
+   "titulo": "CONEXIÓN *DIRECTA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔋",
+    "linea1": "aquí manda la corriente (intensidad)",
+    "linea2": "LA POTENCIA SUBE",
+    "stamp": "SORPRESA"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el Fill Factor",
+   "sub": "Y para saber si una placa es buena, se mira el *Fill Factor.* La potencia máxima... dividida entre la tensión [(voltaje)] de circuito abierto por la corriente [(intensidad)] de cortocircuito.",
+   "titulo": "FILL *FACTOR*",
+   "visual": {
+    "tipo": "big",
+    "big": "FF",
+    "small": "Pmáx / (Voc · Isc)"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Con calor, la tensión [(voltaje)] *baja.* Y cuanto más alto el Fill Factor... *mejor* placa.",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🥵",
+      "izq": "Con calor",
+      "der": "TENSIÓN (VOLTAJE) BAJA",
+      "rojo": true,
+      "en": "baja."
+     },
+     {
+      "icono": "📈",
+      "izq": "Fill Factor alto",
+      "der": "MEJOR PLACA",
+      "rojo": null,
+      "en": "mejor"
+     }
+    ]
+   }
+  }
+ ]
+}

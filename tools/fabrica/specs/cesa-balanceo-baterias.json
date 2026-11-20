@@ -1,0 +1,81 @@
+{
+ "id": "cesa-balanceo-baterias",
+ "titulo": "Cómo se igualan las celdas de una batería",
+ "texto": "Balanceo pasivo vs activo",
+ "tema": "CESA · Baterías",
+ "etiqueta": "baterías",
+ "pron": {},
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que dentro de una batería hay muchas *celdas...* y nunca se cargan exactamente *igual?*",
+   "titulo": "CELDAS *DESIGUALES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔋",
+    "linea1": "unas se llenan antes que otras",
+    "linea2": "HAY QUE IGUALARLAS"
+   }
+  },
+  {
+   "tag": "el balanceo",
+   "sub": "Para igualarlas existe el *balanceo.* Y hay dos formas: el pasivo... y el *activo.*",
+   "titulo": "*BALANCEO*",
+   "visual": {
+    "tipo": "big",
+    "big": "2",
+    "small": "formas de igualar las celdas"
+   }
+  },
+  {
+   "tag": "pasivo",
+   "sub": "El *pasivo* es el bruto: a la celda más cargada le quita energía con una *resistencia...* y la quema en calor.",
+   "titulo": "*PASIVO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔥",
+    "linea1": "disipa la energía de la celda más cargada",
+    "linea2": "CON UNA RESISTENCIA",
+    "stamp": "SE PIERDE"
+   },
+   "num": 1
+  },
+  {
+   "tag": "activo",
+   "sub": "El *activo* es el listo: con un convertidor conmutado, *pasa* la energía de la celda más cargada... a la menos cargada.",
+   "titulo": "*ACTIVO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔁",
+    "linea1": "de la más cargada a la menos cargada",
+    "linea2": "CONVERTIDOR CONMUTADO",
+    "stamp": "SE APROVECHA"
+   },
+   "num": 2
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Pasivo: *quema.* Activo: *reparte.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔥",
+      "izq": "Pasivo",
+      "der": "QUEMA EN UNA RESISTENCIA",
+      "rojo": null,
+      "en": "quema."
+     },
+     {
+      "icono": "🔁",
+      "izq": "Activo",
+      "der": "REPARTE CON CONVERTIDOR",
+      "rojo": true,
+      "en": "reparte."
+     }
+    ]
+   }
+  }
+ ]
+}

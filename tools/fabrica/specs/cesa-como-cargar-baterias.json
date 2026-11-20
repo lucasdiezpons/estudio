@@ -1,0 +1,115 @@
+{
+ "id": "cesa-como-cargar-baterias",
+ "titulo": "Cada batería se carga a su manera",
+ "texto": "Plomo, litio y níquel",
+ "tema": "CESA · Baterías",
+ "etiqueta": "baterías",
+ "pron": {
+  "CC/CV.": "corriente constante y tensión constante.",
+  "NiMH": "níquel metal hidruro"
+ },
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que la batería del coche, la del móvil y unas pilas recargables... se cargan de formas *distintas?*",
+   "titulo": "3 BATERÍAS, *3 CARGAS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔌",
+    "linea1": "plomo, litio y NiMH",
+    "linea2": "CADA UNA A SU MANERA"
+   }
+  },
+  {
+   "tag": "plomo",
+   "sub": "La de *plomo,* la del coche, admite dos: tensión [(voltaje)] constante... o corriente [(intensidad)] constante y luego tensión *constante.*",
+   "titulo": "*PLOMO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🚗",
+      "izq": "Opción 1",
+      "der": "TENSIÓN CONSTANTE"
+     },
+     {
+      "icono": "🚗",
+      "izq": "Opción 2",
+      "der": "CC/CV",
+      "rojo": true,
+      "en": "constante."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "litio",
+   "sub": "La de *litio,* la del móvil, solo una: primero corriente [(intensidad)] constante... y al final, tensión [(voltaje)] *constante.*",
+   "titulo": "*LITIO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📱",
+    "linea1": "corriente constante, luego tensión constante",
+    "linea2": "SOLO CC/CV"
+   },
+   "num": 2
+  },
+  {
+   "tag": "litio",
+   "sub": "¿Por qué no solo tensión constante? Porque con la batería vacía, la corriente [(intensidad)] sería *enorme.*",
+   "titulo": "¿POR *QUÉ*?",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "💥",
+    "linea1": "batería vacía + tensión (voltaje) fija",
+    "linea2": "CORRIENTE ENORME",
+    "stamp": "PELIGRO"
+   },
+   "num": 2
+  },
+  {
+   "tag": "níquel",
+   "sub": "Y las de *níquel,* las pilas recargables, solo a corriente [(intensidad)] *constante.* Se para cuando se calientan... o cuando la tensión [(voltaje)] cae un poquito.",
+   "titulo": "*NÍQUEL*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔋",
+    "linea1": "se corta por temperatura o por −ΔV",
+    "linea2": "SOLO CORRIENTE CONSTANTE"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Plomo: *dos* opciones. Litio: solo *CC/CV.* Níquel: solo corriente [(intensidad)] *constante.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🚗",
+      "izq": "Plomo",
+      "der": "TENSIÓN CTE. O CC/CV",
+      "rojo": null,
+      "en": "dos"
+     },
+     {
+      "icono": "📱",
+      "izq": "Litio",
+      "der": "SOLO CC/CV",
+      "rojo": true,
+      "en": "CC/CV."
+     },
+     {
+      "icono": "🔋",
+      "izq": "Níquel (NiMH)",
+      "der": "SOLO CORRIENTE CTE.",
+      "rojo": null,
+      "en": "constante."
+     }
+    ]
+   }
+  }
+ ]
+}

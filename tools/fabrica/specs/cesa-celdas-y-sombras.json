@@ -1,0 +1,146 @@
+{
+ "id": "cesa-celdas-y-sombras",
+ "titulo": "Una hoja puede calentar tu placa solar",
+ "texto": "Sombras, diodos y celdas en serie",
+ "tema": "CESA · Fotovoltaica",
+ "etiqueta": "energía solar",
+ "pron": {
+  "4,2": "cuatro coma dos",
+  "4.": "cuatro.",
+  "8": "ocho",
+  "10.": "diez.",
+  "0,5...": "cero coma cinco..."
+ },
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que una sola *hoja* encima de una placa solar... puede hacer que se *caliente* peligrosamente?",
+   "titulo": "UNA *HOJA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🍂",
+    "linea1": "una celda tapada",
+    "linea2": "PUNTO CALIENTE"
+   }
+  },
+  {
+   "tag": "celdas en serie",
+   "sub": "En una placa, las celdas van en *serie.* Si una queda a oscuras... las demás la obligan a conducir *al revés.*",
+   "titulo": "CELDAS EN *SERIE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔥",
+    "linea1": "la celda tapada trabaja en inverso",
+    "linea2": "SE CALIENTA",
+    "stamp": "PUNTO CALIENTE"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la solución",
+   "sub": "La solución: un diodo en *paralelo* con las celdas. El diodo de bypass. La corriente [(intensidad)] se lo salta... y *listo.*",
+   "titulo": "DIODO *BYPASS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔀",
+      "izq": "Celdas en serie",
+      "der": "DIODO EN PARALELO",
+      "rojo": true,
+      "en": "paralelo"
+     },
+     {
+      "icono": "✅",
+      "izq": "Resultado",
+      "der": "SIN PUNTO CALIENTE",
+      "rojo": null,
+      "en": "listo."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "celdas en paralelo",
+   "sub": "Si las celdas van en *paralelo,* pasa al revés: la tapada recibe corriente [(intensidad)] de las demás. Ahí el diodo va en *serie,* para bloquearla.",
+   "titulo": "EN *PARALELO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔀",
+      "izq": "Celdas en paralelo",
+      "der": "DIODO EN SERIE",
+      "rojo": true,
+      "en": "serie,"
+     },
+     {
+      "icono": "🚫",
+      "izq": "Para qué",
+      "der": "BLOQUEA LA CORRIENTE"
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "cuántas celdas",
+   "sub": "¿Y cuántas celdas en serie para cargar una batería *directamente?* Cada celda da, como mínimo, medio voltio de *tensión* [(voltaje).]",
+   "titulo": "¿CUÁNTAS *CELDAS*?",
+   "visual": {
+    "tipo": "big",
+    "big": "0,5 V",
+    "small": "tensión (voltaje) mínima por celda"
+   },
+   "num": 3
+  },
+  {
+   "tag": "cuántas celdas",
+   "sub": "Si la batería llega a 4,2 voltios... con 8 celdas solo llegas a 4. Te quedas *corto.* Necesitas *10.*",
+   "titulo": "NI UNA *MENOS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "❌",
+      "izq": "8 celdas × 0,5 V",
+      "der": "4 V · TE QUEDAS CORTO",
+      "rojo": null,
+      "en": "corto."
+     },
+     {
+      "icono": "✅",
+      "izq": "10 celdas × 0,5 V",
+      "der": "5 V · TE SOBRA",
+      "rojo": true,
+      "en": "10."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Divide la tensión [(voltaje)] máxima de la batería entre 0,5... y redondea hacia *arriba.*",
+   "titulo": "LA *REGLA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "➗",
+      "izq": "Tensión (voltaje) máx. ÷ 0,5",
+      "der": "REDONDEA ARRIBA",
+      "rojo": true,
+      "en": "arriba."
+     },
+     {
+      "icono": "🍂",
+      "izq": "Celdas en serie + sombra",
+      "der": "DIODO EN PARALELO"
+     }
+    ]
+   }
+  }
+ ]
+}

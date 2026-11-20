@@ -1,0 +1,73 @@
+{
+  "id": "cesa-tt-vs-tn",
+  "titulo": "TT vs TN: el cable que lo cambia todo",
+  "texto": "Por qué tu casa tiene diferencial",
+  "tema": "CESA · Protecciones",
+  "etiqueta": "electricidad en casa",
+  "pron": {"TT": "te te", "TN": "te ene", "T": "te", "N": "ene"},
+  "segmentos": [
+    {
+      "tag": "la curiosidad",
+      "sub": "¿Sabías que en España y en Alemania la *luz* de casa te protege de forma distinta? Todo depende de un solo *cable.*",
+      "titulo": "TT *VS* TN",
+      "visual": {"tipo": "alerta", "icono": "🔌", "linea1": "un solo cable lo cambia todo", "linea2": "TT o TN"}
+    },
+    {
+      "tag": "red TT",
+      "sub": "En una red TT, la segunda T es de *Tierra.* El cable de protección va directo a *tierra.*",
+      "titulo": "TT = *TIERRA*",
+      "num": 1,
+      "visual": {"tipo": "diagrama", "destino": "tierra"}
+    },
+    {
+      "tag": "red TT",
+      "sub": "Si algo falla... la corriente [(intensidad)] que se escapa es *pequeña.* Tan pequeña, que el magnetotérmico ni se *entera.*",
+      "titulo": "FUGA *PEQUEÑA*",
+      "num": 1,
+      "visual": {"tipo": "alerta", "icono": "😴", "linea1": "corriente (intensidad) de fuga: pequeña", "linea2": "Magnetotérmico", "stamp": "NI SE ENTERA"}
+    },
+    {
+      "tag": "red TT",
+      "sub": "Por eso aparece el *diferencial.* Él te protege de los choques eléctricos. Y el *magnetotérmico,* de las sobrecorrientes.",
+      "titulo": "TT: *2* PROTECCIONES",
+      "num": 1,
+      "visual": {"tipo": "filas", "filas": [
+        {"icono": "🧍", "izq": "Choques eléctricos", "der": "DIFERENCIAL", "rojo": true, "en": "diferencial."},
+        {"icono": "🔥", "izq": "Sobrecorrientes", "der": "MAGNETOTÉRMICO", "en": "magnetotérmico,"}
+      ]}
+    },
+    {
+      "tag": "red TN",
+      "sub": "En una red TN, en cambio, la N es de *Neutro.* El cable de protección va al *neutro.*",
+      "titulo": "TN = *NEUTRO*",
+      "num": 2,
+      "visual": {"tipo": "diagrama", "destino": "neutro"}
+    },
+    {
+      "tag": "red TN",
+      "sub": "Aquí, un fallo es un *cortocircuito.* La corriente [(intensidad)] se dispara... y el magnetotérmico salta. Te protege de *todo.*",
+      "titulo": "*CORTO*CIRCUITO",
+      "num": 2,
+      "visual": {"tipo": "alerta", "icono": "💥", "linea1": "corriente (intensidad) de fallo: ENORME", "linea2": "Magnetotérmico", "stamp": "SALTA"}
+    },
+    {
+      "tag": "dónde se usa",
+      "sub": "En países *fríos,* como Alemania, se suele usar TN. Y en países *cálidos,* como Italia o España... TT.",
+      "titulo": "¿*DÓNDE*?",
+      "num": 3,
+      "visual": {"tipo": "filas", "filas": [
+        {"icono": "❄️", "izq": "Fríos · Alemania", "der": "TN", "en": "fríos,"},
+        {"icono": "☀️", "izq": "Cálidos · Italia, España", "der": "TT", "rojo": true, "en": "cálidos,"}
+      ]}
+    },
+    {
+      "tag": "en resumen",
+      "sub": "Así que ya sabes. Si ves un *diferencial...* estás en una red TT. Y en TN, el magnetotérmico se encarga de *todo.*",
+      "titulo": "EN *RESUMEN*",
+      "visual": {"tipo": "filas", "filas": [
+        {"icono": "✅", "izq": "¿Diferencial?", "der": "RED TT", "rojo": true, "en": "diferencial..."},
+        {"icono": "✅", "izq": "¿Red TN?", "der": "MAGNETO. PARA TODO", "en": "todo."}
+      ]}
+    }
+  ]
+}

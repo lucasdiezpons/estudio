@@ -1,0 +1,149 @@
+{
+ "id": "cesa-normas-reglamentos-ce",
+ "titulo": "Norma, reglamento y marcado CE",
+ "texto": "Qué es obligatorio y qué no",
+ "tema": "CESA · Normativa",
+ "etiqueta": "normativa",
+ "pron": {
+  "UNE": "une",
+  "CE": "ce e",
+  "CE?": "ce e"
+ },
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que cumplir una *norma* técnica no es obligatorio? Lo que sí es obligatorio... es otra cosa.",
+   "titulo": "NORMA *NO* ES LEY",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📜",
+    "linea1": "una norma es una recomendación",
+    "linea2": "¿OBLIGATORIA? NO"
+   }
+  },
+  {
+   "tag": "las normas",
+   "sub": "Las *normas,* como las UNE, las escriben *comités* técnicos. Son recomendaciones... nadie te obliga a seguirlas.",
+   "titulo": "*NORMAS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📘",
+      "izq": "Quién las escribe",
+      "der": "COMITÉS TÉCNICOS",
+      "rojo": null,
+      "en": "comités"
+     },
+     {
+      "icono": "🤷",
+      "izq": "¿Obligatorias?",
+      "der": "NO, VOLUNTARIAS",
+      "rojo": true,
+      "en": "recomendaciones..."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "los reglamentos",
+   "sub": "Los *reglamentos,* en cambio, los dicta el *Gobierno.* Por ejemplo, un Real Decreto. Y esos sí son *obligatorios.*",
+   "titulo": "*REGLAMENTOS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🏛️",
+      "izq": "Quién los dicta",
+      "der": "EL GOBIERNO",
+      "rojo": null,
+      "en": "Gobierno."
+     },
+     {
+      "icono": "⚖️",
+      "izq": "¿Obligatorios?",
+      "der": "SÍ, SIEMPRE",
+      "rojo": true,
+      "en": "obligatorios."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "el marcado CE",
+   "sub": "¿Y el famoso marcado *CE?* Es obligatorio para vender un producto... pero no lo pone ningún *laboratorio.*",
+   "titulo": "MARCADO *CE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏷️",
+    "linea1": "obligatorio para vender en Europa",
+    "linea2": "NINGÚN LABORATORIO"
+   },
+   "num": 3
+  },
+  {
+   "tag": "el marcado CE",
+   "sub": "Lo pone el propio *fabricante.* Junto con la Declaración de Conformidad, dice: si esto incumple la ley... el responsable soy *yo.*",
+   "titulo": "LO FIRMA EL *FABRICANTE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✍️",
+    "linea1": "Declaración de Conformidad",
+    "linea2": "RESPONSABLE: EL FABRICANTE",
+    "stamp": "OBLIGATORIO"
+   },
+   "num": 3
+  },
+  {
+   "tag": "el marcado CE",
+   "sub": "Y esa declaración se entrega para *todos* los productos... y habla de cumplir los *reglamentos,* no las normas.",
+   "titulo": "PARA *TODO* PRODUCTO",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📦",
+      "izq": "¿Qué productos?",
+      "der": "TODOS",
+      "rojo": true,
+      "en": "todos"
+     },
+     {
+      "icono": "⚖️",
+      "izq": "¿Cumplir qué?",
+      "der": "LOS REGLAMENTOS",
+      "rojo": null,
+      "en": "reglamentos,"
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Norma: *recomendación.* Reglamento: *obligatorio.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📘",
+      "izq": "Norma · comité técnico",
+      "der": "RECOMENDACIÓN",
+      "rojo": null,
+      "en": "recomendación."
+     },
+     {
+      "icono": "🏛️",
+      "izq": "Reglamento · Gobierno",
+      "der": "OBLIGATORIO",
+      "rojo": true,
+      "en": "obligatorio."
+     }
+    ]
+   }
+  }
+ ]
+}

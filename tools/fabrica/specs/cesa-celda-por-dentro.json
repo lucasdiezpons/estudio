@@ -1,0 +1,108 @@
+{
+ "id": "cesa-celda-por-dentro",
+ "titulo": "Una placa solar a oscuras es un diodo",
+ "texto": "Qué pasa dentro de una celda solar",
+ "tema": "CESA · Fotovoltaica",
+ "etiqueta": "energía solar",
+ "pron": {
+  "PN": "pe ene",
+  "PN.": "pe ene",
+  "P": "pe",
+  "N": "ene"
+ },
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que una placa solar, a *oscuras,* se comporta igual que un *diodo?*",
+   "titulo": "A OSCURAS = *DIODO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🌑",
+    "linea1": "celda solar sin luz",
+    "linea2": "UN DIODO (UNIÓN PN)"
+   }
+  },
+  {
+   "tag": "por dentro",
+   "sub": "Por dentro, una celda es una unión *PN.* Una zona P y una zona N... pegadas.",
+   "titulo": "UNIÓN *PN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "➕",
+      "izq": "Zona P",
+      "der": "HUECOS"
+     },
+     {
+      "icono": "➖",
+      "izq": "Zona N",
+      "der": "ELECTRONES",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "la zona clave",
+   "sub": "Justo en medio aparece la zona de carga *espacial.* Ahí hay un campo eléctrico... y es donde la luz se convierte en *corriente* [(intensidad).]",
+   "titulo": "LA ZONA *CLAVE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚡",
+    "linea1": "un campo eléctrico separa las cargas",
+    "linea2": "ZONA DE CARGA ESPACIAL"
+   },
+   "num": 1
+  },
+  {
+   "tag": "difusión",
+   "sub": "Además hay otra corriente curiosa: la de *difusión.* Las cargas se mueven solas... de donde hay muchas, a donde hay *pocas.*",
+   "titulo": "*DIFUSIÓN*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🫧",
+    "linea1": "de más concentración a menos",
+    "linea2": "CORRIENTE DE DIFUSIÓN"
+   },
+   "num": 2
+  },
+  {
+   "tag": "difusión",
+   "sub": "Como una gota de *tinta* en un vaso de agua... se reparte sola, sin que nadie la *empuje.*",
+   "titulo": "COMO LA *TINTA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "💧",
+    "linea1": "sin campo eléctrico, solo concentración",
+    "linea2": "SE REPARTE SOLA"
+   },
+   "num": 2
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Sin luz, una celda es un *diodo.* Y la magia pasa en la zona de carga *espacial.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🌑",
+      "izq": "Celda sin luz",
+      "der": "UN DIODO",
+      "rojo": true,
+      "en": "diodo."
+     },
+     {
+      "icono": "⚡",
+      "izq": "Dónde se genera",
+      "der": "ZONA DE CARGA ESPACIAL",
+      "rojo": null,
+      "en": "espacial."
+     }
+    ]
+   }
+  }
+ ]
+}

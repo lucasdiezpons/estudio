@@ -1,0 +1,119 @@
+{
+ "id": "cesa-rayo-vs-neutro",
+ "titulo": "Un rayo vs un neutro cortado",
+ "texto": "Dos sobretensiones muy distintas",
+ "tema": "CESA · Protecciones",
+ "etiqueta": "protecciones",
+ "pron": {},
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que un rayo y un cable de neutro cortado... pueden freír tus aparatos de formas *muy* distintas?",
+   "titulo": "RAYO *VS* NEUTRO",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚡",
+    "linea1": "dos sobretensiones distintas",
+    "linea2": "CORTA O LARGA"
+   }
+  },
+  {
+   "tag": "el rayo",
+   "sub": "Un rayo que cae en una línea da un pico *brutal...* pero muy *corto.* Microsegundos.",
+   "titulo": "RAYO: *CORTO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🌩️",
+    "linea1": "pico enorme de tensión (voltaje)",
+    "linea2": "MUY CORTA DURACIÓN"
+   },
+   "num": 1
+  },
+  {
+   "tag": "el rayo",
+   "sub": "Y pasa sobre todo en líneas *aéreas,* que son las que reciben el golpe. Las *enterradas* están más a salvo.",
+   "titulo": "LÍNEAS *AÉREAS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🗼",
+      "izq": "Líneas aéreas",
+      "der": "MÁS EXPUESTAS",
+      "rojo": true,
+      "en": "aéreas,"
+     },
+     {
+      "icono": "⛏️",
+      "izq": "Líneas enterradas",
+      "der": "MÁS A SALVO",
+      "rojo": null,
+      "en": "enterradas"
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "el rayo",
+   "sub": "¿Cómo te proteges? Con limitadores o descargadores, en *paralelo* con la carga. Desvían el pico... y *listo.*",
+   "titulo": "*LIMITADORES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🛡️",
+    "linea1": "en paralelo con la carga",
+    "linea2": "DESVÍAN EL PICO"
+   },
+   "num": 1
+  },
+  {
+   "tag": "el neutro",
+   "sub": "En cambio, si se corta el *neutro,* la tensión [(voltaje)] se queda alta... y *no* baja. Es una sobretensión de larga duración.",
+   "titulo": "NEUTRO: *LARGO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✂️",
+    "linea1": "la tensión (voltaje) se queda alta",
+    "linea2": "LARGA DURACIÓN"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el neutro",
+   "sub": "Y eso no lo aguanta ningún limitador. La única solución es *desconectar* la red.",
+   "titulo": "*DESCONECTA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔌",
+    "linea1": "ningún limitador lo aguanta",
+    "linea2": "DESCONECTAR LA RED",
+    "stamp": "ÚNICA SALIDA"
+   },
+   "num": 2
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Rayo: corto, *limitador.* Neutro cortado: largo, *desconectar.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⚡",
+      "izq": "Rayo · corta duración",
+      "der": "LIMITADOR EN PARALELO",
+      "rojo": null,
+      "en": "limitador."
+     },
+     {
+      "icono": "✂️",
+      "izq": "Neutro cortado · larga",
+      "der": "DESCONECTAR",
+      "rojo": true,
+      "en": "desconectar."
+     }
+    ]
+   }
+  }
+ ]
+}
