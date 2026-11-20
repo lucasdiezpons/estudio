@@ -84,6 +84,7 @@ git add -A && git commit -m "Añade vídeos de ..." && git -c push.negotiate=tru
 - Asignatura = lo que va antes de " · " en `tema`; examen = campo `examen` del spec (se copia a videos.json); tema = lo de después de " · ".
 - CESA: `examen` = "Control 2" (Normativa, Fotovoltaica, Dimensionado FV, Baterías, Protecciones) o "MQ" (Tema 1).
 - Lucas activa/desactiva cada nivel con interruptores; se guarda en el móvil (localStorage "apagados"; por defecto MQ apagado).
+- Varias etiquetas: `"examen": ["MQ", "Control 2"]` (mismo tema) o `"rutas": ["CESA/MQ/Conmutados", "CESA/Control 2/Baterías"]` (temas distintos). Sale si CUALQUIER ruta está encendida.
 - Spec nuevo: pon SIEMPRE `examen`. Asignatura nueva: `tema` = "ASIG · Tema".
 
 ## Voz gratis (edge-tts)

@@ -45,16 +45,24 @@ function ronda(lista) {
   return out.concat(siVistos);
 }
 // ---------- Asignatura › Examen › Tema (interruptores guardados en el móvil) ----------
-const asig = (v) => v.asignatura || (v.tema || "Otros").split(" · ")[0];
-const exam = (v) => v.examen || "General";
-const tem = (v) => (v.tema || "Sin tema").split(" · ").slice(1).join(" · ") || v.tema || "Sin tema";
-const claves = (v) => [`A:${asig(v)}`, `E:${asig(v)}/${exam(v)}`, `T:${asig(v)}/${exam(v)}/${tem(v)}`];
+// Un vídeo puede tener varias etiquetas (rutas "Asignatura/Examen/Tema"):
+//  · v.rutas = ["CESA/MQ/Conmutados", "CESA/Control 2/Baterías"]   (lo más flexible)
+//  · o v.examen = "MQ" | ["MQ", "Control 2"]  + v.tema = "CESA · Conmutados"
+// Sale si CUALQUIERA de sus rutas está encendida.
+const asig0 = (v) => v.asignatura || (v.tema || "Otros").split(" · ")[0];
+const tem0 = (v) => (v.tema || "Sin tema").split(" · ").slice(1).join(" · ") || v.tema || "Sin tema";
+function rutas(v) {
+  if (Array.isArray(v.rutas) && v.rutas.length) return v.rutas.map((r) => { const [A, E = "General", T = "Sin tema"] = r.split("/"); return [A, E, T]; });
+  const ex = Array.isArray(v.examen) ? v.examen : [v.examen || "General"];
+  return ex.map((E) => [asig0(v), E, tem0(v)]);
+}
+const rutaOn = ([A, E, T]) => !apagados.has(`A:${A}`) && !apagados.has(`E:${A}/${E}`) && !apagados.has(`T:${A}/${E}/${T}`);
 const apagados = new Set(leerApagados());
 function leerApagados() {
   try { const x = localStorage.getItem("apagados"); return x ? JSON.parse(x) : ["E:CESA/MQ"]; } catch { return ["E:CESA/MQ"]; }
 }
 function guardarApagados() { try { localStorage.setItem("apagados", JSON.stringify([...apagados])); } catch {} }
-const activoV = (v) => !claves(v).some((k) => apagados.has(k));
+const activoV = (v) => rutas(v).some(rutaOn);
 const listaActual = () => videos.filter(activoV);
 
 // ---------- Feed ----------
@@ -205,12 +213,12 @@ $("#btn-sonido").addEventListener("click", (e) => {
 // ---------- Filtro: árbol de interruptores ----------
 function arbol(lista) {
   const t = {};
-  for (const v of lista) (((t[asig(v)] ??= {})[exam(v)] ??= {})[tem(v)] ??= []).push(v);
+  for (const v of lista) for (const [A, E, T] of rutas(v)) (((t[A] ??= {})[E] ??= {})[T] ??= []).push(v);
   return t;
 }
 const ord = (o) => Object.keys(o).sort((a, b) => a.localeCompare(b, "es"));
 function etiquetaFiltro() {
-  const on = new Set(listaActual().map((v) => `${asig(v)} · ${exam(v)}`));
+  const on = new Set(videos.flatMap((v) => rutas(v).filter(rutaOn).map(([A, E]) => `${A} · ${E}`)));
   const n = listaActual().length;
   $("#btn-tema").textContent = (on.size === 1 ? [...on][0] : on.size ? `${on.size} exámenes` : "Nada") + ` (${n}) ▾`;
 }
@@ -225,7 +233,8 @@ function pintarFiltro() {
     b.onclick = () => { apagados.has(clave) ? apagados.delete(clave) : apagados.add(clave); guardarApagados(); pintarFiltro(); };
     box.appendChild(b);
   };
-  const cuenta = (o) => Array.isArray(o) ? o.length : Object.values(o).reduce((s, x) => s + cuenta(x), 0);
+  const ids = (o) => Array.isArray(o) ? o.map((v) => v.id) : Object.values(o).flatMap(ids);
+  const cuenta = (o) => new Set(ids(o)).size;
   for (const A of ord(t)) {
     const kA = `A:${A}`; fila(kA, A, cuenta(t[A]), 0, false);
     for (const E of ord(t[A])) {
@@ -249,7 +258,7 @@ function pintarLista() {
   const grupos = {};
   for (const v of videos) {
     if (q && !`${v.titulo} ${v.texto} ${v.tema}`.toLowerCase().includes(q)) continue;
-    (grupos[`${asig(v)} › ${exam(v)} › ${tem(v)}`] ??= []).push(v);
+    for (const [A, E, T] of rutas(v)) (grupos[`${A} › ${E} › ${T}`] ??= []).push(v);
   }
   const nombres = Object.keys(grupos).sort((a, b) => a.localeCompare(b, "es"));
   if (!nombres.length) { cont.innerHTML = `<p style="opacity:.6;margin-top:20px">Nada por aquí.</p>`; return; }
