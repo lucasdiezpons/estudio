@@ -13,7 +13,8 @@ const feed = $("#feed");
 let videos = [];
 let filtroTema = null;   // NO se guarda: al cerrar la app vuelve a "Para ti"
 let muted = false;       // sonido activado por defecto
-let bloqueado = false;   // iOS: hasta el primer toque solo deja reproducir en silencio
+let bloqueado = false;
+let desbloqueadoEn = 0;   // iOS: hasta el primer toque solo deja reproducir en silencio
 const player = document.createElement("video");
 player.playsInline = true; player.setAttribute("webkit-playsinline", ""); player.loop = true; player.preload = "auto";
 let cola = [];           // vídeos en el feed (en orden)
@@ -86,7 +87,36 @@ function crearSlide(v, i) {
       <h2>${esc(v.titulo || v.archivo)}</h2>
       ${v.texto ? `<p>${esc(v.texto)}</p>` : ""}
     </div>
-    <div class="barra"><i></i></div>`;
+    <div class="barra"><div class="pista"><i><b></b></i></div><span class="tiempo"></span></div>`;
+  // ---- barra de progreso arrastrable (como TikTok) ----
+  const barra = s.querySelector(".barra");
+  let arrastrando = false, seguia = false;
+  const mover = (e) => {
+    if (!player.duration) return;
+    const r = barra.getBoundingClientRect();
+    const p = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width));
+    player.currentTime = p * player.duration;
+    barra.querySelector("i").style.width = p * 100 + "%";
+    barra.querySelector(".tiempo").textContent = mmss(p * player.duration) + " / " + mmss(player.duration);
+  };
+  barra.addEventListener("pointerdown", (e) => {
+    if (+s.dataset.i !== activo) return;
+    e.preventDefault(); e.stopPropagation();
+    arrastrando = true; seguia = !player.paused;
+    barra.setPointerCapture(e.pointerId);
+    s.classList.add("scrub"); player.pause(); mover(e);
+  });
+  barra.addEventListener("pointermove", (e) => { if (arrastrando) { e.preventDefault(); mover(e); } });
+  const soltar = (e) => {
+    if (!arrastrando) return;
+    arrastrando = false; s.classList.remove("scrub");
+    if (seguia) player.play().catch(() => {});
+    desbloqueadoEn = Date.now(); // que el "click" de soltar no pause el vídeo
+  };
+  barra.addEventListener("pointerup", soltar);
+  barra.addEventListener("pointercancel", soltar);
+  barra.addEventListener("click", (e) => e.stopPropagation());
+
   s.addEventListener("click", () => {
     if (+s.dataset.i !== activo) return;
     if (bloqueado) { desbloquear(); return; }
@@ -128,7 +158,6 @@ function reproducir() {
   $("#btn-sonido").textContent = muted ? "🔇" : "🔊";
 }
 
-let desbloqueadoEn = 0;
 function desbloquear() {
   bloqueado = false;
   desbloqueadoEn = Date.now();
@@ -216,6 +245,7 @@ function vista(n) {
 document.querySelectorAll("#bottom button").forEach((b) => b.addEventListener("click", () => vista(b.dataset.vista)));
 
 // ---------- Utilidades ----------
+function mmss(t) { t = Math.max(0, Math.floor(t || 0)); return Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0"); }
 function esc(s) { return String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
 function toast(t) { const el = $("#toast"); el.textContent = t; el.hidden = false; setTimeout(() => (el.hidden = true), 1600); }
 
