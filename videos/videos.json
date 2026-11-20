@@ -8,6 +8,110 @@
     "tema": "Prueba"
   },
   {
+    "id": "cesa-balanceo-baterias",
+    "archivo": "cesa-balanceo-baterias.mp4",
+    "poster": "cesa-balanceo-baterias.jpg",
+    "titulo": "Cómo se igualan las celdas de una batería",
+    "texto": "Balanceo pasivo vs activo",
+    "tema": "CESA · Baterías"
+  },
+  {
+    "id": "cesa-celda-por-dentro",
+    "archivo": "cesa-celda-por-dentro.mp4",
+    "poster": "cesa-celda-por-dentro.jpg",
+    "titulo": "Una placa solar a oscuras es un diodo",
+    "texto": "Qué pasa dentro de una celda solar",
+    "tema": "CESA · Fotovoltaica"
+  },
+  {
+    "id": "cesa-celdas-y-sombras",
+    "archivo": "cesa-celdas-y-sombras.mp4",
+    "poster": "cesa-celdas-y-sombras.jpg",
+    "titulo": "Una hoja puede calentar tu placa solar",
+    "texto": "Sombras, diodos y celdas en serie",
+    "tema": "CESA · Fotovoltaica"
+  },
+  {
+    "id": "cesa-como-cargar-baterias",
+    "archivo": "cesa-como-cargar-baterias.mp4",
+    "poster": "cesa-como-cargar-baterias.jpg",
+    "titulo": "Cada batería se carga a su manera",
+    "texto": "Plomo, litio y níquel",
+    "tema": "CESA · Baterías"
+  },
+  {
+    "id": "cesa-inclinacion-placas",
+    "archivo": "cesa-inclinacion-placas.mp4",
+    "poster": "cesa-inclinacion-placas.jpg",
+    "titulo": "Cuánto inclinar una placa solar",
+    "texto": "Verano, invierno y hemisferio sur",
+    "tema": "CESA · Fotovoltaica"
+  },
+  {
+    "id": "cesa-normas-reglamentos-ce",
+    "archivo": "cesa-normas-reglamentos-ce.mp4",
+    "poster": "cesa-normas-reglamentos-ce.jpg",
+    "titulo": "Norma, reglamento y marcado CE",
+    "texto": "Qué es obligatorio y qué no",
+    "tema": "CESA · Normativa"
+  },
+  {
+    "id": "cesa-placa-y-calor",
+    "archivo": "cesa-placa-y-calor.mp4",
+    "poster": "cesa-placa-y-calor.jpg",
+    "titulo": "Por qué una placa solar odia el calor",
+    "texto": "Temperatura, MPPT y Fill Factor",
+    "tema": "CESA · Fotovoltaica"
+  },
+  {
+    "id": "cesa-protectores-tipo-1-2-3",
+    "archivo": "cesa-protectores-tipo-1-2-3.mp4",
+    "poster": "cesa-protectores-tipo-1-2-3.jpg",
+    "titulo": "Protectores tipo 1, 2 y 3",
+    "texto": "Cómo proteger un ordenador de un rayo",
+    "tema": "CESA · Protecciones"
+  },
+  {
+    "id": "cesa-rayo-vs-neutro",
+    "archivo": "cesa-rayo-vs-neutro.mp4",
+    "poster": "cesa-rayo-vs-neutro.jpg",
+    "titulo": "Un rayo vs un neutro cortado",
+    "texto": "Dos sobretensiones muy distintas",
+    "tema": "CESA · Protecciones"
+  },
+  {
+    "id": "cesa-supercondensador",
+    "archivo": "cesa-supercondensador.mp4",
+    "poster": "cesa-supercondensador.jpg",
+    "titulo": "Supercondensador vs batería",
+    "texto": "Química, iones y autodescarga",
+    "tema": "CESA · Baterías"
+  },
+  {
+    "id": "cesa-tipos-de-bateria",
+    "archivo": "cesa-tipos-de-bateria.mp4",
+    "poster": "cesa-tipos-de-bateria.jpg",
+    "titulo": "Batería de coche vs carrito de golf",
+    "texto": "Arranque, tracción y estacionaria",
+    "tema": "CESA · Baterías"
+  },
+  {
+    "id": "cesa-tipos-de-placa",
+    "archivo": "cesa-tipos-de-placa.mp4",
+    "poster": "cesa-tipos-de-placa.jpg",
+    "titulo": "Mono, poli y amorfa: cuál es mejor",
+    "texto": "Los 3 tipos de placa solar",
+    "tema": "CESA · Fotovoltaica"
+  },
+  {
+    "id": "cesa-varistor-bimetal-pptc",
+    "archivo": "cesa-varistor-bimetal-pptc.mp4",
+    "poster": "cesa-varistor-bimetal-pptc.jpg",
+    "titulo": "Varistor, bimetal y PPTC",
+    "texto": "Los pequeños guardianes de un circuito",
+    "tema": "CESA · Protecciones"
+  },
+  {
     "id": "cesa-tt-vs-tn",
     "archivo": "cesa-tt-vs-tn.mp4",
     "poster": "cesa-tt-vs-tn.jpg",
