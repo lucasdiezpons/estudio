@@ -45,7 +45,20 @@ function ronda(lista) {
   }
   return out.concat(siVistos);
 }
-const listaActual = () => (filtroTema ? videos.filter((v) => v.tema === filtroTema) : videos);
+// Grupos de temas (aparecen arriba del todo en el filtro)
+const GRUPOS = {
+  "📝 CESA · Control 2": ["CESA · Normativa", "CESA · Fotovoltaica", "CESA · Dimensionado FV", "CESA · Baterías", "CESA · Protecciones"],
+  "📘 CESA · Tema 1 (examen MQ)": ["CESA · Conversión de energía", "CESA · Rectificadores", "CESA · Reguladores lineales",
+    "CESA · Térmica", "CESA · Conmutados", "CESA · Bombas de carga", "CESA · Inversores"],
+};
+// Grupos que NO salen en "Para ti" (solo si los eliges en el filtro). Vaciar tras el Control 2.
+const OCULTOS_EN_PARA_TI = ["📘 CESA · Tema 1 (examen MQ)"];
+const enGrupo = (v, g) => GRUPOS[g].includes(v.tema);
+const listaActual = () => {
+  if (!filtroTema) return videos.filter((v) => !OCULTOS_EN_PARA_TI.some((g) => enGrupo(v, g)));
+  if (GRUPOS[filtroTema]) return videos.filter((v) => enGrupo(v, filtroTema));
+  return videos.filter((v) => v.tema === filtroTema);
+};
 
 // ---------- Feed ----------
 function montarFeed(primero = null) {
@@ -197,9 +210,9 @@ const temas = () => [...new Set(videos.map((v) => v.tema).filter(Boolean))].sort
 $("#btn-tema").addEventListener("click", () => {
   const box = $("#sheet-temas");
   box.innerHTML = "";
-  [null, ...temas()].forEach((t) => {
+  [null, ...Object.keys(GRUPOS), ...temas()].forEach((t) => {
     const b = document.createElement("button");
-    b.textContent = t ?? "Todo mezclado";
+    b.textContent = t ?? "Para ti (sin Tema 1)";
     if (t === filtroTema) b.classList.add("on");
     b.onclick = () => {
       filtroTema = t;

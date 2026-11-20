@@ -80,6 +80,9 @@ git add -A && git commit -m "Añade vídeos de ..." && git -c push.negotiate=tru
 - `tools/fabrica/guiones/` = `hooks.json` (21 fórmulas de gancho) + `hookscore.py` (puntúa ganchos) del plugin MIT Jakeschincariol/youtube-agent-skill.
 - Uso: escribir 5 ganchos por TikTok → `python3 tools/fabrica/guiones/hookscore.py --hook "frase"` → quedarse con el mejor.
 - Ojo: está pensado para YouTube en inglés; la puntuación en español es orientativa.
+## Grupos en la app
+- `app.js` → `GRUPOS` (Control 2 / Tema 1) y `OCULTOS_EN_PARA_TI` (ahora oculta el Tema 1 en "Para ti"; vaciarlo tras el Control 2). Temas nuevos: añadirlos a su grupo.
+
 ## Voz gratis (edge-tts)
 - `tts_gratis.py` = igual que `tts.py` pero con `es-MX-DaliaNeural` (edge-tts, WordBoundary). `VOZ_FAKE=1` → silencio para probar sin internet.
 - El entorno cloud NO llega a `speech.platform.bing.com`: la voz se genera en el PC de Lucas.
