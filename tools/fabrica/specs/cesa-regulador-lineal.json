@@ -115,5 +115,9 @@
    }
   }
  ],
- "examen": "MQ"
+ "examen": "MQ",
+ "rutas": [
+  "CESA/MQ/Reguladores lineales",
+  "CESA/Control lab/P3 Baterías"
+ ]
 }

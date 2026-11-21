@@ -1,0 +1,139 @@
+{
+ "id": "cesa-lab-transitorio-arranque",
+ "titulo": "El primer segundo de una fuente",
+ "texto": "El transitorio de arranque · P2 3.1.3 · control nº3",
+ "tema": "CESA · P2 Fuente de alimentación",
+ "examen": "Control lab",
+ "etiqueta": "rectificador",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "IFSM": "i efe ese eme"
+ },
+ "segmentos": [
+  {
+   "tag": "el momento",
+   "sub": "El momento más duro para los diodos de una fuente no es funcionando... es al *encenderla.*",
+   "titulo": "AL *ENCENDER*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚡",
+    "linea1": "primer semiciclo",
+    "linea2": "PEOR MOMENTO"
+   }
+  },
+  {
+   "tag": "por qué",
+   "sub": "Al principio el condensador está *vacío.* Para llenarlo de golpe... los diodos dejan pasar un pico de corriente [(intensidad)] *enorme.*",
+   "titulo": "CONDENSADOR *VACÍO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔋",
+    "linea1": "se carga de cero",
+    "linea2": "PICO ENORME"
+   },
+   "num": 1
+  },
+  {
+   "tag": "luego",
+   "sub": "Después ya solo repone lo que pierde entre pico y pico: picos mucho más *pequeños.*",
+   "titulo": "RÉGIMEN *ESTACIONARIO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🚀",
+      "izq": "Arranque",
+      "der": "PICO ENORME",
+      "rojo": true
+     },
+     {
+      "icono": "🔁",
+      "izq": "Estacionario",
+      "der": "PICOS PEQUEÑOS",
+      "en": "pequeños."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "el diodo",
+   "sub": "Por suerte, solo pasa *una* vez. El datasheet lo llama corriente de pico no *repetitiva:* el diodo aguanta más en ese caso.",
+   "titulo": "SOLO *UNA VEZ*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📄",
+    "linea1": "Peak Forward Surge Current",
+    "linea2": "IFSM"
+   },
+   "num": 3
+  },
+  {
+   "tag": "cómo verlo",
+   "sub": "Para verlo en el osciloscopio: disparo en modo *normal* y captura *única.* Si no, se te escapa.",
+   "titulo": "CÓMO *VERLO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🎯",
+      "izq": "Disparo",
+      "der": "MODO NORMAL",
+      "en": "normal"
+     },
+     {
+      "icono": "📸",
+      "izq": "Captura",
+      "der": "ÚNICA",
+      "rojo": true,
+      "en": "única."
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "para llevarte",
+   "sub": "Al encender, condensador vacío... y el pico más *grande* de todos.",
+   "titulo": "PARA *LLEVARTE*",
+   "visual": {
+    "tipo": "big",
+    "big": "ARRANQUE = PICO MÁXIMO",
+    "small": "una sola vez → IFSM"
+   }
+  }
+ ]
+}

@@ -1,0 +1,141 @@
+{
+ "id": "cesa-lab-pwm-dimmer",
+ "titulo": "Cómo un LED parece estar a medias",
+ "texto": "Modulación PWM · P1 S2.10 · control nº2",
+ "tema": "CESA · P1 Dimmer",
+ "examen": "Control lab",
+ "etiqueta": "PWM",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "VLED": "uve led",
+  "Vg": "uve ge"
+ },
+ "segmentos": [
+  {
+   "tag": "truco",
+   "sub": "El LED del dimmer en realidad *nunca* está a media luz: se enciende y se apaga *mil* veces por segundo.",
+   "titulo": "NUNCA A *MEDIAS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "💡",
+    "linea1": "on / off muy rápido",
+    "linea2": "TU OJO VE LA MEDIA"
+   }
+  },
+  {
+   "tag": "cómo",
+   "sub": "Un comparador mira la onda *triangular* del oscilador... y la compara con la tensión [(voltaje)] del *potenciómetro.*",
+   "titulo": "TRIÁNGULO VS *POTENCIÓMETRO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔺",
+      "izq": "Triangular",
+      "der": "OSCILADOR",
+      "en": "triangular"
+     },
+     {
+      "icono": "🎛️",
+      "izq": "Referencia",
+      "der": "POTENCIÓMETRO",
+      "rojo": true,
+      "en": "potenciómetro."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "la salida",
+   "sub": "Mientras el triángulo está por debajo... salida *alta.* Si está por encima... salida *baja.* Una cuadrada de ancho *ajustable.*",
+   "titulo": "ANCHO *AJUSTABLE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⬜",
+    "linea1": "misma frecuencia",
+    "linea2": "CICLO DE TRABAJO VARIABLE"
+   },
+   "num": 2
+  },
+  {
+   "tag": "la media",
+   "sub": "La corriente [(intensidad)] media del LED es el ciclo de trabajo... por la corriente cuando está *encendido.*",
+   "titulo": "LA *MEDIA*",
+   "visual": {
+    "tipo": "big",
+    "big": "I media = D · (Vcc − VLED)/Rs",
+    "small": "D = ciclo de trabajo"
+   },
+   "num": 3
+  },
+  {
+   "tag": "las ondas",
+   "sub": "Al dibujarlas, todo va *sincronizado:* cuando la puerta está alta, el LED conduce. Cuando está baja... *cero.*",
+   "titulo": "*SINCRONIZADAS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📊",
+    "linea1": "Vg alta → LED encendido",
+    "linea2": "MISMA BASE DE TIEMPOS"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en una frase",
+   "sub": "PWM: misma frecuencia, ancho *variable*... y el ojo ve la *media.*",
+   "titulo": "EN UNA *FRASE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬜",
+      "izq": "PWM",
+      "der": "ANCHO VARIABLE",
+      "en": "variable..."
+     },
+     {
+      "icono": "👁️",
+      "izq": "El ojo",
+      "der": "VE LA MEDIA",
+      "rojo": true,
+      "en": "media."
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -6,7 +6,11 @@
     "titulo": "Cómo se igualan las celdas de una batería",
     "texto": "Balanceo pasivo vs activo",
     "tema": "CESA · Baterías",
-    "examen": "Control 2"
+    "examen": "Control 2",
+    "rutas": [
+      "CESA/Control 2/Baterías",
+      "CESA/Control lab/P3 Baterías"
+    ]
   },
   {
     "id": "cesa-celda-por-dentro",
@@ -33,7 +37,11 @@
     "titulo": "Cada batería se carga a su manera",
     "texto": "Plomo, litio y níquel",
     "tema": "CESA · Baterías",
-    "examen": "Control 2"
+    "examen": "Control 2",
+    "rutas": [
+      "CESA/Control 2/Baterías",
+      "CESA/Control lab/P3 Baterías"
+    ]
   },
   {
     "id": "cesa-inclinacion-placas",
@@ -141,25 +149,11 @@
     "titulo": "El condensador que castiga a los diodos",
     "texto": "Menos rizado... a un precio",
     "tema": "CESA · Rectificadores",
-    "examen": "MQ"
-  },
-  {
-    "id": "cesa-graetz-vs-toma-media",
-    "archivo": "cesa-graetz-vs-toma-media.mp4",
-    "poster": "cesa-graetz-vs-toma-media.jpg",
-    "titulo": "Puente de Graetz o toma media",
-    "texto": "Dos rectificadores, dos trampas",
-    "tema": "CESA · Rectificadores",
-    "examen": "MQ"
-  },
-  {
-    "id": "cesa-regulador-lineal",
-    "archivo": "cesa-regulador-lineal.mp4",
-    "poster": "cesa-regulador-lineal.jpg",
-    "titulo": "El regulador lineal es un grifo",
-    "texto": "Salida limpia, pero quema lo que sobra",
-    "tema": "CESA · Reguladores lineales",
-    "examen": "MQ"
+    "examen": "MQ",
+    "rutas": [
+      "CESA/MQ/Rectificadores",
+      "CESA/Control lab/P2 Fuente de alimentación"
+    ]
   },
   {
     "id": "cesa-shunt-y-regulacion",
@@ -168,7 +162,11 @@
     "titulo": "El regulador que se traga lo que sobra",
     "texto": "Shunt, línea y carga",
     "tema": "CESA · Reguladores lineales",
-    "examen": "MQ"
+    "examen": "MQ",
+    "rutas": [
+      "CESA/MQ/Reguladores lineales",
+      "CESA/Control lab/P2 Fuente de alimentación"
+    ]
   },
   {
     "id": "cesa-lm317",
@@ -177,16 +175,11 @@
     "titulo": "El truco del LM317",
     "texto": "Siempre 1,25 voltios",
     "tema": "CESA · Reguladores lineales",
-    "examen": "MQ"
-  },
-  {
-    "id": "cesa-calor-regulador",
-    "archivo": "cesa-calor-regulador.mp4",
-    "poster": "cesa-calor-regulador.jpg",
-    "titulo": "La ley de Ohm del calor",
-    "texto": "Cuánto aguanta un chip antes de quemarse",
-    "tema": "CESA · Térmica",
-    "examen": "MQ"
+    "examen": "MQ",
+    "rutas": [
+      "CESA/MQ/Reguladores lineales",
+      "CESA/Control lab/P3 Baterías"
+    ]
   },
   {
     "id": "cesa-conmutados",
@@ -195,7 +188,11 @@
     "titulo": "El truco de los conmutados",
     "texto": "Encender y apagar muy rápido",
     "tema": "CESA · Conmutados",
-    "examen": "MQ"
+    "examen": "MQ",
+    "rutas": [
+      "CESA/MQ/Conmutados",
+      "CESA/Control lab/P3 Baterías"
+    ]
   },
   {
     "id": "cesa-flyback-forward",
@@ -213,16 +210,11 @@
     "titulo": "El diodo escondido del MOSFET",
     "texto": "Canal N, canal P y su diodo",
     "tema": "CESA · Conmutados",
-    "examen": "MQ"
-  },
-  {
-    "id": "cesa-bombas-de-carga",
-    "archivo": "cesa-bombas-de-carga.mp4",
-    "poster": "cesa-bombas-de-carga.jpg",
-    "titulo": "Convertidores sin bobinas",
-    "texto": "Las bombas de carga",
-    "tema": "CESA · Bombas de carga",
-    "examen": "MQ"
+    "examen": "MQ",
+    "rutas": [
+      "CESA/MQ/Conmutados",
+      "CESA/Control lab/P1 Dimmer"
+    ]
   },
   {
     "id": "cesa-inversores",
@@ -258,7 +250,11 @@
     "titulo": "Por qué se descarga una batería guardada",
     "texto": "Autodescarga y su modelo",
     "tema": "CESA · Baterías",
-    "examen": "Control 2"
+    "examen": "Control 2",
+    "rutas": [
+      "CESA/Control 2/Baterías",
+      "CESA/Control lab/P3 Baterías"
+    ]
   },
   {
     "id": "cesa-g-balanceo-en-un-minuto",
@@ -267,7 +263,11 @@
     "titulo": "Balanceo pasivo y activo",
     "texto": "Quemar o repartir",
     "tema": "CESA · Baterías",
-    "examen": "Control 2"
+    "examen": "Control 2",
+    "rutas": [
+      "CESA/Control 2/Baterías",
+      "CESA/Control lab/P3 Baterías"
+    ]
   },
   {
     "id": "cesa-g-calor-directa-vs-mppt",
@@ -303,7 +303,11 @@
     "titulo": "Cómo se carga cada batería",
     "texto": "Plomo, litio y níquel",
     "tema": "CESA · Baterías",
-    "examen": "Control 2"
+    "examen": "Control 2",
+    "rutas": [
+      "CESA/Control 2/Baterías",
+      "CESA/Control lab/P3 Baterías"
+    ]
   },
   {
     "id": "cesa-g-celda-a-oscuras",
@@ -565,5 +569,467 @@
     "texto": "La zona de carga espacial",
     "tema": "CESA · Fotovoltaica",
     "examen": "Control 2"
+  },
+  {
+    "id": "cesa-bombas-de-carga",
+    "archivo": "cesa-bombas-de-carga.mp4",
+    "poster": "cesa-bombas-de-carga.jpg",
+    "titulo": "Convertidores sin bobinas",
+    "texto": "Las bombas de carga",
+    "tema": "CESA · Bombas de carga",
+    "examen": "MQ"
+  },
+  {
+    "id": "cesa-calor-regulador",
+    "archivo": "cesa-calor-regulador.mp4",
+    "poster": "cesa-calor-regulador.jpg",
+    "titulo": "La ley de Ohm del calor",
+    "texto": "Cuánto aguanta un chip antes de quemarse",
+    "tema": "CESA · Térmica",
+    "examen": "MQ",
+    "rutas": [
+      "CESA/MQ/Térmica",
+      "CESA/Control lab/P3 Baterías"
+    ]
+  },
+  {
+    "id": "cesa-regulador-lineal",
+    "archivo": "cesa-regulador-lineal.mp4",
+    "poster": "cesa-regulador-lineal.jpg",
+    "titulo": "El regulador lineal es un grifo",
+    "texto": "Salida limpia, pero quema lo que sobra",
+    "tema": "CESA · Reguladores lineales",
+    "examen": "MQ",
+    "rutas": [
+      "CESA/MQ/Reguladores lineales",
+      "CESA/Control lab/P3 Baterías"
+    ]
+  },
+  {
+    "id": "cesa-graetz-vs-toma-media",
+    "archivo": "cesa-graetz-vs-toma-media.mp4",
+    "poster": "cesa-graetz-vs-toma-media.jpg",
+    "titulo": "Puente de Graetz o toma media",
+    "texto": "Dos rectificadores, dos trampas",
+    "tema": "CESA · Rectificadores",
+    "examen": "MQ",
+    "rutas": [
+      "CESA/MQ/Rectificadores",
+      "CESA/Control lab/P2 Fuente de alimentación"
+    ]
+  },
+  {
+    "id": "cesa-lab-astable-rc",
+    "archivo": "cesa-lab-astable-rc.mp4",
+    "poster": "cesa-lab-astable-rc.jpg",
+    "titulo": "El oscilador hecho con un condensador",
+    "texto": "Astable RC · P1 S2.8–S2.9",
+    "tema": "CESA · P1 Dimmer",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-astable-tiempos-calculo",
+    "archivo": "cesa-lab-astable-tiempos-calculo.mp4",
+    "poster": "cesa-lab-astable-tiempos-calculo.jpg",
+    "titulo": "Cuánto dura cada tramo del oscilador",
+    "texto": "Con números · P1 S2.8–S2.9",
+    "tema": "CESA · P1 Dimmer",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-autonomia-dropout",
+    "archivo": "cesa-lab-autonomia-dropout.mp4",
+    "poster": "cesa-lab-autonomia-dropout.jpg",
+    "titulo": "Cuándo se acaba una batería de verdad",
+    "texto": "Autonomía y dropout · P3 S1.3, S1.5 · control nº5",
+    "tema": "CESA · P3 Baterías",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-avalancha-termica",
+    "archivo": "cesa-lab-avalancha-termica.mp4",
+    "poster": "cesa-lab-avalancha-termica.jpg",
+    "titulo": "El transistor que se calienta solo",
+    "texto": "Avalancha térmica · P1 3.1 · S1.11",
+    "tema": "CESA · P1 Dimmer",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-bjt-tres-zonas",
+    "archivo": "cesa-lab-bjt-tres-zonas.mp4",
+    "poster": "cesa-lab-bjt-tres-zonas.jpg",
+    "titulo": "Las tres caras de un transistor",
+    "texto": "Corte, activa y saturación · P1 S1.1–S1.2",
+    "tema": "CESA · P1 Dimmer",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-buck-cargador",
+    "archivo": "cesa-lab-buck-cargador.mp4",
+    "poster": "cesa-lab-buck-cargador.jpg",
+    "titulo": "Un cargador con Buck",
+    "texto": "Ciclo de trabajo y bobina mínima · P3 S2.8",
+    "tema": "CESA · P3 Baterías",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-buck-numeros",
+    "archivo": "cesa-lab-buck-numeros.mp4",
+    "poster": "cesa-lab-buck-numeros.jpg",
+    "titulo": "El Buck del lab con números",
+    "texto": "Rizado y modo continuo · P3 S1.7–S1.10",
+    "tema": "CESA · P3 Baterías",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-cargador-cc-cv",
+    "archivo": "cesa-lab-cargador-cc-cv.mp4",
+    "poster": "cesa-lab-cargador-cc-cv.jpg",
+    "titulo": "Cómo se carga una batería de litio",
+    "texto": "Corriente constante y luego tensión constante · P3 S2.4–S2.6 · control nº6",
+    "tema": "CESA · P3 Baterías",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-cargador-numeros",
+    "archivo": "cesa-lab-cargador-numeros.mp4",
+    "poster": "cesa-lab-cargador-numeros.jpg",
+    "titulo": "El cargador del lab con números",
+    "texto": "Corriente, margen y temperatura · P3 S2.1–S2.3",
+    "tema": "CESA · P3 Baterías",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-cargador-tl431-numeros",
+    "archivo": "cesa-lab-cargador-tl431-numeros.mp4",
+    "poster": "cesa-lab-cargador-tl431-numeros.jpg",
+    "titulo": "Cuándo deja de cargar a corriente constante",
+    "texto": "R3, R4 y los 8 voltios · P3 S2.5–S2.6",
+    "tema": "CESA · P3 Baterías",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-colector-abierto",
+    "archivo": "cesa-lab-colector-abierto.mp4",
+    "poster": "cesa-lab-colector-abierto.jpg",
+    "titulo": "Salida en colector abierto",
+    "texto": "Y por qué necesita una resistencia · P3 S1.6 · control nº6",
+    "tema": "CESA · P3 Baterías",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-comparador-histeresis",
+    "archivo": "cesa-lab-comparador-histeresis.mp4",
+    "poster": "cesa-lab-comparador-histeresis.jpg",
+    "titulo": "Un comparador con dos umbrales",
+    "texto": "Histéresis · P1 S2.6–S2.7",
+    "tema": "CESA · P1 Dimmer",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-condensadores-utiles",
+    "archivo": "cesa-lab-condensadores-utiles.mp4",
+    "poster": "cesa-lab-condensadores-utiles.jpg",
+    "titulo": "Condensadores que parecen inútiles",
+    "texto": "Pero sin ellos oscila · P2 S2.7 · P3 C1",
+    "tema": "CESA · P2 Fuente de alimentación",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-cortocircuito-virtual",
+    "archivo": "cesa-lab-cortocircuito-virtual.mp4",
+    "poster": "cesa-lab-cortocircuito-virtual.jpg",
+    "titulo": "El truco del amplificador operacional",
+    "texto": "Cortocircuito virtual · P1 S1.11",
+    "tema": "CESA · P1 Dimmer",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-cuatro-estructuras-mosfet",
+    "archivo": "cesa-lab-cuatro-estructuras-mosfet.mp4",
+    "poster": "cesa-lab-cuatro-estructuras-mosfet.jpg",
+    "titulo": "Cuatro formas de poner un MOSFET",
+    "texto": "Seguidor o fuente en la alimentación · P2 S2.1–S2.4",
+    "tema": "CESA · P2 Fuente de alimentación",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-darlington",
+    "archivo": "cesa-lab-darlington.mp4",
+    "poster": "cesa-lab-darlington.jpg",
+    "titulo": "Dos transistores que parecen uno",
+    "texto": "El Darlington del dimmer · P1 S1.3",
+    "tema": "CESA · P1 Dimmer",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-diodo-zener",
+    "archivo": "cesa-lab-diodo-zener.mp4",
+    "poster": "cesa-lab-diodo-zener.jpg",
+    "titulo": "El diodo que trabaja al revés",
+    "texto": "Zener como referencia · P2 S1.3",
+    "tema": "CESA · P2 Fuente de alimentación",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-dropout-discreto",
+    "archivo": "cesa-lab-dropout-discreto.mp4",
+    "poster": "cesa-lab-dropout-discreto.jpg",
+    "titulo": "Por qué tu fuente necesita tanto margen",
+    "texto": "El dropout del regulador discreto · P2 S2.5",
+    "tema": "CESA · P2 Fuente de alimentación",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-emulador-celdas",
+    "archivo": "cesa-lab-emulador-celdas.mp4",
+    "poster": "cesa-lab-emulador-celdas.jpg",
+    "titulo": "Por qué se desequilibran las celdas",
+    "texto": "Dos celdas en serie · P3 intro",
+    "tema": "CESA · P3 Baterías",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-fuente-cuatro-bloques",
+    "archivo": "cesa-lab-fuente-cuatro-bloques.mp4",
+    "poster": "cesa-lab-fuente-cuatro-bloques.jpg",
+    "titulo": "Una fuente de alimentación por dentro",
+    "texto": "Cuatro bloques · P2 intro · control nº4",
+    "tema": "CESA · P2 Fuente de alimentación",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-fuente-negativa-valores",
+    "archivo": "cesa-lab-fuente-negativa-valores.mp4",
+    "poster": "cesa-lab-fuente-negativa-valores.jpg",
+    "titulo": "Una fuente de −3,3 V con números",
+    "texto": "El espejo de la fuente positiva · P2 S2.10 · control nº4",
+    "tema": "CESA · P2 Fuente de alimentación",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-fuente-ocp",
+    "archivo": "cesa-lab-fuente-ocp.mp4",
+    "poster": "cesa-lab-fuente-ocp.jpg",
+    "titulo": "El botón OCP de la fuente",
+    "texto": "Limitar o cortar · P1 S1.6",
+    "tema": "CESA · P1 Dimmer",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-iled-ao-calculo",
+    "archivo": "cesa-lab-iled-ao-calculo.mp4",
+    "poster": "cesa-lab-iled-ao-calculo.jpg",
+    "titulo": "La corriente del LED con el AO",
+    "texto": "Ya no depende del transistor · P1 S1.11 · control P1-3 nº1",
+    "tema": "CESA · P1 Dimmer",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-iled-bjt-calculo",
+    "archivo": "cesa-lab-iled-bjt-calculo.mp4",
+    "poster": "cesa-lab-iled-bjt-calculo.jpg",
+    "titulo": "La corriente del LED con un transistor",
+    "texto": "Fórmula y margen del potenciómetro · P1 S1.7–S1.9 · control P1-3 nº1",
+    "tema": "CESA · P1 Dimmer",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-led-resistencia",
+    "archivo": "cesa-lab-led-resistencia.mp4",
+    "poster": "cesa-lab-led-resistencia.jpg",
+    "titulo": "Por qué un LED necesita su resistencia",
+    "texto": "Una curva que se dispara · P1 · intro",
+    "tema": "CESA · P1 Dimmer",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-limitador-corriente",
+    "archivo": "cesa-lab-limitador-corriente.mp4",
+    "poster": "cesa-lab-limitador-corriente.jpg",
+    "titulo": "El transistor que protege tu fuente",
+    "texto": "Limitador de corriente · P2 S2.8–S2.9",
+    "tema": "CESA · P2 Fuente de alimentación",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-limitador-numeros",
+    "archivo": "cesa-lab-limitador-numeros.mp4",
+    "poster": "cesa-lab-limitador-numeros.jpg",
+    "titulo": "El limitador con números",
+    "texto": "70 mA y el AO saturado · P2 S2.8–S2.9",
+    "tema": "CESA · P2 Fuente de alimentación",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-lineal-o-conmutacion",
+    "archivo": "cesa-lab-lineal-o-conmutacion.mp4",
+    "poster": "cesa-lab-lineal-o-conmutacion.jpg",
+    "titulo": "Por qué el transistor quema en lineal",
+    "texto": "Y no en conmutación · P1 S2.1",
+    "tema": "CESA · P1 Dimmer",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-lm317-fuente-corriente",
+    "archivo": "cesa-lab-lm317-fuente-corriente.mp4",
+    "poster": "cesa-lab-lm317-fuente-corriente.jpg",
+    "titulo": "El LM317 como fuente de corriente",
+    "texto": "Una sola resistencia · P3 S2.1",
+    "tema": "CESA · P3 Baterías",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-lm317-lp2951-resistencias",
+    "archivo": "cesa-lab-lm317-lp2951-resistencias.mp4",
+    "poster": "cesa-lab-lm317-lp2951-resistencias.jpg",
+    "titulo": "LM317 contra LP2951: las resistencias",
+    "texto": "La referencia está en sitios distintos · P3 S1.1, S1.4",
+    "tema": "CESA · P3 Baterías",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-mosfet-interruptor",
+    "archivo": "cesa-lab-mosfet-interruptor.mp4",
+    "poster": "cesa-lab-mosfet-interruptor.jpg",
+    "titulo": "El MOSFET como interruptor",
+    "texto": "Dónde poner drenador y fuente · P1 S2.4 · control nº2",
+    "tema": "CESA · P1 Dimmer",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-multimetro",
+    "archivo": "cesa-lab-multimetro.mp4",
+    "poster": "cesa-lab-multimetro.jpg",
+    "titulo": "Cómo medir sin romper el multímetro",
+    "texto": "Corriente en serie, tensión en paralelo · P1 S1.4–S1.5",
+    "tema": "CESA · P1 Dimmer",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-nmos-o-pmos-regulador",
+    "archivo": "cesa-lab-nmos-o-pmos-regulador.mp4",
+    "poster": "cesa-lab-nmos-o-pmos-regulador.jpg",
+    "titulo": "NMOS o PMOS para regular",
+    "texto": "Dropout y control · P2 S2.1–S2.4",
+    "tema": "CESA · P2 Fuente de alimentación",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-nmos-pmos-por-dentro",
+    "archivo": "cesa-lab-nmos-pmos-por-dentro.mp4",
+    "poster": "cesa-lab-nmos-pmos-por-dentro.jpg",
+    "titulo": "NMOS y PMOS por dentro",
+    "texto": "Y por qué el umbral cambia de signo · P1 S2.2, S2.3, S2.5",
+    "tema": "CESA · P1 Dimmer",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-npn-o-pnp",
+    "archivo": "cesa-lab-npn-o-pnp.mp4",
+    "poster": "cesa-lab-npn-o-pnp.jpg",
+    "titulo": "NPN o PNP: dónde va cada uno",
+    "texto": "Arriba o abajo de la carga · P1 S1.1–S1.2",
+    "tema": "CESA · P1 Dimmer",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-pico-diodos-calculo",
+    "archivo": "cesa-lab-pico-diodos-calculo.mp4",
+    "poster": "cesa-lab-pico-diodos-calculo.jpg",
+    "titulo": "Calcular el pico de corriente de los diodos",
+    "texto": "Y la tensión que aguantan · P2 S1.2 · control nº3",
+    "tema": "CESA · P2 Fuente de alimentación",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-pt1000-seguridad",
+    "archivo": "cesa-lab-pt1000-seguridad.mp4",
+    "poster": "cesa-lab-pt1000-seguridad.jpg",
+    "titulo": "El termómetro dentro de la batería",
+    "texto": "PT1000 y sobrecarga · P3 S2.7",
+    "tema": "CESA · P3 Baterías",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-pwm-dimmer",
+    "archivo": "cesa-lab-pwm-dimmer.mp4",
+    "poster": "cesa-lab-pwm-dimmer.jpg",
+    "titulo": "Cómo un LED parece estar a medias",
+    "texto": "Modulación PWM · P1 S2.10 · control nº2",
+    "tema": "CESA · P1 Dimmer",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-rendimiento-lineal",
+    "archivo": "cesa-lab-rendimiento-lineal.mp4",
+    "poster": "cesa-lab-rendimiento-lineal.jpg",
+    "titulo": "Cuánto desperdicia un regulador lineal",
+    "texto": "Rendimiento con batería · P3 S1.2",
+    "tema": "CESA · P3 Baterías",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-rizado-calculo",
+    "archivo": "cesa-lab-rizado-calculo.mp4",
+    "poster": "cesa-lab-rizado-calculo.jpg",
+    "titulo": "Calcular el rizado de la fuente",
+    "texto": "Con números del lab · P2 S1.1",
+    "tema": "CESA · P2 Fuente de alimentación",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-sondas-generador",
+    "archivo": "cesa-lab-sondas-generador.mp4",
+    "poster": "cesa-lab-sondas-generador.jpg",
+    "titulo": "Dos trampas del osciloscopio y el generador",
+    "texto": "Sondas 10:1 y salida HiZ · P1 C4–C5",
+    "tema": "CESA · P1 Dimmer",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-tl431-resistencias-calculo",
+    "archivo": "cesa-lab-tl431-resistencias-calculo.mp4",
+    "poster": "cesa-lab-tl431-resistencias-calculo.jpg",
+    "titulo": "Elegir las resistencias del TL431",
+    "texto": "Divisor y margen de R1 · P2 S1.4–S1.5",
+    "tema": "CESA · P2 Fuente de alimentación",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-tl431",
+    "archivo": "cesa-lab-tl431.mp4",
+    "poster": "cesa-lab-tl431.jpg",
+    "titulo": "El TL431, una referencia de 2,5 voltios",
+    "texto": "Y sus dos límites de corriente · P2 S1.6–S1.8",
+    "tema": "CESA · P2 Fuente de alimentación",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-transitorio-arranque",
+    "archivo": "cesa-lab-transitorio-arranque.mp4",
+    "poster": "cesa-lab-transitorio-arranque.jpg",
+    "titulo": "El primer segundo de una fuente",
+    "texto": "El transitorio de arranque · P2 3.1.3 · control nº3",
+    "tema": "CESA · P2 Fuente de alimentación",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-tres-reguladores-autonomia",
+    "archivo": "cesa-lab-tres-reguladores-autonomia.mp4",
+    "poster": "cesa-lab-tres-reguladores-autonomia.jpg",
+    "titulo": "Tres reguladores, tres autonomías",
+    "texto": "LM317, LP2951 y Buck · P3 S1.11 · control nº5",
+    "tema": "CESA · P3 Baterías",
+    "examen": "Control lab"
+  },
+  {
+    "id": "cesa-lab-umbrales-histeresis-calculo",
+    "archivo": "cesa-lab-umbrales-histeresis-calculo.mp4",
+    "poster": "cesa-lab-umbrales-histeresis-calculo.jpg",
+    "titulo": "Calcular los umbrales del comparador",
+    "texto": "VTH y VTL con números · P1 S2.6–S2.7",
+    "tema": "CESA · P1 Dimmer",
+    "examen": "Control lab"
   }
 ]

@@ -1,0 +1,127 @@
+{
+ "id": "cesa-lab-astable-tiempos-calculo",
+ "titulo": "Cuánto dura cada tramo del oscilador",
+ "texto": "Con números · P1 S2.8–S2.9",
+ "tema": "CESA · P1 Dimmer",
+ "examen": "Control lab",
+ "etiqueta": "cálculo",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "R4": "erre cuatro",
+  "Cc": "ce ce",
+  "Vsat": "uve sat",
+  "Vini": "uve ini",
+  "Vfin": "uve fin"
+ },
+ "segmentos": [
+  {
+   "tag": "los datos",
+   "sub": "Cuatro coma siete kilos, doscientos nanos, umbrales de uno coma seis y menos uno coma ocho. ¿Cuánto dura cada *tramo?*",
+   "titulo": "LOS *DATOS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔧",
+      "izq": "R4 · Cc",
+      "der": "4,7 kΩ · 200 nF = 0,94 ms"
+     },
+     {
+      "icono": "↕️",
+      "izq": "Umbrales",
+      "der": "1,6 V y −1,8 V",
+      "rojo": true,
+      "en": "tramo?"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "la fórmula",
+   "sub": "El condensador va hacia la saturación. El tiempo: erre ce por el logaritmo de lo que falta al *empezar* entre lo que falta al *acabar.*",
+   "titulo": "LA *FÓRMULA*",
+   "visual": {
+    "tipo": "big",
+    "big": "t = RC · ln((Vsat − Vini)/(Vsat − Vfin))",
+    "small": "va hacia Vsat"
+   },
+   "num": 1
+  },
+  {
+   "tag": "subida",
+   "sub": "Subiendo hacia cinco coma cinco: logaritmo de *siete coma tres* entre *tres coma nueve*... cero coma cincuenta y nueve milisegundos.",
+   "titulo": "LA *SUBIDA*",
+   "visual": {
+    "tipo": "big",
+    "big": "0,94 · ln(7,3 / 3,9) ≈ 0,59 ms",
+    "small": "salida en saturación +"
+   },
+   "num": 2
+  },
+  {
+   "tag": "bajada",
+   "sub": "Bajando hacia menos seis, de uno coma seis a menos uno coma ocho: logaritmo de *siete coma seis* entre *cuatro coma dos.*",
+   "titulo": "LA *BAJADA*",
+   "visual": {
+    "tipo": "big",
+    "big": "0,94 · ln(7,6 / 4,2) ≈ 0,56 ms",
+    "small": "salida en saturación −"
+   },
+   "num": 3
+  },
+  {
+   "tag": "periodo",
+   "sub": "En total, un periodo de uno coma quince milisegundos... unos *ochocientos setenta* hercios.",
+   "titulo": "EL *PERIODO*",
+   "visual": {
+    "tipo": "big",
+    "big": "0,59 + 0,56 ≈ 1,15 ms",
+    "small": "≈ 870 Hz"
+   },
+   "num": 4
+  },
+  {
+   "tag": "el truco",
+   "sub": "El truco: distancia hasta la saturación al empezar... entre la distancia al *acabar.*",
+   "titulo": "EL *TRUCO*",
+   "visual": {
+    "tipo": "big",
+    "big": "ln(distancia inicio / distancia final)",
+    "small": "siempre medido hasta Vsat"
+   }
+  }
+ ]
+}

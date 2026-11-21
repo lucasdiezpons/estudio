@@ -1,0 +1,128 @@
+{
+ "id": "cesa-lab-diodo-zener",
+ "titulo": "El diodo que trabaja al revés",
+ "texto": "Zener como referencia · P2 S1.3",
+ "tema": "CESA · P2 Fuente de alimentación",
+ "examen": "Control lab",
+ "etiqueta": "referencia",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta"
+ },
+ "segmentos": [
+  {
+   "tag": "al revés",
+   "sub": "Un diodo normal no quiere trabajar en inverso. El *Zener,* en cambio, está hecho *para* eso.",
+   "titulo": "AL *REVÉS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔻",
+    "linea1": "diodo Zener",
+    "linea2": "TRABAJA EN RUPTURA"
+   }
+  },
+  {
+   "tag": "la ruptura",
+   "sub": "En inverso, al llegar a su tensión [(voltaje)] Zener... la corriente [(intensidad)] se dispara, pero la tensión casi *no* cambia.",
+   "titulo": "LA *RUPTURA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📏",
+    "linea1": "pasa mucha o poca corriente",
+    "linea2": "TENSIÓN CASI FIJA"
+   },
+   "num": 1
+  },
+  {
+   "tag": "referencia",
+   "sub": "Por eso sirve de *referencia:* con una resistencia en serie, su tensión casi no depende de la alimentación.",
+   "titulo": "UNA *REFERENCIA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎯",
+    "linea1": "Zener + resistencia en serie",
+    "linea2": "TENSIÓN DE REFERENCIA"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el defecto",
+   "sub": "Su defecto: la *temperatura.* Su tensión se mueve decenas de milivoltios por grado.",
+   "titulo": "EL *DEFECTO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🌡️",
+    "linea1": "decenas de mV por grado",
+    "linea2": "DERIVA TÉRMICA",
+    "stamp": "¡OJO!"
+   },
+   "num": 3
+  },
+  {
+   "tag": "la mejora",
+   "sub": "Por eso existen Zener *compensados,* y reguladores *shunt* como el TL431, que ya lo traen todo dentro.",
+   "titulo": "LA *MEJORA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🧊",
+      "izq": "Zener compensado",
+      "der": "MENOS DERIVA",
+      "en": "compensados,"
+     },
+     {
+      "icono": "🧩",
+      "izq": "TL431",
+      "der": "SHUNT INTEGRADO",
+      "rojo": true,
+      "en": "dentro."
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "idea",
+   "sub": "El Zener trabaja en *ruptura*... y ahí la tensión casi no se *mueve.*",
+   "titulo": "LA *IDEA*",
+   "visual": {
+    "tipo": "big",
+    "big": "RUPTURA = TENSIÓN FIJA",
+    "small": "por eso es referencia"
+   }
+  }
+ ]
+}

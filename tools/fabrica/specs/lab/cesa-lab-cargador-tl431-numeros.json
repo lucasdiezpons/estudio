@@ -1,0 +1,118 @@
+{
+ "id": "cesa-lab-cargador-tl431-numeros",
+ "titulo": "Cuándo deja de cargar a corriente constante",
+ "texto": "R3, R4 y los 8 voltios · P3 S2.5–S2.6",
+ "tema": "CESA · P3 Baterías",
+ "examen": "Control lab",
+ "etiqueta": "cálculo",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "VB": "uve be",
+  "R3": "erre tres",
+  "R4": "erre cuatro",
+  "CC": "ce ce",
+  "CV": "ce uve"
+ },
+ "segmentos": [
+  {
+   "tag": "pregunta",
+   "sub": "¿En qué momento pasa el cargador de corriente [(intensidad)] constante a tensión [(voltaje)] *constante?*",
+   "titulo": "¿*CUÁNDO?*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔀",
+    "linea1": "fase CC → fase CV",
+    "linea2": "LO DECIDE UN DIVISOR"
+   }
+  },
+  {
+   "tag": "el divisor",
+   "sub": "Un divisor colgado de la batería le da al TL431 una parte de su tensión. Cuando esa parte llega a *dos coma cinco...* cambia de fase.",
+   "titulo": "EL *DIVISOR*",
+   "visual": {
+    "tipo": "big",
+    "big": "V ref = VB · R4 / (R3 + R4)",
+    "small": "cambia al llegar a 2,5 V"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la cuenta",
+   "sub": "Para cambiar a ocho voltios con cuatro de diez kilos: diez kilos por ocho entre dos coma cinco menos uno... *veintidós* kilos.",
+   "titulo": "LA *CUENTA*",
+   "visual": {
+    "tipo": "big",
+    "big": "R3 = 10k · (8/2,5 − 1) = 22 kΩ",
+    "small": "resistencia de arriba"
+   },
+   "num": 2
+  },
+  {
+   "tag": "antes",
+   "sub": "Antes de llegar, el TL431 está *apagado:* el LM317 mete sus doscientos cincuenta miliamperios, sin importar la batería.",
+   "titulo": "ANTES: *APAGADO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "😴",
+    "linea1": "VB < 8 V",
+    "linea2": "I = 250 mA CONSTANTE"
+   },
+   "num": 3
+  },
+  {
+   "tag": "después",
+   "sub": "Al llegar, el TL431 la clava en ocho voltios... y la corriente va *bajando* sola hasta casi *cero.*",
+   "titulo": "DESPUÉS: *8 V*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📉",
+    "linea1": "VB = 8 V fija",
+    "linea2": "LA CORRIENTE CAE"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en una línea",
+   "sub": "Batería igual a dos coma cinco, por uno más R3 entre *R4.*",
+   "titulo": "EN UNA *LÍNEA*",
+   "visual": {
+    "tipo": "big",
+    "big": "VB = 2,5 · (1 + R3/R4)",
+    "small": "= 8 V"
+   }
+  }
+ ]
+}

@@ -1,0 +1,174 @@
+{
+ "id": "cesa-lab-cuatro-estructuras-mosfet",
+ "titulo": "Cuatro formas de poner un MOSFET",
+ "texto": "Seguidor o fuente en la alimentación · P2 S2.1–S2.4",
+ "tema": "CESA · P2 Fuente de alimentación",
+ "examen": "Control lab",
+ "etiqueta": "cálculo",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "Vpot": "uve pot",
+  "RL": "erre ele"
+ },
+ "segmentos": [
+  {
+   "tag": "la clave",
+   "sub": "Con un MOSFET de paso, todo depende de una cosa: ¿dónde está la *fuente?* ¿En la carga... o en la *alimentación?*",
+   "titulo": "¿DÓNDE ESTÁ LA *FUENTE?*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "💡",
+      "izq": "Fuente en la carga",
+      "der": "SEGUIDOR",
+      "en": "fuente?"
+     },
+     {
+      "icono": "🔋",
+      "izq": "Fuente en la alimentación",
+      "der": "GRIFO SENSIBLE",
+      "rojo": true,
+      "en": "alimentación?"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "seguidor",
+   "sub": "En *seguidor,* la salida va unos cuatro voltios por debajo del potenciómetro y lo sigue. Con un NMOS: de cero a *siete coma tres* voltios.",
+   "titulo": "*SEGUIDOR*",
+   "visual": {
+    "tipo": "big",
+    "big": "Vpot = Vo + VTH + √(2Vo/(beta·RL))",
+    "small": "6.a: Vo 0 → 7,3 V"
+   },
+   "num": 1
+  },
+  {
+   "tag": "su precio",
+   "sub": "Fácil de ajustar, usas el sesenta y siete por ciento del potenciómetro. Pero el dropout es de casi *cinco* voltios.",
+   "titulo": "SU *PRECIO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🎛️",
+      "izq": "Recorrido útil",
+      "der": "≈ 67 %"
+     },
+     {
+      "icono": "📏",
+      "izq": "Dropout",
+      "der": "≈ 4,7 V",
+      "rojo": true,
+      "en": "voltios."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "en la alimentación",
+   "sub": "Con la fuente en la *alimentación,* como el PMOS en positivo, la salida llega casi a doce... pero todo pasa en un *nueve* por ciento del potenciómetro.",
+   "titulo": "FUENTE EN LA *ALIMENTACIÓN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🎛️",
+      "izq": "Recorrido útil",
+      "der": "≈ 9 %",
+      "rojo": true,
+      "en": "nueve"
+     },
+     {
+      "icono": "📏",
+      "izq": "Dropout",
+      "der": "≈ 1 V"
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "negativa",
+   "sub": "En negativo pasa *igual,* cambiando NMOS por PMOS: el PMOS seguidor fácil, y el NMOS con poco dropout pero *difícil.*",
+   "titulo": "EN *NEGATIVO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "➕",
+      "izq": "Positiva LDO",
+      "der": "PMOS"
+     },
+     {
+      "icono": "➖",
+      "izq": "Negativa LDO",
+      "der": "NMOS",
+      "rojo": true,
+      "en": "difícil."
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "la regla",
+   "sub": "Seguidor: control *fácil,* dropout grande. Fuente en la alimentación: dropout *pequeño,* control difícil.",
+   "titulo": "LA *REGLA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🎛️",
+      "izq": "Seguidor",
+      "der": "FÁCIL · DROPOUT GRANDE",
+      "en": "fácil,"
+     },
+     {
+      "icono": "🤏",
+      "izq": "Fuente en alimentación",
+      "der": "LDO · DIFÍCIL",
+      "rojo": true,
+      "en": "pequeño,"
+     }
+    ]
+   }
+  }
+ ]
+}

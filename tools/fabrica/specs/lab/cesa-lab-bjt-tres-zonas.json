@@ -1,0 +1,154 @@
+{
+ "id": "cesa-lab-bjt-tres-zonas",
+ "titulo": "Las tres caras de un transistor",
+ "texto": "Corte, activa y saturación · P1 S1.1–S1.2",
+ "tema": "CESA · P1 Dimmer",
+ "examen": "Control lab",
+ "etiqueta": "transistores",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "Ic": "i ce",
+  "Ib": "i be",
+  "Vce": "uve ce e"
+ },
+ "segmentos": [
+  {
+   "tag": "tres modos",
+   "sub": "Un transistor bipolar puede ser tres cosas distintas: un *interruptor abierto,* un *grifo,* o un interruptor *cerrado.*",
+   "titulo": "TRES *CARAS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🚪",
+      "izq": "Corte",
+      "der": "ABIERTO",
+      "en": "abierto,"
+     },
+     {
+      "icono": "🚰",
+      "izq": "Activa directa",
+      "der": "GRIFO",
+      "rojo": true,
+      "en": "grifo,"
+     },
+     {
+      "icono": "🔌",
+      "izq": "Saturación",
+      "der": "CERRADO",
+      "en": "cerrado."
+     }
+    ]
+   }
+  },
+  {
+   "tag": "corte",
+   "sub": "En *corte,* no entra corriente [(intensidad)] por la base... y entre colector y emisor no pasa *nada.*",
+   "titulo": "*CORTE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🚪",
+    "linea1": "Ib = 0 → Ic = 0",
+    "linea2": "CIRCUITO ABIERTO"
+   },
+   "num": 1
+  },
+  {
+   "tag": "activa",
+   "sub": "En activa *directa,* la corriente de colector es beta veces la de base. Es una fuente de corriente controlada.",
+   "titulo": "ACTIVA *DIRECTA*",
+   "visual": {
+    "tipo": "big",
+    "big": "Ic = beta · Ib",
+    "small": "y Vce > Vce sat"
+   },
+   "num": 2
+  },
+  {
+   "tag": "saturación",
+   "sub": "En *saturación,* el transistor ya no puede más: entre colector y emisor queda una tensión [(voltaje)] *mínima.*",
+   "titulo": "*SATURACIÓN*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔌",
+    "linea1": "Ic < beta · Ib",
+    "linea2": "Vce = Vce SAT"
+   },
+   "num": 3
+  },
+  {
+   "tag": "cómo saberlo",
+   "sub": "Truco para saber dónde está: supón activa, calcula la tensión colector emisor... y si sale menor que la de saturación, estaba *saturado.*",
+   "titulo": "EL *TRUCO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔍",
+    "linea1": "supón activa y calcula Vce",
+    "linea2": "SI Vce < Vce SAT → SATURADO"
+   },
+   "num": 4
+  },
+  {
+   "tag": "quédate con esto",
+   "sub": "Corte: nada. Activa: beta por la base. Saturación: tensión *mínima.*",
+   "titulo": "QUÉDATE CON *ESTO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🚪",
+      "izq": "Corte",
+      "der": "Ic = 0",
+      "en": "nada."
+     },
+     {
+      "icono": "🚰",
+      "izq": "Activa",
+      "der": "Ic = beta · Ib",
+      "en": "base."
+     },
+     {
+      "icono": "🔌",
+      "izq": "Saturación",
+      "der": "Vce = Vce SAT",
+      "rojo": true,
+      "en": "mínima."
+     }
+    ]
+   }
+  }
+ ]
+}

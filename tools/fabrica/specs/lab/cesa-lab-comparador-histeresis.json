@@ -1,0 +1,153 @@
+{
+ "id": "cesa-lab-comparador-histeresis",
+ "titulo": "Un comparador con dos umbrales",
+ "texto": "Histéresis · P1 S2.6–S2.7",
+ "tema": "CESA · P1 Dimmer",
+ "examen": "Control lab",
+ "etiqueta": "AO",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "XY": "equis i griega"
+ },
+ "segmentos": [
+  {
+   "tag": "pregunta",
+   "sub": "¿Y si un amplificador operacional se realimenta al *revés,* con realimentación positiva?",
+   "titulo": "AL *REVÉS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔁",
+    "linea1": "realimentación positiva",
+    "linea2": "COMPARADOR"
+   }
+  },
+  {
+   "tag": "saturación",
+   "sub": "Entonces nunca está en zona lineal: siempre está *saturado,* arriba o abajo. Y aquí *no* vale el cortocircuito virtual.",
+   "titulo": "SIEMPRE *SATURADO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬆️",
+      "izq": "Saturación +",
+      "der": "SALIDA ARRIBA",
+      "en": "arriba"
+     },
+     {
+      "icono": "⬇️",
+      "izq": "Saturación −",
+      "der": "SALIDA ABAJO",
+      "rojo": true,
+      "en": "abajo."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "dos umbrales",
+   "sub": "Y como la salida vuelve a la entrada más, cada estado tiene su propio umbral: uno *alto* y otro *bajo.*",
+   "titulo": "DOS *UMBRALES*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬆️",
+      "izq": "Umbral alto",
+      "der": "VTH",
+      "en": "alto"
+     },
+     {
+      "icono": "⬇️",
+      "izq": "Umbral bajo",
+      "der": "VTL",
+      "rojo": true,
+      "en": "bajo."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "histéresis",
+   "sub": "Eso es la *histéresis:* para cambiar de estado hay que pasar el otro umbral. Así el ruido no lo hace *temblar.*",
+   "titulo": "*HISTÉRESIS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🛡️",
+    "linea1": "entre los dos umbrales",
+    "linea2": "NO CAMBIA POR RUIDO"
+   },
+   "num": 3
+  },
+  {
+   "tag": "cómo verlo",
+   "sub": "En el osciloscopio, en modo *XY,* sale un rectángulo: el ciclo de histéresis.",
+   "titulo": "MODO *XY*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📺",
+    "linea1": "entrada en X, salida en Y",
+    "linea2": "UN RECTÁNGULO"
+   },
+   "num": 4
+  },
+  {
+   "tag": "idea clave",
+   "sub": "Realimentación *positiva:* saturado, sin cortocircuito virtual... y dos *umbrales.*",
+   "titulo": "IDEA *CLAVE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔁",
+      "izq": "Realimentación +",
+      "der": "SATURADO",
+      "en": "virtual..."
+     },
+     {
+      "icono": "↕️",
+      "izq": "Umbrales",
+      "der": "DOS",
+      "rojo": true,
+      "en": "umbrales."
+     }
+    ]
+   }
+  }
+ ]
+}

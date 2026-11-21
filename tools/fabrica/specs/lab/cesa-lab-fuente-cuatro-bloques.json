@@ -1,0 +1,162 @@
+{
+ "id": "cesa-lab-fuente-cuatro-bloques",
+ "titulo": "Una fuente de alimentación por dentro",
+ "texto": "Cuatro bloques · P2 intro · control nº4",
+ "tema": "CESA · P2 Fuente de alimentación",
+ "examen": "Control lab",
+ "etiqueta": "fuente lineal",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta"
+ },
+ "segmentos": [
+  {
+   "tag": "de la red",
+   "sub": "Del enchufe salen trescientos diez voltios de pico... y tu móvil quiere cinco en *continua.* ¿Cómo se pasa de uno a otro?",
+   "titulo": "DE 310 A *5 V*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔌",
+    "linea1": "red: senoidal de 310 V de pico",
+    "linea2": "CARGA: 5 V CONTINUA"
+   }
+  },
+  {
+   "tag": "1 y 2",
+   "sub": "Primero un *transformador,* que baja la tensión [(voltaje)]. Luego un *rectificador,* que le da la vuelta a la parte negativa.",
+   "titulo": "BLOQUES *1 Y 2*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔁",
+      "izq": "Transformador",
+      "der": "BAJA LA TENSIÓN",
+      "en": "transformador,"
+     },
+     {
+      "icono": "〰️",
+      "izq": "Rectificador",
+      "der": "SOLO POSITIVA",
+      "rojo": true,
+      "en": "rectificador,"
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "3 y 4",
+   "sub": "Después un *filtro* con un condensador, que suaviza el rizado. Y al final el *regulador,* que la deja *fija.*",
+   "titulo": "BLOQUES *3 Y 4*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔋",
+      "izq": "Filtro",
+      "der": "MENOS RIZADO",
+      "en": "filtro"
+     },
+     {
+      "icono": "🎯",
+      "izq": "Regulador",
+      "der": "TENSIÓN FIJA",
+      "rojo": true,
+      "en": "regulador,"
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "regulador",
+   "sub": "El regulador mantiene la salida fija aunque cambie la red... o aunque la carga pida *más.*",
+   "titulo": "EL *REGULADOR*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔌",
+      "izq": "Cambia la red",
+      "der": "REGULACIÓN DE LÍNEA"
+     },
+     {
+      "icono": "💡",
+      "izq": "Cambia la carga",
+      "der": "REGULACIÓN DE CARGA",
+      "rojo": true,
+      "en": "más."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "lineal o conmutada",
+   "sub": "Si el regulador es lineal: *poco* rizado, pero rendimiento bajo. Si es conmutado... al *revés.*",
+   "titulo": "LINEAL O *CONMUTADA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "✨",
+      "izq": "Lineal",
+      "der": "POCO RIZADO",
+      "en": "poco"
+     },
+     {
+      "icono": "⚡",
+      "izq": "Conmutada",
+      "der": "MÁS RENDIMIENTO",
+      "rojo": true,
+      "en": "revés."
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "de memoria",
+   "sub": "Transformador, rectificador, filtro y *regulador.* Y si quieres, un *limitador.*",
+   "titulo": "DE *MEMORIA*",
+   "visual": {
+    "tipo": "big",
+    "big": "TRAFO → RECT → FILTRO → REG",
+    "small": "+ limitador de corriente"
+   }
+  }
+ ]
+}

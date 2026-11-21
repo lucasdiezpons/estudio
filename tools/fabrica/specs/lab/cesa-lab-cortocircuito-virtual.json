@@ -1,0 +1,127 @@
+{
+ "id": "cesa-lab-cortocircuito-virtual",
+ "titulo": "El truco del amplificador operacional",
+ "texto": "Cortocircuito virtual · P1 S1.11",
+ "tema": "CESA · P1 Dimmer",
+ "examen": "Control lab",
+ "etiqueta": "AO",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta"
+ },
+ "segmentos": [
+  {
+   "tag": "la idea",
+   "sub": "Un amplificador operacional con realimentación *negativa* hace todo lo posible para que sus dos entradas valgan *igual.*",
+   "titulo": "EL *TRUCO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚖️",
+    "linea1": "realimentación negativa",
+    "linea2": "V+ = V−"
+   }
+  },
+  {
+   "tag": "el dimmer",
+   "sub": "En el dimmer, la entrada más va al potenciómetro... y la menos, a la resistencia por donde pasa el *LED.*",
+   "titulo": "EN EL *DIMMER*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🎛️",
+      "izq": "Entrada +",
+      "der": "POTENCIÓMETRO",
+      "en": "potenciómetro..."
+     },
+     {
+      "icono": "💡",
+      "izq": "Entrada −",
+      "der": "RESISTENCIA DEL LED",
+      "rojo": true,
+      "en": "LED."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "resultado",
+   "sub": "Así que esa resistencia tiene la tensión [(voltaje)] del potenciómetro... y la corriente sale de una *división.*",
+   "titulo": "UNA *DIVISIÓN*",
+   "visual": {
+    "tipo": "big",
+    "big": "I LED = V pot / R",
+    "small": "ni beta ni Vbe"
+   },
+   "num": 2
+  },
+  {
+   "tag": "lo mejor",
+   "sub": "Lo mejor: ya no depende ni de beta ni de la tensión base emisor. Aunque el transistor se caliente... la corriente no se *mueve.*",
+   "titulo": "NO SE *MUEVE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧊",
+    "linea1": "da igual la temperatura",
+    "linea2": "CORRIENTE FIJA"
+   },
+   "num": 3
+  },
+  {
+   "tag": "el límite",
+   "sub": "Pero ojo: solo vale si el AO *no* está saturado. Si su salida toca el techo... se acabó el *truco.*",
+   "titulo": "EL *LÍMITE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚠️",
+    "linea1": "AO saturado",
+    "linea2": "NO HAY CORTOCIRCUITO VIRTUAL",
+    "stamp": "¡OJO!"
+   },
+   "num": 4
+  },
+  {
+   "tag": "resumen",
+   "sub": "Realimentación negativa y AO sin saturar: entradas *iguales.*",
+   "titulo": "*RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "V+ = V−",
+    "small": "solo en zona lineal"
+   }
+  }
+ ]
+}

@@ -1,0 +1,151 @@
+{
+ "id": "cesa-lab-npn-o-pnp",
+ "titulo": "NPN o PNP: dónde va cada uno",
+ "texto": "Arriba o abajo de la carga · P1 S1.1–S1.2",
+ "tema": "CESA · P1 Dimmer",
+ "examen": "Control lab",
+ "etiqueta": "transistores",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta"
+ },
+ "segmentos": [
+  {
+   "tag": "mismo dibujo",
+   "sub": "El NPN y el PNP son el mismo dibujo... con los *signos* cambiados.",
+   "titulo": "EL MISMO *DIBUJO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔄",
+    "linea1": "mismas zonas, mismas fórmulas",
+    "linea2": "SIGNOS AL REVÉS"
+   }
+  },
+  {
+   "tag": "el NPN",
+   "sub": "El NPN quiere el emisor *abajo,* pegado a masa. Para encenderlo... *subes* la base.",
+   "titulo": "EL *NPN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬇️",
+      "izq": "Emisor",
+      "der": "A MASA",
+      "en": "abajo,"
+     },
+     {
+      "icono": "⬆️",
+      "izq": "Para encender",
+      "der": "SUBE LA BASE",
+      "rojo": true,
+      "en": "subes"
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "el PNP",
+   "sub": "El PNP quiere el emisor *arriba,* pegado a la alimentación. Para encenderlo... *bajas* la base.",
+   "titulo": "EL *PNP*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬆️",
+      "izq": "Emisor",
+      "der": "A LA ALIMENTACIÓN",
+      "en": "arriba,"
+     },
+     {
+      "icono": "⬇️",
+      "izq": "Para encender",
+      "der": "BAJA LA BASE",
+      "rojo": true,
+      "en": "bajas"
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "la carga",
+   "sub": "Por eso el NPN va *debajo* de la carga... y el PNP, *encima.*",
+   "titulo": "¿DÓNDE *VA?*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬇️",
+      "izq": "NPN",
+      "der": "DEBAJO DE LA CARGA",
+      "en": "debajo"
+     },
+     {
+      "icono": "⬆️",
+      "izq": "PNP",
+      "der": "ENCIMA DE LA CARGA",
+      "rojo": true,
+      "en": "encima."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "la flecha",
+   "sub": "Y la flecha del emisor lo dice: en el PNP *apunta* hacia la base. En el NPN, sale hacia *fuera.*",
+   "titulo": "LA *FLECHA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "➡️",
+    "linea1": "PNP: aPunta a la base",
+    "linea2": "NPN: No apunta"
+   },
+   "num": 4
+  },
+  {
+   "tag": "la regla",
+   "sub": "Emisor abajo, NPN. Emisor arriba, *PNP.*",
+   "titulo": "LA *REGLA*",
+   "visual": {
+    "tipo": "big",
+    "big": "NPN ABAJO · PNP ARRIBA",
+    "small": "el emisor manda"
+   }
+  }
+ ]
+}

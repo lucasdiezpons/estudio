@@ -1,0 +1,140 @@
+{
+ "id": "cesa-lab-condensadores-utiles",
+ "titulo": "Condensadores que parecen inútiles",
+ "texto": "Pero sin ellos oscila · P2 S2.7 · P3 C1",
+ "tema": "CESA · P2 Fuente de alimentación",
+ "examen": "Control lab",
+ "etiqueta": "regulador discreto",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta"
+ },
+ "segmentos": [
+  {
+   "tag": "paradoja",
+   "sub": "En continua, un condensador es un circuito *abierto.* Entonces, ¿para qué ponerlo a la salida de un regulador?",
+   "titulo": "¿PARA *QUÉ?*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🤔",
+    "linea1": "en continua es un abierto",
+    "linea2": "¿INÚTIL?"
+   }
+  },
+  {
+   "tag": "cambios",
+   "sub": "Porque la carga cambia de golpe... y el condensador da la corriente [(intensidad)] mientras el lazo *reacciona.*",
+   "titulo": "LOS *CAMBIOS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚡",
+    "linea1": "cambio brusco de carga",
+    "linea2": "EL CONDENSADOR RESPONDE"
+   },
+   "num": 1
+  },
+  {
+   "tag": "estabilidad",
+   "sub": "Y lo más importante: estabiliza el *lazo* de control. Sin él, el regulador puede ponerse a *oscilar.*",
+   "titulo": "*ESTABILIDAD*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "〰️",
+    "linea1": "sin condensador",
+    "linea2": "PUEDE OSCILAR",
+    "stamp": "¡OJO!"
+   },
+   "num": 2
+  },
+  {
+   "tag": "en el lab",
+   "sub": "En la práctica de baterías se ve: quitas el condensador del LDO... y la salida se pone a *bailar.*",
+   "titulo": "EN EL *LAB*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "✅",
+      "izq": "Con condensador",
+      "der": "SALIDA FIJA"
+     },
+     {
+      "icono": "〰️",
+      "izq": "Sin condensador",
+      "der": "OSCILA",
+      "rojo": true,
+      "en": "bailar."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "ruido",
+   "sub": "Además filtran ruido y picos rápidos que el regulador es demasiado *lento* para corregir.",
+   "titulo": "EL *RUIDO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔇",
+    "linea1": "picos rápidos",
+    "linea2": "LOS FILTRA"
+   },
+   "num": 4
+  },
+  {
+   "tag": "resumen",
+   "sub": "No están por la continua: están por los *cambios*... y para que el lazo no *oscile.*",
+   "titulo": "*RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⚡",
+      "izq": "Cambios bruscos",
+      "der": "LOS CUBRE",
+      "en": "cambios..."
+     },
+     {
+      "icono": "🎛️",
+      "izq": "Lazo de control",
+      "der": "NO OSCILA",
+      "rojo": true,
+      "en": "oscile."
+     }
+    ]
+   }
+  }
+ ]
+}

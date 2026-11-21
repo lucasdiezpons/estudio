@@ -1,0 +1,141 @@
+{
+ "id": "cesa-lab-lm317-lp2951-resistencias",
+ "titulo": "LM317 contra LP2951: las resistencias",
+ "texto": "La referencia está en sitios distintos · P3 S1.1, S1.4",
+ "tema": "CESA · P3 Baterías",
+ "examen": "Control lab",
+ "etiqueta": "cálculo",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "I": "i",
+  "R2": "erre dos",
+  "ADJ": "a de jota",
+  "FEEDBACK": "fid bac",
+  "OUT": "aut",
+  "GND": "masa"
+ },
+ "segmentos": [
+  {
+   "tag": "trampa",
+   "sub": "Dos reguladores, mismo divisor... y si usas la misma fórmula en los dos, uno te sale *mal.*",
+   "titulo": "LA *TRAMPA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔧",
+      "izq": "LM317",
+      "der": "1,25 V ARRIBA"
+     },
+     {
+      "icono": "🔧",
+      "izq": "LP2951",
+      "der": "1,235 V ABAJO",
+      "rojo": true,
+      "en": "mal."
+     }
+    ]
+   }
+  },
+  {
+   "tag": "LM317",
+   "sub": "En el LM317, los uno coma veinticinco están en la resistencia de *arriba,* entre salida y ajuste. Con un kilo: uno coma veinticinco miliamperios.",
+   "titulo": "EL *LM317*",
+   "visual": {
+    "tipo": "big",
+    "big": "I R2 = 1,25 V / 1 kΩ = 1,25 mA",
+    "small": "resistencia de arriba"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la de abajo",
+   "sub": "Por la de abajo pasa eso más cuarenta y seis microamperios... y le tocan tres coma setenta y cinco voltios: *dos coma ocho nueve* kilos.",
+   "titulo": "LA DE *ABAJO*",
+   "visual": {
+    "tipo": "big",
+    "big": "3,75 V / 1,296 mA = 2,89 kΩ",
+    "small": "con I ADJ = 46 µA"
+   },
+   "num": 2
+  },
+  {
+   "tag": "LP2951",
+   "sub": "En el LP2951 es al *revés:* su referencia de uno coma dos tres cinco está en la de *abajo,* entre feedback y masa.",
+   "titulo": "EL *LP2951*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔄",
+    "linea1": "entre FEEDBACK y masa",
+    "linea2": "REFERENCIA ABAJO"
+   },
+   "num": 3
+  },
+  {
+   "tag": "la cuenta",
+   "sub": "Así que la de arriba, de un kilo, se come tres coma siete seis cinco... y la de abajo sale de *trescientos treinta* ohmios.",
+   "titulo": "LA *CUENTA*",
+   "visual": {
+    "tipo": "big",
+    "big": "1 kΩ · 1,235 / 3,765 ≈ 330 Ω",
+    "small": "resistencia de abajo"
+   },
+   "num": 4
+  },
+  {
+   "tag": "la regla",
+   "sub": "Antes de calcular, mira entre qué patas está la *referencia.*",
+   "titulo": "LA *REGLA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬆️",
+      "izq": "LM317",
+      "der": "OUT–ADJ (ARRIBA)"
+     },
+     {
+      "icono": "⬇️",
+      "izq": "LP2951",
+      "der": "FEEDBACK–GND (ABAJO)",
+      "rojo": true,
+      "en": "referencia."
+     }
+    ]
+   }
+  }
+ ]
+}

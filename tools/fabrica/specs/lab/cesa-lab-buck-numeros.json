@@ -1,0 +1,150 @@
+{
+ "id": "cesa-lab-buck-numeros",
+ "titulo": "El Buck del lab con números",
+ "texto": "Rizado y modo continuo · P3 S1.7–S1.10",
+ "tema": "CESA · P3 Baterías",
+ "examen": "Control lab",
+ "etiqueta": "cálculo",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "Vin": "uve in",
+  "L": "ele",
+  "C": "ce",
+  "f": "efe",
+  "ΔI": "delta i",
+  "ΔV": "delta uve"
+ },
+ "segmentos": [
+  {
+   "tag": "los datos",
+   "sub": "Siete coma dos a cinco voltios, sobre sesenta ohmios. Bobina de treinta y tres micros, y trescientos cincuenta *kilohercios.*",
+   "titulo": "LOS *DATOS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔋",
+      "izq": "Vin → Vo",
+      "der": "7,2 V → 5 V"
+     },
+     {
+      "icono": "🌀",
+      "izq": "L · C",
+      "der": "33 µH · 470 µF"
+     },
+     {
+      "icono": "⏱️",
+      "izq": "f",
+      "der": "350 kHz",
+      "rojo": true,
+      "en": "kilohercios."
+     }
+    ]
+   }
+  },
+  {
+   "tag": "el ciclo",
+   "sub": "En un Buck la salida es D por la entrada: cinco entre siete coma dos... D igual a *cero coma seis nueve.*",
+   "titulo": "EL *CICLO*",
+   "visual": {
+    "tipo": "big",
+    "big": "D = 5 / 7,2 ≈ 0,69",
+    "small": "Buck: Vo = D · Vin"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la bobina",
+   "sub": "El rizado de la bobina: uno menos D, por la salida, entre L por f. Unos *ciento treinta y dos* miliamperios.",
+   "titulo": "LA *BOBINA*",
+   "visual": {
+    "tipo": "big",
+    "big": "ΔI = (1 − D)·Vo / (L·f) ≈ 132 mA",
+    "small": "de pico a pico"
+   },
+   "num": 2
+  },
+  {
+   "tag": "continuo",
+   "sub": "La carga pide ochenta y tres miliamperios. Le restas la mitad del rizado... y el mínimo queda en *diecisiete,* mayor que cero. Modo *continuo.*",
+   "titulo": "MODO *CONTINUO*",
+   "visual": {
+    "tipo": "big",
+    "big": "83 − 66 = 17 mA > 0",
+    "small": "nunca llega a cero → continuo"
+   },
+   "num": 3
+  },
+  {
+   "tag": "el rizado",
+   "sub": "Y el rizado de salida: ese rizado de bobina, entre ocho por f por C... apenas *cero coma uno* milivoltios.",
+   "titulo": "EL *RIZADO*",
+   "visual": {
+    "tipo": "big",
+    "big": "ΔV = ΔI / (8·f·C) ≈ 0,1 mV",
+    "small": "casi nada"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en tres pasos",
+   "sub": "D, rizado de bobina... y comprobar que el mínimo no toca *cero.*",
+   "titulo": "EN TRES *PASOS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "1️⃣",
+      "izq": "D",
+      "der": "Vo / Vin"
+     },
+     {
+      "icono": "2️⃣",
+      "izq": "ΔI",
+      "der": "(1 − D)·Vo/(L·f)"
+     },
+     {
+      "icono": "3️⃣",
+      "izq": "Continuo",
+      "der": "I − ΔI/2 > 0",
+      "rojo": true,
+      "en": "cero."
+     }
+    ]
+   }
+  }
+ ]
+}

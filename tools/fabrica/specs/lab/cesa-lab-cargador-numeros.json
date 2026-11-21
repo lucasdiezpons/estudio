@@ -1,0 +1,138 @@
+{
+ "id": "cesa-lab-cargador-numeros",
+ "titulo": "El cargador del lab con números",
+ "texto": "Corriente, margen y temperatura · P3 S2.1–S2.3",
+ "tema": "CESA · P3 Baterías",
+ "examen": "Control lab",
+ "etiqueta": "cálculo",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "R1": "erre uno",
+  "Tj": "te jota"
+ },
+ "segmentos": [
+  {
+   "tag": "la corriente",
+   "sub": "Para cargar a doscientos cincuenta miliamperios con el LM317: uno coma veinticinco entre cero coma veinticinco... *cinco* ohmios.",
+   "titulo": "LA *CORRIENTE*",
+   "visual": {
+    "tipo": "big",
+    "big": "R1 = 1,25 / 0,25 = 5 Ω",
+    "small": "5,1 Ω comercial → 245 mA"
+   }
+  },
+  {
+   "tag": "el valle",
+   "sub": "¿Regula siempre? La entrada sale del rectificador: pico de dieciséis coma tres, rizado de dos coma siete... el *valle* queda en trece coma seis.",
+   "titulo": "EL *VALLE*",
+   "visual": {
+    "tipo": "big",
+    "big": "16,27 − 0,25/(2·50·940µ) = 13,6 V",
+    "small": "entrada mínima"
+   },
+   "num": 1
+  },
+  {
+   "tag": "lo que hace falta",
+   "sub": "Necesita ocho coma dos, más uno coma veinticinco, más dos de dropout: *once coma cuatro cinco.* Hay de sobra: *regula.*",
+   "titulo": "LO QUE HACE *FALTA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📉",
+      "izq": "Valle de entrada",
+      "der": "13,6 V",
+      "rojo": true,
+      "en": "regula."
+     },
+     {
+      "icono": "📏",
+      "izq": "Necesita",
+      "der": "8,2 + 1,25 + 2 = 11,45 V",
+      "en": "cinco."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "el calor",
+   "sub": "¿Y la temperatura? El peor caso es *al revés:* entrada máxima y batería *mínima.* Nueve voltios por cero coma veinticinco: dos coma dos vatios.",
+   "titulo": "EL *CALOR*",
+   "visual": {
+    "tipo": "big",
+    "big": "(16,27 − 7,25)·0,25 ≈ 2,26 W",
+    "small": "pico de entrada + batería vacía"
+   },
+   "num": 3
+  },
+  {
+   "tag": "la unión",
+   "sub": "Con veintitrés coma tres grados por vatio: veinticinco más cincuenta y tres... *setenta y siete* grados. Muy lejos de ciento cincuenta.",
+   "titulo": "LA *UNIÓN*",
+   "visual": {
+    "tipo": "big",
+    "big": "Tj = 25 + 23,3·2,26 ≈ 77,5 °C",
+    "small": "< 150 °C"
+   },
+   "num": 4
+  },
+  {
+   "tag": "los dos peores",
+   "sub": "Para el dropout, batería *llena* y entrada en el valle. Para el calor, batería *vacía* y entrada en el pico.",
+   "titulo": "LOS DOS *PEORES*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📏",
+      "izq": "Dropout",
+      "der": "BATERÍA LLENA · VALLE",
+      "en": "llena"
+     },
+     {
+      "icono": "🔥",
+      "izq": "Calor",
+      "der": "BATERÍA VACÍA · PICO",
+      "rojo": true,
+      "en": "vacía"
+     }
+    ]
+   }
+  }
+ ]
+}

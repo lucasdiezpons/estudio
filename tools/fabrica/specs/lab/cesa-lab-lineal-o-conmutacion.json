@@ -1,0 +1,141 @@
+{
+ "id": "cesa-lab-lineal-o-conmutacion",
+ "titulo": "Por qué el transistor quema en lineal",
+ "texto": "Y no en conmutación · P1 S2.1",
+ "tema": "CESA · P1 Dimmer",
+ "examen": "Control lab",
+ "etiqueta": "conmutación",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "Vce": "uve ce e",
+  "Ic": "i ce"
+ },
+ "segmentos": [
+  {
+   "tag": "dato",
+   "sub": "En el dimmer lineal, el transistor se pone tan caliente que *quema* al tocarlo. Y el LED ni se *inmuta.*",
+   "titulo": "*QUEMA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔥",
+    "linea1": "dimmer lineal",
+    "linea2": "TRANSISTOR HIRVIENDO"
+   }
+  },
+  {
+   "tag": "por qué",
+   "sub": "En activa directa, el transistor tiene tensión [(voltaje)] *y* corriente [(intensidad)] a la vez. Su potencia es el *producto.*",
+   "titulo": "TENSIÓN *Y* CORRIENTE",
+   "visual": {
+    "tipo": "big",
+    "big": "P = Vce · Ic",
+    "small": "en activa directa"
+   },
+   "num": 1
+  },
+  {
+   "tag": "interruptor",
+   "sub": "Un interruptor ideal no tiene ese problema. Cerrado, tensión *cero.* Abierto, corriente *cero.*",
+   "titulo": "UN *INTERRUPTOR*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔌",
+      "izq": "Cerrado",
+      "der": "V = 0 → P = 0",
+      "en": "cero."
+     },
+     {
+      "icono": "🚪",
+      "izq": "Abierto",
+      "der": "I = 0 → P = 0",
+      "rojo": true,
+      "en": "cero."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "conmutación",
+   "sub": "Por eso se pasa a *conmutar:* encender y apagar muy rápido. El transistor casi no se *calienta.*",
+   "titulo": "*CONMUTAR*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚡",
+    "linea1": "ON / OFF muy rápido",
+    "linea2": "CASI NO SE CALIENTA"
+   },
+   "num": 3
+  },
+  {
+   "tag": "MOSFET",
+   "sub": "Y se usa un *MOSFET* en vez de un bipolar: en conducción tiene menos caída de *tensión.*",
+   "titulo": "MEJOR *MOSFET*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔋",
+    "linea1": "en conducción",
+    "linea2": "MENOS CAÍDA QUE UN BIPOLAR"
+   },
+   "num": 4
+  },
+  {
+   "tag": "la clave",
+   "sub": "Lineal: tensión por corriente, mucho *calor.* Conmutación: casi *nada.*",
+   "titulo": "LA *CLAVE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔥",
+      "izq": "Lineal",
+      "der": "MUCHO CALOR",
+      "en": "calor."
+     },
+     {
+      "icono": "❄️",
+      "izq": "Conmutación",
+      "der": "CASI NADA",
+      "rojo": true,
+      "en": "nada."
+     }
+    ]
+   }
+  }
+ ]
+}

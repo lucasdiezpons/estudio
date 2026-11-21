@@ -1,0 +1,116 @@
+{
+ "id": "cesa-lab-rendimiento-lineal",
+ "titulo": "Cuánto desperdicia un regulador lineal",
+ "texto": "Rendimiento con batería · P3 S1.2",
+ "tema": "CESA · P3 Baterías",
+ "examen": "Control lab",
+ "etiqueta": "reguladores",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "η": "eta",
+  "Vin": "uve in",
+  "Io": "i o",
+  "R2": "erre dos"
+ },
+ "segmentos": [
+  {
+   "tag": "cuenta rápida",
+   "sub": "Batería de siete coma dos voltios, salida de cinco con un regulador lineal. ¿Cuánta energía se *pierde?*",
+   "titulo": "CUENTA *RÁPIDA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔋",
+    "linea1": "7,2 V → 5 V",
+    "linea2": "¿CUÁNTO SE PIERDE?"
+   }
+  },
+  {
+   "tag": "la clave",
+   "sub": "En un lineal, entra casi la *misma* corriente [(intensidad)] que sale. Así que el rendimiento es salida entre *entrada.*",
+   "titulo": "LA *CLAVE*",
+   "visual": {
+    "tipo": "big",
+    "big": "REND ≈ Vo / Vin",
+    "small": "misma corriente dentro y fuera"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la cuenta",
+   "sub": "Cinco entre siete coma dos... un sesenta y nueve por ciento. Casi un tercio se va en *calor.*",
+   "titulo": "LA *CUENTA*",
+   "visual": {
+    "tipo": "big",
+    "big": "5 / 7,2 ≈ 69 %",
+    "small": "un 31 % se convierte en calor"
+   },
+   "num": 2
+  },
+  {
+   "tag": "con más detalle",
+   "sub": "Si quieres afinar, súmale la corriente de las resistencias del ajuste a la de *entrada:* el rendimiento baja un *poquito.*",
+   "titulo": "MÁS *FINO*",
+   "visual": {
+    "tipo": "big",
+    "big": "Vo·Io / (Vin·(Io + I R2))",
+    "small": "la corriente del divisor también cuenta"
+   },
+   "num": 3
+  },
+  {
+   "tag": "conclusión",
+   "sub": "Cuanto más alta la batería respecto a la salida... *peor* rendimiento.",
+   "titulo": "CONCLUSIÓN",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📉",
+    "linea1": "más diferencia entrada − salida",
+    "linea2": "PEOR RENDIMIENTO"
+   },
+   "num": 4
+  },
+  {
+   "tag": "de cabeza",
+   "sub": "Lineal: salida entre *entrada.* Así de fácil.",
+   "titulo": "DE *CABEZA*",
+   "visual": {
+    "tipo": "big",
+    "big": "Vo / Vin",
+    "small": "rendimiento de un lineal"
+   }
+  }
+ ]
+}

@@ -1,0 +1,139 @@
+{
+ "id": "cesa-lab-avalancha-termica",
+ "titulo": "El transistor que se calienta solo",
+ "texto": "Avalancha térmica · P1 3.1 · S1.11",
+ "tema": "CESA · P1 Dimmer",
+ "examen": "Control lab",
+ "etiqueta": "transistores",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta"
+ },
+ "segmentos": [
+  {
+   "tag": "en el lab",
+   "sub": "Pones el dimmer a media luz... esperas un rato... y el LED se va *encendiendo* solo.",
+   "titulo": "SE ENCIENDE *SOLO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "💡",
+    "linea1": "potenciómetro quieto",
+    "linea2": "LA CORRIENTE SUBE"
+   }
+  },
+  {
+   "tag": "por qué",
+   "sub": "La culpa es de *beta:* la ganancia del transistor sube con la *temperatura.*",
+   "titulo": "LA CULPA: *BETA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🌡️",
+    "linea1": "más temperatura",
+    "linea2": "MÁS GANANCIA"
+   },
+   "num": 1
+  },
+  {
+   "tag": "el círculo",
+   "sub": "Más ganancia, más corriente [(intensidad)]... más calor... y más ganancia otra vez. Un círculo *vicioso.*",
+   "titulo": "CÍRCULO *VICIOSO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬆️",
+      "izq": "Más ganancia",
+      "der": "MÁS CORRIENTE"
+     },
+     {
+      "icono": "🔥",
+      "izq": "Más corriente",
+      "der": "MÁS CALOR",
+      "rojo": true,
+      "en": "vicioso."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "final",
+   "sub": "Hasta que el transistor acaba *saturado,* con la corriente al máximo.",
+   "titulo": "ACABA *SATURADO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔚",
+    "linea1": "final del círculo",
+    "linea2": "SATURACIÓN"
+   },
+   "num": 2
+  },
+  {
+   "tag": "la solución",
+   "sub": "La solución: *realimentar.* Un amplificador operacional mide la corriente y corrige la base él solo.",
+   "titulo": "*REALIMENTAR*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎛️",
+    "linea1": "el AO mide y corrige",
+    "linea2": "CORRIENTE ESTABLE"
+   },
+   "num": 3
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Sin realimentar, depende de beta y se *dispara.* Con el AO... queda *fija.*",
+   "titulo": "PARA *RECORDAR*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔥",
+      "izq": "Sin AO",
+      "der": "INESTABLE",
+      "en": "dispara."
+     },
+     {
+      "icono": "✅",
+      "izq": "Con AO",
+      "der": "ESTABLE",
+      "rojo": true,
+      "en": "fija."
+     }
+    ]
+   }
+  }
+ ]
+}

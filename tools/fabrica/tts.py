@@ -21,9 +21,12 @@ def tokens(seg_sub):
     """[(display, spoken_or_None, rojo)]"""
     out = []
     for raw in seg_sub.split():
-        mute = raw.startswith("[") and raw.endswith("]")
+        m = re.fullmatch(r"\[(.*)\]([.,:;!?…]*)", raw)  # [(intensidad)] o [(intensidad)]... → mudo
+        mute = bool(m)
         if mute:
-            raw = raw[1:-1]
+            raw = m.group(1) + m.group(2)
+            if m.group(2) and out and out[-1][1]:
+                out[-1][1] += m.group(2)  # la pausa se la queda la palabra hablada anterior
         rojo = "*" in raw
         disp = raw.replace("*", "")
         out.append([disp, None if mute else disp, rojo])

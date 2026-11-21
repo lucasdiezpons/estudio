@@ -1,0 +1,130 @@
+{
+ "id": "cesa-lab-lm317-fuente-corriente",
+ "titulo": "El LM317 como fuente de corriente",
+ "texto": "Una sola resistencia · P3 S2.1",
+ "tema": "CESA · P3 Baterías",
+ "examen": "Control lab",
+ "etiqueta": "cargador",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "R": "erre",
+  "OUT": "aut",
+  "ADJ": "a de jota",
+  "R2": "erre dos",
+  "R1": "erre uno"
+ },
+ "segmentos": [
+  {
+   "tag": "otro uso",
+   "sub": "El LM317 no solo da tensión [(voltaje)] fija... con *una* resistencia también da corriente [(intensidad)] fija.",
+   "titulo": "OTRO *USO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔋",
+    "linea1": "LM317 + una resistencia",
+    "linea2": "CORRIENTE CONSTANTE"
+   }
+  },
+  {
+   "tag": "cómo",
+   "sub": "Pones la resistencia entre la salida y el pin de ajuste. El chip le mete *siempre* uno coma veinticinco voltios.",
+   "titulo": "EL *MONTAJE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📌",
+    "linea1": "R entre OUT y ADJ",
+    "linea2": "SIEMPRE 1,25 V"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la corriente",
+   "sub": "Así que por ella pasa siempre uno coma veinticinco entre *R*... y esa corriente va directa a la *batería.*",
+   "titulo": "LA *CORRIENTE*",
+   "visual": {
+    "tipo": "big",
+    "big": "I = 1,25 / R",
+    "small": "no depende de la batería"
+   },
+   "num": 2
+  },
+  {
+   "tag": "ejemplo",
+   "sub": "Para doscientos cincuenta miliamperios: uno coma veinticinco entre cero coma veinticinco... *cinco* ohmios.",
+   "titulo": "*EJEMPLO*",
+   "visual": {
+    "tipo": "big",
+    "big": "1,25 / 0,25 = 5 Ω",
+    "small": "y de medio vatio"
+   },
+   "num": 3
+  },
+  {
+   "tag": "trampa",
+   "sub": "No confundas: aquí no hay divisor. La fórmula de uno más R dos entre R uno es para dar *tensión,* no *corriente.*",
+   "titulo": "LA *TRAMPA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔋",
+      "izq": "Fuente de tensión",
+      "der": "1,25·(1 + R2/R1)",
+      "en": "tensión,"
+     },
+     {
+      "icono": "➡️",
+      "izq": "Fuente de corriente",
+      "der": "1,25 / R",
+      "rojo": true,
+      "en": "corriente."
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en una línea",
+   "sub": "Fuente de corriente: uno coma veinticinco entre *R.*",
+   "titulo": "EN UNA *LÍNEA*",
+   "visual": {
+    "tipo": "big",
+    "big": "I = 1,25 / R",
+    "small": "LM317 en modo corriente"
+   }
+  }
+ ]
+}

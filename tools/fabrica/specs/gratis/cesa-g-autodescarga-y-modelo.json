@@ -90,5 +90,9 @@
    }
   }
  ],
- "examen": "Control 2"
+ "examen": "Control 2",
+ "rutas": [
+  "CESA/Control 2/Baterías",
+  "CESA/Control lab/P3 Baterías"
+ ]
 }

@@ -1,0 +1,165 @@
+{
+ "id": "cesa-lab-rizado-calculo",
+ "titulo": "Calcular el rizado de la fuente",
+ "texto": "Con números del lab · P2 S1.1",
+ "tema": "CESA · P2 Fuente de alimentación",
+ "examen": "Control lab",
+ "etiqueta": "cálculo",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "RL": "erre ele",
+  "io": "i o",
+  "ΔVo": "delta uve o",
+  "f": "efe",
+  "C": "ce"
+ },
+ "segmentos": [
+  {
+   "tag": "datos",
+   "sub": "Secundarios de nueve voltios eficaces, carga de ciento sesenta y cinco ohmios, condensador de cuatrocientos setenta micros. ¿Cuánto *rizado?*",
+   "titulo": "LOS *DATOS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔁",
+      "izq": "Secundario",
+      "der": "9 V ef → 12,7 V pico"
+     },
+     {
+      "icono": "💡",
+      "izq": "RL",
+      "der": "330 y 330 en paralelo = 165 Ω"
+     },
+     {
+      "icono": "🔋",
+      "izq": "C",
+      "der": "470 µF",
+      "rojo": true,
+      "en": "rizado?"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "la salida",
+   "sub": "La salida llega al pico menos un diodo: doce coma siete menos cero coma siete... *doce* voltios. Y la carga se lleva unos *setenta y tres* miliamperios.",
+   "titulo": "LA *SALIDA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📈",
+      "izq": "Vo",
+      "der": "12,7 − 0,7 = 12 V",
+      "en": "voltios."
+     },
+     {
+      "icono": "➡️",
+      "izq": "io",
+      "der": "12 / 165 ≈ 73 mA",
+      "rojo": true,
+      "en": "tres"
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "la fórmula",
+   "sub": "Entre picos, el condensador alimenta solo... durante *medio* periodo, porque es onda completa.",
+   "titulo": "LA *FÓRMULA*",
+   "visual": {
+    "tipo": "big",
+    "big": "ΔVo = io / (2·f·C)",
+    "small": "= Vo / (2·RL·C·f)"
+   },
+   "num": 2
+  },
+  {
+   "tag": "la cuenta",
+   "sub": "Doce entre dos por ciento sesenta y cinco por cuatrocientos setenta micros por cincuenta... *uno coma cinco cinco* voltios.",
+   "titulo": "LA *CUENTA*",
+   "visual": {
+    "tipo": "big",
+    "big": "12 / (2·165·470µ·50) ≈ 1,55 V",
+    "small": "rizado con 470 µF"
+   },
+   "num": 3
+  },
+  {
+   "tag": "la tabla",
+   "sub": "Con cien micros sale siete coma tres, con doscientos veinte, tres coma tres. Doble de condensador... *mitad* de rizado.",
+   "titulo": "LA *TABLA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "1️⃣",
+      "izq": "100 µF",
+      "der": "7,3 V"
+     },
+     {
+      "icono": "2️⃣",
+      "izq": "220 µF",
+      "der": "3,3 V"
+     },
+     {
+      "icono": "4️⃣",
+      "izq": "470 µF",
+      "der": "1,55 V",
+      "rojo": true,
+      "en": "rizado."
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "ojo",
+   "sub": "Y ojo: la fórmula siempre da algo *más* que lo medido, porque supone que se descarga los diez milisegundos *enteros.*",
+   "titulo": "*OJO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📏",
+    "linea1": "la fórmula exagera un poco",
+    "linea2": "MEDIDO < TEÓRICO",
+    "stamp": "¡OJO!"
+   },
+   "num": 5
+  }
+ ]
+}

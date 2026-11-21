@@ -1,0 +1,148 @@
+{
+ "id": "cesa-lab-fuente-negativa-valores",
+ "titulo": "Una fuente de −3,3 V con números",
+ "texto": "El espejo de la fuente positiva · P2 S2.10 · control nº4",
+ "tema": "CESA · P2 Fuente de alimentación",
+ "examen": "Control lab",
+ "etiqueta": "cálculo",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "R1": "erre uno",
+  "R2": "erre dos",
+  "RS": "erre ese",
+  "Q1": "cu uno",
+  "Q2": "cu dos"
+ },
+ "segmentos": [
+  {
+   "tag": "el espejo",
+   "sub": "La fuente negativa es la misma... vista en un *espejo.* Todo lo que era positivo, ahora es *negativo.*",
+   "titulo": "UN *ESPEJO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🪞",
+    "linea1": "mismo circuito",
+    "linea2": "TODO AL REVÉS"
+   }
+  },
+  {
+   "tag": "qué cambia",
+   "sub": "Diodos del rectificador *girados,* el NMOS pasa a *PMOS,* el NPN del limitador a *PNP*... y los electrolíticos con el positivo a *masa.*",
+   "titulo": "QUÉ *CAMBIA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔄",
+      "izq": "Rectificador",
+      "der": "DIODOS GIRADOS",
+      "en": "girados,"
+     },
+     {
+      "icono": "🔁",
+      "izq": "Q1 / Q2",
+      "der": "PMOS / PNP",
+      "rojo": true,
+      "en": "PNP..."
+     },
+     {
+      "icono": "💥",
+      "izq": "Electrolíticos",
+      "der": "+ A MASA",
+      "en": "masa."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "la referencia",
+   "sub": "El TL431 también se gira: cátodo y referencia a masa. Así da *menos* dos coma cinco.",
+   "titulo": "LA *REFERENCIA*",
+   "visual": {
+    "tipo": "big",
+    "big": "Vref = −2,5 V",
+    "small": "TL431 girado"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el divisor",
+   "sub": "Para menos tres coma tres: tres coma tres entre dos coma cinco, menos uno... cero coma treinta y dos. Por ejemplo, tres coma tres kilos y *diez.*",
+   "titulo": "EL *DIVISOR*",
+   "visual": {
+    "tipo": "big",
+    "big": "R1/R2 = 3,3/2,5 − 1 = 0,32",
+    "small": "R1 = 3,3 kΩ · R2 = 10 kΩ"
+   },
+   "num": 3
+  },
+  {
+   "tag": "el límite",
+   "sub": "Y para limitar a cien miliamperios: cero coma siete entre cero coma uno... *siete* ohmios. Con seis coma ocho, unos *ciento tres.*",
+   "titulo": "EL *LÍMITE*",
+   "visual": {
+    "tipo": "big",
+    "big": "RS = 0,7 / 0,1 = 7 Ω",
+    "small": "6,8 Ω → ≈ 103 mA"
+   },
+   "num": 4
+  },
+  {
+   "tag": "la regla",
+   "sub": "Polaridad al revés: NMOS por *PMOS,* NPN por *PNP*... y mismas fórmulas con signo *menos.*",
+   "titulo": "LA *REGLA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔁",
+      "izq": "NMOS → PMOS",
+      "der": "NPN → PNP",
+      "rojo": true,
+      "en": "PNP..."
+     },
+     {
+      "icono": "➖",
+      "izq": "Fórmulas",
+      "der": "LAS MISMAS CON −",
+      "en": "menos."
+     }
+    ]
+   }
+  }
+ ]
+}

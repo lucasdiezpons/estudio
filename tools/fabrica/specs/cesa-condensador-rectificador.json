@@ -121,5 +121,9 @@
    }
   }
  ],
- "examen": "MQ"
+ "examen": "MQ",
+ "rutas": [
+  "CESA/MQ/Rectificadores",
+  "CESA/Control lab/P2 Fuente de alimentación"
+ ]
 }

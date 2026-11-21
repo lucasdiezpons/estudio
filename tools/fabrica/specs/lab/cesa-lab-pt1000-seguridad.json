@@ -1,0 +1,141 @@
+{
+ "id": "cesa-lab-pt1000-seguridad",
+ "titulo": "El termómetro dentro de la batería",
+ "texto": "PT1000 y sobrecarga · P3 S2.7",
+ "tema": "CESA · P3 Baterías",
+ "examen": "Control lab",
+ "etiqueta": "cargador",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "R": "erre",
+  "T": "te"
+ },
+ "segmentos": [
+  {
+   "tag": "riesgo",
+   "sub": "Una batería que se *sobrecarga* se calienta... y en el peor caso, puede arder.",
+   "titulo": "EL *RIESGO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔥",
+    "linea1": "sobrecarga",
+    "linea2": "SOBRECALENTAMIENTO"
+   }
+  },
+  {
+   "tag": "el sensor",
+   "sub": "Por eso llevan un sensor dentro: una *PT1000.* Es una resistencia de platino que vale mil ohmios a cero grados... y *sube* con el calor.",
+   "titulo": "LA *PT1000*",
+   "visual": {
+    "tipo": "big",
+    "big": "R = 1000 · (1 + 0,00385 · T)",
+    "small": "a 50 °C ≈ 1192 Ω"
+   },
+   "num": 1
+  },
+  {
+   "tag": "cómo se usa",
+   "sub": "Se pone en un divisor: al calentarse, su tensión [(voltaje)] *sube.* Un comparador la mira contra un umbral *fijo.*",
+   "titulo": "CON UN *COMPARADOR*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🌡️",
+      "izq": "PT1000",
+      "der": "DIVISOR",
+      "en": "sube."
+     },
+     {
+      "icono": "🎯",
+      "izq": "Umbral",
+      "der": "TL431 + DIVISOR",
+      "rojo": true,
+      "en": "fijo."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "acción",
+   "sub": "Si pasa del umbral, el comparador abre un *relé* en serie con la batería... y la carga se *para.*",
+   "titulo": "SE *PARA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✂️",
+    "linea1": "más de 50 °C",
+    "linea2": "RELÉ ABIERTO"
+   },
+   "num": 3
+  },
+  {
+   "tag": "redundante",
+   "sub": "Y es *redundante:* va por su cuenta, sin tocar el cargador. Si el cargador falla... esto lo sigue *parando.*",
+   "titulo": "*REDUNDANTE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🛡️",
+    "linea1": "independiente del cargador",
+    "linea2": "SEGURIDAD EXTRA"
+   },
+   "num": 4
+  },
+  {
+   "tag": "la idea",
+   "sub": "PT1000: resistencia que sube con el *calor*... y un comparador que corta la *carga.*",
+   "titulo": "LA *IDEA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🌡️",
+      "izq": "PT1000",
+      "der": "SUBE CON EL CALOR",
+      "en": "calor..."
+     },
+     {
+      "icono": "✂️",
+      "izq": "Comparador",
+      "der": "CORTA LA CARGA",
+      "rojo": true,
+      "en": "carga."
+     }
+    ]
+   }
+  }
+ ]
+}

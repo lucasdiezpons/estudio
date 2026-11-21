@@ -1,0 +1,141 @@
+{
+ "id": "cesa-lab-nmos-o-pmos-regulador",
+ "titulo": "NMOS o PMOS para regular",
+ "texto": "Dropout y control · P2 S2.1–S2.4",
+ "tema": "CESA · P2 Fuente de alimentación",
+ "examen": "Control lab",
+ "etiqueta": "regulador discreto",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "Vg": "uve ge",
+  "Vgs": "uve ge ese"
+ },
+ "segmentos": [
+  {
+   "tag": "dilema",
+   "sub": "Para el transistor de una fuente lineal hay dos opciones... y cada una gana en *una* cosa.",
+   "titulo": "EL *DILEMA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚖️",
+    "linea1": "transistor de paso",
+    "linea2": "NMOS O PMOS"
+   }
+  },
+  {
+   "tag": "NMOS",
+   "sub": "Con un NMOS, la salida sigue a la puerta: la salida es la puerta *menos* su tensión [(voltaje)] puerta fuente. Muy fácil de *controlar.*",
+   "titulo": "EL *NMOS*",
+   "visual": {
+    "tipo": "big",
+    "big": "Vo = Vg − Vgs",
+    "small": "seguidor: fácil de controlar"
+   },
+   "num": 1
+  },
+  {
+   "tag": "su problema",
+   "sub": "Pero la puerta tiene que estar *por encima* de la salida, unos voltios. Y eso dispara el dropout.",
+   "titulo": "SU *PROBLEMA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📏",
+    "linea1": "puerta por encima de la salida",
+    "linea2": "DROPOUT GRANDE"
+   },
+   "num": 2
+  },
+  {
+   "tag": "PMOS",
+   "sub": "Con un PMOS, la fuente va a la *entrada.* Para encenderlo bajas la puerta... y la salida puede quedar casi pegada a la *entrada.*",
+   "titulo": "EL *PMOS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🤏",
+    "linea1": "fuente en la entrada",
+    "linea2": "DROPOUT PEQUEÑO"
+   },
+   "num": 3
+  },
+  {
+   "tag": "conclusión",
+   "sub": "Por eso los LDO usan *PMOS.* Y si no te importa el dropout... el NMOS es más *estable.*",
+   "titulo": "*CONCLUSIÓN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🤏",
+      "izq": "LDO",
+      "der": "PMOS",
+      "rojo": true,
+      "en": "PMOS."
+     },
+     {
+      "icono": "🎛️",
+      "izq": "Fácil de controlar",
+      "der": "NMOS",
+      "en": "estable."
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "la regla",
+   "sub": "NMOS, fácil de *controlar.* PMOS, poco *dropout.*",
+   "titulo": "LA *REGLA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🎛️",
+      "izq": "NMOS",
+      "der": "CONTROL FÁCIL",
+      "en": "controlar."
+     },
+     {
+      "icono": "🤏",
+      "izq": "PMOS",
+      "der": "LDO",
+      "rojo": true,
+      "en": "dropout."
+     }
+    ]
+   }
+  }
+ ]
+}

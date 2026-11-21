@@ -1,0 +1,128 @@
+{
+ "id": "cesa-lab-pico-diodos-calculo",
+ "titulo": "Calcular el pico de corriente de los diodos",
+ "texto": "Y la tensión que aguantan · P2 S1.2 · control nº3",
+ "tema": "CESA · P2 Fuente de alimentación",
+ "examen": "Control lab",
+ "etiqueta": "cálculo",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "π": "pi",
+  "ΔVo": "delta uve o",
+  "io": "i o",
+  "Vp": "uve pe"
+ },
+ "segmentos": [
+  {
+   "tag": "la idea",
+   "sub": "Cada diodo tiene que devolver en un *instante* toda la carga que el condensador perdió en diez milisegundos.",
+   "titulo": "LA *IDEA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⏱️",
+    "linea1": "poco tiempo, mucha carga",
+    "linea2": "PICO DE CORRIENTE"
+   }
+  },
+  {
+   "tag": "la fórmula",
+   "sub": "El pico sale de pi, por la raíz de dos veces la salida entre el rizado... por la corriente [(intensidad)] de la *carga.*",
+   "titulo": "LA *FÓRMULA*",
+   "visual": {
+    "tipo": "big",
+    "big": "id máx ≈ π·√(2·Vo/ΔVo)·io",
+    "small": "cuanto menos rizado, más pico"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la cuenta",
+   "sub": "Con doce voltios, uno coma cinco cinco de rizado y setenta y tres miliamperios: unos *cero coma nueve* amperios. Doce veces la carga.",
+   "titulo": "LA *CUENTA*",
+   "visual": {
+    "tipo": "big",
+    "big": "π·√(24/1,55)·73 mA ≈ 0,9 A",
+    "small": "con 470 µF"
+   },
+   "num": 2
+  },
+  {
+   "tag": "la raíz",
+   "sub": "Fíjate en la raíz: cuatro veces más condensador... solo *doble* de pico.",
+   "titulo": "LA *RAÍZ*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✖️",
+    "linea1": "C × 4",
+    "linea2": "PICO × 2"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en inverso",
+   "sub": "¿Y la tensión [(voltaje)] que aguanta cada diodo apagado? Casi *dos* veces el pico: unos *veinticinco* voltios.",
+   "titulo": "EN *INVERSO*",
+   "visual": {
+    "tipo": "big",
+    "big": "Vd máx ≈ 2·Vp ≈ 25 V",
+    "small": "toma media"
+   },
+   "num": 4
+  },
+  {
+   "tag": "resumen",
+   "sub": "Menos rizado... más pico en los diodos. Lo que gana la salida, lo *pagan* ellos.",
+   "titulo": "*RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📉",
+      "izq": "Rizado",
+      "der": "BAJA"
+     },
+     {
+      "icono": "⚡",
+      "izq": "Pico en diodos",
+      "der": "SUBE",
+      "rojo": true,
+      "en": "pagan"
+     }
+    ]
+   }
+  }
+ ]
+}

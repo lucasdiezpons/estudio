@@ -1,0 +1,142 @@
+{
+ "id": "cesa-lab-emulador-celdas",
+ "titulo": "Por qué se desequilibran las celdas",
+ "texto": "Dos celdas en serie · P3 intro",
+ "tema": "CESA · P3 Baterías",
+ "examen": "Control lab",
+ "etiqueta": "baterías",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "Voc": "uve o ce",
+  "Rs1": "erre ese uno",
+  "Cs1": "ce ese uno"
+ },
+ "segmentos": [
+  {
+   "tag": "en serie",
+   "sub": "Dos celdas en serie: por las dos pasa la *misma* corriente [(intensidad)]. Entonces... ¿por qué acaban *distintas?*",
+   "titulo": "LA MISMA *CORRIENTE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔗",
+    "linea1": "dos celdas en serie",
+    "linea2": "¿POR QUÉ SE SEPARAN?"
+   }
+  },
+  {
+   "tag": "diferencias",
+   "sub": "Porque no son *gemelas:* una tiene algo más de capacidad, otra pierde un poco más... y cada ciclo se *separan* un poco más.",
+   "titulo": "NO SON *GEMELAS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔋",
+      "izq": "Capacidad",
+      "der": "DISTINTA",
+      "en": "capacidad,"
+     },
+     {
+      "icono": "💧",
+      "izq": "Pérdidas",
+      "der": "DISTINTAS",
+      "rojo": true,
+      "en": "más..."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "el problema",
+   "sub": "La que llega antes a llena *corta* la carga... y la que llega antes a vacía corta la *descarga.* La batería entera rinde *menos.*",
+   "titulo": "EL *PROBLEMA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📉",
+    "linea1": "manda la peor celda",
+    "linea2": "MENOS CARGA ÚTIL"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el modelo",
+   "sub": "En el emulador, cada celda es una fuente de tensión [(voltaje)]... con una resistencia en serie y un grupo erre ce en *paralelo.*",
+   "titulo": "EL *MODELO*",
+   "visual": {
+    "tipo": "big",
+    "big": "Voc + Rs + RC",
+    "small": "el RC en paralelo; todo depende del estado de carga"
+   },
+   "num": 3
+  },
+  {
+   "tag": "solución",
+   "sub": "La solución es *balancear:* igualar las celdas, quemando lo que sobra o *pasándolo* a la otra.",
+   "titulo": "LA *SOLUCIÓN*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚖️",
+    "linea1": "pasivo o activo",
+    "linea2": "BALANCEO"
+   },
+   "num": 4
+  },
+  {
+   "tag": "para recordar",
+   "sub": "En serie, manda la celda *peor.* Por eso hay que *balancear.*",
+   "titulo": "PARA *RECORDAR*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔗",
+      "izq": "En serie",
+      "der": "MANDA LA PEOR",
+      "en": "peor."
+     },
+     {
+      "icono": "⚖️",
+      "izq": "Solución",
+      "der": "BALANCEAR",
+      "rojo": true,
+      "en": "balancear."
+     }
+    ]
+   }
+  }
+ ]
+}

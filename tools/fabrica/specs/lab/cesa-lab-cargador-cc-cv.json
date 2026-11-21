@@ -1,0 +1,144 @@
+{
+ "id": "cesa-lab-cargador-cc-cv",
+ "titulo": "Cómo se carga una batería de litio",
+ "texto": "Corriente constante y luego tensión constante · P3 S2.4–S2.6 · control nº6",
+ "tema": "CESA · P3 Baterías",
+ "examen": "Control lab",
+ "etiqueta": "cargador",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "VB": "uve be",
+  "R3": "erre tres",
+  "R4": "erre cuatro",
+  "CC": "ce ce",
+  "CV": "ce uve"
+ },
+ "segmentos": [
+  {
+   "tag": "el método",
+   "sub": "Las baterías de litio se cargan en dos fases... y el cargador del lab hace las *dos* con un LM317 y un TL431.",
+   "titulo": "DOS *FASES*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "➡️",
+      "izq": "Fase 1",
+      "der": "CORRIENTE CONSTANTE"
+     },
+     {
+      "icono": "🎯",
+      "izq": "Fase 2",
+      "der": "TENSIÓN CONSTANTE",
+      "rojo": true,
+      "en": "dos"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "fase uno",
+   "sub": "Primero, corriente [(intensidad)] *constante:* el TL431 está apagado... y la tensión [(voltaje)] de la batería va *subiendo.*",
+   "titulo": "FASE *1*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📈",
+    "linea1": "TL431 apagado",
+    "linea2": "I FIJA · V SUBE"
+   },
+   "num": 1
+  },
+  {
+   "tag": "el cambio",
+   "sub": "Cuando la batería llega al límite, el divisor le da *dos coma cinco* voltios al TL431... y este se *despierta.*",
+   "titulo": "EL *CAMBIO*",
+   "visual": {
+    "tipo": "big",
+    "big": "VB = 2,5 · (1 + R3/R4)",
+    "small": "por ejemplo 8 V"
+   },
+   "num": 2
+  },
+  {
+   "tag": "fase dos",
+   "sub": "Ahora, tensión *constante:* el TL431 ajusta el LM317 para que la batería no pase de ahí. Y la corriente va *bajando* sola.",
+   "titulo": "FASE *2*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📉",
+    "linea1": "TL431 regulando",
+    "linea2": "V FIJA · I BAJA"
+   },
+   "num": 3
+  },
+  {
+   "tag": "por qué",
+   "sub": "¿Por qué no cargar siempre a corriente constante? Porque al llenarse, la batería se *sobrecarga* y se calienta *peligrosamente.*",
+   "titulo": "¿POR *QUÉ?*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔥",
+    "linea1": "solo corriente constante",
+    "linea2": "SOBRECARGA Y CALOR",
+    "stamp": "¡OJO!"
+   },
+   "num": 4
+  },
+  {
+   "tag": "dibújalo así",
+   "sub": "Corriente plana y tensión subiendo... luego tensión plana y corriente *cayendo.*",
+   "titulo": "DIBÚJALO *ASÍ*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "➡️",
+      "izq": "Fase CC",
+      "der": "I PLANA · V SUBE",
+      "en": "subiendo..."
+     },
+     {
+      "icono": "🎯",
+      "izq": "Fase CV",
+      "der": "V PLANA · I BAJA",
+      "rojo": true,
+      "en": "cayendo."
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,126 @@
+{
+ "id": "cesa-lab-led-resistencia",
+ "titulo": "Por qué un LED necesita su resistencia",
+ "texto": "Una curva que se dispara · P1 · intro",
+ "tema": "CESA · P1 Dimmer",
+ "examen": "Control lab",
+ "etiqueta": "LED",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta"
+ },
+ "segmentos": [
+  {
+   "tag": "el problema",
+   "sub": "Conecta un LED directamente a una fuente... y en segundos puede estar *muerto.*",
+   "titulo": "UN LED *SOLO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "💡",
+    "linea1": "LED directo a la fuente",
+    "linea2": "PELIGRO"
+   }
+  },
+  {
+   "tag": "la curva",
+   "sub": "Su corriente [(intensidad)] crece de forma *exponencial* con la tensión [(voltaje)]. Un pelín más de tensión... y la corriente se *dispara.*",
+   "titulo": "CURVA *EXPONENCIAL*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📈",
+    "linea1": "un poco más de tensión",
+    "linea2": "MUCHA MÁS CORRIENTE"
+   },
+   "num": 1
+  },
+  {
+   "tag": "el calor",
+   "sub": "Y con el calor, su tensión umbral *baja.* A la misma tensión... todavía más *corriente.*",
+   "titulo": "LA DERIVA *TÉRMICA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🌡️",
+    "linea1": "se calienta → baja su umbral",
+    "linea2": "MÁS CORRIENTE"
+   },
+   "num": 2
+  },
+  {
+   "tag": "la solución",
+   "sub": "Por eso se le pone una resistencia en *serie:* si la corriente sube, la resistencia se come la tensión que *sobra.*",
+   "titulo": "RESISTENCIA EN *SERIE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🛡️",
+    "linea1": "Rs en serie",
+    "linea2": "FRENA LA CORRIENTE"
+   },
+   "num": 3
+  },
+  {
+   "tag": "cuanto más",
+   "sub": "Y cuanto *mayor* es esa resistencia... *menos* varía la corriente con la temperatura.",
+   "titulo": "MÁS Rs, *MÁS ESTABLE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬆️",
+      "izq": "Más resistencia",
+      "der": "MENOS DERIVA",
+      "rojo": true,
+      "en": "mayor"
+     },
+     {
+      "icono": "⬇️",
+      "izq": "Menos resistencia",
+      "der": "MÁS DERIVA"
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "la clave",
+   "sub": "La clave: un LED se controla por *corriente,* nunca por tensión.",
+   "titulo": "LA *CLAVE*",
+   "visual": {
+    "tipo": "big",
+    "big": "CONTROLA LA CORRIENTE",
+    "small": "nunca la tensión de un LED"
+   }
+  }
+ ]
+}

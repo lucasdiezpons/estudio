@@ -1,0 +1,129 @@
+{
+ "id": "cesa-lab-tl431-resistencias-calculo",
+ "titulo": "Elegir las resistencias del TL431",
+ "texto": "Divisor y margen de R1 · P2 S1.4–S1.5",
+ "tema": "CESA · P2 Fuente de alimentación",
+ "examen": "Control lab",
+ "etiqueta": "cálculo",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "R1": "erre uno",
+  "R2": "erre dos",
+  "R3": "erre tres",
+  "iKA": "i ka",
+  "iL": "i ele"
+ },
+ "segmentos": [
+  {
+   "tag": "objetivo",
+   "sub": "Queremos tres voltios con un TL431, que siempre compara con *dos coma cinco.*",
+   "titulo": "EL *OBJETIVO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎯",
+    "linea1": "TL431",
+    "linea2": "3 V A LA SALIDA"
+   }
+  },
+  {
+   "tag": "el divisor",
+   "sub": "Tres entre dos coma cinco, menos uno: la de arriba tiene que ser el *veinte* por ciento de la de abajo. Por ejemplo, dos kilos y *diez.*",
+   "titulo": "EL *DIVISOR*",
+   "visual": {
+    "tipo": "big",
+    "big": "R2/R3 = 3/2,5 − 1 = 0,2",
+    "small": "R2 = 2 kΩ · R3 = 10 kΩ"
+   },
+   "num": 1
+  },
+  {
+   "tag": "R1",
+   "sub": "Por la resistencia de entrada entra la corriente [(intensidad)] que se reparten el TL431, el divisor... y la *carga.*",
+   "titulo": "LA *R1*",
+   "visual": {
+    "tipo": "big",
+    "big": "(Vcc − 3)/R1 = iKA + i div + iL",
+    "small": "i div = 3/12k = 0,25 mA"
+   },
+   "num": 2
+  },
+  {
+   "tag": "R1 máxima",
+   "sub": "Peor caso por abajo: diez voltios y cincuenta miliamperios de carga. Así, R1 como mucho *ciento treinta y ocho.*",
+   "titulo": "R1 *MÁXIMA*",
+   "visual": {
+    "tipo": "big",
+    "big": "7 / (50,65 mA) → R1 ≤ 138 Ω",
+    "small": "Vcc mínima + carga máxima"
+   },
+   "num": 3
+  },
+  {
+   "tag": "R1 mínima",
+   "sub": "Peor caso por arriba: quince voltios y carga mínima, diez miliamperios. Para no pasar de ciento cincuenta... R1 como mínimo *setenta y cinco.*",
+   "titulo": "R1 *MÍNIMA*",
+   "visual": {
+    "tipo": "big",
+    "big": "12 / (160,25 mA) → R1 ≥ 75 Ω",
+    "small": "Vcc máxima + carga mínima"
+   },
+   "num": 4
+  },
+  {
+   "tag": "la regla",
+   "sub": "R1 máxima: entrada mínima y carga *máxima.* R1 mínima: entrada máxima y carga *mínima.*",
+   "titulo": "LA *REGLA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬆️",
+      "izq": "R1 máx",
+      "der": "Vcc MÍN + CARGA MÁX",
+      "en": "máxima."
+     },
+     {
+      "icono": "⬇️",
+      "izq": "R1 mín",
+      "der": "Vcc MÁX + CARGA MÍN",
+      "rojo": true,
+      "en": "mínima."
+     }
+    ]
+   }
+  }
+ ]
+}

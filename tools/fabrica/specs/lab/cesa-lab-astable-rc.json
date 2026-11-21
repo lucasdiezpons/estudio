@@ -1,0 +1,127 @@
+{
+ "id": "cesa-lab-astable-rc",
+ "titulo": "El oscilador hecho con un condensador",
+ "texto": "Astable RC · P1 S2.8–S2.9",
+ "tema": "CESA · P1 Dimmer",
+ "examen": "Control lab",
+ "etiqueta": "AO",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "t": "te"
+ },
+ "segmentos": [
+  {
+   "tag": "idea",
+   "sub": "Junta un comparador con histéresis y un condensador... y tienes un *oscilador* que no para nunca.",
+   "titulo": "UN *OSCILADOR*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔄",
+    "linea1": "comparador + RC",
+    "linea2": "ASTABLE"
+   }
+  },
+  {
+   "tag": "carga",
+   "sub": "Con la salida arriba, el condensador se *carga*... hasta tocar el umbral alto. Entonces la salida *salta* abajo.",
+   "titulo": "SE *CARGA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⬆️",
+    "linea1": "hasta el umbral alto",
+    "linea2": "LA SALIDA BAJA"
+   },
+   "num": 1
+  },
+  {
+   "tag": "descarga",
+   "sub": "Con la salida abajo, se *descarga*... hasta el umbral bajo. Y vuelta a *empezar.*",
+   "titulo": "SE *DESCARGA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⬇️",
+    "linea1": "hasta el umbral bajo",
+    "linea2": "LA SALIDA SUBE"
+   },
+   "num": 1
+  },
+  {
+   "tag": "el tiempo",
+   "sub": "Cada tramo dura erre por ce... por el logaritmo de cuánto le falta al principio, entre cuánto le falta al *final.*",
+   "titulo": "EL *TIEMPO*",
+   "visual": {
+    "tipo": "big",
+    "big": "t = RC · ln((Vsat − Vini)/(Vsat − Vfin))",
+    "small": "carga o descarga hacia Vsat"
+   },
+   "num": 2
+  },
+  {
+   "tag": "las ondas",
+   "sub": "Resultado: una onda *cuadrada* en la salida... y casi un *triángulo* en el condensador.",
+   "titulo": "LAS *ONDAS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬜",
+      "izq": "Salida del AO",
+      "der": "CUADRADA",
+      "en": "cuadrada"
+     },
+     {
+      "icono": "🔺",
+      "izq": "Condensador",
+      "der": "CASI TRIANGULAR",
+      "rojo": true,
+      "en": "triángulo"
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "quédate con",
+   "sub": "Carga hasta el alto, descarga hasta el *bajo*... y el tiempo sale con un *logaritmo.*",
+   "titulo": "QUÉDATE *CON ESTO*",
+   "visual": {
+    "tipo": "big",
+    "big": "RC · ln(...)",
+    "small": "cada tramo del astable"
+   }
+  }
+ ]
+}

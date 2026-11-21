@@ -141,5 +141,9 @@
    }
   }
  ],
- "examen": "MQ"
+ "examen": "MQ",
+ "rutas": [
+  "CESA/MQ/Conmutados",
+  "CESA/Control lab/P3 Baterías"
+ ]
 }

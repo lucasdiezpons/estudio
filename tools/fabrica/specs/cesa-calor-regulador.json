@@ -127,5 +127,9 @@
    }
   }
  ],
- "examen": "MQ"
+ "examen": "MQ",
+ "rutas": [
+  "CESA/MQ/Térmica",
+  "CESA/Control lab/P3 Baterías"
+ ]
 }

@@ -1,0 +1,128 @@
+{
+ "id": "cesa-lab-mosfet-interruptor",
+ "titulo": "El MOSFET como interruptor",
+ "texto": "Dónde poner drenador y fuente · P1 S2.4 · control nº2",
+ "tema": "CESA · P1 Dimmer",
+ "examen": "Control lab",
+ "etiqueta": "MOSFET",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "Vgs": "uve ge ese"
+ },
+ "segmentos": [
+  {
+   "tag": "dato",
+   "sub": "Un MOSFET como interruptor deja pasar corriente [(intensidad)] en los *dos* sentidos... pero solo bloquea en *uno.*",
+   "titulo": "BLOQUEA EN *UNO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "↕️",
+    "linea1": "corriente en los dos sentidos",
+    "linea2": "BLOQUEA EN UNO"
+   }
+  },
+  {
+   "tag": "por qué",
+   "sub": "La culpa es su diodo parásito: aunque lo apagues... si lo pones al revés, la corriente pasa por el *diodo.*",
+   "titulo": "EL DIODO *PARÁSITO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🕵️",
+    "linea1": "entre drenador y fuente",
+    "linea2": "NO SE PUEDE APAGAR"
+   },
+   "num": 1
+  },
+  {
+   "tag": "el NMOS",
+   "sub": "Con un NMOS debajo del LED: la fuente a *masa,* el drenador hacia el *LED.* Así el diodo queda en inverso.",
+   "titulo": "EL *NMOS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬇️",
+      "izq": "Fuente",
+      "der": "A MASA",
+      "rojo": true,
+      "en": "masa,"
+     },
+     {
+      "icono": "💡",
+      "izq": "Drenador",
+      "der": "HACIA EL LED",
+      "en": "LED."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "encender",
+   "sub": "Y para encenderlo, la tensión [(voltaje)] puerta fuente tiene que pasar su umbral, que en un NMOS es *positivo.*",
+   "titulo": "EL *UMBRAL*",
+   "visual": {
+    "tipo": "big",
+    "big": "Vgs > VTH > 0",
+    "small": "NMOS encendido"
+   },
+   "num": 3
+  },
+  {
+   "tag": "al revés",
+   "sub": "Si cambias drenador y fuente, el diodo conduce siempre... y el LED se queda encendido *pase lo que pase.*",
+   "titulo": "AL *REVÉS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚠️",
+    "linea1": "drenador y fuente cambiados",
+    "linea2": "LED SIEMPRE ENCENDIDO",
+    "stamp": "¡OJO!"
+   },
+   "num": 4
+  },
+  {
+   "tag": "la regla",
+   "sub": "Pon el MOSFET para que, apagado, su diodo *bloquee.*",
+   "titulo": "LA *REGLA*",
+   "visual": {
+    "tipo": "big",
+    "big": "DIODO EN INVERSO",
+    "small": "cuando está apagado"
+   }
+  }
+ ]
+}

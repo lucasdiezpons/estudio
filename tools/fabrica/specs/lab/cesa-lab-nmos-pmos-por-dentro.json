@@ -1,0 +1,162 @@
+{
+ "id": "cesa-lab-nmos-pmos-por-dentro",
+ "titulo": "NMOS y PMOS por dentro",
+ "texto": "Y por qué el umbral cambia de signo · P1 S2.2, S2.3, S2.5",
+ "tema": "CESA · P1 Dimmer",
+ "examen": "Control lab",
+ "etiqueta": "MOSFET",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "P": "pe",
+  "N": "ene"
+ },
+ "segmentos": [
+  {
+   "tag": "dentro",
+   "sub": "Un NMOS por dentro es un trozo de silicio *P* con dos islas *N:* el drenador y la fuente. Encima, una capa de óxido... y el metal de la *puerta.*",
+   "titulo": "EL *NMOS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🟥",
+      "izq": "Sustrato",
+      "der": "SILICIO P",
+      "en": "P"
+     },
+     {
+      "icono": "🟦",
+      "izq": "Drenador y fuente",
+      "der": "ISLAS N",
+      "en": "N:"
+     },
+     {
+      "icono": "⬜",
+      "izq": "Puerta",
+      "der": "METAL SOBRE ÓXIDO",
+      "rojo": true,
+      "en": "puerta."
+     }
+    ]
+   }
+  },
+  {
+   "tag": "el canal",
+   "sub": "Si pones la puerta *positiva,* atrae electrones debajo del óxido... y forma un *canal* N que une las dos islas.",
+   "titulo": "EL *CANAL*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "➕",
+    "linea1": "puerta positiva",
+    "linea2": "CANAL DE ELECTRONES"
+   },
+   "num": 1
+  },
+  {
+   "tag": "umbral NMOS",
+   "sub": "La tensión [(voltaje)] mínima para formar ese canal es el *umbral.* En un NMOS es *positivo.*",
+   "titulo": "UMBRAL *POSITIVO*",
+   "visual": {
+    "tipo": "big",
+    "big": "VTH > 0",
+    "small": "NMOS: hay que atraer electrones"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el PMOS",
+   "sub": "El PMOS es el *espejo:* sustrato N, islas P... y para formar el canal hay que atraer *huecos.* Con puerta *negativa.*",
+   "titulo": "EL *PMOS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🟦",
+      "izq": "Sustrato",
+      "der": "SILICIO N"
+     },
+     {
+      "icono": "🟥",
+      "izq": "Islas",
+      "der": "P"
+     },
+     {
+      "icono": "➖",
+      "izq": "Puerta",
+      "der": "NEGATIVA",
+      "rojo": true,
+      "en": "negativa."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "umbral PMOS",
+   "sub": "Por eso el umbral del PMOS es *negativo.*",
+   "titulo": "UMBRAL *NEGATIVO*",
+   "visual": {
+    "tipo": "big",
+    "big": "VTH < 0",
+    "small": "PMOS: hay que atraer huecos"
+   },
+   "num": 4
+  },
+  {
+   "tag": "de memoria",
+   "sub": "NMOS, electrones, umbral *positivo.* PMOS, huecos, umbral *negativo.*",
+   "titulo": "DE *MEMORIA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "➕",
+      "izq": "NMOS",
+      "der": "VTH > 0",
+      "en": "positivo."
+     },
+     {
+      "icono": "➖",
+      "izq": "PMOS",
+      "der": "VTH < 0",
+      "rojo": true,
+      "en": "negativo."
+     }
+    ]
+   }
+  }
+ ]
+}

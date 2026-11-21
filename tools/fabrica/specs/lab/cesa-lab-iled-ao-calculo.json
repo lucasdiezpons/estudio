@@ -1,0 +1,116 @@
+{
+ "id": "cesa-lab-iled-ao-calculo",
+ "titulo": "La corriente del LED con el AO",
+ "texto": "Ya no depende del transistor · P1 S1.11 · control P1-3 nº1",
+ "tema": "CESA · P1 Dimmer",
+ "examen": "Control lab",
+ "etiqueta": "cálculo",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "V": "uve",
+  "CTR": "ce te erre",
+  "Rs1": "erre ese uno",
+  "Rs2": "erre ese dos",
+  "Vbe": "uve be e"
+ },
+ "segmentos": [
+  {
+   "tag": "la diferencia",
+   "sub": "Con el AO, la corriente [(intensidad)] del LED sale de una cuenta *mucho* más fácil que sin él.",
+   "titulo": "MÁS *FÁCIL*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎛️",
+    "linea1": "transistor + AO",
+    "linea2": "SIN BETA NI Vbe"
+   }
+  },
+  {
+   "tag": "cortocircuito",
+   "sub": "El AO copia en la resistencia de emisor la tensión [(voltaje)] del potenciómetro. La corriente es esa tensión... entre la *resistencia.*",
+   "titulo": "EL *TRUCO*",
+   "visual": {
+    "tipo": "big",
+    "big": "I LED = V CTR / 5 Ω",
+    "small": "Rs1 y Rs2 de 10 Ω en paralelo = 5 Ω"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la tensión",
+   "sub": "El potenciómetro de cien kilos cuelga de tres resistencias de un mega en paralelo. Arriba del todo da unos *uno coma seis* voltios.",
+   "titulo": "LA *TENSIÓN*",
+   "visual": {
+    "tipo": "big",
+    "big": "7 · 100k / (333k + 100k) ≈ 1,6 V",
+    "small": "tensión máxima de control"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el máximo",
+   "sub": "Uno coma seis entre cinco ohmios... unos *trescientos veinte* miliamperios como máximo.",
+   "titulo": "EL *MÁXIMO*",
+   "visual": {
+    "tipo": "big",
+    "big": "1,6 / 5 ≈ 0,32 A",
+    "small": "I LED máxima"
+   },
+   "num": 3
+  },
+  {
+   "tag": "el límite",
+   "sub": "Y para que el AO no se sature, su salida tiene que poder dar la tensión de emisor más la base emisor del Darlington. Si no le llega... *satura.*",
+   "titulo": "QUE NO *SATURE*",
+   "visual": {
+    "tipo": "big",
+    "big": "V salida AO = V CTR + Vbe",
+    "small": "tiene que quedar por debajo de su máximo"
+   },
+   "num": 4
+  },
+  {
+   "tag": "la regla",
+   "sub": "Con AO: corriente igual a la tensión de control entre la resistencia de *emisor.*",
+   "titulo": "LA *REGLA*",
+   "visual": {
+    "tipo": "big",
+    "big": "I = V CTR / R",
+    "small": "nada de beta"
+   }
+  }
+ ]
+}

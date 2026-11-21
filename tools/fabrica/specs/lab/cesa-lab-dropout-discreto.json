@@ -1,0 +1,127 @@
+{
+ "id": "cesa-lab-dropout-discreto",
+ "titulo": "Por qué tu fuente necesita tanto margen",
+ "texto": "El dropout del regulador discreto · P2 S2.5",
+ "tema": "CESA · P2 Fuente de alimentación",
+ "examen": "Control lab",
+ "etiqueta": "regulador discreto",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "LM324": "ele eme tres dos cuatro",
+  "Vgs": "uve ge ese"
+ },
+ "segmentos": [
+  {
+   "tag": "pregunta",
+   "sub": "¿Por qué la fuente del lab necesita *varios* voltios más en la entrada que en la salida?",
+   "titulo": "TANTO *MARGEN*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📏",
+    "linea1": "entrada − salida",
+    "linea2": "DROPOUT"
+   }
+  },
+  {
+   "tag": "qué es",
+   "sub": "El *dropout* es la diferencia mínima entre entrada y salida para que el regulador siga *regulando.*",
+   "titulo": "EL *DROPOUT*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🛏️",
+    "linea1": "diferencia mínima",
+    "linea2": "PARA SEGUIR REGULANDO"
+   },
+   "num": 1
+  },
+  {
+   "tag": "primer culpable",
+   "sub": "Primer culpable: el AO. Su salida no llega arriba del todo: se queda *uno coma cinco* voltios por debajo de su alimentación.",
+   "titulo": "CULPABLE *1*",
+   "visual": {
+    "tipo": "big",
+    "big": "Vcc − 1,5 V",
+    "small": "máximo a la salida del LM324"
+   },
+   "num": 2
+  },
+  {
+   "tag": "segundo",
+   "sub": "Segundo culpable: el NMOS necesita que la puerta esté unos *cuatro* voltios por encima de la *salida.*",
+   "titulo": "CULPABLE *2*",
+   "visual": {
+    "tipo": "big",
+    "big": "Vgs ≈ 4 V",
+    "small": "para dar la corriente de la carga"
+   },
+   "num": 2
+  },
+  {
+   "tag": "la suma",
+   "sub": "Súmalos: uno coma cinco más cuatro... cinco coma cinco voltios de *dropout.*",
+   "titulo": "LA *SUMA*",
+   "visual": {
+    "tipo": "big",
+    "big": "1,5 + 4 = 5,5 V",
+    "small": "dropout del regulador discreto"
+   },
+   "num": 3
+  },
+  {
+   "tag": "clave",
+   "sub": "Dropout: lo que pierde el AO... más lo que necesita la *puerta.*",
+   "titulo": "LA *CLAVE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🎛️",
+      "izq": "AO",
+      "der": "− 1,5 V",
+      "en": "AO..."
+     },
+     {
+      "icono": "🔌",
+      "izq": "Puerta",
+      "der": "+ Vgs",
+      "rojo": true,
+      "en": "puerta."
+     }
+    ]
+   }
+  }
+ ]
+}

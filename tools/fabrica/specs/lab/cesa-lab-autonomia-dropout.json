@@ -1,0 +1,128 @@
+{
+ "id": "cesa-lab-autonomia-dropout",
+ "titulo": "Cuándo se acaba una batería de verdad",
+ "texto": "Autonomía y dropout · P3 S1.3, S1.5 · control nº5",
+ "tema": "CESA · P3 Baterías",
+ "examen": "Control lab",
+ "etiqueta": "autonomía",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "VB": "uve be",
+  "Vdropout": "uve drop aut",
+  "Q": "cu",
+  "t": "te"
+ },
+ "segmentos": [
+  {
+   "tag": "sorpresa",
+   "sub": "Tu aparato se apaga... y la batería todavía tiene *carga.* No es un fallo: es el *dropout.*",
+   "titulo": "AÚN TIENE *CARGA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🪫",
+    "linea1": "el aparato se apaga",
+    "linea2": "LA BATERÍA NO ESTÁ VACÍA"
+   }
+  },
+  {
+   "tag": "la condición",
+   "sub": "El regulador necesita que la batería esté por encima de la salida... *más* su dropout.",
+   "titulo": "LA *CONDICIÓN*",
+   "visual": {
+    "tipo": "big",
+    "big": "VB ≥ Vo + Vdropout",
+    "small": "para seguir regulando"
+   },
+   "num": 1
+  },
+  {
+   "tag": "el final",
+   "sub": "Mientras la batería se descarga, su tensión [(voltaje)] *baja.* Cuando cruza ese límite... la salida deja de estar *regulada.*",
+   "titulo": "EL *FINAL*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📉",
+    "linea1": "VB < Vo + dropout",
+    "linea2": "FIN DE LA AUTONOMÍA"
+   },
+   "num": 2
+  },
+  {
+   "tag": "cómo calcular",
+   "sub": "Para calcular la autonomía: buscas en la curva de descarga *cuándo* la batería llega a ese límite... o la carga útil entre la *corriente.*",
+   "titulo": "CÓMO *CALCULAR*",
+   "visual": {
+    "tipo": "big",
+    "big": "t = Q útil / I",
+    "small": "hasta que VB = Vo + dropout"
+   },
+   "num": 3
+  },
+  {
+   "tag": "ejemplo",
+   "sub": "Con salida de cinco voltios y dropout de dos coma dos... la batería sirve hasta siete coma *dos.*",
+   "titulo": "*EJEMPLO*",
+   "visual": {
+    "tipo": "big",
+    "big": "5 + 2,2 = 7,2 V",
+    "small": "por debajo, no regula"
+   },
+   "num": 4
+  },
+  {
+   "tag": "idea",
+   "sub": "La autonomía acaba cuando la batería baja de salida *más* dropout. Por eso el *LDO* aguanta más.",
+   "titulo": "LA *IDEA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🛏️",
+      "izq": "Dropout grande",
+      "der": "ACABA ANTES"
+     },
+     {
+      "icono": "🤏",
+      "izq": "LDO",
+      "der": "AGUANTA MÁS",
+      "rojo": true,
+      "en": "LDO"
+     }
+    ]
+   }
+  }
+ ]
+}

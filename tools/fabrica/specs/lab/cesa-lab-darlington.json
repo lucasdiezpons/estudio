@@ -1,0 +1,126 @@
+{
+ "id": "cesa-lab-darlington",
+ "titulo": "Dos transistores que parecen uno",
+ "texto": "El Darlington del dimmer · P1 S1.3",
+ "tema": "CESA · P1 Dimmer",
+ "examen": "Control lab",
+ "etiqueta": "transistores",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "Vbe": "uve be e"
+ },
+ "segmentos": [
+  {
+   "tag": "dentro",
+   "sub": "El TIP122 parece un transistor normal... pero dentro lleva *dos.*",
+   "titulo": "DOS EN *UNO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🪆",
+    "linea1": "TIP122",
+    "linea2": "DARLINGTON"
+   }
+  },
+  {
+   "tag": "cómo",
+   "sub": "El primero amplifica la corriente [(intensidad)] de base... y se la pasa como base al *segundo.*",
+   "titulo": "EN *CADENA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔗",
+    "linea1": "la salida del 1 es la base del 2",
+    "linea2": "AMPLIFICA DOS VECES"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la ganancia",
+   "sub": "Así que las ganancias se *multiplican.* Mil por tres... *tres mil.*",
+   "titulo": "SE *MULTIPLICAN*",
+   "visual": {
+    "tipo": "big",
+    "big": "beta = beta1 · beta2",
+    "small": "por eso supera 1000"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el precio",
+   "sub": "El precio: hay *dos* uniones base emisor en serie. Su tensión [(voltaje)] de base es de un voltio, no cero coma *siete.*",
+   "titulo": "EL *PRECIO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⚡",
+      "izq": "Vbe",
+      "der": "≈ 1 V",
+      "rojo": true,
+      "en": "siete."
+     },
+     {
+      "icono": "🔌",
+      "izq": "Vce de saturación",
+      "der": "MÁS ALTA"
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "lo bueno",
+   "sub": "Lo bueno: con una corriente de base diminuta, del potenciómetro... mueves la corriente enorme del *LED.*",
+   "titulo": "LO *BUENO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎛️",
+    "linea1": "microamperios en la base",
+    "linea2": "CIENTOS DE mA EN EL LED"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en una frase",
+   "sub": "Darlington: dos transistores, ganancias *multiplicadas*... y un voltio de base.",
+   "titulo": "EN UNA *FRASE*",
+   "visual": {
+    "tipo": "big",
+    "big": "beta1 · beta2",
+    "small": "y Vbe ≈ 1 V"
+   }
+  }
+ ]
+}

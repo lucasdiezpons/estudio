@@ -1,0 +1,135 @@
+{
+ "id": "cesa-lab-limitador-numeros",
+ "titulo": "El limitador con números",
+ "texto": "70 mA y el AO saturado · P2 S2.8–S2.9",
+ "tema": "CESA · P2 Fuente de alimentación",
+ "examen": "Control lab",
+ "etiqueta": "cálculo",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "R1": "erre uno",
+  "R2": "erre dos",
+  "VG": "uve ge",
+  "Q2": "cu dos"
+ },
+ "segmentos": [
+  {
+   "tag": "la salida",
+   "sub": "Referencia de dos coma cinco y divisor de uno coma dos: la fuente da *tres* voltios.",
+   "titulo": "LA *SALIDA*",
+   "visual": {
+    "tipo": "big",
+    "big": "Vo = 2,5 · (1 + R1/R2) = 3 V",
+    "small": "mientras el limitador duerme"
+   }
+  },
+  {
+   "tag": "el límite",
+   "sub": "La resistencia de sensado es de diez ohmios. El transistor despierta cuando le caen cero coma siete: *setenta* miliamperios.",
+   "titulo": "EL *LÍMITE*",
+   "visual": {
+    "tipo": "big",
+    "big": "0,7 / 10 Ω = 70 mA",
+    "small": "Q2 empieza a conducir"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la puerta",
+   "sub": "A partir de ahí, la puerta del MOSFET tiene que estar en tres, más cero coma siete, más cuatro: *siete coma siete* voltios.",
+   "titulo": "LA *PUERTA*",
+   "visual": {
+    "tipo": "big",
+    "big": "VG = 3 + 0,7 + 4 = 7,7 V",
+    "small": "y el AO llega como mucho a 10,5 V"
+   },
+   "num": 2
+  },
+  {
+   "tag": "satura",
+   "sub": "Lo que cae en la resistencia de puerta es lo que roba el transistor: unos cuatro miliamperios más. Con unos *setenta y cuatro,* el AO se *satura.*",
+   "titulo": "EL AO *SATURA*",
+   "visual": {
+    "tipo": "big",
+    "big": "(10,5 − 7,7)/680 ≈ 4 mA → 74 mA",
+    "small": "AO saturado"
+   },
+   "num": 3
+  },
+  {
+   "tag": "y luego",
+   "sub": "Desde ahí la salida baja de tres voltios... y ya *no* vale el cortocircuito virtual.",
+   "titulo": "Y *LUEGO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📉",
+    "linea1": "más de 74 mA",
+    "linea2": "Vo BAJA · SIN C.C. VIRTUAL",
+    "stamp": "¡OJO!"
+   },
+   "num": 4
+  },
+  {
+   "tag": "tres números",
+   "sub": "Tres voltios regulados... setenta miliamperios despierta... y setenta y cuatro, *satura.*",
+   "titulo": "TRES *NÚMEROS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🎯",
+      "izq": "Regulada",
+      "der": "3 V",
+      "en": "regulados..."
+     },
+     {
+      "icono": "👀",
+      "izq": "Despierta Q2",
+      "der": "70 mA",
+      "en": "despierta..."
+     },
+     {
+      "icono": "🛑",
+      "izq": "Satura el AO",
+      "der": "74 mA",
+      "rojo": true,
+      "en": "satura."
+     }
+    ]
+   }
+  }
+ ]
+}

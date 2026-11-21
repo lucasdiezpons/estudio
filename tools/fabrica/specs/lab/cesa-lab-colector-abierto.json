@@ -1,0 +1,152 @@
+{
+ "id": "cesa-lab-colector-abierto",
+ "titulo": "Salida en colector abierto",
+ "texto": "Y por qué necesita una resistencia · P3 S1.6 · control nº6",
+ "tema": "CESA · P3 Baterías",
+ "examen": "Control lab",
+ "etiqueta": "digital",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta"
+ },
+ "segmentos": [
+  {
+   "tag": "rara",
+   "sub": "El LP2951 tiene una salida de *error* un poco rara: solo sabe tirar hacia *abajo.*",
+   "titulo": "SOLO *TIRA ABAJO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⬇️",
+    "linea1": "salida de error del LP2951",
+    "linea2": "COLECTOR ABIERTO"
+   }
+  },
+  {
+   "tag": "qué es",
+   "sub": "Por dentro es un transistor con el colector *al aire.* Encendido, pone la salida a *masa.* Apagado... la deja *flotando.*",
+   "titulo": "*COLECTOR ABIERTO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬇️",
+      "izq": "Transistor encendido",
+      "der": "SALIDA A MASA",
+      "rojo": true,
+      "en": "masa."
+     },
+     {
+      "icono": "🎈",
+      "izq": "Transistor apagado",
+      "der": "FLOTANDO",
+      "en": "flotando."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "la resistencia",
+   "sub": "Por eso necesita una resistencia de *pull-up* hacia la alimentación: cuando está apagado, ella sube la salida a *nivel alto.*",
+   "titulo": "EL *PULL-UP*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⬆️",
+    "linea1": "resistencia a la alimentación",
+    "linea2": "PULL-UP"
+   },
+   "num": 2
+  },
+  {
+   "tag": "push-pull",
+   "sub": "Una salida *push-pull* lleva dos transistores: uno sube y otro baja. No necesita resistencia... pero *no* se pueden unir dos.",
+   "titulo": "PUSH-*PULL*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "↕️",
+      "izq": "Push-pull",
+      "der": "SUBE Y BAJA",
+      "en": "push-pull"
+     },
+     {
+      "icono": "⬇️",
+      "izq": "Colector abierto",
+      "der": "SOLO BAJA",
+      "rojo": true,
+      "en": "baja."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "en paralelo",
+   "sub": "Las de colector abierto sí se pueden unir: si *cualquiera* tira abajo, la línea baja. Un solo LED avisa del error de *todos.*",
+   "titulo": "EN *PARALELO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔗",
+    "linea1": "varias salidas unidas",
+    "linea2": "CUALQUIERA AVISA"
+   },
+   "num": 4
+  },
+  {
+   "tag": "recuerda",
+   "sub": "Colector abierto: solo *baja,* necesita pull-up... y se puede poner en *paralelo.*",
+   "titulo": "*RECUERDA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬆️",
+      "izq": "Necesita",
+      "der": "PULL-UP",
+      "en": "pull-up..."
+     },
+     {
+      "icono": "🔗",
+      "izq": "Se pueden unir",
+      "der": "SÍ",
+      "rojo": true,
+      "en": "paralelo."
+     }
+    ]
+   }
+  }
+ ]
+}

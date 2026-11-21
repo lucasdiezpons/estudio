@@ -1,0 +1,129 @@
+{
+ "id": "cesa-lab-buck-cargador",
+ "titulo": "Un cargador con Buck",
+ "texto": "Ciclo de trabajo y bobina mínima · P3 S2.8",
+ "tema": "CESA · P3 Baterías",
+ "examen": "Control lab",
+ "etiqueta": "cálculo",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "VB": "uve be",
+  "Vin": "uve in",
+  "ΔI": "delta i",
+  "L": "ele",
+  "f": "efe"
+ },
+ "segmentos": [
+  {
+   "tag": "la idea",
+   "sub": "Un cargador conmutado: de dieciséis coma tres voltios a una batería de seis a ocho coma cuatro. ¿Qué *convertidor?*",
+   "titulo": "¿QUÉ *CONVERTIDOR?*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔀",
+    "linea1": "16,3 V → 6–8,4 V",
+    "linea2": "HAY QUE BAJAR → BUCK"
+   }
+  },
+  {
+   "tag": "el ciclo",
+   "sub": "Como siempre baja, un *Buck.* D es batería entre entrada: de cero coma treinta y siete a cero coma *cincuenta y dos.*",
+   "titulo": "EL *CICLO*",
+   "visual": {
+    "tipo": "big",
+    "big": "D = VB / Vin = 0,37 → 0,52",
+    "small": "6/16,27 y 8,4/16,27"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la condición",
+   "sub": "Para modo continuo, la mitad del rizado de la bobina no puede pasar de la corriente de carga, doscientos *miliamperios.*",
+   "titulo": "LA *CONDICIÓN*",
+   "visual": {
+    "tipo": "big",
+    "big": "ΔI / 2 ≤ 0,2 A",
+    "small": "con ΔI = D·(1 − D)·Vin / (L·f)"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el peor",
+   "sub": "El peor caso es con D igual a cero coma *cinco,* donde D por uno menos D es máximo. Y está dentro del margen.",
+   "titulo": "EL *PEOR* CASO",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎯",
+    "linea1": "D·(1 − D) máximo en D = 0,5",
+    "linea2": "PEOR CASO"
+   },
+   "num": 3
+  },
+  {
+   "tag": "la bobina",
+   "sub": "Cero coma veinticinco por dieciséis coma tres, entre cero coma cuatro por cien kilohercios... unos *ciento dos* microhenrios como mínimo.",
+   "titulo": "LA *BOBINA*",
+   "visual": {
+    "tipo": "big",
+    "big": "L ≥ 0,25·16,27 / (0,4·100k) ≈ 102 µH",
+    "small": "bobina mínima"
+   },
+   "num": 4
+  },
+  {
+   "tag": "la clave",
+   "sub": "Buck, D entre cero coma treinta y siete y cero coma cincuenta y dos... y la bobina con D igual a *medio.*",
+   "titulo": "LA *CLAVE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔀",
+      "izq": "Buck",
+      "der": "D = 0,37–0,52"
+     },
+     {
+      "icono": "🌀",
+      "izq": "L mínima",
+      "der": "≈ 102 µH (D = 0,5)",
+      "rojo": true,
+      "en": "medio."
+     }
+    ]
+   }
+  }
+ ]
+}

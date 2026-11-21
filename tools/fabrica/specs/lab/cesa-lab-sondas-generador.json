@@ -1,0 +1,142 @@
+{
+ "id": "cesa-lab-sondas-generador",
+ "titulo": "Dos trampas del osciloscopio y el generador",
+ "texto": "Sondas 10:1 y salida HiZ · P1 C4–C5",
+ "tema": "CESA · P1 Dimmer",
+ "examen": "Control lab",
+ "etiqueta": "instrumentos",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "10:1": "diez a uno",
+  "1:1": "uno a uno"
+ },
+ "segmentos": [
+  {
+   "tag": "trampa uno",
+   "sub": "Primera trampa: la sonda en *diez a uno.* Si no la calibras... las ondas cuadradas salen con *picos* o redondeadas.",
+   "titulo": "TRAMPA *1*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📺",
+    "linea1": "sonda 10:1 sin calibrar",
+    "linea2": "ONDA DEFORMADA"
+   }
+  },
+  {
+   "tag": "por qué",
+   "sub": "En diez a uno, la sonda lleva un divisor con un condensador *ajustable.* Hay que ajustarlo hasta ver una cuadrada *perfecta.*",
+   "titulo": "CALIBRAR",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🪛",
+    "linea1": "tornillo de la sonda",
+    "linea2": "CUADRADA PERFECTA"
+   },
+   "num": 1
+  },
+  {
+   "tag": "uno a uno",
+   "sub": "En uno a uno no hace falta: la sonda es casi un *cable,* no hay divisor que *compensar.*",
+   "titulo": "EN 1:1, *NO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔟",
+      "izq": "10:1",
+      "der": "HAY QUE CALIBRAR",
+      "rojo": true
+     },
+     {
+      "icono": "1️⃣",
+      "izq": "1:1",
+      "der": "NO HACE FALTA",
+      "en": "compensar."
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "trampa dos",
+   "sub": "Segunda trampa: el *generador.* Por defecto cree que hay una carga de cincuenta ohmios... y si no la hay, sale el *doble.*",
+   "titulo": "TRAMPA *2*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎛️",
+    "linea1": "generador en modo 50 Ω",
+    "linea2": "SALE EL DOBLE",
+    "stamp": "¡OJO!"
+   },
+   "num": 3
+  },
+  {
+   "tag": "la solución",
+   "sub": "Si lo conectas a un circuito de alta impedancia, como la puerta de un MOSFET, ponlo en *HiZ.* Así sale lo que *marca.*",
+   "titulo": "PONLO EN *HiZ*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✅",
+    "linea1": "carga de alta impedancia",
+    "linea2": "MODO HiZ"
+   },
+   "num": 4
+  },
+  {
+   "tag": "recuerda",
+   "sub": "Sonda diez a uno, *calibrada.* Generador con circuito, en *HiZ.*",
+   "titulo": "*RECUERDA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📺",
+      "izq": "Sonda 10:1",
+      "der": "CALIBRAR",
+      "en": "calibrada."
+     },
+     {
+      "icono": "🎛️",
+      "izq": "Generador",
+      "der": "HiZ",
+      "rojo": true,
+      "en": "HiZ."
+     }
+    ]
+   }
+  }
+ ]
+}

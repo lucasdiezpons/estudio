@@ -1,0 +1,138 @@
+{
+ "id": "cesa-lab-umbrales-histeresis-calculo",
+ "titulo": "Calcular los umbrales del comparador",
+ "texto": "VTH y VTL con números · P1 S2.6–S2.7",
+ "tema": "CESA · P1 Dimmer",
+ "examen": "Control lab",
+ "etiqueta": "cálculo",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "R3": "erre tres",
+  "R2": "erre dos",
+  "V+": "uve más",
+  "Vgnr": "uve ge ene erre"
+ },
+ "segmentos": [
+  {
+   "tag": "el montaje",
+   "sub": "Salida del AO, una de diez kilos hasta la entrada más... y de ahí, una de cuatro coma siete a *masa.*",
+   "titulo": "EL *MONTAJE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔧",
+      "izq": "R3",
+      "der": "10 kΩ (a la salida)"
+     },
+     {
+      "icono": "🔧",
+      "izq": "R2",
+      "der": "4,7 kΩ (a masa)",
+      "en": "masa."
+     }
+    ]
+   }
+  },
+  {
+   "tag": "el divisor",
+   "sub": "La entrada más es la salida pasada por un divisor: cuatro coma siete entre catorce coma siete... un *cero coma treinta y dos.*",
+   "titulo": "EL *DIVISOR*",
+   "visual": {
+    "tipo": "big",
+    "big": "V+ = V salida · 4,7 / 14,7",
+    "small": "= 0,32 · V salida"
+   },
+   "num": 1
+  },
+  {
+   "tag": "abajo",
+   "sub": "Con la salida en *menos seis,* el umbral bajo es menos seis por cero coma treinta y dos: menos uno coma *nueve.*",
+   "titulo": "UMBRAL *BAJO*",
+   "visual": {
+    "tipo": "big",
+    "big": "VTL = −6 · 0,32 ≈ −1,9 V",
+    "small": "saturación negativa"
+   },
+   "num": 2
+  },
+  {
+   "tag": "arriba",
+   "sub": "Con la salida en *cinco coma cinco,* el umbral alto: uno coma *siete* y pico.",
+   "titulo": "UMBRAL *ALTO*",
+   "visual": {
+    "tipo": "big",
+    "big": "VTH = 5,5 · 0,32 ≈ 1,76 V",
+    "small": "saturación positiva"
+   },
+   "num": 3
+  },
+  {
+   "tag": "cuándo cambia",
+   "sub": "Mientras está abajo, aguanta hasta que la entrada baje de menos uno coma nueve. Y arriba... hasta que suba de uno coma *siete.*",
+   "titulo": "CUÁNDO *CAMBIA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬇️",
+      "izq": "Saturación −",
+      "der": "HASTA Vgnr < VTL",
+      "en": "nueve."
+     },
+     {
+      "icono": "⬆️",
+      "izq": "Saturación +",
+      "der": "HASTA Vgnr > VTH",
+      "rojo": true,
+      "en": "siete."
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "la receta",
+   "sub": "Umbral igual a la tensión de saturación por el *divisor.*",
+   "titulo": "LA *RECETA*",
+   "visual": {
+    "tipo": "big",
+    "big": "V umbral = V sat · R2 / (R2 + R3)",
+    "small": "una vez para cada saturación"
+   }
+  }
+ ]
+}

@@ -1,0 +1,115 @@
+{
+ "id": "cesa-lab-fuente-ocp",
+ "titulo": "El botón OCP de la fuente",
+ "texto": "Limitar o cortar · P1 S1.6",
+ "tema": "CESA · P1 Dimmer",
+ "examen": "Control lab",
+ "etiqueta": "instrumentos",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta"
+ },
+ "segmentos": [
+  {
+   "tag": "pregunta",
+   "sub": "La fuente del lab tiene un límite de corriente [(intensidad)]. Pero ¿qué hace *exactamente* cuando lo pasas?",
+   "titulo": "¿QUÉ *HACE?*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔋",
+    "linea1": "límite de corriente",
+    "linea2": "DEPENDE DEL OCP"
+   }
+  },
+  {
+   "tag": "OCP apagado",
+   "sub": "Con el OCP *apagado,* la fuente *limita:* baja la tensión [(voltaje)] lo justo para no pasar del límite. Sigue dando corriente.",
+   "titulo": "OCP *APAGADO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📉",
+    "linea1": "baja la tensión",
+    "linea2": "LIMITA LA CORRIENTE"
+   },
+   "num": 1
+  },
+  {
+   "tag": "OCP encendido",
+   "sub": "Con el OCP *encendido,* la fuente *corta:* en cuanto pasas el límite... apaga la salida del todo.",
+   "titulo": "OCP *ENCENDIDO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✂️",
+    "linea1": "pasa el límite",
+    "linea2": "APAGA LA SALIDA"
+   },
+   "num": 2
+  },
+  {
+   "tag": "en el dimmer",
+   "sub": "En el dimmer se usa siete voltios con límite de cero coma ocho amperios... y OCP *apagado,* para que *limite.*",
+   "titulo": "EN EL *DIMMER*",
+   "visual": {
+    "tipo": "big",
+    "big": "7 V · 0,8 A",
+    "small": "OCP apagado → limita"
+   },
+   "num": 3
+  },
+  {
+   "tag": "para recordar",
+   "sub": "OCP apagado: *limita.* OCP encendido: *corta.*",
+   "titulo": "PARA *RECORDAR*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📉",
+      "izq": "OCP OFF",
+      "der": "LIMITA",
+      "en": "limita."
+     },
+     {
+      "icono": "✂️",
+      "izq": "OCP ON",
+      "der": "CORTA",
+      "rojo": true,
+      "en": "corta."
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,154 @@
+{
+ "id": "cesa-lab-multimetro",
+ "titulo": "Cómo medir sin romper el multímetro",
+ "texto": "Corriente en serie, tensión en paralelo · P1 S1.4–S1.5",
+ "tema": "CESA · P1 Dimmer",
+ "examen": "Control lab",
+ "etiqueta": "instrumentos",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "Ib": "i be",
+  "Vce": "uve ce e"
+ },
+ "segmentos": [
+  {
+   "tag": "error típico",
+   "sub": "El error más típico del lab: medir corriente [(intensidad)] con las puntas puestas como para *tensión.*",
+   "titulo": "ERROR *TÍPICO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "💥",
+    "linea1": "puntas en paralelo en modo amperios",
+    "linea2": "FUSIBLE FUNDIDO",
+    "stamp": "¡OJO!"
+   }
+  },
+  {
+   "tag": "tensión",
+   "sub": "La tensión [(voltaje)] se mide en *paralelo:* tocas los dos puntos, sin abrir el circuito. Borne de voltios y común.",
+   "titulo": "TENSIÓN: *PARALELO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔀",
+    "linea1": "bornes V y COM",
+    "linea2": "EN PARALELO"
+   },
+   "num": 1
+  },
+  {
+   "tag": "corriente",
+   "sub": "La corriente se mide en *serie:* hay que *abrir* el circuito y meter el multímetro en medio, para que pase por él.",
+   "titulo": "CORRIENTE: *SERIE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔗",
+    "linea1": "bornes A y COM",
+    "linea2": "EN SERIE"
+   },
+   "num": 2
+  },
+  {
+   "tag": "por qué",
+   "sub": "En modo corriente, el multímetro es casi un *cable.* Si lo pones en paralelo... haces un *cortocircuito.*",
+   "titulo": "CASI UN *CABLE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔀",
+      "izq": "Voltímetro",
+      "der": "RESISTENCIA ENORME"
+     },
+     {
+      "icono": "🔗",
+      "izq": "Amperímetro",
+      "der": "RESISTENCIA CASI CERO",
+      "rojo": true,
+      "en": "cable."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "ejemplos",
+   "sub": "Corriente de base: abres la base y lo metes en *serie.* Tensión colector emisor: tocas colector y *emisor.*",
+   "titulo": "EN EL *DIMMER*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔗",
+      "izq": "Ib",
+      "der": "EN SERIE CON LA BASE",
+      "en": "serie."
+     },
+     {
+      "icono": "🔀",
+      "izq": "Vce",
+      "der": "ENTRE C Y E",
+      "rojo": true,
+      "en": "emisor."
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "no lo olvides",
+   "sub": "Tensión, en *paralelo.* Corriente, en *serie.*",
+   "titulo": "NO LO *OLVIDES*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔀",
+      "izq": "Tensión",
+      "der": "PARALELO",
+      "en": "paralelo."
+     },
+     {
+      "icono": "🔗",
+      "izq": "Corriente",
+      "der": "SERIE",
+      "rojo": true,
+      "en": "serie."
+     }
+    ]
+   }
+  }
+ ]
+}

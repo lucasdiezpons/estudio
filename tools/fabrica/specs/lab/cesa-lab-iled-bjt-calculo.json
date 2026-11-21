@@ -1,0 +1,164 @@
+{
+ "id": "cesa-lab-iled-bjt-calculo",
+ "titulo": "La corriente del LED con un transistor",
+ "texto": "Fórmula y margen del potenciómetro · P1 S1.7–S1.9 · control P1-3 nº1",
+ "tema": "CESA · P1 Dimmer",
+ "examen": "Control lab",
+ "etiqueta": "cálculo",
+ "pron": {
+  "AO": "a o",
+  "LED": "led",
+  "LEDs": "leds",
+  "BJT": "be jota te",
+  "NPN": "ene pe ene",
+  "PNP": "pe ene pe",
+  "PWM": "pe uve doble eme",
+  "MOSFET": "mos fet",
+  "NMOS": "ene mos",
+  "PMOS": "pe mos",
+  "LM317": "ele eme tres uno siete",
+  "TL431": "te ele cuatro tres uno",
+  "LP2951": "ele pe dos nueve cinco uno",
+  "LDO": "ele de o",
+  "TIP122": "tip ciento veintidós",
+  "OCP": "o ce pe",
+  "Vref": "uve ref",
+  "Vo": "uve o",
+  "Vcc": "uve ce ce",
+  "VTH": "uve te hache",
+  "VTL": "uve te ele",
+  "Rs": "erre ese",
+  "RC": "erre ce",
+  "Buck": "bak",
+  "D": "de",
+  "MCC": "eme ce ce",
+  "PT1000": "pe te mil",
+  "DFR0205": "de efe erre cero dos cero cinco",
+  "CC/CV": "ce ce, ce uve",
+  "dropout": "drop aut",
+  "pull-up": "pul ap",
+  "push-pull": "push pul",
+  "Zener": "séner",
+  "HiZ": "hai zeta",
+  "Ib": "i be",
+  "Vbe": "uve be e",
+  "Rpt": "erre pe te",
+  "Rg": "erre ge",
+  "x": "equis",
+  "Vce": "uve ce e"
+ },
+ "segmentos": [
+  {
+   "tag": "el circuito",
+   "sub": "Siete voltios, un potenciómetro de cien kilos y cuarenta y siete kilos a la base. ¿Cuánta corriente [(intensidad)] pasa por el *LED?*",
+   "titulo": "EL *CIRCUITO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔋",
+      "izq": "Vcc",
+      "der": "7 V"
+     },
+     {
+      "icono": "🎛️",
+      "izq": "Potenciómetro",
+      "der": "x · 100 kΩ"
+     },
+     {
+      "icono": "🔧",
+      "izq": "Rg",
+      "der": "47 kΩ"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "la base",
+   "sub": "La corriente de base es lo que sobra de los siete voltios, quitando la tensión [(voltaje)] base emisor... entre las dos resistencias en *serie.*",
+   "titulo": "LA *BASE*",
+   "visual": {
+    "tipo": "big",
+    "big": "Ib = (Vcc − Vbe) / (x·Rpt + Rg)",
+    "small": "la base va por el potenciómetro y Rg"
+   },
+   "num": 1
+  },
+  {
+   "tag": "el LED",
+   "sub": "Y en activa directa, la del LED es beta veces esa. Así sale la fórmula de la *figura.*",
+   "titulo": "EL *LED*",
+   "visual": {
+    "tipo": "big",
+    "big": "I LED = beta·(Vcc − Vbe)/(x·Rpt + Rg)",
+    "small": "beta = 3000 · Vbe = 1 V"
+   },
+   "num": 2
+  },
+  {
+   "tag": "los extremos",
+   "sub": "Con el potenciómetro a cero: tres mil por seis entre cuarenta y siete mil... unos *trescientos ochenta* miliamperios. Al máximo... unos *ciento veinte.*",
+   "titulo": "LOS *EXTREMOS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "0️⃣",
+      "izq": "x = 0",
+      "der": "≈ 383 mA",
+      "rojo": true,
+      "en": "ochenta"
+     },
+     {
+      "icono": "💯",
+      "izq": "x = 1",
+      "der": "≈ 122 mA",
+      "en": "veinte."
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "el margen",
+   "sub": "Para seguir en activa, el LED no puede pasar de unos *quinientos sesenta* miliamperios... y nunca llega. Todo el recorrido está en *activa.*",
+   "titulo": "EL *MARGEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "I LED ≤ (7 − 3,5 − 0,7)/5 Ω = 0,56 A",
+    "small": "siempre por debajo → 0 < x < 1"
+   },
+   "num": 4
+  },
+  {
+   "tag": "a 300 mA",
+   "sub": "Con trescientos miliamperios: cien microamperios de base, *dos* voltios entre colector y emisor... y cero coma *seis* vatios de calor.",
+   "titulo": "A *300 mA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "➡️",
+      "izq": "Ib",
+      "der": "0,3 / 3000 = 100 µA",
+      "en": "base,"
+     },
+     {
+      "icono": "📏",
+      "izq": "Vce",
+      "der": "7 − 3,5 − 1,5 = 2 V",
+      "en": "voltios"
+     },
+     {
+      "icono": "🔥",
+      "izq": "Potencia",
+      "der": "2 · 0,3 = 0,6 W",
+      "rojo": true,
+      "en": "calor."
+     }
+    ]
+   },
+   "num": 5
+  }
+ ]
+}
