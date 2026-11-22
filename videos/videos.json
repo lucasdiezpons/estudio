@@ -1031,5 +1031,203 @@
     "texto": "VTH y VTL con números · P1 S2.6–S2.7",
     "tema": "CESA · P1 Dimmer",
     "examen": "Control lab"
+  },
+  {
+    "id": "eco-biens-publics",
+    "archivo": "eco-biens-publics.mp4",
+    "poster": "eco-biens-publics.jpg",
+    "titulo": "Le passager clandestin",
+    "texto": "Pourquoi l'État produit les biens publics",
+    "tema": "Sciences éco · L'État",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-capitalisme-planifie",
+    "archivo": "eco-capitalisme-planifie.mp4",
+    "poster": "eco-capitalisme-planifie.jpg",
+    "titulo": "Capitalisme ou économie planifiée ?",
+    "texto": "Les trois questions de tout système",
+    "tema": "Sciences éco · Introduction",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-courbe-phillips",
+    "archivo": "eco-courbe-phillips.mp4",
+    "poster": "eco-courbe-phillips.jpg",
+    "titulo": "La courbe de Phillips",
+    "texto": "Inflation et chômage : l'arbitrage",
+    "tema": "Sciences éco · Macroéconomie",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-cout-opportunite",
+    "archivo": "eco-cout-opportunite.mp4",
+    "poster": "eco-cout-opportunite.jpg",
+    "titulo": "Le coût d'opportunité",
+    "texto": "Ce à quoi tu renonces vraiment",
+    "tema": "Sciences éco · Introduction",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-determinants-elasticite",
+    "archivo": "eco-determinants-elasticite.mp4",
+    "poster": "eco-determinants-elasticite.jpg",
+    "titulo": "Pourquoi le beurre est plus élastique que les œufs",
+    "texto": "Les déterminants de l'élasticité",
+    "tema": "Sciences éco · Élasticité",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-echange-profite",
+    "archivo": "eco-echange-profite.mp4",
+    "poster": "eco-echange-profite.jpg",
+    "titulo": "L'échange profite-t-il à tous ?",
+    "texto": "Smith, Ricardo et la Corée du Sud",
+    "tema": "Sciences éco · Introduction",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-elasticite-revenu-croisee",
+    "archivo": "eco-elasticite-revenu-croisee.mp4",
+    "poster": "eco-elasticite-revenu-croisee.jpg",
+    "titulo": "Normal, de luxe ou inférieur ?",
+    "texto": "Élasticité-revenu et élasticité croisée",
+    "tema": "Sciences éco · Élasticité",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-equite-horizontale-verticale",
+    "archivo": "eco-equite-horizontale-verticale.mp4",
+    "poster": "eco-equite-horizontale-verticale.jpg",
+    "titulo": "Équité horizontale ou verticale ?",
+    "texto": "Avant ou après le marché",
+    "tema": "Sciences éco · L'État",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-externalites",
+    "archivo": "eco-externalites.mp4",
+    "poster": "eco-externalites.jpg",
+    "titulo": "Les externalités",
+    "texto": "Quand tes actes coûtent aux autres",
+    "tema": "Sciences éco · L'État",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-inflation-vocabulaire",
+    "archivo": "eco-inflation-vocabulaire.mp4",
+    "poster": "eco-inflation-vocabulaire.jpg",
+    "titulo": "Inflation, déflation, désinflation",
+    "texto": "Ne confonds plus jamais",
+    "tema": "Sciences éco · Macroéconomie",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-main-invisible",
+    "archivo": "eco-main-invisible.mp4",
+    "poster": "eco-main-invisible.jpg",
+    "titulo": "La main invisible",
+    "texto": "Pourquoi l'égoïsme peut servir tout le monde",
+    "tema": "Sciences éco · Introduction",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-monopole-naturel",
+    "archivo": "eco-monopole-naturel.mp4",
+    "poster": "eco-monopole-naturel.jpg",
+    "titulo": "Le monopole naturel",
+    "texto": "Pourquoi un seul réseau, et pourquoi l'État s'en mêle",
+    "tema": "Sciences éco · L'État",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-penurie-ou-exces",
+    "archivo": "eco-penurie-ou-exces.mp4",
+    "poster": "eco-penurie-ou-exces.jpg",
+    "titulo": "Pénurie ou excédent ?",
+    "texto": "Comment le prix revient tout seul à l'équilibre",
+    "tema": "Sciences éco · Marché",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-pib-croissance",
+    "archivo": "eco-pib-croissance.mp4",
+    "poster": "eco-pib-croissance.jpg",
+    "titulo": "Le PIB ne dit pas tout",
+    "texto": "Croissance, PIB par tête et leurs limites",
+    "tema": "Sciences éco · Macroéconomie",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-point-milieu",
+    "archivo": "eco-point-milieu.mp4",
+    "poster": "eco-point-milieu.jpg",
+    "titulo": "Le piège du point-milieu",
+    "texto": "Pourquoi A→B et B→A ne donnent pas pareil",
+    "tema": "Sciences éco · Élasticité",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-quatre-hypotheses",
+    "archivo": "eco-quatre-hypotheses.mp4",
+    "poster": "eco-quatre-hypotheses.jpg",
+    "titulo": "Quand le marché est parfait",
+    "texto": "Le premier théorème du bien-être",
+    "tema": "Sciences éco · L'État",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-raisonnement-marge",
+    "archivo": "eco-raisonnement-marge.mp4",
+    "poster": "eco-raisonnement-marge.jpg",
+    "titulo": "Penser à la marge",
+    "texto": "Pourquoi on s'arrête de manger des tomates",
+    "tema": "Sciences éco · Introduction",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-recette-totale",
+    "archivo": "eco-recette-totale.mp4",
+    "poster": "eco-recette-totale.jpg",
+    "titulo": "Augmenter le prix : bonne idée ?",
+    "texto": "Recette totale et élasticité",
+    "tema": "Sciences éco · Élasticité",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-statique-comparative",
+    "archivo": "eco-statique-comparative.mp4",
+    "poster": "eco-statique-comparative.jpg",
+    "titulo": "Choc sur le marché : mode d'emploi",
+    "texto": "La méthode en 3 étapes",
+    "tema": "Sciences éco · Marché",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-substituts-complementaires",
+    "archivo": "eco-substituts-complementaires.mp4",
+    "poster": "eco-substituts-complementaires.jpg",
+    "titulo": "Substituts ou complémentaires ?",
+    "texto": "Quand le prix d'un bien bouge la demande d'un autre",
+    "tema": "Sciences éco · Offre et demande",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-sur-ou-de-la-droite",
+    "archivo": "eco-sur-ou-de-la-droite.mp4",
+    "poster": "eco-sur-ou-de-la-droite.jpg",
+    "titulo": "Sur la droite ou de la droite ?",
+    "texto": "Deux déplacements, deux causes",
+    "tema": "Sciences éco · Offre et demande",
+    "examen": "Partiel"
+  },
+  {
+    "id": "eco-trois-raisons-etat",
+    "archivo": "eco-trois-raisons-etat.mp4",
+    "poster": "eco-trois-raisons-etat.jpg",
+    "titulo": "Pourquoi l'État intervient",
+    "texto": "Efficience, équité, stabilisation",
+    "tema": "Sciences éco · L'État",
+    "examen": "Partiel"
   }
 ]
