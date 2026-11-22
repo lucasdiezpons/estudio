@@ -1,0 +1,108 @@
+{
+ "id": "eco-capitalisme-planifie",
+ "titulo": "Capitalisme ou économie planifiée ?",
+ "texto": "Les trois questions de tout système",
+ "tema": "Sciences éco · Introduction",
+ "etiqueta": "système",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais que *tout* pays doit répondre à trois questions ? Quoi produire, comment produire... et pour *qui ?*",
+   "titulo": "TROIS QUESTIONS",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "❓",
+    "linea1": "quoi · comment · pour qui",
+    "linea2": "LE SYSTÈME RÉPOND"
+   }
+  },
+  {
+   "tag": "le système",
+   "sub": "Le *système économique*, c'est la manière d'organiser et de distribuer les ressources pour répondre aux besoins des citoyens.",
+   "titulo": "LE *SYSTÈME*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧩",
+    "linea1": "organiser les ressources",
+    "linea2": "POUR LES BESOINS"
+   },
+   "num": 1
+  },
+  {
+   "tag": "capitalisme",
+   "sub": "Le *capitalisme :* propriété privée des facteurs de production, échanges par les prix, et production tournée vers le *profit.*",
+   "titulo": "LE *CAPITALISME*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🏢",
+      "izq": "propriété privée",
+      "der": "prix + profit",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "planifié",
+   "sub": "L'économie *planifiée :* des planificateurs centraux décident des réponses. Attention : ce n'est *pas* la même chose que le communisme.",
+   "titulo": "LE *PLANIFIÉ*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📋",
+      "izq": "planificateurs centraux",
+      "der": "décident de tout"
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "le piège",
+   "sub": "Piège : ne pas confondre système planifié centralisateur... et communisme.",
+   "titulo": "NE CONFONDS *PAS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🚫",
+    "linea1": "planifié ≠ communisme",
+    "linea2": "ATTENTION",
+    "stamp": "PIÈGE"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Capitalisme : *marchés, propriété privée, profit.* Planifié : *décisions centrales.*",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🏢",
+      "izq": "capitalisme",
+      "der": "marchés + profit"
+     },
+     {
+      "icono": "📋",
+      "izq": "planifié",
+      "der": "planificateurs",
+      "rojo": true
+     }
+    ]
+   }
+  }
+ ]
+}

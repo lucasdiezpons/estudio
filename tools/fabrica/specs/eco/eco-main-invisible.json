@@ -1,0 +1,98 @@
+{
+ "id": "eco-main-invisible",
+ "titulo": "La main invisible",
+ "texto": "Pourquoi l'égoïsme peut servir tout le monde",
+ "tema": "Sciences éco · Introduction",
+ "etiqueta": "marché",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais que les économies de marché fonctionnent... parce que chacun pense à *soi ?* Pas parce que les gens sont gentils.",
+   "titulo": "L'ÉGOÏSME *UTILE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🤝",
+    "linea1": "chacun pense à soi",
+    "linea2": "ET ÇA MARCHE"
+   }
+  },
+  {
+   "tag": "décentralisé",
+   "sub": "Des milliers d'entreprises et de ménages décident *chacun de leur côté :* qui embaucher, quoi produire, quoi acheter.",
+   "titulo": "DÉCISIONS *DÉCENTRALISÉES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏪",
+    "linea1": "entreprises + ménages",
+    "linea2": "CHACUN DÉCIDE"
+   },
+   "num": 1
+  },
+  {
+   "tag": "les prix",
+   "sub": "Ce qui les guide : les *prix.* Ils reflètent la valeur d'un bien pour la société... et ce qu'il coûte à produire.",
+   "titulo": "LES *PRIX* GUIDENT",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🏷️",
+      "izq": "valeur pour la société",
+      "der": "le prix"
+     },
+     {
+      "icono": "🏭",
+      "izq": "coût de production",
+      "der": "le prix",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "Smith",
+   "sub": "En mille sept cent soixante-seize, Adam Smith l'appelle la *main invisible :* l'intérêt personnel mène à l'intérêt de la société.",
+   "titulo": "ADAM *SMITH*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✋",
+    "linea1": "Adam Smith, 1776",
+    "linea2": "LA MAIN INVISIBLE"
+   },
+   "num": 3
+  },
+  {
+   "tag": "la limite",
+   "sub": "Mais attention : le marché n'est pas toujours efficace, ni équitable. C'est là que l'*État* peut intervenir.",
+   "titulo": "LES *LIMITES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚠️",
+    "linea1": "pas toujours efficace ni équitable",
+    "linea2": "L'ÉTAT INTERVIENT"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Les marchés marchent grâce à l'*intérêt personnel* et aux *prix.* La main invisible, c'est ça.",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✋",
+    "linea1": "intérêt personnel + prix",
+    "linea2": "LA MAIN INVISIBLE"
+   }
+  }
+ ]
+}

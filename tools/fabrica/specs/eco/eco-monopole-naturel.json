@@ -1,0 +1,102 @@
+{
+ "id": "eco-monopole-naturel",
+ "titulo": "Le monopole naturel",
+ "texto": "Pourquoi un seul réseau, et pourquoi l'État s'en mêle",
+ "tema": "Sciences éco · L'État",
+ "etiqueta": "État",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais qu'il n'y a qu'*un seul* réseau ferroviaire en France... et que c'est *normal ?*",
+   "titulo": "UN SEUL *RÉSEAU*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🚆",
+    "linea1": "un seul réseau",
+    "linea2": "POURQUOI ?"
+   }
+  },
+  {
+   "tag": "coûts fixes",
+   "sub": "Poser des rails ou des câbles coûte une fortune. Ce sont des *coûts fixes* très élevés. Plus on produit, plus le coût moyen *baisse.*",
+   "titulo": "COÛTS *FIXES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏗️",
+    "linea1": "coûts d'installation énormes",
+    "linea2": "COÛT MOYEN ↓"
+   },
+   "num": 1
+  },
+  {
+   "tag": "économies d'échelle",
+   "sub": "On appelle ça des *économies d'échelle.* Mieux vaut qu'une seule entreprise fasse tout... C'est un *monopole naturel.*",
+   "titulo": "ÉCONOMIES D'ÉCHELLE",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📉",
+    "linea1": "plus on produit, moins ça coûte",
+    "linea2": "MONOPOLE NATUREL"
+   },
+   "num": 2
+  },
+  {
+   "tag": "le risque",
+   "sub": "Le risque : une entreprise seule fixe un prix *trop élevé* et produit *trop peu.* C'est son pouvoir de marché.",
+   "titulo": "LE *RISQUE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "💶",
+      "izq": "prix au-dessus du coût marginal",
+      "der": "quantité plus faible",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "la réponse",
+   "sub": "L'État peut alors imposer un prix égal au *coût marginal.* Ou produire lui-même le bien.",
+   "titulo": "LA *RÉPONSE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⚖️",
+      "izq": "tarifer au coût marginal",
+      "der": "comme en concurrence"
+     },
+     {
+      "icono": "🏛️",
+      "izq": "ou produire lui-même",
+      "der": "l'État"
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Monopole naturel : *coûts fixes énormes*, coût moyen qui baisse. L'État *régule* pour éviter les abus.",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🚆",
+    "linea1": "coûts fixes + économies d'échelle",
+    "linea2": "L'ÉTAT RÉGULE"
+   }
+  }
+ ]
+}

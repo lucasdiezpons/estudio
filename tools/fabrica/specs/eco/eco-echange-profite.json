@@ -1,0 +1,98 @@
+{
+ "id": "eco-echange-profite",
+ "titulo": "L'échange profite-t-il à tous ?",
+ "texto": "Smith, Ricardo et la Corée du Sud",
+ "tema": "Sciences éco · Introduction",
+ "etiqueta": "échange",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais qu'on avait conseillé à la Corée du Sud d'*importer* son acier... plutôt que d'en produire ?",
+   "titulo": "LE CONSEIL *RATÉ*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🇰🇷",
+    "linea1": "Corée du Sud, années 60",
+    "linea2": "IMPORTER OU PRODUIRE ?"
+   }
+  },
+  {
+   "tag": "l'idée",
+   "sub": "L'idée de départ : chacun se *spécialise*, devient plus efficace, puis échange. Donc l'échange profite à tous. C'est vrai entre agents... et entre pays.",
+   "titulo": "SE *SPÉCIALISER*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔁",
+    "linea1": "spécialisation + échange",
+    "linea2": "TOUT LE MONDE GAGNE ?"
+   },
+   "num": 1
+  },
+  {
+   "tag": "Ricardo",
+   "sub": "Ricardo disait : le Portugal fait du *vin*, l'Angleterre du *textile.* C'est l'avantage comparatif. Avant lui, Smith parlait d'avantage absolu.",
+   "titulo": "L'AVANTAGE *COMPARATIF*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🇵🇹",
+      "izq": "Portugal",
+      "der": "le vin"
+     },
+     {
+      "icono": "🇬🇧",
+      "izq": "Angleterre",
+      "der": "le textile",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "les limites",
+   "sub": "Mais l'échange crée aussi des *perdants.* Dans les pays développés, la concurrence des pays émergents a fait mal à certains secteurs.",
+   "titulo": "DES *PERDANTS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏚️",
+    "linea1": "concurrence des pays émergents",
+    "linea2": "CERTAINS SECTEURS SOUFFRENT"
+   },
+   "num": 3
+  },
+  {
+   "tag": "la Corée",
+   "sub": "La Corée a quand même développé son industrie... et son miracle économique est venu de là.",
+   "titulo": "LE *MIRACLE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏭",
+    "linea1": "industrie lourde en Corée",
+    "linea2": "MIRACLE ÉCONOMIQUE"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. L'échange profite *souvent* à tous... mais il faut des *conditions équitables* avant d'échanger.",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🌍",
+    "linea1": "échange + conditions équitables",
+    "linea2": "À NUANCER"
+   }
+  }
+ ]
+}

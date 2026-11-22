@@ -1,0 +1,113 @@
+{
+ "id": "eco-trois-raisons-etat",
+ "titulo": "Pourquoi l'État intervient",
+ "texto": "Efficience, équité, stabilisation",
+ "tema": "Sciences éco · L'État",
+ "etiqueta": "État",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais que l'État intervient dans l'économie pour *trois raisons* seulement ?",
+   "titulo": "TROIS *RAISONS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏛️",
+    "linea1": "l'État dans l'économie",
+    "linea2": "3 RAISONS"
+   }
+  },
+  {
+   "tag": "efficience",
+   "sub": "Un : l'*efficience.* Corriger ce que le marché fait mal : monopoles, pollution, biens publics, manque d'information.",
+   "titulo": "L'*EFFICIENCE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔧",
+    "linea1": "corriger le marché",
+    "linea2": "LA TAILLE DU GÂTEAU"
+   },
+   "num": 1
+  },
+  {
+   "tag": "équité",
+   "sub": "Deux : l'*équité.* Rendre la répartition des revenus plus juste. C'est la façon de partager le gâteau.",
+   "titulo": "L'*ÉQUITÉ*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🍰",
+    "linea1": "partager le gâteau",
+    "linea2": "RÉPARTITION PLUS JUSTE"
+   },
+   "num": 2
+  },
+  {
+   "tag": "stabilité",
+   "sub": "Trois : la *stabilisation.* Maintenir la croissance, lutter contre le chômage et l'inflation.",
+   "titulo": "LA *STABILISATION*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📈",
+    "linea1": "croissance · chômage · inflation",
+    "linea2": "STABILISER L'ACTIVITÉ"
+   },
+   "num": 3
+  },
+  {
+   "tag": "les outils",
+   "sub": "Pour ça, deux outils : la politique *budgétaire*, avec les dépenses et les impôts. Et la politique *monétaire.*",
+   "titulo": "DEUX *OUTILS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🧾",
+      "izq": "budgétaire",
+      "der": "dépenses + impôts"
+     },
+     {
+      "icono": "💱",
+      "izq": "monétaire",
+      "der": "monnaie en circulation",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Efficience, équité, stabilisation. Trois raisons, deux outils.",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔧",
+      "izq": "efficience",
+      "der": "corriger le marché"
+     },
+     {
+      "icono": "🍰",
+      "izq": "équité",
+      "der": "partager"
+     },
+     {
+      "icono": "📈",
+      "izq": "stabilisation",
+      "der": "activité",
+      "rojo": true
+     }
+    ]
+   }
+  }
+ ]
+}

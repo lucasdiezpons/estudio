@@ -1,0 +1,109 @@
+{
+ "id": "eco-quatre-hypotheses",
+ "titulo": "Quand le marché est parfait",
+ "texto": "Le premier théorème du bien-être",
+ "tema": "Sciences éco · L'État",
+ "etiqueta": "État",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais que le marché n'est efficace... que si *quatre conditions* sont réunies ?",
+   "titulo": "QUATRE *CONDITIONS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✅",
+    "linea1": "premier théorème du bien-être",
+    "linea2": "4 HYPOTHÈSES"
+   }
+  },
+  {
+   "tag": "le théorème",
+   "sub": "Le premier théorème du bien-être dit : un marché libre mène à un équilibre où les gains à l'échange sont *maximisés.* C'est la main invisible, version moderne.",
+   "titulo": "LE *THÉORÈME*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏆",
+    "linea1": "gains à l'échange maximisés",
+    "linea2": "SI 4 CONDITIONS"
+   },
+   "num": 1
+  },
+  {
+   "tag": "H1 et H2",
+   "sub": "Un : les entreprises *prennent les prix comme donnés.* Deux : il n'y a *pas d'externalités.*",
+   "titulo": "*H1* ET *H2*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "1️⃣",
+      "izq": "prix donnés",
+      "der": "pas de monopole"
+     },
+     {
+      "icono": "2️⃣",
+      "izq": "pas d'externalités",
+      "der": "pas de pollution",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "H3 et H4",
+   "sub": "Trois : il n'y a *pas de bien public.* Quatre : les consommateurs sont *parfaitement informés.*",
+   "titulo": "*H3* ET *H4*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "3️⃣",
+      "izq": "pas de bien public",
+      "der": "tout est privé"
+     },
+     {
+      "icono": "4️⃣",
+      "izq": "info parfaite",
+      "der": "pas d'asymétrie",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "l'État",
+   "sub": "Quand *une seule* condition manque, le marché n'est plus efficace. L'État peut intervenir.",
+   "titulo": "UNE SEULE *SUFFIT*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏛️",
+    "linea1": "une condition fausse",
+    "linea2": "L'ÉTAT INTERVIENT",
+    "stamp": "STOP"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Quatre conditions : prix donnés, pas d'externalités, pas de bien public, information parfaite. S'il en manque une, l'État peut agir.",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✅",
+    "linea1": "4 conditions",
+    "linea2": "SINON → L'ÉTAT"
+   }
+  }
+ ]
+}
