@@ -1,0 +1,176 @@
+{
+ "id": "api-g-mx-prioridad",
+ "titulo": "El servidor de correo con número bajo gana",
+ "texto": "Preferencia del MX",
+ "tema": "API · Correo",
+ "etiqueta": "correo",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "BDR": "be de erre",
+  "fc": "efe ce",
+  "fd": "efe de",
+  "ff": "efe efe",
+  "TIME_WAIT": "taim güeit",
+  "MSL": "eme ese ele",
+  "+trace": "más treis",
+  "api.": "api",
+  "api": "api",
+  "tc": "te ce",
+  "ICMPv6": "i ce eme pe uve seis",
+  "ff02": "efe efe cero dos",
+  "53": "cincuenta y tres",
+  "MAIL": "méil",
+  "FROM": "from",
+  "RCPT": "ricipient",
+  "TO": "tu",
+  "DATA": "deita",
+  "From": "from",
+  "To": "tu",
+  "Subject": "sábyect",
+  "main.cf": "mein punto ce efe",
+  "250": "doscientos cincuenta",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que en el DNS del correo... el número más *bajo* es el que gana?",
+   "titulo": "BAJO *GANA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🥇",
+    "linea1": "registro MX",
+    "linea2": "MENOR = PREFERIDO"
+   }
+  },
+  {
+   "tag": "el registro",
+   "sub": "Cada MX lleva un número de *preferencia* y el nombre del servidor de correo.",
+   "titulo": "EL *REGISTRO*",
+   "visual": {
+    "tipo": "big",
+    "big": "MX 10 mail.lab.api.",
+    "small": "preferencia + servidor"
+   },
+   "num": 1
+  },
+  {
+   "tag": "el orden",
+   "sub": "Con diez y veinte... primero se prueba el *diez.* El veinte es el de reserva.",
+   "titulo": "EL *ORDEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "1️⃣",
+      "izq": "MX 10",
+      "der": "principal",
+      "en": "*diez.*"
+     },
+     {
+      "icono": "2️⃣",
+      "izq": "MX 20",
+      "der": "reserva"
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "empate",
+   "sub": "Si dos tienen el mismo número... se reparten el correo entre los *dos.*",
+   "titulo": "EL *EMPATE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚖️",
+    "linea1": "mismo número",
+    "linea2": "SE REPARTEN"
+   },
+   "num": 3
+  },
+  {
+   "tag": "el detalle",
+   "sub": "Y el MX apunta a un *nombre*, nunca a una IP. Ese nombre necesita su propio registro A.",
+   "titulo": "EL *DETALLE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏷️",
+    "linea1": "MX → nombre",
+    "linea2": "NUNCA UNA IP",
+    "stamp": "¡OJO!"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Número más bajo, primero... y siempre a un nombre con su *A.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "MX menor = primero",
+    "small": "y apunta a un nombre"
+   }
+  }
+ ],
+ "examen": "PA3"
+}

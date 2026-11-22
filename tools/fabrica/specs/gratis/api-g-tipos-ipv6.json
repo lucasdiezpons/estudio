@@ -1,0 +1,173 @@
+{
+ "id": "api-g-tipos-ipv6",
+ "titulo": "Cómo saber qué IPv6 tienes delante",
+ "texto": "Por cómo empieza",
+ "tema": "API · IPv6",
+ "etiqueta": "ipv6",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "BDR": "be de erre",
+  "fc": "efe ce",
+  "fd": "efe de",
+  "ff": "efe efe",
+  "TIME_WAIT": "taim güeit",
+  "MSL": "eme ese ele",
+  "+trace": "más treis",
+  "api.": "api",
+  "api": "api",
+  "tc": "te ce",
+  "ICMPv6": "i ce eme pe uve seis",
+  "ff02": "efe efe cero dos",
+  "53": "cincuenta y tres",
+  "MAIL": "méil",
+  "FROM": "from",
+  "RCPT": "ricipient",
+  "TO": "tu",
+  "DATA": "deita",
+  "From": "from",
+  "To": "tu",
+  "Subject": "sábyect",
+  "main.cf": "mein punto ce efe",
+  "250": "doscientos cincuenta",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que una IPv6 te dice qué *tipo* de dirección es... solo con mirar cómo empieza?",
+   "titulo": "MIRA *EL PRINCIPIO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔍",
+    "linea1": "las primeras cifras",
+    "linea2": "TE LO DICEN TODO"
+   }
+  },
+  {
+   "tag": "global",
+   "sub": "Si empieza por *dos* o tres: es global. Se puede usar en internet.",
+   "titulo": "2 O 3: *GLOBAL*",
+   "visual": {
+    "tipo": "big",
+    "big": "2001:db8:: · 2002::",
+    "small": "global unicast"
+   },
+   "num": 1
+  },
+  {
+   "tag": "enlace",
+   "sub": "Si empieza por fe80: *link-local.* Solo vale dentro de ese enlace.",
+   "titulo": "FE80: *ENLACE*",
+   "visual": {
+    "tipo": "big",
+    "big": "fe80::/10",
+    "small": "link-local"
+   },
+   "num": 2
+  },
+  {
+   "tag": "privada",
+   "sub": "Si empieza por fc o fd: es *privada*, como las diez punto de IPv4.",
+   "titulo": "FC / FD: *PRIVADA*",
+   "visual": {
+    "tipo": "big",
+    "big": "fd00::/8",
+    "small": "unique local"
+   },
+   "num": 3
+  },
+  {
+   "tag": "multicast",
+   "sub": "Y si empieza por *ff:* multicast. ff02 uno, todos los nodos del enlace. ff02 dos, todos los routers.",
+   "titulo": "FF: *MULTICAST*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "👥",
+      "izq": "ff02::1",
+      "der": "todos los nodos"
+     },
+     {
+      "icono": "📡",
+      "izq": "ff02::2",
+      "der": "todos los routers",
+      "en": "routers."
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Dos, global. fe80, enlace. fd, privada. ff, *multicast.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "2 · fe80 · fd · ff",
+    "small": "global · enlace · privada · multicast"
+   }
+  }
+ ],
+ "examen": "PA3"
+}

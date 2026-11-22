@@ -16,7 +16,7 @@ PRON = {
     "EUI-64": "e u i sesenta y cuatro", "fe80": "efe e ochenta", "ff:fe": "efe efe efe e", "6to4": "seis tu cuatro", "2002": "dos mil dos",
     "SYN": "sin", "ACK": "ak", "FIN": "fin", "MSS": "eme ese ese", "BDP": "be de pe", "RTT": "erre te te", "SACK": "sak", "ISN": "i ese ene",
     "postfix": "póstfix", "mutt": "mat", "dovecot": "dóvcot", "myhostname": "mai jóstneim", "mydomain": "mai doméin", "LSID": "ele ese i de",
-    "DR": "de erre", "TIME_WAIT": "taim güeit", "MSL": "eme ese ele", "+trace": "más treis", "api.": "api", "api": "api", "tc": "te ce", "ICMPv6": "i ce eme pe uve seis", "ff02": "efe efe cero dos", "53": "cincuenta y tres", "MAIL": "méil", "FROM": "from", "RCPT": "ricipient", "TO": "tu", "DATA": "deita", "From": "from", "To": "tu", "Subject": "sábyect", "main.cf": "mein punto ce efe", "250": "doscientos cincuenta", "ID": "i de", "RA": "erre a", "NS/NA": "ene ese y ene a",
+    "DR": "de erre", "BDR": "be de erre", "fc": "efe ce", "fd": "efe de", "ff": "efe efe", "TIME_WAIT": "taim güeit", "MSL": "eme ese ele", "+trace": "más treis", "api.": "api", "api": "api", "tc": "te ce", "ICMPv6": "i ce eme pe uve seis", "ff02": "efe efe cero dos", "53": "cincuenta y tres", "MAIL": "méil", "FROM": "from", "RCPT": "ricipient", "TO": "tu", "DATA": "deita", "From": "from", "To": "tu", "Subject": "sábyect", "main.cf": "mein punto ce efe", "250": "doscientos cincuenta", "ID": "i de", "RA": "erre a", "NS/NA": "ene ese y ene a",
 }
 
 
@@ -362,6 +362,52 @@ VIDEOS += [
          A("🧟", "paquetes rezagados", "QUE NO SE CUELEN")),
         ("en resumen", "Así que ya sabes. FIN y ACK por cada lado... y el primero en cerrar, *espera.*", "EN *RESUMEN*",
          B("FIN·ACK·FIN·ACK + TIME_WAIT", "cierre TCP")),
+    ]),
+]
+
+VIDEOS += [
+    # ---------------- tanda 7
+    v("api-g-tipos-ipv6", "Cómo saber qué IPv6 tienes delante", "Por cómo empieza", "API · IPv6", "ipv6", [
+        ("la curiosidad", "¿Sabías que una IPv6 te dice qué *tipo* de dirección es... solo con mirar cómo empieza?", "MIRA *EL PRINCIPIO*",
+         A("🔍", "las primeras cifras", "TE LO DICEN TODO")),
+        ("global", "Si empieza por *dos* o tres: es global. Se puede usar en internet.", "2 O 3: *GLOBAL*",
+         B("2001:db8:: · 2002::", "global unicast")),
+        ("enlace", "Si empieza por fe80: *link-local.* Solo vale dentro de ese enlace.", "FE80: *ENLACE*",
+         B("fe80::/10", "link-local")),
+        ("privada", "Si empieza por fc o fd: es *privada*, como las diez punto de IPv4.", "FC / FD: *PRIVADA*",
+         B("fd00::/8", "unique local")),
+        ("multicast", "Y si empieza por *ff:* multicast. ff02 uno, todos los nodos del enlace. ff02 dos, todos los routers.", "FF: *MULTICAST*",
+         F([{"icono": "👥", "izq": "ff02::1", "der": "todos los nodos"}, {"icono": "📡", "izq": "ff02::2", "der": "todos los routers", "en": "routers."}])),
+        ("en resumen", "Así que ya sabes. Dos, global. fe80, enlace. fd, privada. ff, *multicast.*", "EN *RESUMEN*",
+         B("2 · fe80 · fd · ff", "global · enlace · privada · multicast")),
+    ]),
+    v("api-g-elegir-dr", "Quién manda en una red OSPF", "Elección del DR", "API · OSPFv3", "ospfv3", [
+        ("la curiosidad", "¿Sabías que en una red con varios routers OSPF... uno hace de *portavoz?*", "UN *PORTAVOZ*",
+         A("🎤", "red con varios routers", "EL DR")),
+        ("para qué", "El *DR* evita que todos hablen con todos. Cada router se sincroniza solo con él... y con el BDR, su suplente.", "¿PARA *QUÉ*?",
+         F([{"icono": "👑", "izq": "DR", "der": "portavoz", "en": "*DR*"}, {"icono": "🥈", "izq": "BDR", "der": "suplente"}])),
+        ("la prioridad", "Gana la *prioridad* más alta. Por defecto todos tienen uno... y con cero, nunca puede ser DR.", "LA *PRIORIDAD*",
+         B("priority 0 → nunca DR", "por defecto: 1")),
+        ("el empate", "Si empatan, gana el router ID más *alto.*", "EL *EMPATE*",
+         B("router ID mayor", "desempata")),
+        ("la trampa", "Pero ojo: no es apropiativo. Si llega un router mejor más *tarde*... el DR no cambia.", "LA *TRAMPA*",
+         A("🪑", "llega uno mejor después", "EL DR NO CAMBIA", "¡OJO!")),
+        ("en resumen", "Así que ya sabes. Prioridad más alta, luego router ID... y el que llega tarde, se *espera.*", "EN *RESUMEN*",
+         B("prioridad > router ID", "elección del DR")),
+    ]),
+    v("api-g-mx-prioridad", "El servidor de correo con número bajo gana", "Preferencia del MX", "API · Correo", "correo", [
+        ("la curiosidad", "¿Sabías que en el DNS del correo... el número más *bajo* es el que gana?", "BAJO *GANA*",
+         A("🥇", "registro MX", "MENOR = PREFERIDO")),
+        ("el registro", "Cada MX lleva un número de *preferencia* y el nombre del servidor de correo.", "EL *REGISTRO*",
+         B("MX 10 mail.lab.api.", "preferencia + servidor")),
+        ("el orden", "Con diez y veinte... primero se prueba el *diez.* El veinte es el de reserva.", "EL *ORDEN*",
+         F([{"icono": "1️⃣", "izq": "MX 10", "der": "principal", "en": "*diez.*"}, {"icono": "2️⃣", "izq": "MX 20", "der": "reserva"}])),
+        ("empate", "Si dos tienen el mismo número... se reparten el correo entre los *dos.*", "EL *EMPATE*",
+         A("⚖️", "mismo número", "SE REPARTEN")),
+        ("el detalle", "Y el MX apunta a un *nombre*, nunca a una IP. Ese nombre necesita su propio registro A.", "EL *DETALLE*",
+         A("🏷️", "MX → nombre", "NUNCA UNA IP", "¡OJO!")),
+        ("en resumen", "Así que ya sabes. Número más bajo, primero... y siempre a un nombre con su *A.*", "EN *RESUMEN*",
+         B("MX menor = primero", "y apunta a un nombre")),
     ]),
 ]
 

@@ -1,0 +1,175 @@
+{
+ "id": "api-g-elegir-dr",
+ "titulo": "Quién manda en una red OSPF",
+ "texto": "Elección del DR",
+ "tema": "API · OSPFv3",
+ "etiqueta": "ospfv3",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "BDR": "be de erre",
+  "fc": "efe ce",
+  "fd": "efe de",
+  "ff": "efe efe",
+  "TIME_WAIT": "taim güeit",
+  "MSL": "eme ese ele",
+  "+trace": "más treis",
+  "api.": "api",
+  "api": "api",
+  "tc": "te ce",
+  "ICMPv6": "i ce eme pe uve seis",
+  "ff02": "efe efe cero dos",
+  "53": "cincuenta y tres",
+  "MAIL": "méil",
+  "FROM": "from",
+  "RCPT": "ricipient",
+  "TO": "tu",
+  "DATA": "deita",
+  "From": "from",
+  "To": "tu",
+  "Subject": "sábyect",
+  "main.cf": "mein punto ce efe",
+  "250": "doscientos cincuenta",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que en una red con varios routers OSPF... uno hace de *portavoz?*",
+   "titulo": "UN *PORTAVOZ*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎤",
+    "linea1": "red con varios routers",
+    "linea2": "EL DR"
+   }
+  },
+  {
+   "tag": "para qué",
+   "sub": "El *DR* evita que todos hablen con todos. Cada router se sincroniza solo con él... y con el BDR, su suplente.",
+   "titulo": "¿PARA *QUÉ*?",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "👑",
+      "izq": "DR",
+      "der": "portavoz",
+      "en": "*DR*"
+     },
+     {
+      "icono": "🥈",
+      "izq": "BDR",
+      "der": "suplente"
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "la prioridad",
+   "sub": "Gana la *prioridad* más alta. Por defecto todos tienen uno... y con cero, nunca puede ser DR.",
+   "titulo": "LA *PRIORIDAD*",
+   "visual": {
+    "tipo": "big",
+    "big": "priority 0 → nunca DR",
+    "small": "por defecto: 1"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el empate",
+   "sub": "Si empatan, gana el router ID más *alto.*",
+   "titulo": "EL *EMPATE*",
+   "visual": {
+    "tipo": "big",
+    "big": "router ID mayor",
+    "small": "desempata"
+   },
+   "num": 3
+  },
+  {
+   "tag": "la trampa",
+   "sub": "Pero ojo: no es apropiativo. Si llega un router mejor más *tarde*... el DR no cambia.",
+   "titulo": "LA *TRAMPA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🪑",
+    "linea1": "llega uno mejor después",
+    "linea2": "EL DR NO CAMBIA",
+    "stamp": "¡OJO!"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Prioridad más alta, luego router ID... y el que llega tarde, se *espera.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "prioridad > router ID",
+    "small": "elección del DR"
+   }
+  }
+ ],
+ "examen": "PA3"
+}
