@@ -1,0 +1,152 @@
+{
+ "id": "api-g-lsa-link-intra",
+ "titulo": "Dónde viven los prefijos en OSPFv3",
+ "texto": "Link LSA e Intra-Area-Prefix",
+ "tema": "API · OSPFv3",
+ "etiqueta": "ospfv3",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que en OSPFv3 el mapa de la red... ya *no* lleva direcciones?",
+   "titulo": "UN MAPA *SIN DIRECCIONES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🗺️",
+    "linea1": "router LSA y network LSA",
+    "linea2": "SOLO QUIÉN CON QUIÉN"
+   }
+  },
+  {
+   "tag": "la topología",
+   "sub": "Las LSA de router y de red solo dicen quién está conectado con *quién.* Nada de prefijos.",
+   "titulo": "SOLO *TOPOLOGÍA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🖥️",
+      "izq": "Router LSA",
+      "der": "enlaces"
+     },
+     {
+      "icono": "🔀",
+      "izq": "Network LSA",
+      "der": "quién hay",
+      "en": "*quién.*"
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "los prefijos",
+   "sub": "Los prefijos van aparte, en la *Intra-Area-Prefix.* Esa es la que dice qué redes hay.",
+   "titulo": "LOS *PREFIJOS*",
+   "visual": {
+    "tipo": "big",
+    "big": "Intra-Area-Prefix",
+    "small": "qué redes IPv6 hay"
+   },
+   "num": 2
+  },
+  {
+   "tag": "la de enlace",
+   "sub": "Y la *Link* LSA no sale del cable: lleva tu fe80 y tus prefijos a los vecinos de ese enlace.",
+   "titulo": "LA *LINK* LSA",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔗",
+    "linea1": "no sale del enlace",
+    "linea2": "fe80 + PREFIJOS"
+   },
+   "num": 3
+  },
+  {
+   "tag": "la ventaja",
+   "sub": "¿La gracia? Si cambias un prefijo... no se recalcula todo el *árbol.* Solo cambia una LSA.",
+   "titulo": "LA *VENTAJA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🌳",
+    "linea1": "cambias un prefijo",
+    "linea2": "SIN RECALCULAR TODO"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Router y Network, topología. Intra-Area-Prefix, las *redes.* Link, el enlace.",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "topología ≠ prefijos",
+    "small": "separados en OSPFv3"
+   }
+  }
+ ],
+ "examen": "PA3"
+}

@@ -1,0 +1,153 @@
+{
+ "id": "api-g-ospfv3-sin-ips",
+ "titulo": "El OSPF que no sabe de IPs",
+ "texto": "Router ID y vecinos en OSPFv3",
+ "tema": "API · OSPFv3",
+ "etiqueta": "ospfv3",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que OSPF para IPv6... sigue usando un nombre con *pinta* de IPv4?",
+   "titulo": "UN NOMBRE *DE IPv4*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏷️",
+    "linea1": "router ID",
+    "linea2": "32 BITS, COMO IPv4"
+   }
+  },
+  {
+   "tag": "el ID",
+   "sub": "El router ID son treinta y dos bits. Se escribe como uno punto uno punto uno punto uno... pero no es una *IP.*",
+   "titulo": "NO ES *UNA IP*",
+   "visual": {
+    "tipo": "big",
+    "big": "router-id 1.1.1.1",
+    "small": "solo un nombre"
+   },
+   "num": 1
+  },
+  {
+   "tag": "los vecinos",
+   "sub": "Los vecinos se hablan con su dirección *link-local*, la de fe80. Nunca con la global.",
+   "titulo": "VECINOS POR *FE80*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🤝",
+    "linea1": "hello entre vecinos",
+    "linea2": "SIEMPRE fe80"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el siguiente salto",
+   "sub": "Por eso en la tabla de rutas... el siguiente salto también es una fe80, y va con su *interfaz.*",
+   "titulo": "EL *SIGUIENTE SALTO*",
+   "visual": {
+    "tipo": "big",
+    "big": "via fe80::2, eth1",
+    "small": "link-local + interfaz"
+   },
+   "num": 3
+  },
+  {
+   "tag": "el despiste",
+   "sub": "Si el router no tiene IPv4... el router ID hay que ponerlo a *mano.* Si no, OSPFv3 no arranca.",
+   "titulo": "SIN IPv4, *A MANO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✋",
+    "linea1": "sin IPv4 que copiar",
+    "linea2": "PONLO A MANO",
+    "stamp": "¡OJO!"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Nombre de treinta y dos bits... y todo lo demás, por *link-local.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🏷️",
+      "izq": "router ID",
+      "der": "32 bits"
+     },
+     {
+      "icono": "🔗",
+      "izq": "vecinos y saltos",
+      "der": "fe80",
+      "en": "*link-local.*"
+     }
+    ]
+   }
+  }
+ ],
+ "examen": "PA3"
+}

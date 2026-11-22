@@ -1,0 +1,141 @@
+{
+ "id": "api-g-eui64",
+ "titulo": "Tu MAC dentro de tu IPv6",
+ "texto": "fe80 + la MAC con ff:fe",
+ "tema": "API · IPv6",
+ "etiqueta": "ipv6",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que tu tarjeta de red se inventa su propia IPv6... a partir de su *MAC?*",
+   "titulo": "TU MAC *EN TU IPv6*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🪪",
+    "linea1": "dirección de enlace",
+    "linea2": "SE LA INVENTA SOLA"
+   }
+  },
+  {
+   "tag": "el prefijo",
+   "sub": "Empieza siempre por fe80. Es la dirección *link-local:* solo vale dentro de ese cable.",
+   "titulo": "EMPIEZA POR *FE80*",
+   "visual": {
+    "tipo": "big",
+    "big": "fe80::/64",
+    "small": "solo dentro del enlace"
+   },
+   "num": 1
+  },
+  {
+   "tag": "el relleno",
+   "sub": "La MAC tiene cuarenta y ocho bits... y faltan dieciséis. Se meten en *medio:* ff:fe.",
+   "titulo": "ff:fe *EN MEDIO*",
+   "visual": {
+    "tipo": "big",
+    "big": "00:0c:29 ff:fe 3a:4b:5c",
+    "small": "MAC partida en dos"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el bit",
+   "sub": "Y un detalle: el séptimo bit del primer byte se *invierte.* Cero cero pasa a ser cero dos.",
+   "titulo": "EL BIT *GIRADO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔁",
+    "linea1": "séptimo bit del primer byte",
+    "linea2": "00 → 02",
+    "stamp": "¡OJO!"
+   },
+   "num": 3
+  },
+  {
+   "tag": "resultado",
+   "sub": "Resultado: fe80, dos puntos, dos c, veintinueve ff, fe tres a, cuatro b cinco *c.*",
+   "titulo": "EL *RESULTADO*",
+   "visual": {
+    "tipo": "big",
+    "big": "fe80::20c:29ff:fe3a:4b5c",
+    "small": "EUI-64"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. fe80, la MAC partida con ff:fe... y el séptimo bit *girado.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "fe80 + MAC(ff:fe) + bit 7",
+    "small": "EUI-64"
+   }
+  }
+ ],
+ "examen": "PA3"
+}

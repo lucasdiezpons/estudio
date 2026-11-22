@@ -1,0 +1,153 @@
+{
+ "id": "api-g-tres-acks",
+ "titulo": "Tres ACK repetidos",
+ "texto": "Fast retransmit",
+ "tema": "API · TCP",
+ "etiqueta": "tcp",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que TCP puede saber que se perdió un paquete... *antes* de que salte el temporizador?",
+   "titulo": "ANTES DEL *TIMEOUT*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⏰",
+    "linea1": "sin esperar al reloj",
+    "linea2": "FAST RETRANSMIT"
+   }
+  },
+  {
+   "tag": "el hueco",
+   "sub": "Si se pierde un segmento, el receptor sigue pidiendo el *mismo* byte una y otra vez.",
+   "titulo": "EL *HUECO*",
+   "visual": {
+    "tipo": "big",
+    "big": "ACK 5000 · 5000 · 5000",
+    "small": "sigue pidiendo lo mismo"
+   },
+   "num": 1
+  },
+  {
+   "tag": "los tres",
+   "sub": "Al tercer ACK *duplicado*... el emisor no espera más y reenvía ese segmento.",
+   "titulo": "TRES *DUPLICADOS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "3️⃣",
+    "linea1": "ACK duplicados",
+    "linea2": "REENVÍA YA",
+    "stamp": "¡YA!"
+   },
+   "num": 2
+  },
+  {
+   "tag": "la ventana",
+   "sub": "Y la ventana de congestión se queda a la *mitad*, no vuelve a uno.",
+   "titulo": "VENTANA A LA *MITAD*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⚡",
+      "izq": "3 ACK dup",
+      "der": "cwnd / 2",
+      "en": "*mitad*"
+     },
+     {
+      "icono": "⏰",
+      "izq": "timeout",
+      "der": "cwnd = 1",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "SACK",
+   "sub": "Con *SACK*, el receptor además dice qué trozos sí tiene. Así solo se reenvía el hueco.",
+   "titulo": "CON *SACK*",
+   "visual": {
+    "tipo": "big",
+    "big": "SACK 6448-9344",
+    "small": "esto ya lo tengo"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Tres ACK repetidos, reenvío inmediato... y ventana a la *mitad.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "3 dup ACK → reenvío",
+    "small": "fast retransmit"
+   }
+  }
+ ],
+ "examen": "PA3"
+}

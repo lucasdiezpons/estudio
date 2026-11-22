@@ -1,0 +1,151 @@
+{
+ "id": "api-g-6to4",
+ "titulo": "IPv6 escondido en IPv4",
+ "texto": "Los túneles 6to4",
+ "tema": "API · IPv6",
+ "etiqueta": "ipv6",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que se puede viajar en IPv6... por una red que solo entiende *IPv4?*",
+   "titulo": "IPv6 *POR IPv4*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🚇",
+    "linea1": "un túnel",
+    "linea2": "IPv6 DENTRO DE IPv4"
+   }
+  },
+  {
+   "tag": "el prefijo",
+   "sub": "El truco se llama 6to4. Sus direcciones empiezan siempre por *2002.*",
+   "titulo": "EMPIEZA POR *2002*",
+   "visual": {
+    "tipo": "big",
+    "big": "2002::/16",
+    "small": "prefijo 6to4"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la IP dentro",
+   "sub": "Detrás va la IPv4 pública del router... pasada a *hexadecimal.* Ocho dígitos.",
+   "titulo": "LA IPv4 *EN HEXA*",
+   "visual": {
+    "tipo": "big",
+    "big": "2002:c000:0201::/48",
+    "small": "192.0.2.1 en hexa"
+   },
+   "num": 2
+  },
+  {
+   "tag": "cómo se lee",
+   "sub": "Ciento noventa y dos es c cero. Cero, cero cero. Dos, cero dos. Uno, cero *uno.*",
+   "titulo": "CÓMO SE *LEE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "1️⃣",
+      "izq": "192.0",
+      "der": "c000"
+     },
+     {
+      "icono": "2️⃣",
+      "izq": "2.1",
+      "der": "0201",
+      "en": "*uno.*"
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "el viaje",
+   "sub": "Así el router sabe a dónde mandar el paquete IPv4... sin tabla de túneles: la dirección ya lo *dice.*",
+   "titulo": "EL *VIAJE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📦",
+    "linea1": "IPv6 metido en IPv4",
+    "linea2": "EL DESTINO VA DENTRO"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. 2002, más la IPv4 en hexadecimal... y tienes tu barra *cuarenta y ocho.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "2002 : IPv4 hexa ::/48",
+    "small": "6to4"
+   }
+  }
+ ],
+ "examen": "PA3"
+}

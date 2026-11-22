@@ -1,0 +1,141 @@
+{
+ "id": "api-g-syn-gasta",
+ "titulo": "El SYN que cuesta un byte",
+ "texto": "Números de secuencia en el handshake",
+ "tema": "API · TCP",
+ "etiqueta": "tcp",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que un SYN de TCP no lleva datos... pero gasta un número como si llevara *uno?*",
+   "titulo": "UN BYTE *FANTASMA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "👻",
+    "linea1": "SYN sin datos",
+    "linea2": "GASTA 1"
+   }
+  },
+  {
+   "tag": "el saludo",
+   "sub": "Primer paquete: SYN con un número inicial, el *ISN.* Digamos mil.",
+   "titulo": "EL *SYN*",
+   "visual": {
+    "tipo": "big",
+    "big": "SYN seq=1000",
+    "small": "número inicial"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la respuesta",
+   "sub": "El otro responde SYN y ACK. Y su ACK es mil *uno*, no mil.",
+   "titulo": "ACK = *1001*",
+   "visual": {
+    "tipo": "big",
+    "big": "SYN+ACK ack=1001",
+    "small": "1000 + 1"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el FIN",
+   "sub": "Con el FIN pasa *igual:* no lleva datos, pero el ACK que lo confirma suma uno.",
+   "titulo": "EL FIN, *IGUAL*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🚪",
+    "linea1": "FIN sin datos",
+    "linea2": "TAMBIÉN GASTA 1",
+    "stamp": "¡OJO!"
+   },
+   "num": 3
+  },
+  {
+   "tag": "la regla",
+   "sub": "La regla: el ACK es el siguiente byte que *esperas.* Por eso SYN y FIN cuentan como uno.",
+   "titulo": "LA *REGLA*",
+   "visual": {
+    "tipo": "big",
+    "big": "ACK = seq + datos (+1 SYN/FIN)",
+    "small": "el siguiente que espero"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. SYN y FIN no llevan datos... pero cada uno gasta un *número.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "SYN +1 · FIN +1",
+    "small": "números de secuencia"
+   }
+  }
+ ],
+ "examen": "PA3"
+}

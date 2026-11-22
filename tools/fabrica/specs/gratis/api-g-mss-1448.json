@@ -1,0 +1,152 @@
+{
+ "id": "api-g-mss-1448",
+ "titulo": "Por qué caben 1448 bytes y no 1460",
+ "texto": "MSS y timestamps",
+ "tema": "API · TCP",
+ "etiqueta": "tcp",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que en una red normal TCP podría mandar mil cuatrocientos sesenta bytes... pero manda *mil cuatrocientos cuarenta y ocho?*",
+   "titulo": "1460 *O 1448*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📏",
+    "linea1": "datos por segmento",
+    "linea2": "¿CUÁNTOS CABEN?"
+   }
+  },
+  {
+   "tag": "la cuenta",
+   "sub": "Ethernet deja mil quinientos. Menos veinte de IP, menos veinte de TCP: mil cuatrocientos *sesenta.*",
+   "titulo": "LA *CUENTA*",
+   "visual": {
+    "tipo": "big",
+    "big": "1500 − 20 − 20 = 1460",
+    "small": "MSS anunciado"
+   },
+   "num": 1
+  },
+  {
+   "tag": "el ladrón",
+   "sub": "Pero si se usan *timestamps*... cada segmento lleva doce bytes más de opciones.",
+   "titulo": "EL *LADRÓN*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⏱️",
+    "linea1": "opción timestamps",
+    "linea2": "+12 BYTES",
+    "stamp": "¡OJO!"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el resultado",
+   "sub": "Mil cuatrocientos sesenta menos doce: mil cuatrocientos cuarenta y *ocho.* Eso es lo que ves en la captura.",
+   "titulo": "EL *RESULTADO*",
+   "visual": {
+    "tipo": "big",
+    "big": "1460 − 12 = 1448",
+    "small": "datos reales"
+   },
+   "num": 3
+  },
+  {
+   "tag": "dónde se ve",
+   "sub": "El MSS solo aparece en el *SYN.* Los siguientes segmentos simplemente miden eso.",
+   "titulo": "DÓNDE SE *VE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🤝",
+      "izq": "SYN",
+      "der": "MSS 1460",
+      "en": "*SYN.*"
+     },
+     {
+      "icono": "📦",
+      "izq": "datos",
+      "der": "len 1448"
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Mil quinientos, menos cuarenta de cabeceras... y menos doce si hay *timestamps.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "1500 − 40 − 12 = 1448",
+    "small": "MSS con timestamps"
+   }
+  }
+ ],
+ "examen": "PA3"
+}
