@@ -1,0 +1,186 @@
+{
+ "id": "api-g-ipv6-no-fragmenta",
+ "titulo": "Los routers IPv6 no trocean",
+ "texto": "Fragmentación solo en origen",
+ "tema": "API · IPv6",
+ "etiqueta": "ipv6",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "Packet": "páket",
+  "Too": "tu",
+  "Big": "big",
+  "4xx": "cuatrocientos",
+  "5xx": "quinientos",
+  "NOERROR": "no érror",
+  "ANSWER": "ánser",
+  "wscale": "güi escale",
+  "auto-cost": "auto cost",
+  "reference-bandwidth": "réferens bánduiz",
+  "BW": "be uve doble",
+  "BDR": "be de erre",
+  "fc": "efe ce",
+  "fd": "efe de",
+  "ff": "efe efe",
+  "TIME_WAIT": "taim güeit",
+  "MSL": "eme ese ele",
+  "+trace": "más treis",
+  "api.": "api",
+  "api": "api",
+  "tc": "te ce",
+  "ICMPv6": "i ce eme pe uve seis",
+  "ff02": "efe efe cero dos",
+  "53": "cincuenta y tres",
+  "MAIL": "méil",
+  "FROM": "from",
+  "RCPT": "ricipient",
+  "TO": "tu",
+  "DATA": "deita",
+  "From": "from",
+  "To": "tu",
+  "Subject": "sábyect",
+  "main.cf": "mein punto ce efe",
+  "250": "doscientos cincuenta",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que un router IPv6 *nunca* parte un paquete que no cabe?",
+   "titulo": "NUNCA *TROCEA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✂️",
+    "linea1": "router IPv6",
+    "linea2": "NO FRAGMENTA"
+   }
+  },
+  {
+   "tag": "en IPv4",
+   "sub": "En IPv4 el router lo partía en *trozos* y seguía. En IPv6, lo tira.",
+   "titulo": "EN IPv4, *SÍ*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "4️⃣",
+      "izq": "IPv4",
+      "der": "trocea"
+     },
+     {
+      "icono": "6️⃣",
+      "izq": "IPv6",
+      "der": "descarta",
+      "rojo": true,
+      "en": "tira."
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "el aviso",
+   "sub": "Y devuelve un ICMPv6 *Packet Too Big*, con el tamaño máximo que sí cabe.",
+   "titulo": "PACKET *TOO BIG*",
+   "visual": {
+    "tipo": "big",
+    "big": "Packet Too Big · MTU 1280",
+    "small": "vuelve al origen"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el origen",
+   "sub": "Entonces el *origen* ajusta: o manda más pequeño, o lo fragmenta él con una cabecera de extensión.",
+   "titulo": "LO HACE *EL ORIGEN*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📦",
+    "linea1": "cabecera de extensión",
+    "linea2": "FRAGMENT"
+   },
+   "num": 3
+  },
+  {
+   "tag": "el mínimo",
+   "sub": "Por eso IPv6 exige que todo enlace aguante al menos mil doscientos *ochenta* bytes.",
+   "titulo": "EL *MÍNIMO*",
+   "visual": {
+    "tipo": "big",
+    "big": "MTU ≥ 1280",
+    "small": "en todo enlace IPv6"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. En IPv6 el router no trocea: avisa... y el *origen* se adapta.",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "router → Packet Too Big",
+    "small": "el origen fragmenta"
+   }
+  }
+ ],
+ "examen": "PA3"
+}

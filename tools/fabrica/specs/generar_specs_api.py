@@ -16,7 +16,7 @@ PRON = {
     "EUI-64": "e u i sesenta y cuatro", "fe80": "efe e ochenta", "ff:fe": "efe efe efe e", "6to4": "seis tu cuatro", "2002": "dos mil dos",
     "SYN": "sin", "ACK": "ak", "FIN": "fin", "MSS": "eme ese ese", "BDP": "be de pe", "RTT": "erre te te", "SACK": "sak", "ISN": "i ese ene",
     "postfix": "póstfix", "mutt": "mat", "dovecot": "dóvcot", "myhostname": "mai jóstneim", "mydomain": "mai doméin", "LSID": "ele ese i de",
-    "DR": "de erre", "NOERROR": "no érror", "ANSWER": "ánser", "wscale": "güi escale", "auto-cost": "auto cost", "reference-bandwidth": "réferens bánduiz", "BW": "be uve doble", "BDR": "be de erre", "fc": "efe ce", "fd": "efe de", "ff": "efe efe", "TIME_WAIT": "taim güeit", "MSL": "eme ese ele", "+trace": "más treis", "api.": "api", "api": "api", "tc": "te ce", "ICMPv6": "i ce eme pe uve seis", "ff02": "efe efe cero dos", "53": "cincuenta y tres", "MAIL": "méil", "FROM": "from", "RCPT": "ricipient", "TO": "tu", "DATA": "deita", "From": "from", "To": "tu", "Subject": "sábyect", "main.cf": "mein punto ce efe", "250": "doscientos cincuenta", "ID": "i de", "RA": "erre a", "NS/NA": "ene ese y ene a",
+    "DR": "de erre", "Packet": "páket", "Too": "tu", "Big": "big", "4xx": "cuatrocientos", "5xx": "quinientos", "NOERROR": "no érror", "ANSWER": "ánser", "wscale": "güi escale", "auto-cost": "auto cost", "reference-bandwidth": "réferens bánduiz", "BW": "be uve doble", "BDR": "be de erre", "fc": "efe ce", "fd": "efe de", "ff": "efe efe", "TIME_WAIT": "taim güeit", "MSL": "eme ese ele", "+trace": "más treis", "api.": "api", "api": "api", "tc": "te ce", "ICMPv6": "i ce eme pe uve seis", "ff02": "efe efe cero dos", "53": "cincuenta y tres", "MAIL": "méil", "FROM": "from", "RCPT": "ricipient", "TO": "tu", "DATA": "deita", "From": "from", "To": "tu", "Subject": "sábyect", "main.cf": "mein punto ce efe", "250": "doscientos cincuenta", "ID": "i de", "RA": "erre a", "NS/NA": "ene ese y ene a",
 }
 
 
@@ -152,7 +152,7 @@ VIDEOS += [
         ("la ventaja", "¿La gracia? Si cambias un prefijo... no se recalcula todo el *árbol.* Solo cambia una LSA.", "LA *VENTAJA*",
          A("🌳", "cambias un prefijo", "SIN RECALCULAR TODO")),
         ("en resumen", "Así que ya sabes. Router y Network, topología. Intra-Area-Prefix, las *redes.* Link, el enlace.", "EN *RESUMEN*",
-         B("topología ≠ prefijos", "separados en OSPFv3")),
+         B("topología | prefijos", "separados en OSPFv3")),
     ]),
     v("api-g-6to4", "IPv6 escondido en IPv4", "Los túneles 6to4", "API · IPv6", "ipv6", [
         ("la curiosidad", "¿Sabías que se puede viajar en IPv6... por una red que solo entiende *IPv4?*", "IPv6 *POR IPv4*",
@@ -454,6 +454,52 @@ VIDEOS += [
          A("➕", "costes de salida", "GANA LA MENOR SUMA")),
         ("en resumen", "Así que ya sabes. Referencia entre ancho de banda... y nunca menos de *uno.*", "EN *RESUMEN*",
          B("coste = ref / BW ≥ 1", "OSPF")),
+    ]),
+]
+
+VIDEOS += [
+    # ---------------- tanda 9
+    v("api-g-ipv6-no-fragmenta", "Los routers IPv6 no trocean", "Fragmentación solo en origen", "API · IPv6", "ipv6", [
+        ("la curiosidad", "¿Sabías que un router IPv6 *nunca* parte un paquete que no cabe?", "NUNCA *TROCEA*",
+         A("✂️", "router IPv6", "NO FRAGMENTA")),
+        ("en IPv4", "En IPv4 el router lo partía en *trozos* y seguía. En IPv6, lo tira.", "EN IPv4, *SÍ*",
+         F([{"icono": "4️⃣", "izq": "IPv4", "der": "trocea"}, {"icono": "6️⃣", "izq": "IPv6", "der": "descarta", "rojo": True, "en": "tira."}])),
+        ("el aviso", "Y devuelve un ICMPv6 *Packet Too Big*, con el tamaño máximo que sí cabe.", "PACKET *TOO BIG*",
+         B("Packet Too Big · MTU 1280", "vuelve al origen")),
+        ("el origen", "Entonces el *origen* ajusta: o manda más pequeño, o lo fragmenta él con una cabecera de extensión.", "LO HACE *EL ORIGEN*",
+         A("📦", "cabecera de extensión", "FRAGMENT")),
+        ("el mínimo", "Por eso IPv6 exige que todo enlace aguante al menos mil doscientos *ochenta* bytes.", "EL *MÍNIMO*",
+         B("MTU ≥ 1280", "en todo enlace IPv6")),
+        ("en resumen", "Así que ya sabes. En IPv6 el router no trocea: avisa... y el *origen* se adapta.", "EN *RESUMEN*",
+         B("router → Packet Too Big", "el origen fragmenta")),
+    ]),
+    v("api-g-ventana-cero", "Cuando el receptor dice basta", "Ventana cero y sondeo", "API · TCP", "tcp", [
+        ("la curiosidad", "¿Sabías que un receptor TCP puede decir al emisor: para, ahora no me cabe *nada?*", "¡PARA!",
+         A("✋", "receptor lleno", "VENTANA 0")),
+        ("el anuncio", "Lo hace anunciando ventana *cero.* Su búfer está lleno: la aplicación no lee lo bastante rápido.", "VENTANA *CERO*",
+         B("win = 0", "búfer lleno")),
+        ("el emisor", "El emisor se *para*, pero no se queda mudo: cada cierto tiempo manda una sonda.", "LA *SONDA*",
+         A("📡", "zero window probe", "¿YA HAY SITIO?")),
+        ("el reinicio", "Cuando la aplicación lee, el receptor anuncia ventana nueva... y todo *sigue.*", "SE *REANUDA*",
+         B("win = 64000", "vuelve a enviar")),
+        ("no confundir", "Esto es control de *flujo:* protege al receptor. El de congestión protege a la red.", "FLUJO VS *CONGESTIÓN*",
+         F([{"icono": "📥", "izq": "flujo", "der": "receptor", "en": "*flujo:*"}, {"icono": "🛣️", "izq": "congestión", "der": "la red"}])),
+        ("en resumen", "Así que ya sabes. Ventana cero, el emisor para... y sondea hasta que hay *sitio.*", "EN *RESUMEN*",
+         B("win 0 → sonda → win > 0", "control de flujo")),
+    ]),
+    v("api-g-codigos-smtp", "Lo que te contesta un servidor de correo", "Códigos SMTP", "API · Correo", "correo", [
+        ("la curiosidad", "¿Sabías que con solo mirar el *primer* número... sabes si tu correo ha ido bien?", "EL *PRIMER* NÚMERO",
+         A("🔢", "códigos SMTP", "3 CIFRAS")),
+        ("el dos", "Si empieza por *dos*, todo bien. Doscientos cincuenta: hecho.", "2: *BIEN*",
+         B("250 OK", "aceptado")),
+        ("el tres", "Si empieza por *tres*, sigue: el servidor espera algo más. Trescientos cincuenta y cuatro, tras DATA.", "3: *SIGUE*",
+         B("354 start mail input", "manda el texto")),
+        ("cuatro y cinco", "Cuatro es un error *temporal:* prueba luego. Cinco es *definitivo:* no insistas.", "4 Y *5*",
+         F([{"icono": "⏳", "izq": "4xx", "der": "temporal", "en": "*temporal:*"}, {"icono": "⛔", "izq": "5xx", "der": "definitivo", "rojo": True, "en": "*definitivo:*"}])),
+        ("el saludo", "Y la conversación empieza con doscientos veinte, el saludo... y tú respondes con *EHLO.*", "EL *SALUDO*",
+         B("220 → EHLO", "inicio de sesión")),
+        ("en resumen", "Así que ya sabes. Dos, bien. Tres, sigue. Cuatro, luego. Cinco, *nunca.*", "EN *RESUMEN*",
+         B("2 · 3 · 4 · 5", "bien · sigue · luego · nunca")),
     ]),
 ]
 
