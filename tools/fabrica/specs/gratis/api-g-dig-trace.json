@@ -1,0 +1,170 @@
+{
+ "id": "api-g-dig-trace",
+ "titulo": "Seguir una pregunta desde la raíz",
+ "texto": "dig +trace",
+ "tema": "API · DNS",
+ "etiqueta": "dns",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "TIME_WAIT": "taim güeit",
+  "MSL": "eme ese ele",
+  "+trace": "más treis",
+  "api.": "api",
+  "api": "api",
+  "tc": "te ce",
+  "ICMPv6": "i ce eme pe uve seis",
+  "ff02": "efe efe cero dos",
+  "53": "cincuenta y tres",
+  "MAIL": "méil",
+  "FROM": "from",
+  "RCPT": "ricipient",
+  "TO": "tu",
+  "DATA": "deita",
+  "From": "from",
+  "To": "tu",
+  "Subject": "sábyect",
+  "main.cf": "mein punto ce efe",
+  "250": "doscientos cincuenta",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que puedes ver el *camino* entero de una pregunta DNS, salto a salto?",
+   "titulo": "EL *CAMINO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧭",
+    "linea1": "dig +trace",
+    "linea2": "SALTO A SALTO"
+   }
+  },
+  {
+   "tag": "la raíz",
+   "sub": "Primero pregunta a la *raíz*, el punto. Ella no sabe la respuesta... pero sabe quién lleva api.",
+   "titulo": "LA *RAÍZ*",
+   "visual": {
+    "tipo": "big",
+    "big": ". → NS de api.",
+    "small": "te manda abajo"
+   },
+   "num": 1
+  },
+  {
+   "tag": "bajando",
+   "sub": "Luego al servidor de api, que te manda al de lab punto api. Cada uno te *delega* al siguiente.",
+   "titulo": "BAJANDO *EL ÁRBOL*",
+   "visual": {
+    "tipo": "big",
+    "big": "api. → lab.api.",
+    "small": "referencias"
+   },
+   "num": 2
+  },
+  {
+   "tag": "la respuesta",
+   "sub": "Hasta llegar al que tiene la zona. Ese contesta con *aa:* la respuesta de verdad.",
+   "titulo": "LA *RESPUESTA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✅",
+    "linea1": "el último servidor",
+    "linea2": "RESPONDE CON aa"
+   },
+   "num": 3
+  },
+  {
+   "tag": "iterativo",
+   "sub": "Eso es una resolución *iterativa:* tú preguntas a cada uno. Recursiva es cuando otro lo hace por ti.",
+   "titulo": "*ITERATIVA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🚶",
+      "izq": "iterativa",
+      "der": "vas tú",
+      "en": "*iterativa:*"
+     },
+     {
+      "icono": "🚕",
+      "izq": "recursiva",
+      "der": "te llevan"
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Raíz, dominio, subdominio... cada uno te manda *abajo.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": ". → api. → lab.api.",
+    "small": "dig +trace"
+   }
+  }
+ ],
+ "examen": "PA3"
+}

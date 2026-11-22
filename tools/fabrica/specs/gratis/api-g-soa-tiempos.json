@@ -1,0 +1,160 @@
+{
+ "id": "api-g-soa-tiempos",
+ "titulo": "Los cuatro relojes del SOA",
+ "texto": "refresh, retry, expire y TTL",
+ "tema": "API · DNS",
+ "etiqueta": "dns",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "TIME_WAIT": "taim güeit",
+  "MSL": "eme ese ele",
+  "+trace": "más treis",
+  "api.": "api",
+  "api": "api",
+  "tc": "te ce",
+  "ICMPv6": "i ce eme pe uve seis",
+  "ff02": "efe efe cero dos",
+  "53": "cincuenta y tres",
+  "MAIL": "méil",
+  "FROM": "from",
+  "RCPT": "ricipient",
+  "TO": "tu",
+  "DATA": "deita",
+  "From": "from",
+  "To": "tu",
+  "Subject": "sábyect",
+  "main.cf": "mein punto ce efe",
+  "250": "doscientos cincuenta",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que cada zona DNS lleva *cuatro* relojes escondidos?",
+   "titulo": "CUATRO *RELOJES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⏱️",
+    "linea1": "el registro SOA",
+    "linea2": "4 TIEMPOS"
+   }
+  },
+  {
+   "tag": "refresh",
+   "sub": "*Refresh:* cada cuánto el esclavo pregunta al máster si el serial ha cambiado.",
+   "titulo": "*REFRESH*",
+   "visual": {
+    "tipo": "big",
+    "big": "refresh",
+    "small": "cada cuánto mira el serial"
+   },
+   "num": 1
+  },
+  {
+   "tag": "retry",
+   "sub": "*Retry:* si el máster no contesta, cada cuánto lo vuelve a intentar.",
+   "titulo": "*RETRY*",
+   "visual": {
+    "tipo": "big",
+    "big": "retry",
+    "small": "si falla, reintenta"
+   },
+   "num": 2
+  },
+  {
+   "tag": "expire",
+   "sub": "*Expire:* si pasa este tiempo sin hablar con el máster... el esclavo deja de responder esa zona.",
+   "titulo": "*EXPIRE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "💀",
+    "linea1": "sin máster demasiado tiempo",
+    "linea2": "DEJA DE RESPONDER",
+    "stamp": "¡OJO!"
+   },
+   "num": 3
+  },
+  {
+   "tag": "el último",
+   "sub": "Y el último número: cuánto se guardan en caché las respuestas *negativas*, las de que no existe.",
+   "titulo": "EL *NEGATIVO*",
+   "visual": {
+    "tipo": "big",
+    "big": "minimum / TTL negativo",
+    "small": "caché de NXDOMAIN"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Refresh mira, retry reintenta, expire se rinde... y el último guarda los *no.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "refresh · retry · expire · min",
+    "small": "el SOA"
+   }
+  }
+ ],
+ "examen": "PA3"
+}

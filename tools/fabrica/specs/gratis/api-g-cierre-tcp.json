@@ -1,0 +1,161 @@
+{
+ "id": "api-g-cierre-tcp",
+ "titulo": "Por qué TCP tarda en despedirse",
+ "texto": "FIN, ACK y TIME_WAIT",
+ "tema": "API · TCP",
+ "etiqueta": "tcp",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "TIME_WAIT": "taim güeit",
+  "MSL": "eme ese ele",
+  "+trace": "más treis",
+  "api.": "api",
+  "api": "api",
+  "tc": "te ce",
+  "ICMPv6": "i ce eme pe uve seis",
+  "ff02": "efe efe cero dos",
+  "53": "cincuenta y tres",
+  "MAIL": "méil",
+  "FROM": "from",
+  "RCPT": "ricipient",
+  "TO": "tu",
+  "DATA": "deita",
+  "From": "from",
+  "To": "tu",
+  "Subject": "sábyect",
+  "main.cf": "mein punto ce efe",
+  "250": "doscientos cincuenta",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que TCP necesita *cuatro* mensajes para cerrar... y luego aún espera?",
+   "titulo": "CUATRO *PARA CERRAR*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "👋",
+    "linea1": "cerrar una conexión",
+    "linea2": "4 MENSAJES"
+   }
+  },
+  {
+   "tag": "medio cierre",
+   "sub": "Cada lado cierra su *mitad.* Uno manda FIN, el otro confirma con ACK... pero aún puede enviar.",
+   "titulo": "MEDIO *CIERRE*",
+   "visual": {
+    "tipo": "big",
+    "big": "FIN → ACK",
+    "small": "una dirección cerrada"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la otra mitad",
+   "sub": "Cuando el otro termina, manda su FIN... y el primero responde con el último *ACK.*",
+   "titulo": "LA OTRA *MITAD*",
+   "visual": {
+    "tipo": "big",
+    "big": "FIN → ACK",
+    "small": "la otra dirección"
+   },
+   "num": 2
+  },
+  {
+   "tag": "time wait",
+   "sub": "Y el que cerró primero se queda en *TIME_WAIT*: dos veces la vida máxima de un segmento.",
+   "titulo": "TIME *WAIT*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⏳",
+    "linea1": "el que cerró primero",
+    "linea2": "ESPERA 2·MSL",
+    "stamp": "¡OJO!"
+   },
+   "num": 3
+  },
+  {
+   "tag": "por qué",
+   "sub": "¿Para qué? Por si el último ACK se pierde... y para que paquetes *viejos* no se cuelen en una conexión nueva.",
+   "titulo": "¿POR *QUÉ*?",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧟",
+    "linea1": "paquetes rezagados",
+    "linea2": "QUE NO SE CUELEN"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. FIN y ACK por cada lado... y el primero en cerrar, *espera.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "FIN·ACK·FIN·ACK + TIME_WAIT",
+    "small": "cierre TCP"
+   }
+  }
+ ],
+ "examen": "PA3"
+}

@@ -16,7 +16,7 @@ PRON = {
     "EUI-64": "e u i sesenta y cuatro", "fe80": "efe e ochenta", "ff:fe": "efe efe efe e", "6to4": "seis tu cuatro", "2002": "dos mil dos",
     "SYN": "sin", "ACK": "ak", "FIN": "fin", "MSS": "eme ese ese", "BDP": "be de pe", "RTT": "erre te te", "SACK": "sak", "ISN": "i ese ene",
     "postfix": "póstfix", "mutt": "mat", "dovecot": "dóvcot", "myhostname": "mai jóstneim", "mydomain": "mai doméin", "LSID": "ele ese i de",
-    "DR": "de erre", "tc": "te ce", "ICMPv6": "i ce eme pe uve seis", "ff02": "efe efe cero dos", "53": "cincuenta y tres", "MAIL": "méil", "FROM": "from", "RCPT": "ricipient", "TO": "tu", "DATA": "deita", "From": "from", "To": "tu", "Subject": "sábyect", "main.cf": "mein punto ce efe", "250": "doscientos cincuenta", "ID": "i de", "RA": "erre a", "NS/NA": "ene ese y ene a",
+    "DR": "de erre", "TIME_WAIT": "taim güeit", "MSL": "eme ese ele", "+trace": "más treis", "api.": "api", "api": "api", "tc": "te ce", "ICMPv6": "i ce eme pe uve seis", "ff02": "efe efe cero dos", "53": "cincuenta y tres", "MAIL": "méil", "FROM": "from", "RCPT": "ricipient", "TO": "tu", "DATA": "deita", "From": "from", "To": "tu", "Subject": "sábyect", "main.cf": "mein punto ce efe", "250": "doscientos cincuenta", "ID": "i de", "RA": "erre a", "NS/NA": "ene ese y ene a",
 }
 
 
@@ -316,6 +316,52 @@ VIDEOS += [
          B("RA → prefijo /64", "autoconfiguración")),
         ("en resumen", "Así que ya sabes. Nada de ARP ni broadcast: Neighbor Discovery... y *multicast.*", "EN *RESUMEN*",
          B("NS/NA + ff02::1:ff..", "en vez de ARP")),
+    ]),
+]
+
+VIDEOS += [
+    # ---------------- tanda 6
+    v("api-g-soa-tiempos", "Los cuatro relojes del SOA", "refresh, retry, expire y TTL", "API · DNS", "dns", [
+        ("la curiosidad", "¿Sabías que cada zona DNS lleva *cuatro* relojes escondidos?", "CUATRO *RELOJES*",
+         A("⏱️", "el registro SOA", "4 TIEMPOS")),
+        ("refresh", "*Refresh:* cada cuánto el esclavo pregunta al máster si el serial ha cambiado.", "*REFRESH*",
+         B("refresh", "cada cuánto mira el serial")),
+        ("retry", "*Retry:* si el máster no contesta, cada cuánto lo vuelve a intentar.", "*RETRY*",
+         B("retry", "si falla, reintenta")),
+        ("expire", "*Expire:* si pasa este tiempo sin hablar con el máster... el esclavo deja de responder esa zona.", "*EXPIRE*",
+         A("💀", "sin máster demasiado tiempo", "DEJA DE RESPONDER", "¡OJO!")),
+        ("el último", "Y el último número: cuánto se guardan en caché las respuestas *negativas*, las de que no existe.", "EL *NEGATIVO*",
+         B("minimum / TTL negativo", "caché de NXDOMAIN")),
+        ("en resumen", "Así que ya sabes. Refresh mira, retry reintenta, expire se rinde... y el último guarda los *no.*", "EN *RESUMEN*",
+         B("refresh · retry · expire · min", "el SOA")),
+    ]),
+    v("api-g-dig-trace", "Seguir una pregunta desde la raíz", "dig +trace", "API · DNS", "dns", [
+        ("la curiosidad", "¿Sabías que puedes ver el *camino* entero de una pregunta DNS, salto a salto?", "EL *CAMINO*",
+         A("🧭", "dig +trace", "SALTO A SALTO")),
+        ("la raíz", "Primero pregunta a la *raíz*, el punto. Ella no sabe la respuesta... pero sabe quién lleva api.", "LA *RAÍZ*",
+         B(". → NS de api.", "te manda abajo")),
+        ("bajando", "Luego al servidor de api, que te manda al de lab punto api. Cada uno te *delega* al siguiente.", "BAJANDO *EL ÁRBOL*",
+         B("api. → lab.api.", "referencias")),
+        ("la respuesta", "Hasta llegar al que tiene la zona. Ese contesta con *aa:* la respuesta de verdad.", "LA *RESPUESTA*",
+         A("✅", "el último servidor", "RESPONDE CON aa")),
+        ("iterativo", "Eso es una resolución *iterativa:* tú preguntas a cada uno. Recursiva es cuando otro lo hace por ti.", "*ITERATIVA*",
+         F([{"icono": "🚶", "izq": "iterativa", "der": "vas tú", "en": "*iterativa:*"}, {"icono": "🚕", "izq": "recursiva", "der": "te llevan"}])),
+        ("en resumen", "Así que ya sabes. Raíz, dominio, subdominio... cada uno te manda *abajo.*", "EN *RESUMEN*",
+         B(". → api. → lab.api.", "dig +trace")),
+    ]),
+    v("api-g-cierre-tcp", "Por qué TCP tarda en despedirse", "FIN, ACK y TIME_WAIT", "API · TCP", "tcp", [
+        ("la curiosidad", "¿Sabías que TCP necesita *cuatro* mensajes para cerrar... y luego aún espera?", "CUATRO *PARA CERRAR*",
+         A("👋", "cerrar una conexión", "4 MENSAJES")),
+        ("medio cierre", "Cada lado cierra su *mitad.* Uno manda FIN, el otro confirma con ACK... pero aún puede enviar.", "MEDIO *CIERRE*",
+         B("FIN → ACK", "una dirección cerrada")),
+        ("la otra mitad", "Cuando el otro termina, manda su FIN... y el primero responde con el último *ACK.*", "LA OTRA *MITAD*",
+         B("FIN → ACK", "la otra dirección")),
+        ("time wait", "Y el que cerró primero se queda en *TIME_WAIT*: dos veces la vida máxima de un segmento.", "TIME *WAIT*",
+         A("⏳", "el que cerró primero", "ESPERA 2·MSL", "¡OJO!")),
+        ("por qué", "¿Para qué? Por si el último ACK se pierde... y para que paquetes *viejos* no se cuelen en una conexión nueva.", "¿POR *QUÉ*?",
+         A("🧟", "paquetes rezagados", "QUE NO SE CUELEN")),
+        ("en resumen", "Así que ya sabes. FIN y ACK por cada lado... y el primero en cerrar, *espera.*", "EN *RESUMEN*",
+         B("FIN·ACK·FIN·ACK + TIME_WAIT", "cierre TCP")),
     ]),
 ]
 
