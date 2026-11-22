@@ -1,0 +1,152 @@
+{
+ "id": "api-g-delegacion-glue",
+ "titulo": "Cómo se regala un trozo de dominio",
+ "texto": "Delegar: NS + pegamento",
+ "tema": "API · DNS",
+ "etiqueta": "dns",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que un servidor DNS puede *regalar* un trozo de su dominio a otro?",
+   "titulo": "REGALAR *UN TROZO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎁",
+    "linea1": "delegar un subdominio",
+    "linea2": "SUBGRUP.LAB.API"
+   }
+  },
+  {
+   "tag": "el NS",
+   "sub": "Primera línea: subgrup, NS, y el servidor nuevo. Es decir: de aquí para abajo... *pregúntale* a él.",
+   "titulo": "LÍNEA 1: *NS*",
+   "visual": {
+    "tipo": "big",
+    "big": "subgrup NS ns.subgrup",
+    "small": "de aquí abajo, él"
+   },
+   "num": 1
+  },
+  {
+   "tag": "el pegamento",
+   "sub": "Segunda línea: la IP de ese servidor. Se llama *pegamento*, glue en inglés.",
+   "titulo": "LÍNEA 2: *GLUE*",
+   "visual": {
+    "tipo": "big",
+    "big": "ns.subgrup A 10.0.1.130",
+    "small": "su IP"
+   },
+   "num": 2
+  },
+  {
+   "tag": "sin glue",
+   "sub": "Sin el pegamento... sabes *a quién* preguntar, pero no dónde está. Y se queda atascado.",
+   "titulo": "SIN *GLUE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧩",
+    "linea1": "sabes el nombre, no la IP",
+    "linea2": "SE QUEDA ATASCADO",
+    "stamp": "¡OJO!"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en una captura",
+   "sub": "En una captura lo ves así: una respuesta sin answer... con un NS y una IP. Eso es una *delegación.*",
+   "titulo": "EN LA *CAPTURA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📭",
+      "izq": "answer",
+      "der": "vacía"
+     },
+     {
+      "icono": "➡️",
+      "izq": "NS + A",
+      "der": "delegación",
+      "en": "*delegación.*"
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Para delegar: NS en el corte... y la A del servidor, el *pegamento.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "NS + A (glue)",
+    "small": "para delegar"
+   }
+  }
+ ],
+ "examen": "PA3"
+}

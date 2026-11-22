@@ -1,0 +1,154 @@
+{
+ "id": "api-g-punto-final",
+ "titulo": "El punto que rompe tu zona",
+ "texto": "Nombres relativos y absolutos",
+ "tema": "API · DNS",
+ "etiqueta": "dns",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que en una zona DNS... olvidar un *punto* cambia el nombre entero?",
+   "titulo": "UN *PUNTO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "•",
+    "linea1": "el punto final",
+    "linea2": "LO CAMBIA TODO",
+    "stamp": "¡OJO!"
+   }
+  },
+  {
+   "tag": "relativo",
+   "sub": "Sin punto final, el nombre es *relativo:* se le pega el origen. ns se convierte en ns.lab.api.",
+   "titulo": "SIN PUNTO = *RELATIVO*",
+   "visual": {
+    "tipo": "big",
+    "big": "ns → ns.lab.api.",
+    "small": "se le pega el origen"
+   },
+   "num": 1
+  },
+  {
+   "tag": "absoluto",
+   "sub": "Con punto final es *absoluto:* se queda tal cual. ns.lab.api. con punto, ya está completo.",
+   "titulo": "CON PUNTO = *ABSOLUTO*",
+   "visual": {
+    "tipo": "big",
+    "big": "ns.lab.api.",
+    "small": "con punto: completo"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el error",
+   "sub": "Si escribes ns.lab.api sin punto... bind lo convierte en ns.lab.api.lab.api. Un nombre *imposible.*",
+   "titulo": "EL *ERROR*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "💥",
+    "linea1": "sin punto final",
+    "linea2": "ns.lab.api.lab.api.",
+    "stamp": "¡MAL!"
+   },
+   "num": 3
+  },
+  {
+   "tag": "la inversa",
+   "sub": "En la zona inversa, el origen es in-addr.arpa. Así que los nombres van *siempre* con punto.",
+   "titulo": "EN LA *INVERSA*",
+   "visual": {
+    "tipo": "big",
+    "big": "5 PTR www.lab.api.",
+    "small": "siempre con punto"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Sin punto, se le pega el origen. Con punto, es el nombre *completo.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "➕",
+      "izq": "sin punto",
+      "der": "+ origen",
+      "en": "Sin"
+     },
+     {
+      "icono": "✅",
+      "izq": "con punto",
+      "der": "completo",
+      "en": "Con"
+     }
+    ]
+   }
+  }
+ ],
+ "examen": "PA3"
+}

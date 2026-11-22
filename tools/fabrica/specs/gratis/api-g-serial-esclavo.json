@@ -1,0 +1,153 @@
+{
+ "id": "api-g-serial-esclavo",
+ "titulo": "Por qué el esclavo no se entera",
+ "texto": "El número de serie del SOA",
+ "tema": "API · DNS",
+ "etiqueta": "dns",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que puedes cambiar tu zona DNS... y que la copia *no* se entere?",
+   "titulo": "LA COPIA *NO SE ENTERA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🙈",
+    "linea1": "máster y esclavo",
+    "linea2": "DOS SERVIDORES"
+   }
+  },
+  {
+   "tag": "el esclavo",
+   "sub": "El esclavo no escribe nada. Le *pide* la zona entera al máster. Con una pregunta AXFR, por TCP.",
+   "titulo": "EL *ESCLAVO*",
+   "visual": {
+    "tipo": "big",
+    "big": "AXFR · TCP",
+    "small": "dame toda la zona"
+   },
+   "num": 1
+  },
+  {
+   "tag": "el serial",
+   "sub": "Pero antes mira el número de serie del SOA. Si no ha *subido*... cree que no ha cambiado nada.",
+   "titulo": "EL *SERIAL*",
+   "visual": {
+    "tipo": "big",
+    "big": "2018111201",
+    "small": "número de serie"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el fallo",
+   "sub": "Resultado: el máster contesta lo nuevo... y el esclavo sigue diciendo que no *existe.*",
+   "titulo": "EL *FALLO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "✅",
+      "izq": "máster",
+      "der": "lo nuevo"
+     },
+     {
+      "icono": "❌",
+      "izq": "esclavo",
+      "der": "NXDOMAIN",
+      "rojo": true,
+      "en": "*existe.*"
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "la regla",
+   "sub": "La regla: cada vez que toques el máster, sube el serial en uno. Entonces avisa con NOTIFY... y el esclavo *copia.*",
+   "titulo": "LA *REGLA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⬆️",
+    "linea1": "cambias algo",
+    "linea2": "SERIAL + 1",
+    "stamp": "SIEMPRE"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. El esclavo solo copia si el serial del máster es *mayor.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "serial + 1",
+    "small": "o no hay copia"
+   }
+  }
+ ],
+ "examen": "PA3"
+}
