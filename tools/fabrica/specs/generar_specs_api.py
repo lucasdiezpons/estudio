@@ -16,7 +16,7 @@ PRON = {
     "EUI-64": "e u i sesenta y cuatro", "fe80": "efe e ochenta", "ff:fe": "efe efe efe e", "6to4": "seis tu cuatro", "2002": "dos mil dos",
     "SYN": "sin", "ACK": "ak", "FIN": "fin", "MSS": "eme ese ese", "BDP": "be de pe", "RTT": "erre te te", "SACK": "sak", "ISN": "i ese ene",
     "postfix": "póstfix", "mutt": "mat", "dovecot": "dóvcot", "myhostname": "mai jóstneim", "mydomain": "mai doméin", "LSID": "ele ese i de",
-    "DR": "de erre", "BDR": "be de erre", "fc": "efe ce", "fd": "efe de", "ff": "efe efe", "TIME_WAIT": "taim güeit", "MSL": "eme ese ele", "+trace": "más treis", "api.": "api", "api": "api", "tc": "te ce", "ICMPv6": "i ce eme pe uve seis", "ff02": "efe efe cero dos", "53": "cincuenta y tres", "MAIL": "méil", "FROM": "from", "RCPT": "ricipient", "TO": "tu", "DATA": "deita", "From": "from", "To": "tu", "Subject": "sábyect", "main.cf": "mein punto ce efe", "250": "doscientos cincuenta", "ID": "i de", "RA": "erre a", "NS/NA": "ene ese y ene a",
+    "DR": "de erre", "NOERROR": "no érror", "ANSWER": "ánser", "wscale": "güi escale", "auto-cost": "auto cost", "reference-bandwidth": "réferens bánduiz", "BW": "be uve doble", "BDR": "be de erre", "fc": "efe ce", "fd": "efe de", "ff": "efe efe", "TIME_WAIT": "taim güeit", "MSL": "eme ese ele", "+trace": "más treis", "api.": "api", "api": "api", "tc": "te ce", "ICMPv6": "i ce eme pe uve seis", "ff02": "efe efe cero dos", "53": "cincuenta y tres", "MAIL": "méil", "FROM": "from", "RCPT": "ricipient", "TO": "tu", "DATA": "deita", "From": "from", "To": "tu", "Subject": "sábyect", "main.cf": "mein punto ce efe", "250": "doscientos cincuenta", "ID": "i de", "RA": "erre a", "NS/NA": "ene ese y ene a",
 }
 
 
@@ -408,6 +408,52 @@ VIDEOS += [
          A("🏷️", "MX → nombre", "NUNCA UNA IP", "¡OJO!")),
         ("en resumen", "Así que ya sabes. Número más bajo, primero... y siempre a un nombre con su *A.*", "EN *RESUMEN*",
          B("MX menor = primero", "y apunta a un nombre")),
+    ]),
+]
+
+VIDEOS += [
+    # ---------------- tanda 8
+    v("api-g-wscale", "El número que multiplica la ventana", "Window scaling en el SYN", "API · TCP", "tcp", [
+        ("la curiosidad", "¿Sabías que la ventana de TCP que ves en una captura... puede ser *mentira?*", "UNA VENTANA *FALSA*",
+         A("🪟", "campo window", "NO ES EL VALOR REAL")),
+        ("el límite", "El campo ventana tiene dieciséis bits. Como mucho, sesenta y cinco mil quinientos treinta y *cinco.*", "EL *LÍMITE*",
+         B("16 bits → 65535", "ventana máxima")),
+        ("la escala", "Por eso en el SYN cada lado anuncia un factor de *escala:* cuántas veces desplazar a la izquierda.", "LA *ESCALA*",
+         B("wscale = 7 → × 128", "se anuncia en el SYN")),
+        ("la cuenta", "Si ves ventana quinientos uno con escala siete... la real es quinientos uno por ciento veintiocho: sesenta y cuatro mil *ciento veintiocho.*", "LA *CUENTA*",
+         B("501 × 128 = 64128", "ventana real")),
+        ("la trampa", "La escala solo va en el *SYN.* Si la captura empieza después... no sabes el factor.", "LA *TRAMPA*",
+         A("🙈", "sin ver el SYN", "NO SABES LA ESCALA", "¡OJO!")),
+        ("en resumen", "Así que ya sabes. Ventana por dos elevado a la escala... y la escala, solo en el *SYN.*", "EN *RESUMEN*",
+         B("ventana · 2^escala", "window scaling")),
+    ]),
+    v("api-g-nxdomain-nodata", "No existe o no tiene eso", "NXDOMAIN vs respuesta vacía", "API · DNS", "dns", [
+        ("la curiosidad", "¿Sabías que el DNS tiene dos formas distintas de decirte que *no?*", "DOS *NOES*",
+         A("🙅", "respuestas negativas", "NO ES LO MISMO")),
+        ("nxdomain", "*NXDOMAIN:* ese nombre no existe. Ni con A, ni con MX, ni con nada.", "*NXDOMAIN*",
+         B("status: NXDOMAIN", "el nombre no existe")),
+        ("vacía", "La otra: NOERROR pero sin respuesta. El nombre *existe*... pero no tiene el tipo que pides.", "RESPUESTA *VACÍA*",
+         B("NOERROR · ANSWER: 0", "existe, pero sin ese tipo")),
+        ("ejemplo", "Pides el MX de www. Si www tiene A pero no MX... te llega la *vacía*, no NXDOMAIN.", "*EJEMPLO*",
+         F([{"icono": "❌", "izq": "noexiste", "der": "NXDOMAIN", "rojo": True}, {"icono": "📭", "izq": "www MX", "der": "ANSWER 0", "en": "*vacía*"}])),
+        ("el SOA", "En las dos, en autoridad viene el *SOA:* para saber cuánto guardar ese no en caché.", "EL *SOA*",
+         A("🗄️", "sección autoridad", "SOA → caché del no")),
+        ("en resumen", "Así que ya sabes. NXDOMAIN, el nombre no existe. Vacía, existe pero no tiene ese *tipo.*", "EN *RESUMEN*",
+         B("NXDOMAIN vs ANSWER 0", "dos noes distintos")),
+    ]),
+    v("api-g-coste-ospf", "Por qué OSPF ve iguales enlaces distintos", "Coste y ancho de banda de referencia", "API · OSPFv3", "ospfv3", [
+        ("la curiosidad", "¿Sabías que para OSPF un enlace de cien megas y uno de diez gigas... pueden *costar* lo mismo?", "CUESTAN *LO MISMO*",
+         A("⚖️", "100 Mb/s y 10 Gb/s", "COSTE 1")),
+        ("la fórmula", "El coste es la referencia entre el ancho de banda. Y la referencia por defecto son *cien* megas.", "LA *FÓRMULA*",
+         B("coste = 100 Mb/s / BW", "referencia por defecto")),
+        ("el problema", "Cien entre cien, uno. Cien entre diez mil... cero coma cero uno. Pero el mínimo es *uno.*", "EL *PROBLEMA*",
+         F([{"icono": "🐢", "izq": "100 Mb/s", "der": "coste 1"}, {"icono": "🚀", "izq": "10 Gb/s", "der": "coste 1", "rojo": True, "en": "*uno.*"}])),
+        ("el arreglo", "Solución: subir la referencia con auto-cost *reference-bandwidth.* En todos los routers igual.", "EL *ARREGLO*",
+         B("auto-cost reference-bandwidth", "en todos igual")),
+        ("la ruta", "Y el camino elegido es el de menor coste *sumado*, contando la salida de cada router.", "LA *RUTA*",
+         A("➕", "costes de salida", "GANA LA MENOR SUMA")),
+        ("en resumen", "Así que ya sabes. Referencia entre ancho de banda... y nunca menos de *uno.*", "EN *RESUMEN*",
+         B("coste = ref / BW ≥ 1", "OSPF")),
     ]),
 ]
 

@@ -1,0 +1,181 @@
+{
+ "id": "api-g-nxdomain-nodata",
+ "titulo": "No existe o no tiene eso",
+ "texto": "NXDOMAIN vs respuesta vacía",
+ "tema": "API · DNS",
+ "etiqueta": "dns",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "NOERROR": "no érror",
+  "ANSWER": "ánser",
+  "wscale": "güi escale",
+  "auto-cost": "auto cost",
+  "reference-bandwidth": "réferens bánduiz",
+  "BW": "be uve doble",
+  "BDR": "be de erre",
+  "fc": "efe ce",
+  "fd": "efe de",
+  "ff": "efe efe",
+  "TIME_WAIT": "taim güeit",
+  "MSL": "eme ese ele",
+  "+trace": "más treis",
+  "api.": "api",
+  "api": "api",
+  "tc": "te ce",
+  "ICMPv6": "i ce eme pe uve seis",
+  "ff02": "efe efe cero dos",
+  "53": "cincuenta y tres",
+  "MAIL": "méil",
+  "FROM": "from",
+  "RCPT": "ricipient",
+  "TO": "tu",
+  "DATA": "deita",
+  "From": "from",
+  "To": "tu",
+  "Subject": "sábyect",
+  "main.cf": "mein punto ce efe",
+  "250": "doscientos cincuenta",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que el DNS tiene dos formas distintas de decirte que *no?*",
+   "titulo": "DOS *NOES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🙅",
+    "linea1": "respuestas negativas",
+    "linea2": "NO ES LO MISMO"
+   }
+  },
+  {
+   "tag": "nxdomain",
+   "sub": "*NXDOMAIN:* ese nombre no existe. Ni con A, ni con MX, ni con nada.",
+   "titulo": "*NXDOMAIN*",
+   "visual": {
+    "tipo": "big",
+    "big": "status: NXDOMAIN",
+    "small": "el nombre no existe"
+   },
+   "num": 1
+  },
+  {
+   "tag": "vacía",
+   "sub": "La otra: NOERROR pero sin respuesta. El nombre *existe*... pero no tiene el tipo que pides.",
+   "titulo": "RESPUESTA *VACÍA*",
+   "visual": {
+    "tipo": "big",
+    "big": "NOERROR · ANSWER: 0",
+    "small": "existe, pero sin ese tipo"
+   },
+   "num": 2
+  },
+  {
+   "tag": "ejemplo",
+   "sub": "Pides el MX de www. Si www tiene A pero no MX... te llega la *vacía*, no NXDOMAIN.",
+   "titulo": "*EJEMPLO*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "❌",
+      "izq": "noexiste",
+      "der": "NXDOMAIN",
+      "rojo": true
+     },
+     {
+      "icono": "📭",
+      "izq": "www MX",
+      "der": "ANSWER 0",
+      "en": "*vacía*"
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "el SOA",
+   "sub": "En las dos, en autoridad viene el *SOA:* para saber cuánto guardar ese no en caché.",
+   "titulo": "EL *SOA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🗄️",
+    "linea1": "sección autoridad",
+    "linea2": "SOA → caché del no"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. NXDOMAIN, el nombre no existe. Vacía, existe pero no tiene ese *tipo.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "NXDOMAIN vs ANSWER 0",
+    "small": "dos noes distintos"
+   }
+  }
+ ],
+ "examen": "PA3"
+}
