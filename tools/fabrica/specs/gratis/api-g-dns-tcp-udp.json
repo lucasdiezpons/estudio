@@ -1,0 +1,166 @@
+{
+ "id": "api-g-dns-tcp-udp",
+ "titulo": "Cuándo el DNS deja el UDP",
+ "texto": "Puerto 53, UDP y TCP",
+ "tema": "API · DNS",
+ "etiqueta": "dns",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "tc": "te ce",
+  "ICMPv6": "i ce eme pe uve seis",
+  "ff02": "efe efe cero dos",
+  "53": "cincuenta y tres",
+  "MAIL": "méil",
+  "FROM": "from",
+  "RCPT": "ricipient",
+  "TO": "tu",
+  "DATA": "deita",
+  "From": "from",
+  "To": "tu",
+  "Subject": "sábyect",
+  "main.cf": "mein punto ce efe",
+  "250": "doscientos cincuenta",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que el DNS casi siempre va por UDP... pero a veces se pasa a *TCP?*",
+   "titulo": "UDP *O TCP*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔌",
+    "linea1": "puerto 53",
+    "linea2": "LOS DOS"
+   }
+  },
+  {
+   "tag": "lo normal",
+   "sub": "Una pregunta normal va por *UDP*, puerto cincuenta y tres: un paquete y una respuesta.",
+   "titulo": "LO *NORMAL*",
+   "visual": {
+    "tipo": "big",
+    "big": "UDP 53",
+    "small": "pregunta y respuesta"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la zona entera",
+   "sub": "Pero copiar una zona entera, con AXFR o IXFR, va *siempre* por TCP.",
+   "titulo": "ZONA ENTERA: *TCP*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📚",
+    "linea1": "AXFR · IXFR",
+    "linea2": "SIEMPRE TCP",
+    "stamp": "¡OJO!"
+   },
+   "num": 2
+  },
+  {
+   "tag": "respuesta grande",
+   "sub": "Y si la respuesta no cabe, el servidor marca el flag *tc*, truncada. El cliente repite por TCP.",
+   "titulo": "EL FLAG *TC*",
+   "visual": {
+    "tipo": "big",
+    "big": "flags: qr tc",
+    "small": "truncada → repite en TCP"
+   },
+   "num": 3
+  },
+  {
+   "tag": "en la captura",
+   "sub": "En una captura lo ves: handshake de TCP al cincuenta y tres justo antes de la *transferencia.*",
+   "titulo": "EN LA *CAPTURA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "❓",
+      "izq": "consulta",
+      "der": "UDP"
+     },
+     {
+      "icono": "📦",
+      "izq": "AXFR",
+      "der": "TCP",
+      "en": "*transferencia.*"
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Preguntas por UDP... zonas enteras y respuestas truncadas, por *TCP.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "UDP 53 · TCP 53",
+    "small": "según el tamaño"
+   }
+  }
+ ],
+ "examen": "PA3"
+}

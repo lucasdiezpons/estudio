@@ -16,7 +16,7 @@ PRON = {
     "EUI-64": "e u i sesenta y cuatro", "fe80": "efe e ochenta", "ff:fe": "efe efe efe e", "6to4": "seis tu cuatro", "2002": "dos mil dos",
     "SYN": "sin", "ACK": "ak", "FIN": "fin", "MSS": "eme ese ese", "BDP": "be de pe", "RTT": "erre te te", "SACK": "sak", "ISN": "i ese ene",
     "postfix": "póstfix", "mutt": "mat", "dovecot": "dóvcot", "myhostname": "mai jóstneim", "mydomain": "mai doméin", "LSID": "ele ese i de",
-    "DR": "de erre", "MAIL": "méil", "FROM": "from", "RCPT": "ricipient", "TO": "tu", "DATA": "deita", "From": "from", "To": "tu", "Subject": "sábyect", "main.cf": "mein punto ce efe", "250": "doscientos cincuenta", "ID": "i de", "RA": "erre a", "NS/NA": "ene ese y ene a",
+    "DR": "de erre", "tc": "te ce", "ICMPv6": "i ce eme pe uve seis", "ff02": "efe efe cero dos", "53": "cincuenta y tres", "MAIL": "méil", "FROM": "from", "RCPT": "ricipient", "TO": "tu", "DATA": "deita", "From": "from", "To": "tu", "Subject": "sábyect", "main.cf": "mein punto ce efe", "250": "doscientos cincuenta", "ID": "i de", "RA": "erre a", "NS/NA": "ene ese y ene a",
 }
 
 
@@ -270,6 +270,52 @@ VIDEOS += [
          B("postfix reload", "o no cambia nada")),
         ("en resumen", "Así que ya sabes. Si el dominio no está en mydestination... tu servidor no lo considera *suyo.*", "EN *RESUMEN*",
          B("mydestination", "los dominios que son míos")),
+    ]),
+]
+
+VIDEOS += [
+    # ---------------- tanda 5 · extras DNS / IPv6 / TCP
+    v("api-g-delegacion-sin-clase", "Delegar media red inversa", "Delegación sin clase con CNAME", "API · DNS", "dns", [
+        ("la curiosidad", "¿Sabías que se puede delegar *media* zona inversa... aunque los puntos no caigan en un octeto?", "MEDIA *RED*",
+         A("✂️", "una /25", "NO CABE EN UN OCTETO")),
+        ("el problema", "La zona inversa corta por octetos. Una barra veinticinco es *media* zona: no se puede delegar tal cual.", "EL *PROBLEMA*",
+         B("10.0.1.128/25", "media 1.0.10.in-addr.arpa")),
+        ("el truco", "Truco: el padre crea una subzona *inventada*, con nombre 128/25, y se la delega al otro servidor.", "LA *SUBZONA*",
+         B("128/25 NS ns2", "una zona inventada")),
+        ("los alias", "Y para cada IP pone un *CNAME:* el ciento treinta apunta a ciento treinta punto 128/25.", "LOS *CNAME*",
+         B("130 CNAME 130.128/25", "uno por IP")),
+        ("el viaje", "Al preguntar el PTR, el padre responde con el alias... y el hijo da el *nombre.*", "EL *VIAJE*",
+         F([{"icono": "🔀", "izq": "padre", "der": "CNAME"}, {"icono": "🏷️", "izq": "hijo", "der": "PTR", "en": "*nombre.*"}])),
+        ("en resumen", "Así que ya sabes. Subzona inventada, NS para delegarla... y un CNAME por cada *IP.*", "EN *RESUMEN*",
+         B("NS + CNAME por IP", "delegación sin clase")),
+    ]),
+    v("api-g-dns-tcp-udp", "Cuándo el DNS deja el UDP", "Puerto 53, UDP y TCP", "API · DNS", "dns", [
+        ("la curiosidad", "¿Sabías que el DNS casi siempre va por UDP... pero a veces se pasa a *TCP?*", "UDP *O TCP*",
+         A("🔌", "puerto 53", "LOS DOS")),
+        ("lo normal", "Una pregunta normal va por *UDP*, puerto cincuenta y tres: un paquete y una respuesta.", "LO *NORMAL*",
+         B("UDP 53", "pregunta y respuesta")),
+        ("la zona entera", "Pero copiar una zona entera, con AXFR o IXFR, va *siempre* por TCP.", "ZONA ENTERA: *TCP*",
+         A("📚", "AXFR · IXFR", "SIEMPRE TCP", "¡OJO!")),
+        ("respuesta grande", "Y si la respuesta no cabe, el servidor marca el flag *tc*, truncada. El cliente repite por TCP.", "EL FLAG *TC*",
+         B("flags: qr tc", "truncada → repite en TCP")),
+        ("en la captura", "En una captura lo ves: handshake de TCP al cincuenta y tres justo antes de la *transferencia.*", "EN LA *CAPTURA*",
+         F([{"icono": "❓", "izq": "consulta", "der": "UDP"}, {"icono": "📦", "izq": "AXFR", "der": "TCP", "en": "*transferencia.*"}])),
+        ("en resumen", "Así que ya sabes. Preguntas por UDP... zonas enteras y respuestas truncadas, por *TCP.*", "EN *RESUMEN*",
+         B("UDP 53 · TCP 53", "según el tamaño")),
+    ]),
+    v("api-g-ndp-sin-arp", "IPv6 no tiene ARP", "Neighbor Discovery y multicast", "API · IPv6", "ipv6", [
+        ("la curiosidad", "¿Sabías que en IPv6 no existe *ARP?*", "ADIÓS *ARP*",
+         A("🚫", "en IPv6", "NO HAY ARP")),
+        ("el sustituto", "Lo sustituye *Neighbor Discovery:* mensajes ICMPv6 de solicitud y anuncio de vecino.", "NEIGHBOR *DISCOVERY*",
+         B("NS / NA", "solicitud y anuncio")),
+        ("sin broadcast", "Y no grita a todos: no hay *broadcast* en IPv6. Pregunta a un grupo multicast muy concreto.", "SIN *BROADCAST*",
+         A("📢", "IPv6", "NO HAY BROADCAST")),
+        ("el grupo", "El grupo se forma con ff02, uno, ff... y los últimos seis dígitos de la IP *buscada.*", "EL *GRUPO*",
+         B("ff02::1:ff3a:4b5c", "solicited-node")),
+        ("el router", "Y el router se anuncia con un *RA:* ahí da el prefijo para que cada equipo se configure solo.", "EL *RA*",
+         B("RA → prefijo /64", "autoconfiguración")),
+        ("en resumen", "Así que ya sabes. Nada de ARP ni broadcast: Neighbor Discovery... y *multicast.*", "EN *RESUMEN*",
+         B("NS/NA + ff02::1:ff..", "en vez de ARP")),
     ]),
 ]
 

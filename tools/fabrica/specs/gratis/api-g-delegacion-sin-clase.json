@@ -1,0 +1,164 @@
+{
+ "id": "api-g-delegacion-sin-clase",
+ "titulo": "Delegar media red inversa",
+ "texto": "Delegación sin clase con CNAME",
+ "tema": "API · DNS",
+ "etiqueta": "dns",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "tc": "te ce",
+  "ICMPv6": "i ce eme pe uve seis",
+  "ff02": "efe efe cero dos",
+  "53": "cincuenta y tres",
+  "MAIL": "méil",
+  "FROM": "from",
+  "RCPT": "ricipient",
+  "TO": "tu",
+  "DATA": "deita",
+  "From": "from",
+  "To": "tu",
+  "Subject": "sábyect",
+  "main.cf": "mein punto ce efe",
+  "250": "doscientos cincuenta",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que se puede delegar *media* zona inversa... aunque los puntos no caigan en un octeto?",
+   "titulo": "MEDIA *RED*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✂️",
+    "linea1": "una /25",
+    "linea2": "NO CABE EN UN OCTETO"
+   }
+  },
+  {
+   "tag": "el problema",
+   "sub": "La zona inversa corta por octetos. Una barra veinticinco es *media* zona: no se puede delegar tal cual.",
+   "titulo": "EL *PROBLEMA*",
+   "visual": {
+    "tipo": "big",
+    "big": "10.0.1.128/25",
+    "small": "media 1.0.10.in-addr.arpa"
+   },
+   "num": 1
+  },
+  {
+   "tag": "el truco",
+   "sub": "Truco: el padre crea una subzona *inventada*, con nombre 128/25, y se la delega al otro servidor.",
+   "titulo": "LA *SUBZONA*",
+   "visual": {
+    "tipo": "big",
+    "big": "128/25 NS ns2",
+    "small": "una zona inventada"
+   },
+   "num": 2
+  },
+  {
+   "tag": "los alias",
+   "sub": "Y para cada IP pone un *CNAME:* el ciento treinta apunta a ciento treinta punto 128/25.",
+   "titulo": "LOS *CNAME*",
+   "visual": {
+    "tipo": "big",
+    "big": "130 CNAME 130.128/25",
+    "small": "uno por IP"
+   },
+   "num": 3
+  },
+  {
+   "tag": "el viaje",
+   "sub": "Al preguntar el PTR, el padre responde con el alias... y el hijo da el *nombre.*",
+   "titulo": "EL *VIAJE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔀",
+      "izq": "padre",
+      "der": "CNAME"
+     },
+     {
+      "icono": "🏷️",
+      "izq": "hijo",
+      "der": "PTR",
+      "en": "*nombre.*"
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Subzona inventada, NS para delegarla... y un CNAME por cada *IP.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "NS + CNAME por IP",
+    "small": "delegación sin clase"
+   }
+  }
+ ],
+ "examen": "PA3"
+}

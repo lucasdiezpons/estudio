@@ -1,0 +1,154 @@
+{
+ "id": "api-g-ndp-sin-arp",
+ "titulo": "IPv6 no tiene ARP",
+ "texto": "Neighbor Discovery y multicast",
+ "tema": "API · IPv6",
+ "etiqueta": "ipv6",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "tc": "te ce",
+  "ICMPv6": "i ce eme pe uve seis",
+  "ff02": "efe efe cero dos",
+  "53": "cincuenta y tres",
+  "MAIL": "méil",
+  "FROM": "from",
+  "RCPT": "ricipient",
+  "TO": "tu",
+  "DATA": "deita",
+  "From": "from",
+  "To": "tu",
+  "Subject": "sábyect",
+  "main.cf": "mein punto ce efe",
+  "250": "doscientos cincuenta",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que en IPv6 no existe *ARP?*",
+   "titulo": "ADIÓS *ARP*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🚫",
+    "linea1": "en IPv6",
+    "linea2": "NO HAY ARP"
+   }
+  },
+  {
+   "tag": "el sustituto",
+   "sub": "Lo sustituye *Neighbor Discovery:* mensajes ICMPv6 de solicitud y anuncio de vecino.",
+   "titulo": "NEIGHBOR *DISCOVERY*",
+   "visual": {
+    "tipo": "big",
+    "big": "NS / NA",
+    "small": "solicitud y anuncio"
+   },
+   "num": 1
+  },
+  {
+   "tag": "sin broadcast",
+   "sub": "Y no grita a todos: no hay *broadcast* en IPv6. Pregunta a un grupo multicast muy concreto.",
+   "titulo": "SIN *BROADCAST*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📢",
+    "linea1": "IPv6",
+    "linea2": "NO HAY BROADCAST"
+   },
+   "num": 2
+  },
+  {
+   "tag": "el grupo",
+   "sub": "El grupo se forma con ff02, uno, ff... y los últimos seis dígitos de la IP *buscada.*",
+   "titulo": "EL *GRUPO*",
+   "visual": {
+    "tipo": "big",
+    "big": "ff02::1:ff3a:4b5c",
+    "small": "solicited-node"
+   },
+   "num": 3
+  },
+  {
+   "tag": "el router",
+   "sub": "Y el router se anuncia con un *RA:* ahí da el prefijo para que cada equipo se configure solo.",
+   "titulo": "EL *RA*",
+   "visual": {
+    "tipo": "big",
+    "big": "RA → prefijo /64",
+    "small": "autoconfiguración"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Nada de ARP ni broadcast: Neighbor Discovery... y *multicast.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "NS/NA + ff02::1:ff..",
+    "small": "en vez de ARP"
+   }
+  }
+ ],
+ "examen": "PA3"
+}
