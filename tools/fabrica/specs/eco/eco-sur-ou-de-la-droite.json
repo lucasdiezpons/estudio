@@ -1,0 +1,120 @@
+{
+ "id": "eco-sur-ou-de-la-droite",
+ "titulo": "Sur la droite ou de la droite ?",
+ "texto": "Deux déplacements, deux causes",
+ "tema": "Sciences éco · Offre et demande",
+ "etiqueta": "demande",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais que sur un graphique d'offre et de demande... une courbe peut *bouger* de deux façons très différentes ?",
+   "titulo": "DEUX FAÇONS DE *BOUGER*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📈",
+    "linea1": "une courbe, deux mouvements",
+    "linea2": "SUR OU DE ?"
+   }
+  },
+  {
+   "tag": "sur la droite",
+   "sub": "Si c'est le *prix du bien* qui change... on glisse le long de la courbe. La courbe, elle, ne bouge pas.",
+   "titulo": "SUR LA *DROITE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "↘️",
+    "linea1": "le prix du lait baisse",
+    "linea2": "ON GLISSE",
+    "stamp": "PRIX"
+   },
+   "num": 1
+  },
+  {
+   "tag": "de la droite",
+   "sub": "Si c'est *autre chose* qui change... revenu, goûts, publicité... alors toute la courbe se déplace.",
+   "titulo": "DE LA *DROITE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "↔️",
+    "linea1": "revenu, goûts, publicité",
+    "linea2": "LA COURBE BOUGE",
+    "stamp": "AUTRE CHOSE"
+   },
+   "num": 2
+  },
+  {
+   "tag": "l'astuce",
+   "sub": "Droite qui va vers la *droite*... la demande augmente. Vers la *gauche*... elle baisse. À chaque prix.",
+   "titulo": "DROITE OU *GAUCHE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "➡️",
+      "izq": "vers la droite",
+      "der": "demande ↑"
+     },
+     {
+      "icono": "⬅️",
+      "izq": "vers la gauche",
+      "der": "demande ↓",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "la règle",
+   "sub": "Retiens : *toujours* le prix du bien, c'est un glissement. *Jamais* un autre facteur ne fait glisser, il déplace la courbe.",
+   "titulo": "LA *RÈGLE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "💶",
+      "izq": "prix du bien",
+      "der": "GLISSEMENT"
+     },
+     {
+      "icono": "🧩",
+      "izq": "autre déterminant",
+      "der": "DÉPLACEMENT",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Le prix du bien : on glisse *sur* la droite. Tout le reste : la droite se *déplace.*",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "💶",
+      "izq": "prix du bien",
+      "der": "SUR la droite"
+     },
+     {
+      "icono": "🧩",
+      "izq": "tout le reste",
+      "der": "DE la droite",
+      "rojo": true
+     }
+    ]
+   }
+  }
+ ]
+}

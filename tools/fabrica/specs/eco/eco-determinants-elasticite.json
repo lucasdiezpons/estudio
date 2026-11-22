@@ -1,0 +1,118 @@
+{
+ "id": "eco-determinants-elasticite",
+ "titulo": "Pourquoi le beurre est plus élastique que les œufs",
+ "texto": "Les déterminants de l'élasticité",
+ "tema": "Sciences éco · Élasticité",
+ "etiqueta": "élasticité",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais que si le beurre augmente, on passe à la *margarine*... mais si les œufs augmentent, on les achète quand même ?",
+   "titulo": "BEURRE *VS* ŒUFS",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧈",
+    "linea1": "même hausse de prix",
+    "linea2": "DEUX RÉACTIONS"
+   }
+  },
+  {
+   "tag": "substituts proches",
+   "sub": "Le beurre a un substitut *proche :* la margarine. Facile de changer. Sa demande est plus *élastique.*",
+   "titulo": "SUBSTITUTS *PROCHES*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🧈",
+      "izq": "beurre + margarine",
+      "der": "plus élastique",
+      "rojo": true
+     },
+     {
+      "icono": "🥚",
+      "izq": "œufs sans substitut",
+      "der": "moins élastique"
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "essentiels",
+   "sub": "Les biens *essentiels*, comme le gaz ou l'électricité : on en a besoin. La demande baisse *peu.* Elle est plutôt *inélastique.*",
+   "titulo": "BIENS *ESSENTIELS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔥",
+    "linea1": "gaz, électricité",
+    "linea2": "INÉLASTIQUE"
+   },
+   "num": 2
+  },
+  {
+   "tag": "marché étroit",
+   "sub": "Plus le marché est défini *étroitement*, plus la demande est élastique. Les glaces sont plus élastiques que *la nourriture.*",
+   "titulo": "MARCHÉ *ÉTROIT*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🍦",
+      "izq": "glaces",
+      "der": "très élastique",
+      "rojo": true
+     },
+     {
+      "icono": "🍽️",
+      "izq": "nourriture",
+      "der": "peu élastique"
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "le temps",
+   "sub": "Et le *temps* compte. Si l'essence augmente, au début on change peu. Au bout de quelques années, on achète des voitures économes. L'élasticité *monte.*",
+   "titulo": "LE *TEMPS*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⏳",
+      "izq": "court terme",
+      "der": "peu élastique"
+     },
+     {
+      "icono": "📅",
+      "izq": "long terme",
+      "der": "très élastique",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Plus de substituts, un marché étroit, plus de temps... et la demande devient *plus élastique.*",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📈",
+    "linea1": "substituts · marché étroit · temps",
+    "linea2": "PLUS ÉLASTIQUE"
+   }
+  }
+ ]
+}

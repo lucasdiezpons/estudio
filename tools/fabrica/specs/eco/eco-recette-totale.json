@@ -1,0 +1,106 @@
+{
+ "id": "eco-recette-totale",
+ "titulo": "Augmenter le prix : bonne idée ?",
+ "texto": "Recette totale et élasticité",
+ "tema": "Sciences éco · Élasticité",
+ "etiqueta": "élasticité",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais qu'augmenter ses prix peut faire *gagner* de l'argent... ou en faire *perdre* ? Tout dépend de l'élasticité.",
+   "titulo": "PRIX ↑ = *GAIN ?*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "💰",
+    "linea1": "recette = prix × quantité",
+    "linea2": "ÇA DÉPEND"
+   }
+  },
+  {
+   "tag": "la recette",
+   "sub": "La recette totale, c'est le prix *multiplié* par la quantité vendue. Si le prix monte, la quantité baisse. Qui gagne ?",
+   "titulo": "RECETTE *TOTALE*",
+   "visual": {
+    "tipo": "big",
+    "big": "RT = p × Q",
+    "small": "prix fois quantité vendue"
+   },
+   "num": 1
+  },
+  {
+   "tag": "inélastique",
+   "sub": "Demande *inélastique*, plus petite que un : les clients partent peu. La quantité baisse *moins vite* que le prix monte. La recette *augmente.*",
+   "titulo": "INÉLASTIQUE *< 1*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🍞",
+      "izq": "pain, lait, tabac",
+      "der": "prix ↑ → RT ↑",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "élastique",
+   "sub": "Demande *élastique*, plus grande que un : les clients fuient. La quantité baisse *plus vite.* La recette *diminue.*",
+   "titulo": "ÉLASTIQUE *> 1*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🛋️",
+      "izq": "meubles, voitures",
+      "der": "prix ↑ → RT ↓",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "unitaire",
+   "sub": "Et si l'élasticité vaut exactement *un* ? La recette ne bouge *pas.*",
+   "titulo": "UNITAIRE *= 1*",
+   "visual": {
+    "tipo": "big",
+    "big": "= 1",
+    "small": "la recette ne bouge pas"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Inélastique : prix et recette vont dans le *même* sens. Élastique : dans des sens *opposés.*",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🍞",
+      "izq": "inélastique < 1",
+      "der": "même sens"
+     },
+     {
+      "icono": "🛋️",
+      "izq": "élastique > 1",
+      "der": "sens opposés",
+      "rojo": true
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,116 @@
+{
+ "id": "eco-penurie-ou-exces",
+ "titulo": "Pénurie ou excédent ?",
+ "texto": "Comment le prix revient tout seul à l'équilibre",
+ "tema": "Sciences éco · Marché",
+ "etiqueta": "équilibre",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais que sur un marché... *personne* ne fixe le prix d'équilibre ? Il se trouve tout seul.",
+   "titulo": "L'ÉQUILIBRE *TOUT SEUL*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚖️",
+    "linea1": "un seul point d'équilibre",
+    "linea2": "OFFRE = DEMANDE"
+   }
+  },
+  {
+   "tag": "l'équilibre",
+   "sub": "À l'équilibre, l'offre et la demande se *compensent.* Aucune force ne pousse au changement.",
+   "titulo": "OFFRE *=* DEMANDE",
+   "visual": {
+    "tipo": "big",
+    "big": "Qs = Qd",
+    "small": "prix d'équilibre + quantité d'équilibre"
+   },
+   "num": 1
+  },
+  {
+   "tag": "l'excédent",
+   "sub": "Prix trop *haut* : les vendeurs ne vendent pas tout. Les stocks montent... alors le prix *baisse.*",
+   "titulo": "L'*EXCÉDENT*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📦",
+      "izq": "offre > demande",
+      "der": "stocks ↑"
+     },
+     {
+      "icono": "⬇️",
+      "izq": "résultat",
+      "der": "le prix baisse",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "la pénurie",
+   "sub": "Prix trop *bas* : les acheteurs n'ont pas tout ce qu'ils veulent. Le prix *monte.*",
+   "titulo": "LA *PÉNURIE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🛒",
+      "izq": "offre < demande",
+      "der": "rayons vides"
+     },
+     {
+      "icono": "⬆️",
+      "izq": "résultat",
+      "der": "le prix monte",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "le calcul",
+   "sub": "Pour trouver l'équilibre, on pose *Qs égale Qd.* On résout... et on trouve le prix, puis la quantité.",
+   "titulo": "POSE *Qs = Qd*",
+   "visual": {
+    "tipo": "big",
+    "big": "Qs = Qd",
+    "small": "on résout pour p"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Excédent : le prix *baisse.* Pénurie : le prix *monte.* Et à l'équilibre, plus rien ne bouge.",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📦",
+      "izq": "excédent",
+      "der": "prix ↓"
+     },
+     {
+      "icono": "🛒",
+      "izq": "pénurie",
+      "der": "prix ↑",
+      "rojo": true
+     }
+    ]
+   }
+  }
+ ]
+}

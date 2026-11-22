@@ -1,0 +1,86 @@
+{
+ "id": "eco-point-milieu",
+ "titulo": "Le piège du point-milieu",
+ "texto": "Pourquoi A→B et B→A ne donnent pas pareil",
+ "tema": "Sciences éco · Élasticité",
+ "etiqueta": "élasticité",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais que l'élasticité entre deux points... n'est *pas la même* dans un sens et dans l'autre ?",
+   "titulo": "LE *PIÈGE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔀",
+    "linea1": "de A vers B, ou de B vers A",
+    "linea2": "DEUX RÉSULTATS"
+   }
+  },
+  {
+   "tag": "l'exemple",
+   "sub": "Prix de quatre à six euros. Quantité de cent vingt à quatre-vingts. De A vers B on trouve environ *zéro virgule soixante-six.*",
+   "titulo": "A *→* B",
+   "visual": {
+    "tipo": "big",
+    "big": "≈ 0,66",
+    "small": "de A (4 €) vers B (6 €)"
+   },
+   "num": 1
+  },
+  {
+   "tag": "le problème",
+   "sub": "Mais de B vers A... on trouve *un virgule cinq.* Pourtant ce sont les mêmes deux points !",
+   "titulo": "B *→* A",
+   "visual": {
+    "tipo": "big",
+    "big": "1,5",
+    "small": "de B (6 €) vers A (4 €)",
+    "stamp": "PAS PAREIL !"
+   },
+   "num": 2
+  },
+  {
+   "tag": "la solution",
+   "sub": "La solution : le *point-milieu.* On divise la variation non pas par la valeur de départ, mais par la *moyenne* des deux valeurs.",
+   "titulo": "LE *POINT-MILIEU*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎯",
+    "linea1": "diviser par la moyenne",
+    "linea2": "PAS LA VALEUR DE DÉPART"
+   },
+   "num": 3
+  },
+  {
+   "tag": "le résultat",
+   "sub": "Prix moyen : cinq. Quantité moyenne : cent. On trouve *un*, dans les deux sens. Problème réglé.",
+   "titulo": "RÉSULTAT : *1*",
+   "visual": {
+    "tipo": "big",
+    "big": "1",
+    "small": "dans les deux sens"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Point-milieu : on divise par la *moyenne.* Résultat identique de A vers B... et de B vers A.",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎯",
+    "linea1": "variation ÷ moyenne",
+    "linea2": "MÊME RÉSULTAT"
+   }
+  }
+ ]
+}

@@ -1,0 +1,116 @@
+{
+ "id": "eco-statique-comparative",
+ "titulo": "Choc sur le marché : mode d'emploi",
+ "texto": "La méthode en 3 étapes",
+ "tema": "Sciences éco · Marché",
+ "etiqueta": "équilibre",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais qu'un été très *chaud* fait monter le prix du lait ? Et il existe une méthode en *trois étapes* pour le prouver.",
+   "titulo": "LA STATIQUE *COMPARATIVE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "☀️",
+    "linea1": "un choc externe",
+    "linea2": "3 ÉTAPES"
+   }
+  },
+  {
+   "tag": "étape 1",
+   "sub": "Étape un : le choc touche *quoi ?* L'offre, la demande... ou les deux ?",
+   "titulo": "ÉTAPE *1*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🔍",
+      "izq": "qui est touché ?",
+      "der": "offre ou demande"
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "étape 2",
+   "sub": "Étape deux : la courbe va vers la *droite* ou vers la *gauche ?*",
+   "titulo": "ÉTAPE *2*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "↔️",
+      "izq": "quelle direction ?",
+      "der": "droite ou gauche"
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "la chaleur",
+   "sub": "L'été chaud : on veut plus de glaces et de produits laitiers. La *demande* se déplace vers la droite. Le prix *monte*... et la quantité *aussi.*",
+   "titulo": "UN ÉTÉ *CHAUD*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "☀️",
+      "izq": "demande vers la droite",
+      "der": "P ↑ Q ↑",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "la sécheresse",
+   "sub": "Une sécheresse : la nourriture du bétail coûte plus cher. C'est l'*offre* qui va vers la gauche. Le prix *monte*... mais la quantité *baisse.*",
+   "titulo": "UNE *SÉCHERESSE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🌵",
+      "izq": "offre vers la gauche",
+      "der": "P ↑ Q ↓",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Demande à droite : prix *et* quantité montent. Offre à gauche : le prix monte, la quantité *baisse.*",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "☀️",
+      "izq": "demande →",
+      "der": "P ↑ Q ↑"
+     },
+     {
+      "icono": "🌵",
+      "izq": "offre ←",
+      "der": "P ↑ Q ↓",
+      "rojo": true
+     }
+    ]
+   }
+  }
+ ]
+}

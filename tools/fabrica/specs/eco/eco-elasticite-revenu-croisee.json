@@ -1,0 +1,113 @@
+{
+ "id": "eco-elasticite-revenu-croisee",
+ "titulo": "Normal, de luxe ou inférieur ?",
+ "texto": "Élasticité-revenu et élasticité croisée",
+ "tema": "Sciences éco · Élasticité",
+ "etiqueta": "élasticité",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais qu'il existe des biens que tu achètes *moins*... quand ton revenu *monte ?*",
+   "titulo": "LES BIENS *INFÉRIEURS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🚌",
+    "linea1": "revenu ↑",
+    "linea2": "DEMANDE ↓"
+   }
+  },
+  {
+   "tag": "biens normaux",
+   "sub": "La plupart des biens sont *normaux :* quand ton revenu monte, tu en achètes plus. L'élasticité-revenu est *positive.*",
+   "titulo": "BIENS *NORMAUX*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "👕",
+      "izq": "première nécessité",
+      "der": "positive mais faible"
+     },
+     {
+      "icono": "💎",
+      "izq": "luxe : caviar, diamants",
+      "der": "positive et élevée",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "biens inférieurs",
+   "sub": "Les biens *inférieurs*, comme le bus : plus tu gagnes, moins tu en consommes. L'élasticité-revenu est *négative.*",
+   "titulo": "BIENS *INFÉRIEURS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🚌",
+    "linea1": "trajets en bus",
+    "linea2": "ÉLASTICITÉ NÉGATIVE"
+   },
+   "num": 2
+  },
+  {
+   "tag": "l'élasticité croisée",
+   "sub": "Autre mesure : l'élasticité-prix *croisée.* C'est la réaction de la demande d'un bien... quand le prix d'un *autre* bien change.",
+   "titulo": "ÉLASTICITÉ *CROISÉE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔗",
+    "linea1": "le prix de l'autre bien",
+    "linea2": "ET MA DEMANDE"
+   },
+   "num": 3
+  },
+  {
+   "tag": "substituts",
+   "sub": "Pour des *substituts*, elle est positive. Les pommes augmentent... et tu manges plus de *poires.*",
+   "titulo": "SUBSTITUTS *+*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🍎",
+      "izq": "pommes plus chères",
+      "der": "poires ↑",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Bien normal : élasticité-revenu *positive.* Bien inférieur : *négative.* Substituts : élasticité croisée *positive.*",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "👕",
+      "izq": "bien normal",
+      "der": "revenu + "
+     },
+     {
+      "icono": "🚌",
+      "izq": "bien inférieur",
+      "der": "revenu −",
+      "rojo": true
+     }
+    ]
+   }
+  }
+ ]
+}

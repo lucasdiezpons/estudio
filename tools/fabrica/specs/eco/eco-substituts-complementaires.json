@@ -1,0 +1,107 @@
+{
+ "id": "eco-substituts-complementaires",
+ "titulo": "Substituts ou complémentaires ?",
+ "texto": "Quand le prix d'un bien bouge la demande d'un autre",
+ "tema": "Sciences éco · Offre et demande",
+ "etiqueta": "demande",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais que le prix des *céréales* peut changer la demande de... *lait ?*",
+   "titulo": "LE PRIX D'UN *AUTRE* BIEN",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🥣",
+    "linea1": "céréales et lait",
+    "linea2": "LIEN CACHÉ"
+   }
+  },
+  {
+   "tag": "complémentaires",
+   "sub": "Les céréales et le lait, on les consomme *ensemble.* Ce sont des biens complémentaires.",
+   "titulo": "LES *COMPLÉMENTAIRES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🥛",
+    "linea1": "lait + céréales",
+    "linea2": "ENSEMBLE"
+   },
+   "num": 1
+  },
+  {
+   "tag": "l'effet",
+   "sub": "Si le prix des céréales *baisse*... on en achète plus... et on demande plus de *lait.* La courbe de demande se déplace.",
+   "titulo": "PRIX ↓ DEMANDE ↑",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🥣",
+      "izq": "céréales moins chères",
+      "der": "lait ↑"
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "substituts",
+   "sub": "Le lait et le jus d'orange, eux, répondent à la même envie. Ce sont des *substituts.*",
+   "titulo": "LES *SUBSTITUTS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🍊",
+    "linea1": "lait / jus d'orange",
+    "linea2": "MÊME ENVIE"
+   },
+   "num": 3
+  },
+  {
+   "tag": "l'effet inverse",
+   "sub": "Si le jus d'orange devient plus *cher*... on se rabat sur le lait. Sa demande *augmente.*",
+   "titulo": "ORANGE ↑ LAIT ↑",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🍊",
+      "izq": "jus d'orange plus cher",
+      "der": "lait ↑",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Complémentaires : *même* sens. Substituts : sens *opposé* pour le prix qui monte... et la demande de l'autre.",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🥣",
+      "izq": "complémentaires",
+      "der": "prix ↓ → demande ↑"
+     },
+     {
+      "icono": "🍊",
+      "izq": "substituts",
+      "der": "prix ↑ → demande ↑",
+      "rojo": true
+     }
+    ]
+   }
+  }
+ ]
+}
