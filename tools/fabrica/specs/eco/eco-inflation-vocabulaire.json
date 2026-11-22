@@ -1,0 +1,116 @@
+{
+ "id": "eco-inflation-vocabulaire",
+ "titulo": "Inflation, déflation, désinflation",
+ "texto": "Ne confonds plus jamais",
+ "tema": "Sciences éco · Macroéconomie",
+ "etiqueta": "macro",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais que *désinflation* ne veut pas dire que les prix *baissent ?*",
+   "titulo": "LE PIÈGE DE LA *DÉSINFLATION*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏷️",
+    "linea1": "quatre mots qui se ressemblent",
+    "linea2": "À NE PAS CONFONDRE"
+   }
+  },
+  {
+   "tag": "inflation",
+   "sub": "*Inflation :* les prix augmentent. Une hausse relative et positive du niveau général des prix.",
+   "titulo": "*INFLATION*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📈",
+      "izq": "inflation",
+      "der": "les prix montent"
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "déflation",
+   "sub": "*Déflation :* c'est l'inverse. Les prix *baissent* vraiment.",
+   "titulo": "*DÉFLATION*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📉",
+      "izq": "déflation",
+      "der": "les prix baissent",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "désinflation",
+   "sub": "*Désinflation :* les prix montent toujours... mais *moins vite.* Le taux d'inflation diminue.",
+   "titulo": "*DÉSINFLATION*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🐢",
+      "izq": "désinflation",
+      "der": "les prix montent moins vite",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "hyper",
+   "sub": "Et l'*hyperinflation :* une hausse des prix extrêmement forte.",
+   "titulo": "*HYPERINFLATION*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🚀",
+      "izq": "hyperinflation",
+      "der": "hausse énorme des prix"
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Déflation : les prix *baissent.* Désinflation : ils montent, mais *plus lentement.*",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📉",
+      "izq": "déflation",
+      "der": "prix ↓"
+     },
+     {
+      "icono": "🐢",
+      "izq": "désinflation",
+      "der": "prix ↑ mais ralentit",
+      "rojo": true
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "id": "eco-biens-publics",
+ "titulo": "Le passager clandestin",
+ "texto": "Pourquoi l'État produit les biens publics",
+ "tema": "Sciences éco · L'État",
+ "etiqueta": "État",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais que personne n'a envie de payer pour un *feu d'artifice*... parce qu'il en profitera *quand même ?*",
+   "titulo": "LE FEU D'ARTIFICE",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎆",
+    "linea1": "tout le monde en profite",
+    "linea2": "PERSONNE NE PAYE"
+   }
+  },
+  {
+   "tag": "la définition",
+   "sub": "Un *bien public* est *non exclusif :* on ne peut empêcher personne d'en profiter. Et *non rival :* le consommer n'empêche pas les autres de le faire.",
+   "titulo": "BIEN *PUBLIC*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🚫",
+      "izq": "non exclusif",
+      "der": "on ne peut exclure personne"
+     },
+     {
+      "icono": "♾️",
+      "izq": "non rival",
+      "der": "il reste pour les autres",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "les exemples",
+   "sub": "L'éclairage public, la défense nationale, un feu d'artifice.",
+   "titulo": "DES *EXEMPLES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "💡",
+    "linea1": "éclairage · défense · feu d'artifice",
+    "linea2": "BIENS PUBLICS"
+   },
+   "num": 2
+  },
+  {
+   "tag": "le problème",
+   "sub": "Chacun espère que les autres paieront à sa place. C'est le *passager clandestin.* Résultat : les entreprises privées n'en produisent pas.",
+   "titulo": "LE *PASSAGER CLANDESTIN*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎟️",
+    "linea1": "je ne paie pas, les autres paieront",
+    "linea2": "PERSONNE NE PRODUIT",
+    "stamp": "PROBLÈME"
+   },
+   "num": 3
+  },
+  {
+   "tag": "la solution",
+   "sub": "L'État, lui, peut *obliger* tout le monde à payer, grâce aux *impôts.* Il peut donc produire le bien.",
+   "titulo": "L'ÉTAT *PRODUIT*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏛️",
+    "linea1": "financé par l'impôt",
+    "linea2": "TOUT LE MONDE PAIE"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Bien public : non exclusif et non rival. Le privé n'en produit pas... donc l'État s'en charge, avec l'impôt.",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏛️",
+    "linea1": "non exclusif + non rival",
+    "linea2": "L'ÉTAT PRODUIT"
+   }
+  }
+ ]
+}

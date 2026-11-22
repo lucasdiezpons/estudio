@@ -1,0 +1,107 @@
+{
+ "id": "eco-externalites",
+ "titulo": "Les externalités",
+ "texto": "Quand tes actes coûtent aux autres",
+ "tema": "Sciences éco · L'État",
+ "etiqueta": "État",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais qu'une usine peut *créer des emplois*... et *polluer* des voisins qui n'ont rien demandé ?",
+   "titulo": "L'EFFET *INVISIBLE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏭",
+    "linea1": "emplois + pollution",
+    "linea2": "QUI PAIE ?"
+   }
+  },
+  {
+   "tag": "la définition",
+   "sub": "Une *externalité*, c'est l'effet d'une action sur d'autres personnes... sans que le marché en tienne compte.",
+   "titulo": "L'*EXTERNALITÉ*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "💨",
+    "linea1": "l'impact sur les autres",
+    "linea2": "HORS PRIX"
+   },
+   "num": 1
+  },
+  {
+   "tag": "négative",
+   "sub": "Externalité *négative :* l'usine pollue. Elle ne paie que son coût privé. Résultat : trop de production, et un prix trop *bas.*",
+   "titulo": "EXTERNALITÉ *NÉGATIVE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🏭",
+      "izq": "pollution",
+      "der": "trop produit, prix trop bas",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "la réponse",
+   "sub": "L'État peut alors *taxer* le bien, pour que le producteur paie aussi le coût *social.*",
+   "titulo": "L'ÉTAT *TAXE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧾",
+    "linea1": "taxer le bien polluant",
+    "linea2": "COÛT SOCIAL PAYÉ"
+   },
+   "num": 3
+  },
+  {
+   "tag": "positive",
+   "sub": "Externalité *positive :* un hôpital qui profite à tous les habitants. Le producteur ne reçoit pas tous les bénéfices... donc on en produit *trop peu.* L'État *subventionne.*",
+   "titulo": "EXTERNALITÉ *POSITIVE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🏥",
+      "izq": "bénéfice pour tous",
+      "der": "trop peu produit → subvention"
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Externalité négative : *taxe.* Externalité positive : *subvention.* L'État corrige ce que le marché oublie.",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🏭",
+      "izq": "négative",
+      "der": "taxe",
+      "rojo": true
+     },
+     {
+      "icono": "🏥",
+      "izq": "positive",
+      "der": "subvention"
+     }
+    ]
+   }
+  }
+ ]
+}

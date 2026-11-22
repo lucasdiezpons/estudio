@@ -1,0 +1,107 @@
+{
+ "id": "eco-cout-opportunite",
+ "titulo": "Le coût d'opportunité",
+ "texto": "Ce à quoi tu renonces vraiment",
+ "tema": "Sciences éco · Introduction",
+ "etiqueta": "introduction",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais que *rien* n'est gratuit en économie ? Même ce qui ne coûte pas un centime.",
+   "titulo": "RIEN N'EST *GRATUIT*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎁",
+    "linea1": "même le gratuit",
+    "linea2": "A UN COÛT"
+   }
+  },
+  {
+   "tag": "la définition",
+   "sub": "Le coût d'opportunité, c'est *ce à quoi tu renonces* pour obtenir quelque chose.",
+   "titulo": "LE COÛT D'*OPPORTUNITÉ*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔄",
+    "linea1": "ce à quoi tu renonces",
+    "linea2": "POUR OBTENIR AUTRE CHOSE"
+   },
+   "num": 1
+  },
+  {
+   "tag": "l'université",
+   "sub": "Faire des études t'apporte un meilleur avenir. Mais ça te prive aussi d'un *emploi payé.* Ce salaire perdu fait partie du coût.",
+   "titulo": "LES *ÉTUDES*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🎓",
+      "izq": "bénéfice",
+      "der": "plus de métiers possibles"
+     },
+     {
+      "icono": "💸",
+      "izq": "coût d'opportunité",
+      "der": "le salaire perdu",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "l'autoroute",
+   "sub": "Autre exemple : l'autoroute A69. Y renoncer fait perdre environ *vingt minutes* de trajet.",
+   "titulo": "L'*A69*",
+   "visual": {
+    "tipo": "big",
+    "big": "20 min",
+    "small": "le coût d'opportunité de l'abandon"
+   },
+   "num": 3
+  },
+  {
+   "tag": "la règle",
+   "sub": "Retiens : un choix, c'est *toujours* un renoncement. Tu compares ce que tu gagnes... et ce que tu perds.",
+   "titulo": "TOUJOURS *UN RENONCEMENT*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⚖️",
+      "izq": "gagner",
+      "der": "bénéfices"
+     },
+     {
+      "icono": "🕳️",
+      "izq": "perdre",
+      "der": "coût d'opportunité",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Coût d'opportunité : la valeur de *ce à quoi on renonce.* Pas ce qu'on paie... mais ce qu'on perd.",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔄",
+    "linea1": "valeur de ce à quoi on renonce",
+    "linea2": "COÛT D'OPPORTUNITÉ"
+   }
+  }
+ ]
+}

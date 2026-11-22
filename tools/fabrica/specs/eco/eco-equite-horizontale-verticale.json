@@ -1,0 +1,117 @@
+{
+ "id": "eco-equite-horizontale-verticale",
+ "titulo": "Équité horizontale ou verticale ?",
+ "texto": "Avant ou après le marché",
+ "tema": "Sciences éco · L'État",
+ "etiqueta": "État",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais que l'État peut réduire les inégalités... *avant* ou *après* que le marché ait joué ?",
+   "titulo": "AVANT OU *APRÈS ?*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🍰",
+    "linea1": "partager le gâteau",
+    "linea2": "AVANT OU APRÈS"
+   }
+  },
+  {
+   "tag": "le gâteau",
+   "sub": "Image du gâteau : l'*efficience*, c'est sa taille. L'*équité*, c'est la façon de le *partager.*",
+   "titulo": "LE *GÂTEAU*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📏",
+      "izq": "efficience",
+      "der": "la taille du gâteau"
+     },
+     {
+      "icono": "🔪",
+      "izq": "équité",
+      "der": "le partage",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 1
+  },
+  {
+   "tag": "horizontale",
+   "sub": "Équité *horizontale :* en *amont.* L'égalité des chances. École, santé, accès pour tous... sans condition.",
+   "titulo": "ÉQUITÉ *HORIZONTALE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🏫",
+      "izq": "en amont",
+      "der": "égalité des chances"
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "verticale",
+   "sub": "Équité *verticale :* en *aval.* Une fois le marché passé, on redistribue des plus riches vers les plus pauvres. Comme l'impôt sur le revenu.",
+   "titulo": "ÉQUITÉ *VERTICALE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🧾",
+      "izq": "en aval",
+      "der": "redistribution",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "le barème",
+   "sub": "Le barème est *progressif :* chaque taux s'applique uniquement à la part du revenu dans sa tranche. Pas à tout le revenu.",
+   "titulo": "LE *BARÈME*",
+   "visual": {
+    "tipo": "big",
+    "big": "par tranches",
+    "small": "chaque taux sur sa tranche seulement",
+    "stamp": "PROGRESSIF"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Horizontale : *en amont*, égalité des chances. Verticale : *en aval*, redistribution.",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🏫",
+      "izq": "horizontale",
+      "der": "en amont"
+     },
+     {
+      "icono": "🧾",
+      "izq": "verticale",
+      "der": "en aval",
+      "rojo": true
+     }
+    ]
+   }
+  }
+ ]
+}

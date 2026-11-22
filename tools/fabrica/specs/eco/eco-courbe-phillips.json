@@ -1,0 +1,118 @@
+{
+ "id": "eco-courbe-phillips",
+ "titulo": "La courbe de Phillips",
+ "texto": "Inflation et chômage : l'arbitrage",
+ "tema": "Sciences éco · Macroéconomie",
+ "etiqueta": "macro",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais que quand le chômage *baisse*... les prix ont tendance à *monter ?*",
+   "titulo": "CHÔMAGE ↓ *PRIX ↑*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📉",
+    "linea1": "chômage et inflation",
+    "linea2": "VONT EN SENS OPPOSÉS"
+   }
+  },
+  {
+   "tag": "Phillips",
+   "sub": "Dans les années soixante, l'économiste Phillips observe un lien entre la hausse des salaires et le chômage, sur cent ans au Royaume-Uni.",
+   "titulo": "*PHILLIPS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🇬🇧",
+    "linea1": "100 ans de données",
+    "linea2": "UN LIEN STABLE"
+   },
+   "num": 1
+  },
+  {
+   "tag": "l'arbitrage",
+   "sub": "Conclusion : à *court terme*, il y a un arbitrage. Moins de chômage... mais plus d'inflation. Et l'inverse.",
+   "titulo": "UN *ARBITRAGE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "👷",
+      "izq": "chômage ↓",
+      "der": "inflation ↑",
+      "rojo": true
+     },
+     {
+      "icono": "🧊",
+      "izq": "chômage ↑",
+      "der": "inflation ↓"
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "l'exemple",
+   "sub": "Exemple : chômage à quatre pour cent, inflation à six. Un an après : chômage à sept, inflation à deux. La relation est *négative.*",
+   "titulo": "RELATION *NÉGATIVE*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📍",
+      "izq": "chômage 4 %",
+      "der": "inflation 6 %"
+     },
+     {
+      "icono": "📍",
+      "izq": "chômage 7 %",
+      "der": "inflation 2 %",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "l'usage",
+   "sub": "Pour l'État, c'est un outil. Dépenses publiques, impôts, création monétaire : il choisit où placer son curseur.",
+   "titulo": "UN *OUTIL*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎛️",
+    "linea1": "dépenses · impôts · monnaie",
+    "linea2": "LE CURSEUR DE L'ÉTAT"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Courbe de Phillips : à court terme, *chômage et inflation varient en sens opposés.*",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "👷",
+      "izq": "chômage ↓",
+      "der": "inflation ↑"
+     },
+     {
+      "icono": "🧊",
+      "izq": "chômage ↑",
+      "der": "inflation ↓",
+      "rojo": true
+     }
+    ]
+   }
+  }
+ ]
+}

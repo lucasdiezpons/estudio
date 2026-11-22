@@ -1,0 +1,99 @@
+{
+ "id": "eco-raisonnement-marge",
+ "titulo": "Penser à la marge",
+ "texto": "Pourquoi on s'arrête de manger des tomates",
+ "tema": "Sciences éco · Introduction",
+ "etiqueta": "introduction",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix",
+  "Bm": "bénéfice marginal",
+  "Cm": "coût marginal"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais que les économistes ne se demandent *jamais* : tout ou rien ? Ils se demandent : *un peu plus ?*",
+   "titulo": "PENSER *À LA MARGE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🍅",
+    "linea1": "une tomate de plus ?",
+    "linea2": "OUI OU NON"
+   }
+  },
+  {
+   "tag": "la marge",
+   "sub": "On ne choisit presque jamais *tout ou rien.* On décide d'un peu plus... ou d'un peu moins.",
+   "titulo": "UN PEU *PLUS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "➕",
+    "linea1": "une unité en plus",
+    "linea2": "OU EN MOINS"
+   },
+   "num": 1
+  },
+  {
+   "tag": "les deux",
+   "sub": "Chaque unité en plus a un *bénéfice marginal*, la satisfaction. Et un *coût marginal*, ce qu'elle coûte.",
+   "titulo": "BÉNÉFICE *VS* COÛT",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "😋",
+      "izq": "bénéfice marginal",
+      "der": "le gain de l'unité en plus"
+     },
+     {
+      "icono": "💶",
+      "izq": "coût marginal",
+      "der": "le coût de l'unité en plus",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "la règle",
+   "sub": "Tant que le bénéfice dépasse le coût... on continue. On s'arrête quand les deux sont *égaux.*",
+   "titulo": "ON S'ARRÊTE QUAND *=*",
+   "visual": {
+    "tipo": "big",
+    "big": "Bm = Cm",
+    "small": "bénéfice marginal = coût marginal"
+   },
+   "num": 3
+  },
+  {
+   "tag": "l'exemple",
+   "sub": "Pour les tomates : tu manges la suivante tant qu'elle te rapporte plus de plaisir que son prix. Dès que ce n'est plus le cas... *stop.*",
+   "titulo": "LES *TOMATES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🍅",
+    "linea1": "plaisir de la dernière tomate",
+    "linea2": "= SON PRIX",
+    "stamp": "STOP"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. On choisit à la marge : on continue tant que le bénéfice marginal dépasse le coût marginal... et on s'arrête à *l'égalité.*",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "big",
+    "big": "Bm = Cm",
+    "small": "le point où on s'arrête"
+   }
+  }
+ ]
+}

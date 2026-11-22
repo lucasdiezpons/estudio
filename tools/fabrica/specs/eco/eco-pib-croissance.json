@@ -1,0 +1,96 @@
+{
+ "id": "eco-pib-croissance",
+ "titulo": "Le PIB ne dit pas tout",
+ "texto": "Croissance, PIB par tête et leurs limites",
+ "tema": "Sciences éco · Macroéconomie",
+ "etiqueta": "macro",
+ "examen": "Partiel",
+ "pron": {
+  "Qd": "ku de",
+  "Qs": "ku esse",
+  "RT": "erre té",
+  "AES": "a eu esse",
+  "p": "prix"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosité",
+   "sub": "Tu savais qu'un pays très *pollueur*... ou très *inégalitaire* peut avoir un PIB élevé ?",
+   "titulo": "LE PIB EST *AVEUGLE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏭",
+    "linea1": "PIB élevé",
+    "linea2": "MAIS BIEN-ÊTRE ?"
+   }
+  },
+  {
+   "tag": "le PIB",
+   "sub": "Le PIB, c'est la valeur de tout ce qui est produit dans un pays sur une période. Quelle que soit la nationalité des entreprises.",
+   "titulo": "LE *PIB*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏦",
+    "linea1": "ce qui est produit dans le pays",
+    "linea2": "SUR UNE PÉRIODE"
+   },
+   "num": 1
+  },
+  {
+   "tag": "la croissance",
+   "sub": "La *croissance*, c'est la variation relative du PIB. Le PIB de cette année moins celui de l'an dernier... divisé par celui de l'an dernier.",
+   "titulo": "LA *CROISSANCE*",
+   "visual": {
+    "tipo": "big",
+    "big": "(PIB₂ − PIB₁) / PIB₁",
+    "small": "× 100 = taux de croissance"
+   },
+   "num": 2
+  },
+  {
+   "tag": "par tête",
+   "sub": "Pour comparer des pays de tailles différentes, on utilise le *PIB par tête :* le PIB divisé par la population.",
+   "titulo": "PIB *PAR TÊTE*",
+   "visual": {
+    "tipo": "big",
+    "big": "PIB / pop.",
+    "small": "niveau de vie moyen"
+   },
+   "num": 3
+  },
+  {
+   "tag": "les limites",
+   "sub": "Mais le PIB reste *matériel.* Il ignore la vie culturelle et politique. Et le PIB par tête ignore les *inégalités* de revenu.",
+   "titulo": "LES *LIMITES*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🎭",
+      "izq": "culture, politique",
+      "der": "ignorées"
+     },
+     {
+      "icono": "⚖️",
+      "izq": "inégalités",
+      "der": "ignorées",
+      "rojo": true
+     }
+    ]
+   },
+   "num": 4
+  },
+  {
+   "tag": "en résumé",
+   "sub": "Voilà. Croissance : variation relative du PIB. PIB par tête : on divise par la population. Les deux restent *imparfaits.*",
+   "titulo": "EN *RÉSUMÉ*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📊",
+    "linea1": "PIB · croissance · PIB par tête",
+    "linea2": "INDICATEURS IMPARFAITS"
+   }
+  }
+ ]
+}
