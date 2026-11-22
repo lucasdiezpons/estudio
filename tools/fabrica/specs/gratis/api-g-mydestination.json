@@ -1,0 +1,162 @@
+{
+ "id": "api-g-mydestination",
+ "titulo": "Cuando tu servidor rechaza tu propio correo",
+ "texto": "mydestination en postfix",
+ "tema": "API · Correo",
+ "etiqueta": "correo",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "MAIL": "méil",
+  "FROM": "from",
+  "RCPT": "ricipient",
+  "TO": "tu",
+  "DATA": "deita",
+  "From": "from",
+  "To": "tu",
+  "Subject": "sábyect",
+  "main.cf": "mein punto ce efe",
+  "250": "doscientos cincuenta",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que tu servidor de correo puede rechazar correo... para su *propio* dominio?",
+   "titulo": "RECHAZA *LO SUYO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📪",
+    "linea1": "correo para ti",
+    "linea2": "RELAY DENIED"
+   }
+  },
+  {
+   "tag": "la lista",
+   "sub": "En postfix, *mydestination* es la lista de dominios que entrega aquí, en sus buzones.",
+   "titulo": "LA *LISTA*",
+   "visual": {
+    "tipo": "big",
+    "big": "mydestination = lab.api",
+    "small": "esto es mío"
+   },
+   "num": 1
+  },
+  {
+   "tag": "si falta",
+   "sub": "Si tu dominio no está... cree que el correo es para otro sitio. Y como no reenvía para extraños, lo *rechaza.*",
+   "titulo": "SI *FALTA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⛔",
+    "linea1": "dominio no listado",
+    "linea2": "554 RELAY DENIED",
+    "stamp": "¡MAL!"
+   },
+   "num": 2
+  },
+  {
+   "tag": "los nombres",
+   "sub": "Ojo también con myhostname y mydomain: son los nombres con los que el servidor se *presenta.*",
+   "titulo": "SUS *NOMBRES*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "🖥️",
+      "izq": "myhostname",
+      "der": "mail.lab.api"
+     },
+     {
+      "icono": "🌐",
+      "izq": "mydomain",
+      "der": "lab.api",
+      "en": "*presenta.*"
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "y después",
+   "sub": "Tras cambiar el main.cf... hay que *recargar* postfix. Si no, sigue con lo viejo.",
+   "titulo": "Y *RECARGA*",
+   "visual": {
+    "tipo": "big",
+    "big": "postfix reload",
+    "small": "o no cambia nada"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. Si el dominio no está en mydestination... tu servidor no lo considera *suyo.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "mydestination",
+    "small": "los dominios que son míos"
+   }
+  }
+ ],
+ "examen": "PA3"
+}

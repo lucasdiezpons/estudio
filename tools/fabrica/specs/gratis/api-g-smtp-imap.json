@@ -1,0 +1,171 @@
+{
+ "id": "api-g-smtp-imap",
+ "titulo": "Un protocolo para enviar, otro para leer",
+ "texto": "SMTP, IMAP y POP3",
+ "tema": "API · Correo",
+ "etiqueta": "correo",
+ "pron": {
+  "DNS": "de ene ese",
+  "PTR": "pe te erre",
+  "NS": "ene ese",
+  "MX": "eme equis",
+  "SOA": "ese o a",
+  "CNAME": "ce neim",
+  "IP": "i pe",
+  "IPs": "i pes",
+  "aa": "a a",
+  "ra": "erre a",
+  "rd": "erre de",
+  "REFUSED": "refiused",
+  "NXDOMAIN": "en equis domein",
+  "AXFR": "a equis efe erre",
+  "IXFR": "i equis efe erre",
+  "TCP": "te ce pe",
+  "UDP": "u de pe",
+  "NOTIFY": "nótifai",
+  "in-addr.arpa": "in adr arpa",
+  "dig": "dig",
+  "-x": "guion equis",
+  "lab.api": "lab punto api",
+  "lab.api.": "lab punto api",
+  "ns": "ene ese",
+  "ns2": "ene ese dos",
+  "www": "uve doble uve doble uve doble",
+  "PC03": "pe ce tres",
+  "PC08": "pe ce ocho",
+  "128/25": "ciento veintiocho barra veinticinco",
+  "SMTP": "ese eme te pe",
+  "POP3": "pop tres",
+  "IMAP": "ímap",
+  "EHLO": "e hache ele o",
+  "IPv6": "i pe uve seis",
+  "IPv4": "i pe uve cuatro",
+  "OSPFv3": "o ese pe efe versión tres",
+  "LSA": "ele ese a",
+  "MAC": "mac",
+  "EUI-64": "e u i sesenta y cuatro",
+  "fe80": "efe e ochenta",
+  "ff:fe": "efe efe efe e",
+  "6to4": "seis tu cuatro",
+  "2002": "dos mil dos",
+  "SYN": "sin",
+  "ACK": "ak",
+  "FIN": "fin",
+  "MSS": "eme ese ese",
+  "BDP": "be de pe",
+  "RTT": "erre te te",
+  "SACK": "sak",
+  "ISN": "i ese ene",
+  "postfix": "póstfix",
+  "mutt": "mat",
+  "dovecot": "dóvcot",
+  "myhostname": "mai jóstneim",
+  "mydomain": "mai doméin",
+  "LSID": "ele ese i de",
+  "DR": "de erre",
+  "MAIL": "méil",
+  "FROM": "from",
+  "RCPT": "ricipient",
+  "TO": "tu",
+  "DATA": "deita",
+  "From": "from",
+  "To": "tu",
+  "Subject": "sábyect",
+  "main.cf": "mein punto ce efe",
+  "250": "doscientos cincuenta",
+  "ID": "i de",
+  "RA": "erre a",
+  "NS/NA": "ene ese y ene a"
+ },
+ "voz": "gratis",
+ "segmentos": [
+  {
+   "tag": "la curiosidad",
+   "sub": "¿Sabías que tu correo usa un protocolo para *enviar*... y otro distinto para leer?",
+   "titulo": "ENVIAR *Y LEER*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✉️",
+    "linea1": "dos caminos",
+    "linea2": "IDA Y LECTURA"
+   }
+  },
+  {
+   "tag": "enviar",
+   "sub": "Para enviar: *SMTP*, puerto veinticinco. Va de tu cliente al servidor... y de servidor a servidor.",
+   "titulo": "ENVIAR: *SMTP*",
+   "visual": {
+    "tipo": "big",
+    "big": "SMTP · 25",
+    "small": "empuja el correo"
+   },
+   "num": 1
+  },
+  {
+   "tag": "leer",
+   "sub": "Para leer: *POP3* en el ciento diez, o IMAP en el ciento cuarenta y tres.",
+   "titulo": "LEER: *POP3 / IMAP*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📥",
+      "izq": "POP3",
+      "der": "110",
+      "en": "*POP3*"
+     },
+     {
+      "icono": "🗂️",
+      "izq": "IMAP",
+      "der": "143"
+     }
+    ]
+   },
+   "num": 2
+  },
+  {
+   "tag": "la diferencia",
+   "sub": "POP3 se lo *descarga* y suele borrarlo. IMAP lo deja en el servidor, con sus carpetas.",
+   "titulo": "LA *DIFERENCIA*",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "⬇️",
+      "izq": "POP3",
+      "der": "descarga",
+      "en": "*descarga*"
+     },
+     {
+      "icono": "☁️",
+      "izq": "IMAP",
+      "der": "se queda"
+     }
+    ]
+   },
+   "num": 3
+  },
+  {
+   "tag": "el destino",
+   "sub": "¿Y cómo sabe SMTP a qué servidor ir? Pregunta al DNS por el registro *MX* del dominio.",
+   "titulo": "EL *MX*",
+   "visual": {
+    "tipo": "big",
+    "big": "lab.api. MX 10 mail",
+    "small": "quién recibe el correo"
+   },
+   "num": 4
+  },
+  {
+   "tag": "en resumen",
+   "sub": "Así que ya sabes. SMTP empuja, el MX dice a dónde... y POP3 o IMAP para *leer.*",
+   "titulo": "EN *RESUMEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "SMTP → MX → POP3/IMAP",
+    "small": "el viaje de un correo"
+   }
+  }
+ ],
+ "examen": "PA3"
+}

@@ -16,7 +16,7 @@ PRON = {
     "EUI-64": "e u i sesenta y cuatro", "fe80": "efe e ochenta", "ff:fe": "efe efe efe e", "6to4": "seis tu cuatro", "2002": "dos mil dos",
     "SYN": "sin", "ACK": "ak", "FIN": "fin", "MSS": "eme ese ese", "BDP": "be de pe", "RTT": "erre te te", "SACK": "sak", "ISN": "i ese ene",
     "postfix": "póstfix", "mutt": "mat", "dovecot": "dóvcot", "myhostname": "mai jóstneim", "mydomain": "mai doméin", "LSID": "ele ese i de",
-    "DR": "de erre", "ID": "i de", "RA": "erre a", "NS/NA": "ene ese y ene a",
+    "DR": "de erre", "MAIL": "méil", "FROM": "from", "RCPT": "ricipient", "TO": "tu", "DATA": "deita", "From": "from", "To": "tu", "Subject": "sábyect", "main.cf": "mein punto ce efe", "250": "doscientos cincuenta", "ID": "i de", "RA": "erre a", "NS/NA": "ene ese y ene a",
 }
 
 
@@ -224,6 +224,52 @@ VIDEOS += [
          B("SACK 6448-9344", "esto ya lo tengo")),
         ("en resumen", "Así que ya sabes. Tres ACK repetidos, reenvío inmediato... y ventana a la *mitad.*", "EN *RESUMEN*",
          B("3 dup ACK → reenvío", "fast retransmit")),
+    ]),
+]
+
+VIDEOS += [
+    # ---------------- tanda 4 · correo
+    v("api-g-smtp-imap", "Un protocolo para enviar, otro para leer", "SMTP, IMAP y POP3", "API · Correo", "correo", [
+        ("la curiosidad", "¿Sabías que tu correo usa un protocolo para *enviar*... y otro distinto para leer?", "ENVIAR *Y LEER*",
+         A("✉️", "dos caminos", "IDA Y LECTURA")),
+        ("enviar", "Para enviar: *SMTP*, puerto veinticinco. Va de tu cliente al servidor... y de servidor a servidor.", "ENVIAR: *SMTP*",
+         B("SMTP · 25", "empuja el correo")),
+        ("leer", "Para leer: *POP3* en el ciento diez, o IMAP en el ciento cuarenta y tres.", "LEER: *POP3 / IMAP*",
+         F([{"icono": "📥", "izq": "POP3", "der": "110", "en": "*POP3*"}, {"icono": "🗂️", "izq": "IMAP", "der": "143"}])),
+        ("la diferencia", "POP3 se lo *descarga* y suele borrarlo. IMAP lo deja en el servidor, con sus carpetas.", "LA *DIFERENCIA*",
+         F([{"icono": "⬇️", "izq": "POP3", "der": "descarga", "en": "*descarga*"}, {"icono": "☁️", "izq": "IMAP", "der": "se queda"}])),
+        ("el destino", "¿Y cómo sabe SMTP a qué servidor ir? Pregunta al DNS por el registro *MX* del dominio.", "EL *MX*",
+         B("lab.api. MX 10 mail", "quién recibe el correo")),
+        ("en resumen", "Así que ya sabes. SMTP empuja, el MX dice a dónde... y POP3 o IMAP para *leer.*", "EN *RESUMEN*",
+         B("SMTP → MX → POP3/IMAP", "el viaje de un correo")),
+    ]),
+    v("api-g-sobre-y-carta", "El correo tiene sobre y carta", "MAIL FROM vs From:", "API · Correo", "correo", [
+        ("la curiosidad", "¿Sabías que un correo puede decir que es de una persona... y venir de *otra?*", "DE QUIÉN *DE VERDAD*",
+         A("🎭", "remitente", "¿CUÁL ES EL REAL?")),
+        ("el sobre", "En SMTP, MAIL FROM y RCPT TO son el *sobre.* Es lo que usan los servidores para entregar.", "EL *SOBRE*",
+         B("MAIL FROM / RCPT TO", "para los servidores")),
+        ("la carta", "Después de DATA va la *carta:* las cabeceras From, To y Subject... y el texto.", "LA *CARTA*",
+         B("DATA → From: To: Subject:", "lo que ve el usuario")),
+        ("pueden diferir", "Y no tienen por qué *coincidir.* Por eso existe la copia oculta: va en el sobre, pero no en la carta.", "NO *COINCIDEN*",
+         A("🙈", "copia oculta", "SOLO EN EL SOBRE", "¡OJO!")),
+        ("el final", "La carta termina con una línea que solo tiene un *punto.* Ahí el servidor contesta doscientos cincuenta.", "EL *PUNTO*",
+         B(".  → 250 OK", "fin del mensaje")),
+        ("en resumen", "Así que ya sabes. MAIL FROM y RCPT TO, el sobre. From y To, la *carta.*", "EN *RESUMEN*",
+         F([{"icono": "✉️", "izq": "sobre", "der": "MAIL FROM"}, {"icono": "📄", "izq": "carta", "der": "From:", "en": "*carta.*"}])),
+    ]),
+    v("api-g-mydestination", "Cuando tu servidor rechaza tu propio correo", "mydestination en postfix", "API · Correo", "correo", [
+        ("la curiosidad", "¿Sabías que tu servidor de correo puede rechazar correo... para su *propio* dominio?", "RECHAZA *LO SUYO*",
+         A("📪", "correo para ti", "RELAY DENIED")),
+        ("la lista", "En postfix, *mydestination* es la lista de dominios que entrega aquí, en sus buzones.", "LA *LISTA*",
+         B("mydestination = lab.api", "esto es mío")),
+        ("si falta", "Si tu dominio no está... cree que el correo es para otro sitio. Y como no reenvía para extraños, lo *rechaza.*", "SI *FALTA*",
+         A("⛔", "dominio no listado", "554 RELAY DENIED", "¡MAL!")),
+        ("los nombres", "Ojo también con myhostname y mydomain: son los nombres con los que el servidor se *presenta.*", "SUS *NOMBRES*",
+         F([{"icono": "🖥️", "izq": "myhostname", "der": "mail.lab.api"}, {"icono": "🌐", "izq": "mydomain", "der": "lab.api", "en": "*presenta.*"}])),
+        ("y después", "Tras cambiar el main.cf... hay que *recargar* postfix. Si no, sigue con lo viejo.", "Y *RECARGA*",
+         B("postfix reload", "o no cambia nada")),
+        ("en resumen", "Así que ya sabes. Si el dominio no está en mydestination... tu servidor no lo considera *suyo.*", "EN *RESUMEN*",
+         B("mydestination", "los dominios que son míos")),
     ]),
 ]
 
