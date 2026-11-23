@@ -47,7 +47,41 @@
     <button data-vista="lista">📚<span>Lista</span></button>
   </nav>
 
+  <!-- Candado -->
+  <div id="candado">
+    <form id="candado-form" autocomplete="off">
+      <div class="c-ico">🔒</div>
+      <input id="candado-pin" type="password" inputmode="numeric" pattern="[0-9]*" placeholder="Contraseña" autocomplete="off">
+      <button type="submit">Entrar</button>
+      <div id="candado-err" hidden>Contraseña incorrecta</div>
+    </form>
+  </div>
+
   <div id="toast" hidden></div>
-  <script src="app.js"></script>
+  <script>
+  (function () {
+    var HASH = "774b1ae19e9b9edbee4cfed6b90c4004654da97f9b678882e59eb0d62889deae", KEY = "acceso";
+    var cand = document.getElementById("candado");
+    function sha(t) {
+      return crypto.subtle.digest("SHA-256", new TextEncoder().encode("estudio:" + t)).then(function (b) {
+        return Array.from(new Uint8Array(b)).map(function (x) { return x.toString(16).padStart(2, "0"); }).join("");
+      });
+    }
+    function abrir() {
+      cand.remove();
+      var s = document.createElement("script"); s.src = "app.js"; document.body.appendChild(s);
+    }
+    var guardado = ""; try { guardado = localStorage.getItem(KEY) || ""; } catch (e) {}
+    if (guardado === HASH) return abrir();
+    document.getElementById("candado-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var v = document.getElementById("candado-pin").value.trim();
+      sha(v).then(function (h) {
+        if (h === HASH) { try { localStorage.setItem(KEY, h); } catch (e) {} abrir(); }
+        else { document.getElementById("candado-err").hidden = false; document.getElementById("candado-pin").value = ""; }
+      });
+    });
+  })();
+  </script>
 </body>
 </html>

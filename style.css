@@ -95,3 +95,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* ---------- Toast ---------- */
 #toast { position: fixed; top: 40%; left: 50%; transform: translateX(-50%); z-index: 50;
   background: #000c; padding: 10px 16px; border-radius: 8px; font-size: 14px; }
+
+/* Candado */
+#candado { position: fixed; inset: 0; z-index: 1000; background: #000; display: flex; align-items: center; justify-content: center; }
+#candado-form { display: flex; flex-direction: column; align-items: center; gap: 14px; width: min(80vw, 280px); }
+#candado .c-ico { font-size: 44px; }
+#candado-pin { width: 100%; padding: 14px; font-size: 20px; text-align: center; letter-spacing: 4px; border-radius: 12px; border: 1px solid #333; background: #111; color: #fff; outline: none; }
+#candado button { width: 100%; padding: 14px; font-size: 16px; font-weight: 700; border: 0; border-radius: 12px; background: var(--rojo); color: #fff; }
+#candado-err { color: #ff6b81; font-size: 14px; }
