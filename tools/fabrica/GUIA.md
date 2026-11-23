@@ -134,3 +134,7 @@ git add -A && git commit -m "Añade vídeos de ..." && git -c push.negotiate=tru
 - `tts_gratis.py` = igual que `tts.py` pero con `es-MX-DaliaNeural` (edge-tts, WordBoundary). `VOZ_FAKE=1` → silencio para probar sin internet.
 - El entorno cloud NO llega a `speech.platform.bing.com`: la voz se genera en el PC de Lucas.
 - Paquete en el PC: `CESA\3 Vídeos (montaje)\TikToks Control 2 (voz gratis)\HACER_TIKTOKS.bat` (genera los 37 de `specs/gratis/` y, si dice "s", los sube con git).
+
+## Notas SAI (asignatura Serveis Audiovisuals sobre Internet)
+- Generadores: `specs/generar_img_sai.py` (dibujos) y `specs/generar_specs_sai.py` (27 specs + lint). Tema "SAI · <subtema>", examen "Unit 4 Codecs".
+- En `visual.en` las claves van SIN asteriscos (`*palabra*` solo en `sub`); si no, la fila no sale.

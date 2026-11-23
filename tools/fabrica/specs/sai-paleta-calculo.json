@@ -1,0 +1,151 @@
+{
+ "id": "sai-paleta-calculo",
+ "formato": "resuelto",
+ "titulo": "Calcular la paleta",
+ "texto": "Entradas y bits",
+ "tema": "SAI · Paleta",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "paleta",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "Las entradas necesarias son una potencia de dos que supere los colores distintos; su exponente son los bits por píxel y el factor es 24 / bits.",
+  "ganchos": [
+   "Una foto de 800×600 con 86 192 colores distintos: ¿cabe en paleta?",
+   "¿Cuántos bits necesita una paleta? Un exponente.",
+   "Ochenta y seis mil colores: ¿cuántos bits?"
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "el enunciado",
+   "sub": "Imagen de ochocientos por seiscientos, con ochenta y seis mil ciento noventa y dos colores *distintos*. ¿Paleta?",
+   "titulo": "¿SE *PUEDE*?",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🖼️",
+    "linea1": "800×600 · 24 bits/píxel",
+    "linea2": "86 192 COLORES"
+   }
+  },
+  {
+   "tag": "el máximo",
+   "sub": "Primero: ¿cuántos colores puede haber como máximo? Uno por píxel: *cuatrocientos ochenta mil*.",
+   "titulo": "MÁXIMO *480 000*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "800 × 600"
+     },
+     {
+      "txt": "= 480 000 píxeles"
+     },
+     {
+      "txt": "≤ 480 000 colores"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "compensa",
+   "sub": "Y hay solo ochenta y seis mil: muchísimos menos que dieciséis millones. Así que *sí* compensa una paleta.",
+   "titulo": "SÍ *COMPENSA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✅",
+    "linea1": "86 192 ≪ 16,7 millones",
+    "linea2": "PALETA POSIBLE"
+   }
+  },
+  {
+   "tag": "16 bits",
+   "sub": "Para no perder nada hacen falta entradas para todos. Con dieciséis bits son sesenta y cinco mil... se queda *corto*.",
+   "titulo": "16 BITS *NO LLEGA*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "16 bits → 65 536"
+     },
+     {
+      "txt": "< 86 192 ✗"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "17 bits",
+   "sub": "Con diecisiete bits, ciento treinta y un mil setenta y dos entradas: *ahora sí* caben.",
+   "titulo": "17 BITS *SÍ*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "17 bits → 131 072"
+     },
+     {
+      "txt": "≥ 86 192 ✓"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "el factor",
+   "sub": "Pasas de veinticuatro a diecisiete bits por píxel: comprimes *uno coma cuatro* veces.",
+   "titulo": "FACTOR *1,4*",
+   "visual": {
+    "tipo": "big",
+    "big": "×1,4",
+    "small": "24 ÷ 17 bits/píxel · sin pérdidas"
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Regla: busca la potencia de dos que supere tus colores. Su *exponente* son tus bits.",
+   "titulo": "EXPONENTE = *BITS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔑",
+    "linea1": "2^bits ≥ colores",
+    "linea2": "BITS = EXPONENTE"
+   }
+  }
+ ]
+}

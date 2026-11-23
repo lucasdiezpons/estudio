@@ -1,0 +1,148 @@
+{
+ "id": "sai-jpeg-bits-pixel",
+ "formato": "formula",
+ "titulo": "Bits por píxel",
+ "texto": "Cuánta calidad es esto",
+ "tema": "SAI · JPEG",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "jpeg",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "Bits por píxel = bits del archivo / píxeles: 0,15 reconocible, 0,25 útil, 0,75 excelente, 1,5 indistinguible; factor = 8 / bpp.",
+  "ganchos": [
+   "Treinta y un bits para sesenta y cuatro píxeles: ¿buena o mala calidad?",
+   "Un número resume la calidad de un JPEG.",
+   "Medio bit por píxel: ¿se ve bien?"
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "el reto",
+   "sub": "Un bloque de sesenta y cuatro píxeles se queda en treinta y un bits. ¿Calidad *buena* o mala?",
+   "titulo": "¿BUENA O *MALA*?",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧮",
+    "linea1": "Bloque 8×8 → 31 bits",
+    "linea2": "¿QUÉ CALIDAD?"
+   }
+  },
+  {
+   "tag": "la medida",
+   "sub": "Se mide en bits por píxel: los bits que ocupa entre los píxeles que *representa*.",
+   "titulo": "BITS POR *PÍXEL*",
+   "visual": {
+    "tipo": "big",
+    "big": "b/p",
+    "small": "bits del archivo ÷ píxeles"
+   }
+  },
+  {
+   "tag": "la cuenta",
+   "sub": "Treinta y uno entre sesenta y cuatro son casi *medio* bit por píxel.",
+   "titulo": "0,5 *BIT/PÍXEL*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "31 ÷ 64"
+     },
+     {
+      "txt": "≈ 0,5 bits/píxel"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "la escala",
+   "sub": "Cero coma quince: se reconoce. Cero coma veinticinco: útil. Cero coma setenta y cinco: *excelente*.",
+   "titulo": "¿Y ESO *QUÉ ES*?",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "👀",
+      "izq": "0,15 bits/píxel",
+      "der": "Reconocible",
+      "en": "reconoce."
+     },
+     {
+      "icono": "👍",
+      "izq": "0,25 bits/píxel",
+      "der": "Útil",
+      "en": "útil."
+     },
+     {
+      "icono": "⭐",
+      "izq": "0,75 bits/píxel",
+      "der": "Excelente",
+      "en": "excelente."
+     }
+    ]
+   }
+  },
+  {
+   "tag": "compresión",
+   "sub": "Así que medio bit está entre útil y excelente. Y de ocho bits a medio, comprimes *dieciséis* veces.",
+   "titulo": "COMPRIMES *×16*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "8 bits ÷ 0,5"
+     },
+     {
+      "txt": "= ×16"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Uno coma cinco bits por píxel ya no se distingue del original. Más que eso, *tiras* bits.",
+   "titulo": "1,5 = *IGUAL*",
+   "visual": {
+    "tipo": "big",
+    "big": "1,5",
+    "small": "bits/píxel: indistinguible del original"
+   }
+  }
+ ]
+}

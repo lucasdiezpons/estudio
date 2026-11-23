@@ -1,0 +1,125 @@
+{
+ "id": "sai-jpeg-que-imagen",
+ "formato": "resuelto",
+ "titulo": "¿Qué imagen es?",
+ "texto": "Fila o columna",
+ "tema": "SAI · JPEG",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "jpeg",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "Pon cada coeficiente en su casilla del zig-zag: todos en la columna de la izquierda = solo frecuencias verticales; en la fila de arriba = horizontales.",
+  "ganchos": [
+   "Te dan símbolos de JPEG y piden la imagen: solo mira dónde caen los ceros.",
+   "Los ceros delatan la imagen.",
+   "Cincuenta, veinte, menos diez, siete: ¿qué imagen es?"
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "el enunciado",
+   "sub": "Te dan estos símbolos y piden la imagen. Mira solo dónde caen los *ceros*.",
+   "titulo": "¿QUÉ *IMAGEN*?",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "(6)(+50) (1,5)(+20)"
+     },
+     {
+      "txt": "(0,4)(−10) (5,3)(+7) EoB"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "casilla dos",
+   "sub": "Un cero antes del veinte: el cero ocupa la casilla uno y el veinte la *dos*.",
+   "titulo": "EL 20: *CASILLA 2*",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-zigzag-orden.png",
+    "en": "dos."
+   }
+  },
+  {
+   "tag": "casilla nueve",
+   "sub": "El menos diez, sin ceros, es la casilla tres. Cinco ceros después, y el siete cae en la *nueve*.",
+   "titulo": "EL 7: *CASILLA 9*",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-zigzag-orden.png",
+    "en": "nueve."
+   }
+  },
+  {
+   "tag": "conclusión",
+   "sub": "Casillas dos, tres, nueve... todas están en la *columna* de la izquierda.",
+   "titulo": "TODO EN *COLUMNA*",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-zz-columna.png",
+    "en": "columna"
+   }
+  },
+  {
+   "tag": "la imagen",
+   "sub": "Una columna son frecuencias *verticales*: la imagen solo cambia de arriba a abajo.",
+   "titulo": "SOLO *VERTICAL*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "↕️",
+    "linea1": "Columna de la izquierda",
+    "linea2": "FRECUENCIAS VERTICALES"
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Y si fuera la fila de arriba, serían horizontales. Regla: *fila* igual horizontal, *columna* igual vertical.",
+   "titulo": "FILA O *COLUMNA*",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-zz-fila.png",
+    "en": "fila",
+    "pie": "fila = horizontal · columna = vertical"
+   }
+  }
+ ]
+}

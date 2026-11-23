@@ -1,0 +1,135 @@
+{
+ "id": "sai-jpeg-simbolos",
+ "formato": "regla",
+ "titulo": "Leer símbolos",
+ "texto": "(ceros, tamaño)(valor)",
+ "tema": "SAI · JPEG",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "jpeg",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "En un símbolo AC (r,s)(v): r son ceros que te saltas, s el tamaño y v el valor. El DC va solo y EoB cierra el bloque.",
+  "ganchos": [
+   "El primer número de (3,4) no es un coeficiente: son ceros.",
+   "Los ceros no se escriben: se cuentan.",
+   "Cuando JPEG escribe 3,4, está contando ceros."
+  ],
+  "elegido": 2
+ },
+ "segmentos": [
+  {
+   "tag": "el gancho",
+   "sub": "En JPEG, un símbolo como tres coma cuatro, menos diez, no es tres, cuatro. Son *tres ceros* y luego menos diez.",
+   "titulo": "(3,4)(−10)",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "(3, 4)(−10)"
+     },
+     {
+      "txt": "3 ceros, luego −10"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "el tamaño",
+   "sub": "El primer número son los *ceros* de delante. El segundo es el tamaño: cuántos bits hacen falta para ese valor.",
+   "titulo": "(CEROS, *TAMAÑO*)",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "(ceros, tamaño)(valor)"
+     },
+     {
+      "txt": "−10 está entre 8 y 15"
+     },
+     {
+      "txt": "→ tamaño 4"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "el DC",
+   "sub": "El primero de todos, el DC, va solo: ese seis es el tamaño del valor *cincuenta*.",
+   "titulo": "EL DC *VA SOLO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎯",
+    "linea1": "(6)(+50)",
+    "linea2": "DC: SIN CEROS"
+   }
+  },
+  {
+   "tag": "el orden",
+   "sub": "Los huecos se cuentan en *zig-zag*: uno a la derecha, luego en diagonal... hasta cubrir las sesenta y cuatro casillas.",
+   "titulo": "ORDEN *ZIG-ZAG*",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-zigzag-orden.png",
+    "en": "zig-zag:"
+   }
+  },
+  {
+   "tag": "el final",
+   "sub": "Y cuando ya no queda nada, ponen *EoB*: fin de bloque. Todo lo que falta son ceros.",
+   "titulo": "EOB = *FIN*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🏁",
+    "linea1": "End of Block",
+    "linea2": "EL RESTO, CEROS"
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Regla: en los AC la primera cifra *nunca* es un coeficiente. Siempre son ceros que te saltas.",
+   "titulo": "1.ª CIFRA = *CEROS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔑",
+    "linea1": "(r, s)(v): r = ceros",
+    "linea2": "SALTA r HUECOS"
+   }
+  }
+ ]
+}

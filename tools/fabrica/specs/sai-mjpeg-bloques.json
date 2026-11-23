@@ -1,0 +1,148 @@
+{
+ "id": "sai-mjpeg-bloques",
+ "formato": "resuelto",
+ "titulo": "Caudal de MJPEG",
+ "texto": "Cuenta bloques de 8×8",
+ "tema": "SAI · JPEG",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "mjpeg",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "Caudal = (bloques Y × bits Y + bloques C × bits C) × imágenes por segundo; 640×480 4:2:0 a 25 im/s con 38 y 26 bits da 6,12 Mbit/s.",
+  "ganchos": [
+   "¿Cuánto caudal genera una cámara MJPEG? Cuenta bloques de ocho por ocho.",
+   "Seis megabits sin saber nada de vídeo: solo contar bloques.",
+   "Una cámara, una multiplicación."
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "el enunciado",
+   "sub": "Cámara *MJPEG*: seiscientos cuarenta por cuatrocientos ochenta, veinticinco imágenes por segundo. ¿Cuántos megabits?",
+   "titulo": "¿CUÁNTO *CAUDAL*?",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📹",
+    "linea1": "640×480 · 25 im/s · 4:2:0",
+    "linea2": "¿Mbit/s?"
+   }
+  },
+  {
+   "tag": "luminancia",
+   "sub": "Bloques de ocho por ocho: seiscientos cuarenta por cuatrocientos ochenta entre sesenta y cuatro, *cuatro mil ochocientos*.",
+   "titulo": "BLOQUES *Y*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "640 × 480 ÷ 64"
+     },
+     {
+      "txt": "= 4800 bloques Y"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "color",
+   "sub": "El color va a un cuarto: *mil doscientos* de Cb y mil doscientos de Cr.",
+   "titulo": "COLOR: *2400*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "4800 ÷ 4 = 1200 Cb"
+     },
+     {
+      "txt": "1200 Cr"
+     },
+     {
+      "txt": "= 2400 bloques C"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "los bits",
+   "sub": "Cuatro mil ochocientos por treinta y ocho, más dos mil cuatrocientos por veintiséis: *244 800* bits.",
+   "titulo": "BITS POR *IMAGEN*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "4800 × 38 = 182 400"
+     },
+     {
+      "txt": "2400 × 26 = 62 400"
+     },
+     {
+      "txt": "= 244 800 bits"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "el caudal",
+   "sub": "Por veinticinco imágenes por segundo: *seis coma doce* megabits por segundo.",
+   "titulo": "6,12 *Mbit/s*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "244 800 × 25"
+     },
+     {
+      "txt": "= 6,12 Mbit/s"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Siempre igual: cuenta bloques, multiplica por bits, y por las imágenes de cada *segundo*.",
+   "titulo": "BLOQUES × *BITS*",
+   "visual": {
+    "tipo": "big",
+    "big": "B × b × fps",
+    "small": "bloques × bits/bloque × imágenes/s"
+   }
+  }
+ ]
+}

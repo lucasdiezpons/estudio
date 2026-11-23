@@ -1,0 +1,135 @@
+{
+ "id": "sai-paleta-pierde",
+ "formato": "adivina",
+ "titulo": "¿Paleta con pérdidas?",
+ "texto": "Depende de los colores",
+ "tema": "SAI · Paleta",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "paleta",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "Una paleta es un diccionario de colores dentro del archivo: sin pérdidas si caben todos los colores, con pérdidas si no.",
+  "ganchos": [
+   "¿La paleta pierde calidad? Depende de una sola cosa.",
+   "GIF no pierde... salvo cuando sí.",
+   "Un diccionario de colores: ¿con o sin pérdidas?"
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "el reto",
+   "sub": "¿Una paleta comprime con pérdidas o *sin* pérdidas? Depende de una sola cosa.",
+   "titulo": "¿PIERDE *CALIDAD*?",
+   "visual": {
+    "tipo": "pregunta",
+    "pregunta": "Paleta (GIF): ¿con o sin pérdidas?",
+    "opciones": [
+     "Siempre sin pérdidas",
+     "Siempre con pérdidas",
+     "Depende de los colores"
+    ],
+    "correcta": 2
+   }
+  },
+  {
+   "tag": "qué es",
+   "sub": "Una paleta es un diccionario de colores: cada píxel guarda solo un *número* que apunta al color.",
+   "titulo": "UN *DICCIONARIO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📖",
+    "linea1": "Píxel → índice → color RGB",
+    "linea2": "GIF: 256 ENTRADAS"
+   }
+  },
+  {
+   "tag": "el ahorro",
+   "sub": "GIF tiene doscientas cincuenta y seis entradas de veinticuatro bits. Cada píxel pasa de veinticuatro a *ocho* bits.",
+   "titulo": "24 → *8 BITS*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "24 bits/píxel"
+     },
+     {
+      "txt": "256 entradas → 8 bits"
+     },
+     {
+      "txt": "factor 3"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "caben",
+   "sub": "Si la imagen tiene como mucho esos colores, cabe todo: *sin pérdidas*.",
+   "titulo": "CABEN: *SIN PÉRDIDA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✅",
+    "linea1": "Colores ≤ entradas",
+    "linea2": "SIN PÉRDIDAS"
+   }
+  },
+  {
+   "tag": "no caben",
+   "sub": "Si hay más colores que entradas, se quedan los más frecuentes y el resto se aproxima: *con pérdidas*.",
+   "titulo": "NO CABEN: *PIERDES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✂️",
+    "linea1": "Más colores que entradas",
+    "linea2": "CON PÉRDIDAS"
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Y la paleta va *siempre* dentro del archivo: sin diccionario, no se puede decodificar.",
+   "titulo": "VA *DENTRO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📦",
+    "linea1": "El decodificador la necesita",
+    "linea2": "SIEMPRE EN EL ARCHIVO"
+   }
+  }
+ ]
+}

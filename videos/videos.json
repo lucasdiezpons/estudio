@@ -1229,5 +1229,248 @@
     "texto": "Efficience, équité, stabilisation",
     "tema": "Sciences éco · L'État",
     "examen": "Partiel"
+  },
+  {
+    "id": "sai-adpcm-bitrate",
+    "archivo": "sai-adpcm-bitrate.mp4",
+    "poster": "sai-adpcm-bitrate.jpg",
+    "titulo": "Bits por muestra",
+    "texto": "Caudal de un ADPCM",
+    "tema": "SAI · ADPCM y silencios",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-adpcm-forward-backward",
+    "archivo": "sai-adpcm-forward-backward.mp4",
+    "poster": "sai-adpcm-forward-backward.jpg",
+    "titulo": "Forward vs backward",
+    "texto": "Quién calcula los coeficientes",
+    "tema": "SAI · ADPCM y silencios",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-cambio-escena",
+    "archivo": "sai-cambio-escena.mp4",
+    "poster": "sai-cambio-escena.jpg",
+    "titulo": "Pico extraño",
+    "texto": "Cambio de escena",
+    "tema": "SAI · Macrobloques",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-eficiencia-rtp",
+    "archivo": "sai-eficiencia-rtp.mp4",
+    "poster": "sai-eficiencia-rtp.jpg",
+    "titulo": "Voz vs cabeceras",
+    "texto": "Eficiencia de una llamada IP",
+    "tema": "SAI · Voz sobre IP",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-enmascaramiento",
+    "archivo": "sai-enmascaramiento.mp4",
+    "poster": "sai-enmascaramiento.jpg",
+    "titulo": "Sonidos tapados",
+    "texto": "Lo que el MP3 se ahorra",
+    "tema": "SAI · Audio perceptual",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-jpeg-bits-pixel",
+    "archivo": "sai-jpeg-bits-pixel.mp4",
+    "poster": "sai-jpeg-bits-pixel.jpg",
+    "titulo": "Bits por píxel",
+    "texto": "Cuánta calidad es esto",
+    "tema": "SAI · JPEG",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-jpeg-mascara",
+    "archivo": "sai-jpeg-mascara.mp4",
+    "poster": "sai-jpeg-mascara.jpg",
+    "titulo": "Dividir y redondear",
+    "texto": "Aquí pierde JPEG",
+    "tema": "SAI · JPEG",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-jpeg-progresivo",
+    "archivo": "sai-jpeg-progresivo.mp4",
+    "poster": "sai-jpeg-progresivo.jpg",
+    "titulo": "JPEG progresivo",
+    "texto": "Primero borroso, luego nítido",
+    "tema": "SAI · JPEG",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-jpeg-que-imagen",
+    "archivo": "sai-jpeg-que-imagen.mp4",
+    "poster": "sai-jpeg-que-imagen.jpg",
+    "titulo": "¿Qué imagen es?",
+    "texto": "Fila o columna",
+    "tema": "SAI · JPEG",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-jpeg-simbolos",
+    "archivo": "sai-jpeg-simbolos.mp4",
+    "poster": "sai-jpeg-simbolos.jpg",
+    "titulo": "Leer símbolos",
+    "texto": "(ceros, tamaño)(valor)",
+    "tema": "SAI · JPEG",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-jpeg-trampa-dct",
+    "archivo": "sai-jpeg-trampa-dct.mp4",
+    "poster": "sai-jpeg-trampa-dct.jpg",
+    "titulo": "La DCT no pierde",
+    "texto": "Dónde se pierde la calidad",
+    "tema": "SAI · JPEG",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-mjpeg-bloques",
+    "archivo": "sai-mjpeg-bloques.mp4",
+    "poster": "sai-mjpeg-bloques.jpg",
+    "titulo": "Caudal de MJPEG",
+    "texto": "Cuenta bloques de 8×8",
+    "tema": "SAI · JPEG",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-mp3-reloj-rtp",
+    "archivo": "sai-mp3-reloj-rtp.mp4",
+    "poster": "sai-mp3-reloj-rtp.jpg",
+    "titulo": "Reloj del MP3",
+    "texto": "La excepción de RTP",
+    "tema": "SAI · Audio perceptual",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-mp3-trama",
+    "archivo": "sai-mp3-trama.mp4",
+    "poster": "sai-mp3-trama.jpg",
+    "titulo": "Trama de MP3",
+    "texto": "417,95 bytes",
+    "tema": "SAI · Audio perceptual",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-mpeg-bitrate",
+    "archivo": "sai-mpeg-bitrate.mp4",
+    "poster": "sai-mpeg-bitrate.jpg",
+    "titulo": "Caudal de MPEG",
+    "texto": "Cuántas I, P y B hay",
+    "tema": "SAI · MPEG retardo",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-mpeg-ipb",
+    "archivo": "sai-mpeg-ipb.mp4",
+    "poster": "sai-mpeg-ipb.jpg",
+    "titulo": "I, P y B",
+    "texto": "Un álbum de fotos",
+    "tema": "SAI · MPEG GoP",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-mpeg-macrobloques",
+    "archivo": "sai-mpeg-macrobloques.mp4",
+    "poster": "sai-mpeg-macrobloques.jpg",
+    "titulo": "Saltado vs no codificado",
+    "texto": "Macrobloques de MPEG",
+    "tema": "SAI · Macrobloques",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-mpeg-n-error",
+    "archivo": "sai-mpeg-n-error.mp4",
+    "poster": "sai-mpeg-n-error.jpg",
+    "titulo": "Sacar N y M",
+    "texto": "Con el caudal y un error",
+    "tema": "SAI · MPEG GoP",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-mpeg-n-m",
+    "archivo": "sai-mpeg-n-m.mp4",
+    "poster": "sai-mpeg-n-m.jpg",
+    "titulo": "N y M",
+    "texto": "Dos distancias",
+    "tema": "SAI · MPEG GoP",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-mpeg-reordenar",
+    "archivo": "sai-mpeg-reordenar.mp4",
+    "poster": "sai-mpeg-reordenar.jpg",
+    "titulo": "Reordenar imágenes",
+    "texto": "El futuro primero",
+    "tema": "SAI · MPEG GoP",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-mpeg-retardo",
+    "archivo": "sai-mpeg-retardo.mp4",
+    "poster": "sai-mpeg-retardo.jpg",
+    "titulo": "Retardo de reordenar",
+    "texto": "M por el tiempo de una imagen",
+    "tema": "SAI · MPEG retardo",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-mpeg-videoconferencia",
+    "archivo": "sai-mpeg-videoconferencia.mp4",
+    "poster": "sai-mpeg-videoconferencia.jpg",
+    "titulo": "¿Sirve para videollamada?",
+    "texto": "El límite de 150 ms",
+    "tema": "SAI · MPEG retardo",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-paleta-calculo",
+    "archivo": "sai-paleta-calculo.mp4",
+    "poster": "sai-paleta-calculo.jpg",
+    "titulo": "Calcular la paleta",
+    "texto": "Entradas y bits",
+    "tema": "SAI · Paleta",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-paleta-pierde",
+    "archivo": "sai-paleta-pierde.mp4",
+    "poster": "sai-paleta-pierde.jpg",
+    "titulo": "¿Paleta con pérdidas?",
+    "texto": "Depende de los colores",
+    "tema": "SAI · Paleta",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-perfiles-bytes",
+    "archivo": "sai-perfiles-bytes.mp4",
+    "poster": "sai-perfiles-bytes.jpg",
+    "titulo": "Adivina el códec",
+    "texto": "Solo con las barras",
+    "tema": "SAI · Macrobloques",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-retardo-voip",
+    "archivo": "sai-retardo-voip.mp4",
+    "poster": "sai-retardo-voip.jpg",
+    "titulo": "Retardo en VoIP",
+    "texto": "G.723.1 llega tarde",
+    "tema": "SAI · Voz sobre IP",
+    "examen": "Unit 4 Codecs"
+  },
+  {
+    "id": "sai-vad-ruido",
+    "archivo": "sai-vad-ruido.mp4",
+    "poster": "sai-vad-ruido.jpg",
+    "titulo": "VAD y ruido",
+    "texto": "Callar cuando no hablas",
+    "tema": "SAI · ADPCM y silencios",
+    "examen": "Unit 4 Codecs"
   }
 ]

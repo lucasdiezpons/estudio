@@ -1,0 +1,149 @@
+{
+ "id": "sai-mp3-trama",
+ "formato": "resuelto",
+ "titulo": "Trama de MP3",
+ "texto": "417,95 bytes",
+ "tema": "SAI · Audio perceptual",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "mp3",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "Una trama MP3 son 1152 muestras = 26,12 ms; a 128 kbit/s mide 417,95 bytes: el 95 % miden 418 (con padding) y el resto 417.",
+  "ganchos": [
+   "Una trama de MP3 mide 417,95 bytes. ¿Y el decimal?",
+   "¿Cuántos bytes tiene una trama de MP3? Hay truco.",
+   "El MP3 tiene bytes con decimales. ¿Cómo se manda medio byte?"
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "el gancho",
+   "sub": "Una trama de MP3 mide cuatrocientos diecisiete coma noventa y cinco bytes... ¿y el *decimal*?",
+   "titulo": "¿MEDIO *BYTE*?",
+   "visual": {
+    "tipo": "big",
+    "big": "417,95 B",
+    "small": "una trama MP3 a 128 kbit/s"
+   }
+  },
+  {
+   "tag": "el tiempo",
+   "sub": "Una trama son mil ciento cincuenta y dos muestras. A cuarenta y cuatro mil cien por segundo: *veintiséis coma doce* ms.",
+   "titulo": "26,12 *ms*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "1152 ÷ 44 100"
+     },
+     {
+      "txt": "= 26,12 ms"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "los bytes",
+   "sub": "Los bytes: ciento veintiocho kilobits en ese tiempo... *cuatrocientos diecisiete coma noventa y cinco*.",
+   "titulo": "LOS *BYTES*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "128 kbit/s × 26,12 ms"
+     },
+     {
+      "txt": "÷ 8 bits"
+     },
+     {
+      "txt": "= 417,95 bytes"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "el reparto",
+   "sub": "Sin decimales: el noventa y cinco por ciento miden *cuatrocientos dieciocho* y el resto, diecisiete.",
+   "titulo": "418 O *417*",
+   "visual": {
+    "tipo": "vs",
+    "izq": {
+     "icono": "📏",
+     "titulo": "418 bytes",
+     "puntos": [
+      "95 % de tramas",
+      "con padding"
+     ]
+    },
+    "der": {
+     "icono": "📐",
+     "titulo": "417 bytes",
+     "puntos": [
+      "5 % de tramas",
+      "sin padding"
+     ]
+    },
+    "ganador": "izq",
+    "en": "dieciocho"
+   }
+  },
+  {
+   "tag": "el padding",
+   "sub": "El *padding* es un byte extra, y un bit de la cabecera avisa de cuándo lo hay.",
+   "titulo": "BIT DE *PADDING*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧩",
+    "linea1": "En la cabecera (1 bit)",
+    "linea2": "1 = BYTE EXTRA"
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Acuérdate: mil ciento cincuenta y dos muestras por trama en MP2 y MP3. *Siempre*. Lo demás sale de dividir.",
+   "titulo": "1152 *SIEMPRE*",
+   "visual": {
+    "tipo": "big",
+    "big": "1152",
+    "small": "muestras por trama · MP2 y MP3"
+   }
+  }
+ ]
+}

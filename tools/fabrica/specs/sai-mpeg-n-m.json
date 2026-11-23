@@ -1,0 +1,127 @@
+{
+ "id": "sai-mpeg-n-m",
+ "formato": "regla",
+ "titulo": "N y M",
+ "texto": "Dos distancias",
+ "tema": "SAI · MPEG GoP",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "mpeg",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "N = distancia entre I y la siguiente I (longitud del GoP); M = distancia entre referencias (I o P); entre ellas hay M−1 B.",
+  "ganchos": [
+   "N y M se confunden siempre. Truco: una se cuenta entre I, otra entre referencias.",
+   "Dos letras que todo el mundo mezcla.",
+   "I B B P B B P B B: ¿cuánto valen N y M?"
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "el gancho",
+   "sub": "N y M se confunden siempre. Truco: mira la secuencia I B B P B B P B B, y cuenta.",
+   "titulo": "N Y *M*",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-gop-nm.png"
+   }
+  },
+  {
+   "tag": "N",
+   "sub": "*N* es la distancia entre una I y la siguiente. Aquí, nueve imágenes: N igual a nueve.",
+   "titulo": "N = *9*",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-gop-nm.png",
+    "pie": "de I a I"
+   }
+  },
+  {
+   "tag": "GoP",
+   "sub": "Esas nueve forman un *GoP*: el grupo de imágenes que cuelga de una I.",
+   "titulo": "GOP = *N*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧩",
+    "linea1": "Grupo de imágenes",
+    "linea2": "LONGITUD = N"
+   }
+  },
+  {
+   "tag": "M",
+   "sub": "*M* es la distancia entre referencias: de la I a la P. Aquí tres: M igual a tres.",
+   "titulo": "M = *3*",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-gop-nm.png",
+    "pie": "de referencia a referencia"
+   }
+  },
+  {
+   "tag": "las B",
+   "sub": "Y entre dos referencias siempre hay M menos uno B. Con M igual a tres, *dos B*.",
+   "titulo": "B = *M − 1*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "M = 3"
+     },
+     {
+      "txt": "B seguidas = M − 1"
+     },
+     {
+      "txt": "= 2"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Regla: N entre I, M entre referencias, y las B son M menos uno. Sin B, *M vale uno*.",
+   "titulo": "SIN B, *M = 1*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔑",
+    "linea1": "I P P P P...",
+    "linea2": "M = 1"
+   }
+  }
+ ]
+}

@@ -1,0 +1,152 @@
+{
+ "id": "sai-mpeg-macrobloques",
+ "formato": "vs",
+ "titulo": "Saltado vs no codificado",
+ "texto": "Macrobloques de MPEG",
+ "tema": "SAI · Macrobloques",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "mpeg",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "Saltado (skipped) = no se manda nada; no codificado (not coded) = solo vector, sin JPEG de diferencia. La I solo tiene intra; la B puede tenerlos todos.",
+  "ganchos": [
+   "Skipped y Not coded parecen lo mismo. No lo son.",
+   "Seis tipos de macrobloque y dos se confunden.",
+   "¿Qué manda un macrobloque que no manda nada?"
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "el gancho",
+   "sub": "El *saltado* y el *no codificado* parecen lo mismo. Los dos casi no llevan nada... pero no es igual.",
+   "titulo": "¿SON *IGUALES*?",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🤔",
+    "linea1": "Skipped y Not coded",
+    "linea2": "¿LO MISMO?"
+   }
+  },
+  {
+   "tag": "saltado",
+   "sub": "El *saltado* no manda nada: ni vector ni diferencia. Es casi igual que antes, y se copia.",
+   "titulo": "SKIPPED = *NADA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⏭️",
+    "linea1": "Casi no cambió",
+    "linea2": "NO SE MANDA NADA"
+   }
+  },
+  {
+   "tag": "no codificado",
+   "sub": "El *no codificado* sí manda vector de movimiento, pero ninguna diferencia: se movió, y no cambió.",
+   "titulo": "NOT CODED = *VECTOR*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧭",
+    "linea1": "Se movió sin cambiar",
+    "linea2": "VECTOR, SIN JPEG"
+   }
+  },
+  {
+   "tag": "el resumen",
+   "sub": "Saltado, nada. No codificado, vector. Los demás llevan vector *más* diferencia.",
+   "titulo": "NADA O *VECTOR*",
+   "visual": {
+    "tipo": "vs",
+    "izq": {
+     "icono": "⏭️",
+     "titulo": "Skipped",
+     "puntos": [
+      "nada"
+     ]
+    },
+    "der": {
+     "icono": "🧭",
+     "titulo": "Not coded",
+     "puntos": [
+      "vector",
+      "sin JPEG"
+     ]
+    }
+   }
+  },
+  {
+   "tag": "dónde",
+   "sub": "En la I todos son *intra*. En la P: intra, forward, saltados y no codificados. En la B, todos.",
+   "titulo": "¿DÓNDE *APARECEN*?",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📷",
+      "izq": "Imagen I",
+      "der": "Intra",
+      "en": "intra."
+     },
+     {
+      "icono": "🩹",
+      "izq": "Imagen P",
+      "der": "Intra · Fwd · Skip · NC",
+      "en": "P:"
+     },
+     {
+      "icono": "🔀",
+      "izq": "Imagen B",
+      "der": "Todos",
+      "en": "todos."
+     }
+    ]
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Regla: la I solo *intra*; la B puede tener todos. Y los que no mandan diferencia, casi gratis.",
+   "titulo": "I = *INTRA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔑",
+    "linea1": "I → solo Intra",
+    "linea2": "B → TODOS"
+   }
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "id": "sai-mpeg-ipb",
+ "formato": "analogia",
+ "titulo": "I, P y B",
+ "texto": "Un álbum de fotos",
+ "tema": "SAI · MPEG GoP",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "mpeg",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "I = foto completa (un JPEG), P = parche respecto al pasado, B = usa pasado y futuro y es la más barata.",
+  "ganchos": [
+   "Un vídeo MPEG es un álbum donde solo algunas hojas son fotos de verdad.",
+   "Tres tipos de imagen: la foto, el parche y el comodín.",
+   "¿Por qué una imagen pesa cinco veces menos que otra?"
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "el gancho",
+   "sub": "Un vídeo MPEG es como un álbum donde solo *algunas* hojas son fotos de verdad.",
+   "titulo": "ÁLBUM *MPEG*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📔",
+    "linea1": "Tres tipos de imagen",
+    "linea2": "I · P · B"
+   }
+  },
+  {
+   "tag": "la I",
+   "sub": "La *I* es la foto entera: un JPEG de toda la vida. Se entiende ella sola.",
+   "titulo": "I = *FOTO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📷",
+    "linea1": "Un JPEG por sí sola",
+    "linea2": "NO DEPENDE DE NADIE"
+   }
+  },
+  {
+   "tag": "la P",
+   "sub": "La *P* dice: es como la anterior, pero esto se movió así. Solo guarda la *diferencia*.",
+   "titulo": "P = *PARCHE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🩹",
+    "linea1": "Mira hacia atrás",
+    "linea2": "GUARDA LA DIFERENCIA"
+   }
+  },
+  {
+   "tag": "la B",
+   "sub": "La *B* mira a las dos: la anterior y la que *viene*. Por eso es la más barata.",
+   "titulo": "B = *AMBAS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔀",
+    "linea1": "Pasado y futuro",
+    "linea2": "LA MÁS BARATA"
+   }
+  },
+  {
+   "tag": "los tamaños",
+   "sub": "En un ejemplo: la I pesa cuarenta mil bytes, la P dieciséis mil, y la B *ocho mil*.",
+   "titulo": "¿Y CUÁNTO *PESAN*?",
+   "visual": {
+    "tipo": "filas",
+    "filas": [
+     {
+      "icono": "📷",
+      "izq": "Imagen I",
+      "der": "40 000 B",
+      "en": "cuarenta"
+     },
+     {
+      "icono": "🩹",
+      "izq": "Imagen P",
+      "der": "16 000 B",
+      "en": "dieciséis"
+     },
+     {
+      "icono": "🔀",
+      "izq": "Imagen B",
+      "der": "8 000 B",
+      "en": "ocho"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Cuanto más mira a otras, *menos pesa*. La I, que no mira a nadie, es la más cara.",
+   "titulo": "MIRA = *AHORRA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "💡",
+    "linea1": "I > P > B (en peso)",
+    "linea2": "MIRAR AHORRA BITS"
+   }
+  }
+ ]
+}

@@ -1,0 +1,135 @@
+{
+ "id": "sai-mpeg-videoconferencia",
+ "formato": "adivina",
+ "titulo": "¿Sirve para videollamada?",
+ "texto": "El límite de 150 ms",
+ "tema": "SAI · MPEG retardo",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "mpeg",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "Una videoconferencia pide menos de 150 ms en un sentido; solo reordenar con M=4 ya son 160 ms, así que N y M de TV no sirven: sin B no se reordena.",
+  "ganchos": [
+   "¿Sirve ese MPEG para videoconferencia? Mira un solo número.",
+   "Ciento sesenta contra ciento cincuenta.",
+   "La tele puede esperar. Una videollamada, no."
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "el reto",
+   "sub": "Con N ocho y M cuatro, ¿sirve para una videoconferencia? Mira *un solo número*.",
+   "titulo": "¿SIRVE?",
+   "visual": {
+    "tipo": "pregunta",
+    "pregunta": "N = 8, M = 4 a 25 im/s → videoconferencia",
+    "opciones": [
+     "Sí, va justo",
+     "Sí, con buena red",
+     "No, pasa de 150 ms"
+    ],
+    "correcta": 2,
+    "en": "número."
+   }
+  },
+  {
+   "tag": "el límite",
+   "sub": "Hablar de tú a tú pide como mucho ciento cincuenta milisegundos en un sentido. Son *trescientos* ida y vuelta.",
+   "titulo": "LÍMITE *150 ms*",
+   "visual": {
+    "tipo": "big",
+    "big": "150 ms",
+    "small": "un sentido (300 ms ida y vuelta)"
+   }
+  },
+  {
+   "tag": "reordenar",
+   "sub": "Y solo reordenar ya son *ciento sesenta*. Te pasas... sin haber mandado nada por la red.",
+   "titulo": "REORDENAR: *160 ms*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "Reordenar: 160 ms"
+     },
+     {
+      "txt": "Límite: 150 ms"
+     },
+     {
+      "txt": "160 > 150 ✗"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "lo demás",
+   "sub": "Y aún faltan la CPU, empaquetar, la red, el buffer y descomprimir. Todo eso *se suma*.",
+   "titulo": "Y *LO DEMÁS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "➕",
+    "linea1": "CPU · paquetes · red · buffer",
+    "linea2": "TODO SE SUMA"
+   }
+  },
+  {
+   "tag": "la solución",
+   "sub": "La solución es sin B: solo I y P. Sin B no hay que reordenar: *cero* retardo por ahí.",
+   "titulo": "SIN B, *SIN ESPERA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✂️",
+    "linea1": "I P P P P...",
+    "linea2": "REORDENAR = 0"
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Regla: la televisión puede esperar, la videoconferencia *no*. M pequeño, o sin B.",
+   "titulo": "VIDEOCONF: *M=1*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔑",
+    "linea1": "TV: puede esperar",
+    "linea2": "VIDEOCONF: NO"
+   }
+  }
+ ]
+}

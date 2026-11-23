@@ -1,0 +1,148 @@
+{
+ "id": "sai-mpeg-bitrate",
+ "formato": "resuelto",
+ "titulo": "Caudal de MPEG",
+ "texto": "Cuántas I, P y B hay",
+ "tema": "SAI · MPEG retardo",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "mpeg",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "En un GoP con N=15 y M=3 hay 1 I, 4 P y 10 B; media ponderada de tamaños × imágenes por segundo = 1,4 Mbit/s.",
+  "ganchos": [
+   "¿Cuántos megabits genera un MPEG? Cuenta las I, P y B de un GoP.",
+   "Una media ponderada y listo.",
+   "Quince imágenes: ¿cuántas son I, P y B?"
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "el reto",
+   "sub": "Tienes N igual a quince, M igual a tres. ¿Cuántas I, P y B hay en cada grupo? Eso decide *el caudal*.",
+   "titulo": "CUENTA *I P B*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧮",
+    "linea1": "N = 15 · M = 3",
+    "linea2": "¿CUÁNTAS DE CADA?"
+   }
+  },
+  {
+   "tag": "las P",
+   "sub": "Una I por grupo. Y de P: quince entre tres, menos uno... *cuatro*.",
+   "titulo": "P = N/M − *1*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "15 ÷ 3 − 1"
+     },
+     {
+      "txt": "= 4 P"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "las B",
+   "sub": "Las B son las que sobran: quince menos una, menos cuatro... *diez*.",
+   "titulo": "B = *10*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "15 − 1 − 4"
+     },
+     {
+      "txt": "= 10 B"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "la media",
+   "sub": "Ahora la media: I catorce mil cuatrocientos, P siete mil seiscientos, B cuatro mil trescientos, cada una con su *peso*.",
+   "titulo": "MEDIA *PONDERADA*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "14 442 · 1/15"
+     },
+     {
+      "txt": "+ 7 595 · 4/15"
+     },
+     {
+      "txt": "+ 4 311 · 10/15"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "el resultado",
+   "sub": "Salen cinco mil ochocientos sesenta y dos bytes por imagen: a veintinueve coma noventa y siete, *uno coma cuatro* megabits.",
+   "titulo": "1,4 *Mbit/s*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "5 862 B × 8 = 46 897 bits"
+     },
+     {
+      "txt": "× 29,97 im/s"
+     },
+     {
+      "txt": "≈ 1,405 Mbit/s"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Siempre igual: media ponderada de tamaños, por ocho bits, por imágenes por segundo. Y ojo con los *bytes*.",
+   "titulo": "BYTES × 8 × *FPS*",
+   "visual": {
+    "tipo": "big",
+    "big": "× 8 × fps",
+    "small": "bytes/imagen → bit/s"
+   }
+  }
+ ]
+}

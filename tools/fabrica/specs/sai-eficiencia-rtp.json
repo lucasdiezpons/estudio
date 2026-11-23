@@ -1,0 +1,159 @@
+{
+ "id": "sai-eficiencia-rtp",
+ "formato": "formula",
+ "titulo": "Voz vs cabeceras",
+ "texto": "Eficiencia de una llamada IP",
+ "tema": "SAI · Voz sobre IP",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "voip",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "Eficiencia = bytes de voz / (voz + 40 de cabeceras): con G.723.1 solo 37,5 %; más tramas por paquete suben la eficiencia pero también el retardo.",
+  "ganchos": [
+   "De cada paquete, más de la mitad no es voz.",
+   "En una llamada IP, la voz ocupa menos que las cabeceras.",
+   "¿Cuánto de tu llamada es voz y cuánto es sobre?"
+  ],
+  "elegido": 1
+ },
+ "segmentos": [
+  {
+   "tag": "el gancho",
+   "sub": "En una llamada por IP, la voz ocupa *menos* que las cabeceras. Veinticuatro bytes de voz... contra cuarenta.",
+   "titulo": "VOZ < *CABECERAS*",
+   "visual": {
+    "tipo": "vs",
+    "izq": {
+     "icono": "🎙️",
+     "titulo": "Voz",
+     "puntos": [
+      "24 bytes"
+     ]
+    },
+    "der": {
+     "icono": "📦",
+     "titulo": "Cabeceras",
+     "puntos": [
+      "40 bytes"
+     ]
+    },
+    "ganador": "der",
+    "en": "menos"
+   }
+  },
+  {
+   "tag": "cabeceras",
+   "sub": "Cabeceras: IP veinte, UDP ocho, RTP doce. Son *cuarenta* bytes en todos los paquetes.",
+   "titulo": "20 + 8 + *12*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "IP 20 + UDP 8 + RTP 12"
+     },
+     {
+      "txt": "= 40 bytes"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "la voz",
+   "sub": "Y la voz: seis coma tres kilobits durante treinta milisegundos son ciento ochenta y nueve bits... *veinticuatro* bytes.",
+   "titulo": "24 BYTES DE *VOZ*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "6,3 kbit/s × 30 ms"
+     },
+     {
+      "txt": "= 189 bits ≈ 24 bytes"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "eficiencia",
+   "sub": "Eficiencia: lo útil entre lo que mandas. Veinticuatro entre sesenta y cuatro: *treinta y siete coma cinco* por ciento.",
+   "titulo": "EFICIENCIA *37,5 %*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "24 ÷ (24 + 40)"
+     },
+     {
+      "txt": "= 37,5 %"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "aún peor",
+   "sub": "Con la versión de cinco coma tres son veinte bytes: aún peor, *treinta y tres* por ciento.",
+   "titulo": "AÚN *PEOR*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "20 ÷ 60 = 33,3 %"
+     },
+     {
+      "txt": "60 B × 8 ÷ 30 ms"
+     },
+     {
+      "txt": "= 16 kbit/s en la red"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "el peaje",
+   "sub": "Mete dos tramas por paquete: sube la eficiencia, pero pagas *treinta* milisegundos más. Siempre hay peaje.",
+   "titulo": "TRAMAS *EXTRA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⚖️",
+    "linea1": "2 tramas: 10,6 kbit/s",
+    "linea2": "+30 ms DE RETARDO"
+   }
+  }
+ ]
+}

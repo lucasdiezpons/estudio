@@ -1,0 +1,120 @@
+{
+ "id": "sai-cambio-escena",
+ "formato": "porque",
+ "titulo": "Pico extraño",
+ "texto": "Cambio de escena",
+ "tema": "SAI · Macrobloques",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "mpeg",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "Un pico fuera de sitio es un cambio de escena: la predicción ya no sirve y el codificador convierte una P en I y reinicia el GoP (en H.261, casi todo pasa a Intra).",
+  "ganchos": [
+   "Un pico gigante en mitad de la secuencia: no es un error.",
+   "Un corte de plano rompe el GoP.",
+   "¿Por qué hay una I donde tocaba una P?"
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "el gancho",
+   "sub": "Ves un pico gigante *en mitad* de la secuencia, donde tocaba una P. ¿Error? No.",
+   "titulo": "PICO *EXTRAÑO*",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-escena.png"
+   }
+  },
+  {
+   "tag": "el corte",
+   "sub": "Es un cambio de escena. La imagen nueva no se parece *nada* a la anterior.",
+   "titulo": "CORTE DE *PLANO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎬",
+    "linea1": "Otra escena, otros colores",
+    "linea2": "NADA QUE COPIAR"
+   }
+  },
+  {
+   "tag": "por qué",
+   "sub": "Predecir desde la anterior no sirve de nada: el parche saldría *más grande* que la foto.",
+   "titulo": "PREDECIR *NO SIRVE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🩹",
+    "linea1": "Diferencia ≈ imagen entera",
+    "linea2": "MEJOR UNA FOTO"
+   }
+  },
+  {
+   "tag": "la solución",
+   "sub": "Así que el codificador convierte esa P en una *I* y reinicia el grupo de imágenes.",
+   "titulo": "P → *I*",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-escena.png",
+    "pie": "el GoP se reinicia"
+   }
+  },
+  {
+   "tag": "H.261",
+   "sub": "En H.261 pasa parecido: casi todos los macrobloques se vuelven *intra*, y los vectores salen raros.",
+   "titulo": "H.261: *INTRA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🌀",
+    "linea1": "Casi todo pasa a Intra",
+    "linea2": "VECTORES RAROS"
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Regla: un pico fuera de sitio es un cambio de escena. Y el grupo *vuelve a empezar*.",
+   "titulo": "PICO = *CORTE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔑",
+    "linea1": "Pico donde no toca",
+    "linea2": "= CAMBIO DE ESCENA"
+   }
+  }
+ ]
+}

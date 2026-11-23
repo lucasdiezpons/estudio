@@ -1,0 +1,149 @@
+{
+ "id": "sai-adpcm-forward-backward",
+ "formato": "vs",
+ "titulo": "Forward vs backward",
+ "texto": "Quién calcula los coeficientes",
+ "tema": "SAI · ADPCM y silencios",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "adpcm",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "En forward los coeficientes viajan con los datos (más bits); en backward los calculan los dos lados (nada extra): por eso casi todos son backward.",
+  "ganchos": [
+   "Misma voz, mismo ADPCM... y una versión sale 12,8 kbit/s más cara.",
+   "¿Quién calcula los coeficientes, el que manda o el que recibe?",
+   "Forward y backward parecen lo mismo. No lo son."
+  ],
+  "elegido": 1
+ },
+ "segmentos": [
+  {
+   "tag": "el reto",
+   "sub": "Misma voz, mismo *ADPCM*... y una versión sale *doce coma ocho* kilobits por segundo más cara.",
+   "titulo": "¿QUIÉN *CALCULA*?",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧮",
+    "linea1": "ADPCM: ¿quién saca los coeficientes?",
+    "linea2": "+12,8 kbit/s"
+   }
+  },
+  {
+   "tag": "forward",
+   "sub": "En *forward* los calcula el que manda... y tiene que *enviárselos* al otro lado, junto con los datos.",
+   "titulo": "FORWARD *ENVÍA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📤",
+    "linea1": "Viajan diferencias + coeficientes",
+    "linea2": "DOS COSAS"
+   }
+  },
+  {
+   "tag": "backward",
+   "sub": "En *backward* los dos ven las mismas diferencias, así que los calculan *solos*. No hay nada que contar.",
+   "titulo": "BACKWARD: *CERO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔁",
+    "linea1": "Emisor y receptor calculan lo mismo",
+    "linea2": "CERO EXTRA"
+   }
+  },
+  {
+   "tag": "la cuenta",
+   "sub": "Ocho coeficientes de treinta y dos bits, cada veinte milisegundos... son *doce coma ocho* kilobits de más.",
+   "titulo": "LA *CUENTA*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "8 coef. × 32 bits",
+      "en": "Ocho"
+     },
+     {
+      "txt": "÷ 20 ms",
+      "en": "veinte"
+     },
+     {
+      "txt": "= 12,8 kbit/s",
+      "en": "doce"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "el total",
+   "sub": "Por eso casi todos usan *backward*: veinticuatro kilobits contra treinta y seis coma ocho.",
+   "titulo": "SE LLEVA *BACKWARD*",
+   "visual": {
+    "tipo": "vs",
+    "izq": {
+     "icono": "📤",
+     "titulo": "Forward",
+     "puntos": [
+      "36,8 kbit/s",
+      "manda coeficientes"
+     ]
+    },
+    "der": {
+     "icono": "🔁",
+     "titulo": "Backward",
+     "puntos": [
+      "24 kbit/s",
+      "calcula cada lado"
+     ]
+    },
+    "ganador": "der",
+    "en": "backward:"
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Regla: si el otro lado lo puede *adivinar*... no se lo mandes.",
+   "titulo": "NO LO *MANDES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🤫",
+    "linea1": "Si los dos lo pueden calcular",
+    "linea2": "NO SE ENVÍA"
+   }
+  }
+ ]
+}

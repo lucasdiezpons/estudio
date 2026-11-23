@@ -1,0 +1,138 @@
+{
+ "id": "sai-jpeg-mascara",
+ "formato": "porque",
+ "titulo": "Dividir y redondear",
+ "texto": "Aquí pierde JPEG",
+ "tema": "SAI · JPEG",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "jpeg",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "JPEG pierde calidad al dividir cada coeficiente por la tabla y redondear: lo pequeño se vuelve cero.",
+  "ganchos": [
+   "La parte donde JPEG te roba calidad es una simple división.",
+   "La DCT no pierde nada: la pérdida es una división.",
+   "¿Dónde se pierde la calidad? En una cuenta de primaria."
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "el gancho",
+   "sub": "Aquí es donde JPEG te roba calidad... y es solo una *división*.",
+   "titulo": "UNA *DIVISIÓN*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "➗",
+    "linea1": "Cada coeficiente ÷ tabla",
+    "linea2": "Y SE REDONDEA"
+   }
+  },
+  {
+   "tag": "ejemplo uno",
+   "sub": "Coeficiente dieciocho coma dos, la tabla dice once. Dieciocho entre once, uno coma seis: redondeas a *dos*.",
+   "titulo": "18,2 ÷ 11 = *2*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "18,2 ÷ 11 = 1,65"
+     },
+     {
+      "txt": "redondeo → 2"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "ejemplo dos",
+   "sub": "Menos doce entre diez, menos uno coma dos... *menos uno*.",
+   "titulo": "−12 ÷ 10 = *−1*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "−12 ÷ 10 = −1,2"
+     },
+     {
+      "txt": "redondeo → −1"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "lo pequeño",
+   "sub": "Pero cinco coma tres entre dieciséis: cero coma treinta y tres. Redondeas y se vuelve *cero*.",
+   "titulo": "SE VUELVE *CERO*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "5,3 ÷ 16 = 0,33"
+     },
+     {
+      "txt": "redondeo → 0 ✗"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "las altas",
+   "sub": "Y la tabla tiene números *grandes* hacia las altas frecuencias, así que ahí desaparece casi todo.",
+   "titulo": "ALTAS: *PIERDEN*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📉",
+    "linea1": "Tabla más grande abajo a la derecha",
+    "linea2": "ALTAS → CEROS"
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Regla: dividir y redondear. Lo pequeño se va a *cero*, y los ceros salen casi gratis.",
+   "titulo": "DIVIDE Y *REDONDEA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🎯",
+    "linea1": "Cuantizar = dividir + redondear",
+    "linea2": "CEROS GRATIS"
+   }
+  }
+ ]
+}

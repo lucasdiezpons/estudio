@@ -1,0 +1,143 @@
+{
+ "id": "sai-vad-ruido",
+ "formato": "resuelto",
+ "titulo": "VAD y ruido",
+ "texto": "Callar cuando no hablas",
+ "tema": "SAI · ADPCM y silencios",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "vad",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "Con VAD solo mandas cuando hablas (24 × 0,4 = 9,6 kbit/s) y el ruido de confort añade 0,24: total 9,84 kbit/s.",
+  "ganchos": [
+   "Hablas menos de la mitad del tiempo... ¿y pagas la llamada entera?",
+   "Una llamada sin hablar no debería costar nada. ¿O sí?",
+   "Solo hablas el cuarenta por ciento. Haz la cuenta."
+  ],
+  "elegido": 2
+ },
+ "segmentos": [
+  {
+   "tag": "el reto",
+   "sub": "Solo hablas el *cuarenta* por ciento de la llamada. El resto es silencio... ¿y se manda igual?",
+   "titulo": "¿Y EL *SILENCIO*?",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🤫",
+    "linea1": "ADPCM 24 kbit/s · hablas el 40 %",
+    "linea2": "¿SE MANDA TODO?"
+   }
+  },
+  {
+   "tag": "sin VAD",
+   "sub": "Sin detector se manda todo: ocho mil por tres bits... *veinticuatro* kilobits, hables o no.",
+   "titulo": "SIN VAD: *24 k*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "8000 × 3 bits"
+     },
+     {
+      "txt": "= 24 kbit/s"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "con VAD",
+   "sub": "Con el detector solo mandas cuando hablas: veinticuatro por cero coma cuatro son *nueve coma seis*.",
+   "titulo": "CON VAD: *9,6 k*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "24 × 0,4"
+     },
+     {
+      "txt": "= 9,6 kbit/s"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "el problema",
+   "sub": "Pero un silencio total suena raro, como si se cortara. Así que se manda un *ruidito* de fondo.",
+   "titulo": "RUIDO DE *CONFORT*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "📞",
+    "linea1": "Silencio total = parece cortada",
+    "linea2": "RUIDO DE CONFORT"
+   }
+  },
+  {
+   "tag": "la cuenta",
+   "sub": "Un byte cada veinte milisegundos, solo el sesenta por ciento del tiempo: *cero coma veinticuatro* kilobits.",
+   "titulo": "SOLO *0,24 k*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "0,6 × 8 bits ÷ 20 ms"
+     },
+     {
+      "txt": "= 0,24 kbit/s"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "el total",
+   "sub": "Total: nueve coma ocho cuatro kilobits. Menos de la *mitad*. Si no hablas, casi no pagas.",
+   "titulo": "TOTAL *9,84 k*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "9,6 + 0,24"
+     },
+     {
+      "txt": "= 9,84 kbit/s"
+     }
+    ]
+   }
+  }
+ ]
+}

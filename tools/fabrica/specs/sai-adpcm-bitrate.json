@@ -1,0 +1,158 @@
+{
+ "id": "sai-adpcm-bitrate",
+ "formato": "formula",
+ "titulo": "Bits por muestra",
+ "texto": "Caudal de un ADPCM",
+ "tema": "SAI · ADPCM y silencios",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "adpcm",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "Caudal = muestras por segundo × bits por muestra (ADPCM-32 a 8 kHz = 4 bits por muestra).",
+  "ganchos": [
+   "ADPCM de 32 kbit/s: ¿cuántos bits por muestra? Diez segundos.",
+   "Una multiplicación y sabes el caudal de cualquier códec.",
+   "Treinta y dos kilobits... ¿cuántos bits tiene cada muestra?"
+  ],
+  "elegido": 1
+ },
+ "segmentos": [
+  {
+   "tag": "el reto",
+   "sub": "ADPCM de treinta y dos kilobits por segundo. ¿Cuántos bits ocupa *cada muestra*?",
+   "titulo": "¿BITS POR *MUESTRA*?",
+   "visual": {
+    "tipo": "pregunta",
+    "pregunta": "ADPCM-32 a 8 kHz → bits por muestra",
+    "opciones": [
+     "2 bits",
+     "4 bits",
+     "8 bits"
+    ],
+    "correcta": 1
+   }
+  },
+  {
+   "tag": "la fórmula",
+   "sub": "Es una multiplicación: muestras por segundo, por bits por muestra, igual a *kilobits* por segundo.",
+   "titulo": "LA *FÓRMULA*",
+   "visual": {
+    "tipo": "big",
+    "big": "fs × bits",
+    "small": "muestras/s × bits/muestra = bit/s"
+   }
+  },
+  {
+   "tag": "aplicar",
+   "sub": "Ocho mil muestras por segundo... y treinta y dos mil entre ocho mil son *cuatro* bits.",
+   "titulo": "SON *4 BITS*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "32 000 ÷ 8 000",
+      "en": "Ocho"
+     },
+     {
+      "txt": "= 4 bits/muestra",
+      "en": "cuatro"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "la familia",
+   "sub": "Y en G.726 van de dos a cinco bits: *dieciséis*, veinticuatro, treinta y dos o cuarenta kilobits.",
+   "titulo": "DE 2 A *5 BITS*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "2 bits → 16 kbit/s"
+     },
+     {
+      "txt": "3 bits → 24 kbit/s"
+     },
+     {
+      "txt": "4 bits → 32 kbit/s"
+     },
+     {
+      "txt": "5 bits → 40 kbit/s"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "el PCM",
+   "sub": "El PCM del teléfono son ocho bits: sesenta y cuatro kilobits. El ADPCM de treinta y dos va a la *mitad*.",
+   "titulo": "LA *MITAD*",
+   "visual": {
+    "tipo": "vs",
+    "izq": {
+     "icono": "☎️",
+     "titulo": "PCM",
+     "puntos": [
+      "8 bits/muestra",
+      "64 kbit/s"
+     ]
+    },
+    "der": {
+     "icono": "🗜️",
+     "titulo": "ADPCM-32",
+     "puntos": [
+      "4 bits/muestra",
+      "32 kbit/s"
+     ]
+    },
+    "ganador": "der",
+    "en": "mitad."
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Acuérdate: bits por muestra, por ocho mil, y *listo*.",
+   "titulo": "× *8000* Y YA",
+   "visual": {
+    "tipo": "big",
+    "big": "× 8000",
+    "small": "bits/muestra × 8000 = bit/s (voz)"
+   }
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+{
+ "id": "sai-jpeg-progresivo",
+ "formato": "analogia",
+ "titulo": "JPEG progresivo",
+ "texto": "Primero borroso, luego nítido",
+ "tema": "SAI · JPEG",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "jpeg",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "JPEG progresivo manda primero las frecuencias bajas de todos los bloques y luego los detalles: la foto sale borrosa y se afina.",
+  "ganchos": [
+   "Hay fotos que llegan borrosas y se afinan solas: no es un truco web.",
+   "¿Por qué algunas fotos se afinan al cargar? Se mandan al revés.",
+   "Primero el boceto, luego los detalles."
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "el gancho",
+   "sub": "Hay fotos que llegan borrosas y se van afinando solas. No es un truco de la web: es *JPEG progresivo*.",
+   "titulo": "BORROSO → *NÍTIDO*",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-progresivo.png",
+    "en": "afinando"
+   }
+  },
+  {
+   "tag": "analogía",
+   "sub": "Imagina un dibujo: primero haces el boceto de toda la hoja, y luego vas *puliendo*. No acabas la esquina antes.",
+   "titulo": "PRIMERO *BOCETO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✏️",
+    "linea1": "Boceto de toda la imagen",
+    "linea2": "LUEGO DETALLES"
+   }
+  },
+  {
+   "tag": "la diferencia",
+   "sub": "En el JPEG normal mandas bloque a bloque, cada uno *completo*. En el progresivo mandas todos los bloques, poco a poco.",
+   "titulo": "NORMAL O *PROGRESIVO*",
+   "visual": {
+    "tipo": "vs",
+    "izq": {
+     "icono": "🧱",
+     "titulo": "Normal",
+     "puntos": [
+      "bloque a bloque",
+      "completo"
+     ]
+    },
+    "der": {
+     "icono": "🌫️",
+     "titulo": "Progresivo",
+     "puntos": [
+      "todos los bloques",
+      "por capas"
+     ]
+    },
+    "ganador": "der"
+   }
+  },
+  {
+   "tag": "el cómo",
+   "sub": "Primer barrido: solo las frecuencias *bajas* de todos los bloques. Luego otro con las siguientes, y otro...",
+   "titulo": "BAJAS *PRIMERO*",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-zigzag-orden.png",
+    "en": "bajas",
+    "pie": "barrido 1: los primeros coeficientes"
+   }
+  },
+  {
+   "tag": "forma y detalle",
+   "sub": "Las bajas dan la forma general; las altas, los *detalles*. Con las primeras ya reconoces la foto.",
+   "titulo": "FORMA, LUEGO *DETALLE*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "👁️",
+    "linea1": "Bajas = forma · Altas = detalle",
+    "linea2": "YA SE RECONOCE"
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Por eso va bien en enlaces lentos: ves la foto *antes* de que termine de bajar.",
+   "titulo": "ENLACE *LENTO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🐢",
+    "linea1": "Vista previa sin esperar",
+    "linea2": "VES ANTES DE TERMINAR"
+   }
+  }
+ ]
+}

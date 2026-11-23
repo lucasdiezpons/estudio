@@ -1,0 +1,133 @@
+{
+ "id": "sai-jpeg-trampa-dct",
+ "formato": "trampa",
+ "titulo": "La DCT no pierde",
+ "texto": "Dónde se pierde la calidad",
+ "tema": "SAI · JPEG",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "jpeg",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "La DCT es reversible y no pierde nada; la pérdida está en la máscara y da dos efectos: borrosidad y bloques de 8×8.",
+  "ganchos": [
+   "Mucha gente dice que la DCT comprime la imagen. Y no.",
+   "¿Dónde pierde JPEG la calidad? No donde crees.",
+   "La DCT se puede deshacer entera. ¿De dónde sale el borrón?"
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "la trampa",
+   "sub": "Mucha gente dice que la *DCT* comprime la imagen. Y no: la DCT por sí sola no pierde *nada*.",
+   "titulo": "LA DCT *NO PIERDE*",
+   "visual": {
+    "tipo": "pregunta",
+    "pregunta": "¿Dónde pierde JPEG la calidad?",
+    "opciones": [
+     "En la DCT",
+     "Al dividir por la tabla",
+     "En el Huffman"
+    ],
+    "correcta": 1,
+    "en": "nada."
+   }
+  },
+  {
+   "tag": "reversible",
+   "sub": "Se puede deshacer entera: con la DCT inversa recuperas el bloque *idéntico*. Es solo un cambio de idioma.",
+   "titulo": "SE PUEDE *DESHACER*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔄",
+    "linea1": "DCT inversa → mismo bloque",
+    "linea2": "REVERSIBLE"
+   }
+  },
+  {
+   "tag": "la pérdida",
+   "sub": "La pérdida está en la máscara, al redondear. Y de ahí salen *dos* efectos.",
+   "titulo": "DOS *EFECTOS*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🔍",
+    "linea1": "Pérdida = máscara",
+    "linea2": "DOS EFECTOS"
+   }
+  },
+  {
+   "tag": "efecto uno",
+   "sub": "Uno: *borrosidad*. Al tirar las frecuencias altas, los bordes finos se suavizan.",
+   "titulo": "EFECTO 1: *BORROSO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🌫️",
+    "linea1": "Se pierden frecuencias altas",
+    "linea2": "IMAGEN BLANDA"
+   }
+  },
+  {
+   "tag": "efecto dos",
+   "sub": "Dos: *bloques*. Cada trozo de ocho por ocho va por su cuenta, y entre vecinos se nota el salto.",
+   "titulo": "EFECTO 2: *BLOQUES*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧱",
+    "linea1": "Cada bloque 8×8 va por libre",
+    "linea2": "CUADRÍCULA VISIBLE"
+   }
+  },
+  {
+   "tag": "la medida",
+   "sub": "Por eso un defecto de dieciséis por dieciséis píxeles son *cuatro bloques*: dos por dos. Siempre múltiplos de ocho.",
+   "titulo": "MÚLTIPLOS DE *8*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "16 ÷ 8 = 2"
+     },
+     {
+      "txt": "2 × 2 = 4 bloques"
+     }
+    ]
+   }
+  }
+ ]
+}

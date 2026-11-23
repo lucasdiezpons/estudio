@@ -1,0 +1,128 @@
+{
+ "id": "sai-perfiles-bytes",
+ "formato": "adivina",
+ "titulo": "Adivina el códec",
+ "texto": "Solo con las barras",
+ "tema": "SAI · Macrobloques",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "mpeg",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "Por la gráfica de bytes/imagen: plana = ITU-R 601 (CBR), variable sin patrón = MJPEG, tres niveles periódicos = MPEG, imagen enorme y luego pequeñas = H.261.",
+  "ganchos": [
+   "Adivina el códec mirando solo las barras.",
+   "Cuatro gráficas, cuatro códecs.",
+   "Una gráfica de barras te dice qué códec es."
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "el reto",
+   "sub": "Te enseñan solo barras de bytes por imagen... y adivinas el códec. Cuatro *gráficas*, cuatro códecs.",
+   "titulo": "ADIVINA *EL CÓDEC*",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-perfiles.png"
+   }
+  },
+  {
+   "tag": "A",
+   "sub": "*A*, todas iguales: ITU-R seiscientos uno. Es el único de *caudal constante*.",
+   "titulo": "A = *ITU-R 601*",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-perfiles.png",
+    "pie": "A: todas iguales"
+   }
+  },
+  {
+   "tag": "B",
+   "sub": "*B*, tamaños parecidos pero que bailan. Eso es MJPEG: cada imagen es un JPEG por su *cuenta*.",
+   "titulo": "B = *MJPEG*",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-perfiles.png",
+    "pie": "B: parecidas, pero variables"
+   }
+  },
+  {
+   "tag": "C",
+   "sub": "*C*, tres alturas que se repiten, perfectamente periódicas: I, P y B. Es *MPEG*.",
+   "titulo": "C = *MPEG*",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-perfiles.png",
+    "pie": "C: tres niveles periódicos"
+   }
+  },
+  {
+   "tag": "D",
+   "sub": "*D*, una primera imagen enorme y luego pequeñas, con algún refresco. Eso es *H.261*.",
+   "titulo": "D = *H.261*",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-perfiles.png",
+    "pie": "D: una grande y luego chicas"
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Truco: plana, ITU; variable sin patrón, MJPEG; periódica, MPEG; una gigante y *chicas*, H.261.",
+   "titulo": "4 *PERFILES*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "plana → ITU-R 601"
+     },
+     {
+      "txt": "variable → MJPEG"
+     },
+     {
+      "txt": "con patrón → MPEG"
+     },
+     {
+      "txt": "1 gigante → H.261"
+     }
+    ]
+   }
+  }
+ ]
+}

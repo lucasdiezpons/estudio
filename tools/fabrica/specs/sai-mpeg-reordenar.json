@@ -1,0 +1,120 @@
+{
+ "id": "sai-mpeg-reordenar",
+ "formato": "porque",
+ "titulo": "Reordenar imágenes",
+ "texto": "El futuro primero",
+ "tema": "SAI · MPEG GoP",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "mpeg",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "La B necesita una imagen futura, así que se codifica y manda la P antes que las B; el receptor reordena y eso mete retardo.",
+  "ganchos": [
+   "¿Cómo codificas una imagen que depende de otra que aún no ha pasado?",
+   "MPEG no se manda en el orden en que lo ves.",
+   "Una imagen no sale hasta que llegue su futuro."
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "el problema",
+   "sub": "¿Cómo codificas una imagen que depende de otra que *todavía no ha pasado*?",
+   "titulo": "EL *FUTURO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⏳",
+    "linea1": "B mira a una P que viene después",
+    "linea2": "¿CÓMO?"
+   }
+  },
+  {
+   "tag": "esperas",
+   "sub": "Muy fácil: esperas. La cámara da I cero, B uno, B dos, B tres, y P *cuatro*.",
+   "titulo": "ESPERAS *A LA P*",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-reorden.png",
+    "en": "cuatro."
+   }
+  },
+  {
+   "tag": "la P antes",
+   "sub": "Entonces se codifica la P cuatro *antes* que las B, porque las B la necesitan.",
+   "titulo": "P *ANTES* QUE B",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-reorden.png",
+    "en": "antes"
+   }
+  },
+  {
+   "tag": "se manda",
+   "sub": "Se manda así: I cero, P cuatro, B uno, B dos, B tres... y el *receptor* las recoloca.",
+   "titulo": "SE *RECOLOCA*",
+   "visual": {
+    "tipo": "imagen",
+    "archivo": "img/sai-reorden.png",
+    "en": "receptor"
+   }
+  },
+  {
+   "tag": "el coste",
+   "sub": "Y ojo: B uno no se puede ver hasta que llegue P cuatro. Ahí se pierde *tiempo*.",
+   "titulo": "ESPERAR = *RETARDO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⏱️",
+    "linea1": "B espera a su P",
+    "linea2": "RETARDO"
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Regla: sin B no hay que reordenar; con B, *esperas*. Es el precio de comprimir más.",
+   "titulo": "B = *ESPERA*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "💸",
+    "linea1": "B comprime más",
+    "linea2": "PERO CUESTA RETARDO"
+   }
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "id": "sai-mpeg-retardo",
+ "formato": "formula",
+ "titulo": "Retardo de reordenar",
+ "texto": "M por el tiempo de una imagen",
+ "tema": "SAI · MPEG retardo",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "mpeg",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "Retardo de reordenación = (M−1) imágenes en el codificador + 1 en el decodificador = M imágenes × tiempo por imagen.",
+  "ganchos": [
+   "¿Cuánto retardo mete reordenar? Una resta, una suma y una multiplicación.",
+   "Cuatro imágenes de espera: ¿cuántos milisegundos?",
+   "Reordenar cuesta M imágenes."
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "el reto",
+   "sub": "¿Cuánto retardo mete reordenar? Con M cuatro y veinticinco por segundo: una *resta*, una suma y una multiplicación.",
+   "titulo": "¿CUÁNTO *RETARDO*?",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⏱️",
+    "linea1": "M = 4 · 25 im/s",
+    "linea2": "¿CUÁNTOS ms?"
+   }
+  },
+  {
+   "tag": "codificador",
+   "sub": "En el codificador esperas M menos uno: *tres* imágenes, hasta que llega la P.",
+   "titulo": "CODIFICADOR: *M − 1*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "4 − 1"
+     },
+     {
+      "txt": "= 3 imágenes"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "decodificador",
+   "sub": "En el decodificador esperas *una*: la P tiene que llegar antes de enseñar las B.",
+   "titulo": "DECODIFICADOR: *1*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "1️⃣",
+    "linea1": "Decodificador: +1 imagen",
+    "linea2": "ESPERA A LA P"
+   }
+  },
+  {
+   "tag": "el total",
+   "sub": "Total: tres más una, *cuatro* imágenes. Siempre te sale M.",
+   "titulo": "TOTAL = *M*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "3 + 1"
+     },
+     {
+      "txt": "= 4 imágenes"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "en tiempo",
+   "sub": "A veinticinco por segundo, una imagen dura cuarenta milisegundos. Cuatro por cuarenta: *ciento sesenta*.",
+   "titulo": "160 *ms*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "1 imagen = 1 ÷ 25 = 40 ms"
+     },
+     {
+      "txt": "4 × 40"
+     },
+     {
+      "txt": "= 160 ms"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Regla: retardo igual a M por el tiempo de una imagen. Y ojo con las imágenes por segundo: *cambian* el tiempo.",
+   "titulo": "M × *T IMAGEN*",
+   "visual": {
+    "tipo": "big",
+    "big": "M × T",
+    "small": "T = 1 / imágenes por segundo"
+   }
+  }
+ ]
+}

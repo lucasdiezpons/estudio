@@ -1,0 +1,140 @@
+{
+ "id": "sai-mpeg-n-error",
+ "formato": "resuelto",
+ "titulo": "Sacar N y M",
+ "texto": "Con el caudal y un error",
+ "tema": "SAI · MPEG GoP",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "mpeg",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "N sale del peor caso de error (se arregla en la siguiente I) y M de la media de bytes por imagen.",
+  "ganchos": [
+   "Te dan caudal, tamaños y cuánto dura un error: con eso sacas N y M.",
+   "N y M sin ver la secuencia.",
+   "Un error dura ocho imágenes: ¿cuánto vale N?"
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "el enunciado",
+   "sub": "Un vídeo a veinticinco imágenes por segundo y dos coma seis megabits. Un error dura como mucho *ocho* imágenes.",
+   "titulo": "¿N Y *M*?",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🧮",
+    "linea1": "25 im/s · 2,6 Mbit/s",
+    "linea2": "ERROR: 8 IMÁGENES"
+   }
+  },
+  {
+   "tag": "N",
+   "sub": "Un error se arrastra hasta la siguiente I. Si dura ocho, la I llega cada ocho: *N igual a ocho*.",
+   "titulo": "N = *8*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "🩹",
+    "linea1": "El error muere en la próxima I",
+    "linea2": "N = 8"
+   }
+  },
+  {
+   "tag": "la media",
+   "sub": "Para M miramos el tamaño medio: dos coma seis megabits entre veinticinco: *trece mil bytes* por imagen.",
+   "titulo": "MEDIA *13 000 B*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "2 600 000 ÷ 25 = 104 000 bits"
+     },
+     {
+      "txt": "÷ 8 = 13 000 bytes"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "la cuenta",
+   "sub": "En ocho imágenes hay una I, unas cuantas P y el resto B. Hechas las cuentas: doce mil más mil por cada *P*.",
+   "titulo": "12 000 + *1000 P*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "(40 000 + P·16 000"
+     },
+     {
+      "txt": "+ (7−P)·8 000) ÷ 8"
+     },
+     {
+      "txt": "= 12 000 + 1000·P"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "la P",
+   "sub": "Igualas a trece mil, y sale una sola P: *P igual a uno*.",
+   "titulo": "P = *1*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "13 000 = 12 000 + 1000·P"
+     },
+     {
+      "txt": "P = 1"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "el resultado",
+   "sub": "Una I, una P y seis B en ocho: I B B B P B B B. Entre referencias hay cuatro: *M igual a cuatro*.",
+   "titulo": "N=8 · *M=4*",
+   "visual": {
+    "tipo": "big",
+    "big": "N=8 M=4",
+    "small": "I B B B P B B B"
+   }
+  }
+ ]
+}

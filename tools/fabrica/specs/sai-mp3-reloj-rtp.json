@@ -1,0 +1,145 @@
+{
+ "id": "sai-mp3-reloj-rtp",
+ "formato": "adivina",
+ "titulo": "Reloj del MP3",
+ "texto": "La excepción de RTP",
+ "tema": "SAI · Audio perceptual",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "mp3",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "En RTP el audio MPEG usa reloj de 90 kHz (no su frecuencia de muestreo): 1 trama = 2351 ticks, 2 tramas = 4702.",
+  "ganchos": [
+   "¿Qué reloj usa el MP3 en RTP?",
+   "El audio normal usa su frecuencia de muestreo. El MP3, no.",
+   "Noventa mil: el número que más se olvida."
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "el reto",
+   "sub": "En RTP el reloj suele ser la frecuencia de muestreo: ocho mil para voz. ¿Y en *MP3*? ¿Cuál será?",
+   "titulo": "¿QUÉ *RELOJ*?",
+   "visual": {
+    "tipo": "pregunta",
+    "pregunta": "Reloj RTP del audio MPEG",
+    "opciones": [
+     "44 100 Hz",
+     "48 000 Hz",
+     "90 000 Hz"
+    ],
+    "correcta": 2
+   }
+  },
+  {
+   "tag": "la excepción",
+   "sub": "Pues ninguno de esos: el audio MPEG usa *noventa mil* hercios. Es la gran excepción.",
+   "titulo": "EXCEPCIÓN: *90 kHz*",
+   "visual": {
+    "tipo": "big",
+    "big": "90 kHz",
+    "small": "reloj RTP del audio MPEG",
+    "stamp": "SIEMPRE"
+   }
+  },
+  {
+   "tag": "una trama",
+   "sub": "Una trama dura veintiséis coma doce milisegundos. Por noventa mil... son *dos mil trescientos cincuenta y uno* ticks.",
+   "titulo": "TICKS POR *TRAMA*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "0,02612 s × 90 000"
+     },
+     {
+      "txt": "= 2351 ticks"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "dos tramas",
+   "sub": "Si el paquete lleva dos tramas, el timestamp salta *cuatro mil setecientos dos*. Luego nueve mil cuatrocientos cuatro.",
+   "titulo": "SALTA *4702*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "2 × 2351"
+     },
+     {
+      "txt": "= 4702 ticks"
+     },
+     {
+      "txt": "0 → 4702 → 9404"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "al revés",
+   "sub": "Y al revés: un salto de veintiún mil ciento cincuenta y nueve ticks son *nueve tramas* en un paquete.",
+   "titulo": "SALTO = *TRAMAS*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "21 159 ÷ 2351"
+     },
+     {
+      "txt": "= 9 tramas"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "para recordar",
+   "sub": "Regla: audio normal, reloj igual al muestreo. Audio *MPEG*, noventa mil, siempre.",
+   "titulo": "MPEG = *90 000*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "⏰",
+    "linea1": "Audio MPEG en RTP",
+    "linea2": "RELOJ 90 kHz"
+   }
+  }
+ ]
+}

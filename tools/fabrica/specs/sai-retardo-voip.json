@@ -1,0 +1,151 @@
+{
+ "id": "sai-retardo-voip",
+ "formato": "trampa",
+ "titulo": "Retardo en VoIP",
+ "texto": "G.723.1 llega tarde",
+ "tema": "SAI · Voz sobre IP",
+ "examen": "Unit 4 Codecs",
+ "etiqueta": "voip",
+ "pron": {
+  "ADPCM": "a de pe ce eme",
+  "MP3": "eme pe tres",
+  "MP2": "eme pe dos",
+  "MPEG": "empeg",
+  "JPEG": "jota peg",
+  "MJPEG": "eme jota peg",
+  "DCT": "de ce te",
+  "GoP": "gop",
+  "RTP": "erre te pe",
+  "VAD": "uve a de",
+  "PCM": "pe ce eme",
+  "G.726": "ge setecientos veintiséis",
+  "H.261": "hache doscientos sesenta y uno",
+  "ITU-R": "i te u erre",
+  "EoB": "e o be",
+  "N": "ene",
+  "M": "eme",
+  "P": "pe",
+  "B": "be",
+  "I": "i",
+  "A": "a",
+  "C": "ce",
+  "D": "de",
+  "DC": "de ce",
+  "GIF": "guif",
+  "CPU": "ce pe u",
+  "lookahead": "lukajed",
+  "ms": "milisegundos",
+  "CBR": "ce be erre",
+  "RGB": "erre ge be",
+  "UDP": "u de pe",
+  "IP": "i pe",
+  "Cb": "ce be",
+  "Cr": "ce erre",
+  "G.723.1": "ge setecientos veintitrés punto uno"
+ },
+ "_guion": {
+  "frase_clave": "El retardo de G.723.1 no es 37,5 ms: sumando CPU, buffer y red son 120-170 ms y con el límite de 150 ms pierdes el 40 %.",
+  "ganchos": [
+   "Mucha gente dice que el retardo del códec es 37,5 ms. Y no.",
+   "Ciento cinco milisegundos... y aún no has contado la red.",
+   "¿Se oye bien una llamada que tarda 170?"
+  ],
+  "elegido": 0
+ },
+ "segmentos": [
+  {
+   "tag": "la trampa",
+   "sub": "Mucha gente suma solo la trama y el *lookahead*: treinta y siete coma cinco milisegundos. Y no es todo.",
+   "titulo": "NO ES *37,5*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "30 ms de trama"
+     },
+     {
+      "txt": "+ 7,5 ms de lookahead"
+     },
+     {
+      "txt": "= 37,5 ms ✗"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "lo que falta",
+   "sub": "Falta la CPU: diecisiete coma cinco para comprimir, cinco para *descomprimir*. Y cuarenta y cinco de buffer.",
+   "titulo": "FALTA *EL RESTO*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "+ 17,5 ms comprimir"
+     },
+     {
+      "txt": "+ 5 ms descomprimir"
+     },
+     {
+      "txt": "+ 45 ms de buffer"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "el fijo",
+   "sub": "Todo eso son *ciento cinco* milisegundos fijos... y todavía no has contado la red.",
+   "titulo": "SON *105 ms*",
+   "visual": {
+    "tipo": "big",
+    "big": "105 ms",
+    "small": "fijos, sin contar la red"
+   }
+  },
+  {
+   "tag": "con la red",
+   "sub": "La red añade entre quince y sesenta y cinco. Total: entre *ciento veinte* y ciento setenta milisegundos.",
+   "titulo": "120 A *170 ms*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "105 + (15 a 65)"
+     },
+     {
+      "txt": "= 120 … 170 ms"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "el límite",
+   "sub": "Para hablar de tú a tú, el límite son *ciento cincuenta*. Lo que pase de ahí llega tarde: el cuarenta por ciento.",
+   "titulo": "PIERDES *40 %*",
+   "visual": {
+    "tipo": "calculo",
+    "lineas": [
+     {
+      "txt": "170 − 150 = 20 ms de más"
+     },
+     {
+      "txt": "20 ÷ 50 ms de margen"
+     },
+     {
+      "txt": "= 40 % tarde ✗"
+     }
+    ]
+   }
+  },
+  {
+   "tag": "arreglo",
+   "sub": "Arreglo: un códec con trama más corta, o menos buffer... aunque con menos buffer el audio se *corta* más.",
+   "titulo": "CÓDEC MÁS *CORTO*",
+   "visual": {
+    "tipo": "alerta",
+    "icono": "✂️",
+    "linea1": "Trama corta o menos buffer",
+    "linea2": "SUMA TODO"
+   }
+  }
+ ]
+}
