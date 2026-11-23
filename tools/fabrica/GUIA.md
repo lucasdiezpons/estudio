@@ -1,6 +1,6 @@
 # 🎬 Fábrica de vídeos de estudio (estilo TikTok)
 
-Pipeline: **guion JSON → voz ElevenLabs (con tiempos por palabra) → render PIL + ffmpeg → app web (GitHub Pages)**.
+Pipeline: **guion JSON → voz (ElevenLabs Dan Dan o gratis edge-tts) con tiempos por palabra → render PIL + schemdraw/matplotlib + ffmpeg → app web (GitHub Pages)**.
 App: repo `lucasdiezpons/estudio` → `https://lucasdiezpons.github.io/estudio/`.
 
 > ⚠️ GitHub: SIEMPRE la cuenta personal **lucasdiezpons** (gmail). NUNCA la de la UPC.
@@ -8,47 +8,90 @@ App: repo `lucasdiezpons/estudio` → `https://lucasdiezpons.github.io/estudio/`
 
 ## 0. Preparar (cada chat nuevo)
 1. Repo: añadir `lucasdiezpons/estudio` con permiso de push y clonar (`git clone --depth 1`).
-2. `pip install pillow --break-system-packages` (si falta) · `ffmpeg` debe existir.
+2. `pip install pillow schemdraw matplotlib numpy --break-system-packages` (si falta) · `ffmpeg` debe existir.
 3. Pedir a Lucas la API key → `printf '%s' 'sk_...' > ~/.elevenkey && chmod 600 ~/.elevenkey`.
 4. Red: `api.elevenlabs.io` tiene que estar permitido en claude.ai → Settings → Capabilities (ya lo está).
 
-## 1. Material → agrupar
-- Entrada: banco de preguntas tipo test (enunciado, opciones, correcta, por qué).
-- Agrupar en **el mínimo de vídeos**: 1 vídeo = 1 idea que responde varias preguntas (3–8).
-- Marcar las dudosas y narrarlas con prudencia.
+## 1. Material → qué vídeos hacer
+- **Fuente principal: los exámenes de otros años** (PC de Lucas: `Descargas/UPC/<ASIG>/2 Exámenes`, `0 Para estudiar`, PA de API…). Primero mira QUÉ preguntan y CÓMO; el vídeo responde a eso.
+- Después apuntes/teoría para entender el porqué.
+- 1 vídeo = 1 idea que hay que llevarse. Si una idea no cabe en 45 s, son dos vídeos.
+- Lo dudoso se marca y se narra con prudencia ("normalmente…"), nunca inventado.
 
-## 2. Guion (spec JSON) — reglas de estilo
-- **Curiosidad**: empieza con "¿Sabías que…?". NUNCA mencionar examen, test, preguntas, control, estudiar, "x/8".
-- Frases cortas, tono hablado, pausas con `...`, preguntas retóricas.
-- 5–8 segmentos, 35–60 s. Último segmento: "Así que ya sabes. …" (tag `en resumen`, título `EN *RESUMEN*`).
-- En pantalla, `corriente` → añadir `[(intensidad)]` y `tensión` → `[(voltaje)]` (los `[...]` se ven pero no se dicen).
-- `*palabra*` = rojo y cursiva en el subtítulo y en el título.
-- Siglas, números y símbolos → `pron` (ej. `"TT": "te te"`, `"55°": "cincuenta y cinco grados"`, `"CC/CV": "corriente constante y tensión constante"`). Las claves van sin puntuación.
-- Grados: usar `°` (no `º`).
+## 2. Guion — escribir con cariño (OBLIGATORIO, vídeo a vídeo)
+
+### 2.1 Elige el formato según el tema (no todos iguales)
+| Formato (`"formato"`) | Cuándo | Cómo arranca | Visual que pega |
+|---|---|---|---|
+| `trampa` | Lo que casi todos fallan | "Mucha gente pone X… y no." | `pregunta`, `calculo` |
+| `resuelto` | Ejercicio con números | Enunciado en 1 frase y se resuelve paso a paso | `circuito` + `calculo` |
+| `analogia` | Concepto abstracto | "Imagina una tubería / un cubo / un portero…" | `alerta`, `imagen` |
+| `vs` | Dos cosas que se confunden | "X y Y parecen iguales. No lo son." | `vs`, `filas` |
+| `porque` | Componentes, protecciones, protocolos | El problema primero, el invento después | `alerta`, `circuito` |
+| `adivina` | Repaso de memoria | Pregunta → pausa ("…") → respuesta | `pregunta` |
+| `formula` | Fórmula clave | Qué es cada letra y qué pasa si la cambias | `big`, `calculo`, `grafica` |
+| `regla` | Datos sueltos | "Siempre… / Nunca…" + truco para acordarse | `filas`, `big` |
+
+### 2.2 Pasos para escribirlo (no saltarse ninguno)
+1. **La frase clave**: escribe en UNA frase qué tiene que saber Lucas al acabar. Si no sale en una frase, el vídeo no está claro.
+2. **Formato**: elige uno de la tabla. Dos vídeos seguidos de la misma tanda NUNCA con el mismo formato, gancho ni cierre.
+3. **3 ganchos**: escribe 3 primeras frases distintas y quédate con la que más dan ganas de seguir mirando. Prohibido abrir siempre con "¿Sabías que…?" (como mucho 1 de cada 5 vídeos).
+4. **Borrador** entero.
+5. **Revisión** — repasa frase a frase:
+   - **¿Lo diría una persona?** Léelo en voz alta en tu cabeza: si suena a libro, a apuntes o a robot, reescríbelo como se lo contarías a un amigo en el bar. Nada de "cabe destacar", "es importante", "por lo tanto", "dicho dispositivo".
+   - **¿Es fácil?** Palabras de la calle. Un tecnicismo solo si hace falta, y explicado en la misma frase. Si hay forma fácil de decirlo, esa.
+   - **¿Sobra?** Si quitas la frase y se entiende igual, fuera.
+   - **¿Es concreto?** Al menos un número, un ejemplo o una imagen mental.
+   - **¿Hay un "¡ahh, claro!"?** El momento en que encaja. Si no lo hay, falta el porqué.
+   - **¿Es correcto?** Comprobado contra apuntes o solución oficial. Nunca inventar datos.
+   - **¿Sirve para el examen?** Responde a algo que preguntan (sin decir "examen").
+6. **Reescribe** aplicando todo lo anterior. Es normal que cambie la mitad.
+7. **Cierre**: una frase que se quede (regla "siempre/nunca", el truco, o la respuesta al gancho). Varía: no siempre "Así que ya sabes".
+
+### 2.3 Reglas de forma (se mantienen)
+- NUNCA decir examen, test, preguntas, control, estudiar, "x/8". Sí "mucha gente pone…", "te lo vas a encontrar así…".
+- Frases cortas y habladas, pausas con `...`. 4–7 segmentos, 30–55 s.
+- En pantalla, `corriente` → `[(intensidad)]` y `tensión` → `[(voltaje)]` (los `[...]` se ven pero no se dicen).
+- `*palabra*` = rojo y cursiva en subtítulo y título.
+- Siglas, números y símbolos → `pron` (claves sin puntuación). Grados con `°`.
+- Títulos de pantalla: 2–3 palabras, que se entiendan sin audio.
 
 ```json
 {
   "id": "asig-tema-corto",            // = nombre del archivo
+  "formato": "trampa",                // de la tabla 2.1
   "titulo": "Título que sale en la app",
   "texto": "Subtítulo corto en la app",
-  "tema": "CESA · Protecciones",      // etiqueta: "ASIGNATURA · Subtema"
-  "etiqueta": "protecciones",         // texto pequeño arriba del vídeo
+  "tema": "CESA · Protecciones",
+  "examen": "Control 2",
+  "etiqueta": "protecciones",
   "pron": {"TT": "te te"},
   "segmentos": [
-    {"tag": "la curiosidad", "sub": "¿Sabías que ... *clave* ...?", "titulo": "TT *VS* TN", "num": 1,
+    {"tag": "el reto", "sub": "Frase hablada con *clave*...", "titulo": "TT *VS* TN", "num": 1,
      "visual": {"tipo": "alerta", "icono": "🔌", "linea1": "texto", "linea2": "CAJA GRANDE", "stamp": "SELLO"}}
   ]
 }
 ```
-Visuales disponibles:
-| tipo | campos |
-|---|---|
-| `alerta` | `icono` (emoji), `linea1`, `linea2` (caja), `stamp` opcional |
-| `filas` | `filas: [{icono, izq, der, rojo?, en?}]` (2–3 filas; `en` = palabra EXACTA del subtítulo, con su puntuación, en la que aparece la fila), `stamp` opcional |
-| `big` | `big` (número/símbolo corto), `small` |
-| `diagrama` | `destino: "tierra" | "neutro"` |
 
-Ejemplos completos: `specs/v11-tt-tn.json` y `specs/generar_specs.py` (13 vídeos de CESA).
+### 2.4 Visuales
+| tipo | campos | Para |
+|---|---|---|
+| `alerta` | `icono`, `linea1`, `linea2`, `stamp?` | idea suelta |
+| `filas` | `filas: [{icono, izq, der, rojo?, en?}]`, `stamp?` | 2–3 datos |
+| `big` | `big`, `small`, `stamp?` | número o fórmula |
+| `diagrama` | `destino: "tierra"/"neutro"` | TT/TN |
+| `circuito` | `nombre` (lm317, divisor, zener, puente, buck, boost), `valores: {R1: "240 Ω"…}`, `rojo: [...]`, `pasos: [{en, rojo: [...]}]`, `pie?` | circuito que se va pintando en rojo según lo que se dice |
+| `imagen` | `archivo` (PNG en `specs/img/`), `en?`, `pie?` | cualquier dibujo propio (schemdraw / matplotlib / foto de diapositiva recortada) |
+| `grafica` | `curvas: [{f: "expr en x", rojo?, label?, discontinua?}]`, `x: [a,b]`, `y?`, `xlabel`, `ylabel`, `puntos: [{x,y,txt}]`, `en?`, `pie?` | curva que se dibuja sola |
+| `calculo` | `lineas: [{txt, en?, rojo?}]` (la última sale en rojo grande; `✓`/`✗` al final se ven bien) | cuenta paso a paso |
+| `vs` | `izq/der: {icono, titulo, puntos: [..]}`, `ganador?: "izq"/"der"`, `en?`, `stamp?` | X contra Y |
+| `pregunta` | `pregunta`, `opciones: [..]`, `correcta` (índice), `en` (palabra en la que se revela) | gancho tipo test / adivina |
+
+- `en` = palabra EXACTA del subtítulo (con su puntuación y asteriscos) en la que aparece/cambia algo.
+- Circuito nuevo: añade una función en `circuitos.py` (mira `lm317`) y pruébalo con `python3 circuitos.py nombre R1,R2`.
+- Ejemplo completo con casi todo: `specs/ejemplos/demo-lm317-trampa.json`.
+- Efectos de sonido suaves (whoosh al cambiar de bloque, pop en sellos, ding al revelar) y barra de progreso: automáticos. Quitar efectos: `"sfx": false` en el spec o `SFX=0`.
+- Requisitos extra: `pip install schemdraw matplotlib numpy --break-system-packages`.
 
 ## 3. Producir (todo en tanda, sin esperas entre vídeos)
 ```bash

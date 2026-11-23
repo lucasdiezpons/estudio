@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """Renderiza un vídeo vertical estilo TikTok a partir de spec + tiempos de voz."""
-import json, math, subprocess, sys
+import json, math, os, subprocess, sys
 from functools import lru_cache
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
+
+HERE = Path(__file__).parent
+GREEN = (30, 150, 70)
 
 W, H, FPS = 720, 1280, 30
 BG = (239, 235, 228)
@@ -183,6 +186,8 @@ def word_time(words, key, default):
 def visual(base, v, t, s0, s1, words):
     dur = s1 - s0
     tipo = v["tipo"]
+    if tipo in NUEVOS:
+        return visual_nuevo(base, v, t, s0, s1, words)
     if tipo == "big":
         paste_anim(base, card(CW, CH), (CX, CY0 + CH / 2), t, s0 + 0.1)
         paste_anim(base, text_img(v["big"], fit("anton", 240, v["big"], 560), INK), (CX, CY0 + 225), t, s0 + 0.3)
@@ -269,6 +274,233 @@ def visual(base, v, t, s0, s1, words):
             paste_anim(base, stamp(v["stamp"]), (CX + 170, CY0 + CH - 60), t, s0 + dur * 0.8, slam=True)
 
 
+# ---------- visuales nuevos (circuito, imagen, grafica, calculo, vs, pregunta) ----------
+@lru_cache(None)
+def _img_fit(path, maxw, maxh):
+    im = Image.open(path).convert("RGBA")
+    bb = im.getbbox()
+    if bb:
+        im = im.crop(bb)
+    r = min(maxw / im.width, maxh / im.height)
+    return im.resize((max(1, int(im.width * r)), max(1, int(im.height * r))), Image.LANCZOS)
+
+
+def _when(words, en, default):
+    return word_time(words, en, default) if en else default
+
+
+def _pie(base, txt, t, t0):
+    if txt:
+        paste_anim(base, text_img(txt, fit("interb", 30, txt, 590), GRAY), (CX, CY0 + CH - 40), t, t0)
+
+
+@lru_cache(None)
+def _grafica_png(key):
+    import numpy as np
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    v = json.loads(key)
+    x0, x1 = v.get("x", [0, 10])
+    x = np.linspace(x0, x1, 400)
+    fig, ax = plt.subplots(figsize=(6.0, 4.6), dpi=110)
+    fig.patch.set_alpha(0); ax.set_facecolor("none")
+    for c in v.get("curvas", []):
+        y = eval(c["f"], {"np": np, "x": x, "pi": np.pi, "sin": np.sin, "cos": np.cos, "exp": np.exp,
+                          "sqrt": np.sqrt, "abs": np.abs, "clip": np.clip, "log": np.log})
+        ax.plot(x, y * np.ones_like(x), lw=4, color="#de2929" if c.get("rojo") else "#141414",
+                ls="--" if c.get("discontinua") else "-", label=c.get("label"))
+    for p in v.get("puntos", []):
+        ax.plot([p["x"]], [p["y"]], "o", ms=12, color="#de2929")
+        if p.get("txt"):
+            ax.annotate(p["txt"], (p["x"], p["y"]), textcoords="offset points", xytext=(10, 10),
+                        fontsize=17, color="#de2929", weight="bold")
+    if v.get("y"):
+        ax.set_ylim(*v["y"])
+    ax.set_xlabel(v.get("xlabel", ""), fontsize=17); ax.set_ylabel(v.get("ylabel", ""), fontsize=17)
+    ax.tick_params(labelsize=13)
+    for sp in ("top", "right"):
+        ax.spines[sp].set_visible(False)
+    ax.grid(alpha=0.25)
+    if any(c.get("label") for c in v.get("curvas", [])):
+        ax.legend(fontsize=15, frameon=False)
+    fig.tight_layout()
+    p = HERE / "out" / "_graf" / (str(abs(hash(key))) + ".png")
+    p.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(p, transparent=True); plt.close(fig)
+    return str(p)
+
+
+def _txt_marca(txt, f, col):
+    """Texto + ✓/✗ final (Anton/Inter no tienen esos símbolos: se dibujan con DejaVu)."""
+    txt = txt.rstrip()
+    if not txt or txt[-1] not in "✓✗✔✘":
+        return text_img(txt, f, col)
+    m = txt[-1]
+    a = text_img(txt[:-1].rstrip(), f, col)
+    b = text_img("✓" if m in "✓✔" else "✗", font("mono", int(f.size * 0.9)), GREEN if m in "✓✔" else RED)
+    im = Image.new("RGBA", (a.width + 18 + b.width, max(a.height, b.height)), (0, 0, 0, 0))
+    im.alpha_composite(a, (0, (im.height - a.height) // 2))
+    im.alpha_composite(b, (a.width + 18, (im.height - b.height) // 2))
+    return im
+
+
+def visual_nuevo(base, v, t, s0, s1, words):
+    dur = s1 - s0
+    tipo = v["tipo"]
+    paste_anim(base, card(CW, CH), (CX, CY0 + CH / 2), t, s0 + 0.05)
+    maxh = CH - (110 if v.get("pie") else 50)
+
+    if tipo == "circuito":
+        import circuitos
+        rojo, tr = list(v.get("rojo", [])), s0 + 0.25
+        for p in v.get("pasos", []):
+            tp = _when(words, p.get("en"), None)
+            if tp is not None and t >= tp - 0.05:
+                rojo = p.get("rojo", rojo)
+        img = _img_fit(str(circuitos.png(v["nombre"], rojo, v.get("valores"))), CW - 50, maxh)
+        paste_anim(base, img, (CX, CY0 + 25 + maxh / 2), t, tr, s0=0.95)
+        _pie(base, v.get("pie"), t, s0 + 0.6)
+
+    elif tipo == "imagen":
+        p = Path(v["archivo"])
+        if not p.is_absolute():
+            p = HERE / "specs" / p
+        img = _img_fit(str(p), CW - 50, maxh)
+        paste_anim(base, img, (CX, CY0 + 25 + maxh / 2), t, _when(words, v.get("en"), s0 + 0.25), s0=0.95)
+        _pie(base, v.get("pie"), t, s0 + 0.6)
+
+    elif tipo == "grafica":
+        img = _img_fit(_grafica_png(json.dumps({k: v[k] for k in v if k not in ("pie", "en")}, sort_keys=True)),
+                       CW - 40, maxh)
+        t0 = _when(words, v.get("en"), s0 + 0.3)
+        p = clamp((t - t0) / 1.4)
+        if p > 0:
+            # eje y fijo + la curva "se dibuja" de izquierda a derecha
+            wv = max(1, int(img.width * (0.12 + 0.88 * p)))
+            base.alpha_composite(img.crop((0, 0, wv, img.height)),
+                                 (int(CX - img.width / 2), int(CY0 + 25 + maxh / 2 - img.height / 2)))
+        _pie(base, v.get("pie"), t, t0 + 1.2)
+
+    elif tipo == "calculo":
+        lineas = v["lineas"]
+        n = len(lineas)
+        lh = min(120, (CH - 80) / max(n, 1))
+        y = CY0 + CH / 2 - lh * (n - 1) / 2
+        prev = s0
+        for i, ln in enumerate(lineas):
+            ta = _when(words, ln.get("en"), None)
+            if ta is None:
+                ta = max(s0 + 0.3 + i * dur / (n + 1), prev + 0.5)
+            prev = ta
+            last = ln.get("rojo") or i == n - 1 and v.get("resaltar_final", True)
+            f = fit("anton" if last else "interb", 64 if last else 40, ln["txt"], 580)
+            paste_anim(base, _txt_marca(ln["txt"], f, RED if last else INK), (CX, y + i * lh), t, ta - 0.05)
+
+    elif tipo == "vs":
+        ganador = v.get("ganador")
+        tg = _when(words, v.get("en"), s0 + dur * 0.7)
+        for k, lado in enumerate(("izq", "der")):
+            col = v[lado]
+            cx = CX - 160 + 320 * k
+            ta = s0 + 0.25 + 0.35 * k
+            if col.get("icono"):
+                paste_anim(base, emoji(col["icono"], 110), (cx, CY0 + 100), t, ta)
+            paste_anim(base, text_img(col["titulo"], fit("anton", 52, col["titulo"], 280), INK), (cx, CY0 + 205), t, ta)
+            for j, pt in enumerate(col.get("puntos", [])):
+                paste_anim(base, text_img(pt, fit("inter", 28, pt, 280), GRAY), (cx, CY0 + 275 + j * 48), t, ta + 0.2 + 0.15 * j)
+            if ganador == lado and t >= tg:
+                d = ImageDraw.Draw(base)
+                d.rounded_rectangle((cx - 150, CY0 + 30, cx + 150, CY0 + CH - 30), 20, outline=RED, width=6)
+        ImageDraw.Draw(base).line((CX, CY0 + 60, CX, CY0 + CH - 60), fill=FAINT, width=3) if t > s0 + 0.2 else None
+        if v.get("stamp"):
+            paste_anim(base, stamp(v["stamp"]), (CX, CY0 + CH - 70), t, tg, slam=True)
+
+    elif tipo == "pregunta":
+        ops = v["opciones"]
+        tr = _when(words, v.get("en"), s0 + dur * 0.75)
+        paste_anim(base, text_img(v["pregunta"], fit("interb", 34, v["pregunta"], 590), INK), (CX, CY0 + 70), t, s0 + 0.2)
+        rh = min(110, (CH - 170) / len(ops))
+        for i, op in enumerate(ops):
+            ok = i == v["correcta"]
+            revel = t >= tr
+            row = Image.new("RGBA", (590, int(rh - 16)), (0, 0, 0, 0))
+            rd = ImageDraw.Draw(row)
+            fill = (225, 245, 230) if (revel and ok) else (248, 246, 242)
+            outl = GREEN if (revel and ok) else (225, 220, 212)
+            rd.rounded_rectangle((0, 0, 589, row.height - 1), 16, fill=fill, outline=outl, width=4 if revel and ok else 3)
+            colt = GREEN if (revel and ok) else (FAINT if revel else INK)
+            rd.text((24, row.height / 2), "ABCD"[i] + ")  " + op, font=fit("interb", 32, op, 470), fill=colt, anchor="lm")
+            if revel:
+                rd.text((560, row.height / 2), "✓" if ok else "✗", font=font("mono", 40), fill=GREEN if ok else RED, anchor="mm")
+            paste_anim(base, row, (CX, CY0 + 170 + i * rh), t, s0 + 0.4 + 0.25 * i)
+
+
+NUEVOS = {"circuito", "imagen", "grafica", "calculo", "vs", "pregunta"}
+
+
+# ---------- sonido: efectos suaves generados (sin descargar nada) ----------
+SR = 44100
+
+
+def _sfx(kind):
+    import numpy as np
+    if kind == "whoosh":
+        n = int(SR * 0.35); t = np.arange(n) / SR
+        noise = np.random.default_rng(1).normal(0, 1, n)
+        k = np.convolve(noise, np.ones(30) / 30, mode="same")       # ruido suave
+        env = np.sin(np.pi * t / t[-1]) ** 2
+        return 0.10 * k * env / (abs(k).max() + 1e-9)
+    if kind == "pop":
+        n = int(SR * 0.12); t = np.arange(n) / SR
+        f = 900 - 500 * t / t[-1]
+        return 0.16 * np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 40)
+    if kind == "ding":
+        n = int(SR * 0.6); t = np.arange(n) / SR
+        return 0.14 * (np.sin(2 * np.pi * 1318 * t) + 0.5 * np.sin(2 * np.pi * 1976 * t)) * np.exp(-t * 6)
+    raise ValueError(kind)
+
+
+def mezclar_audio(voz_mp3, eventos, total, destino):
+    """Voz + efectos -> wav. eventos = [(t, 'whoosh'|'pop'|'ding')]."""
+    import numpy as np
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(voz_mp3), "-f", "s16le", "-ac", "1", "-ar", str(SR), "-"],
+                         capture_output=True, check=True).stdout
+    voz = np.frombuffer(raw, dtype=np.int16).astype(np.float32) / 32768
+    n = max(len(voz), int((total + 0.5) * SR))
+    mix = np.zeros(n, dtype=np.float32); mix[:len(voz)] += voz
+    for t0, kind in eventos:
+        x = _sfx(kind); i = int(t0 * SR)
+        if 0 <= i < n:
+            m = min(len(x), n - i); mix[i:i + m] += x[:m]
+    mix = np.clip(mix, -1, 1)
+    import wave
+    with wave.open(str(destino), "wb") as w:
+        w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR)
+        w.writeframes((mix * 32767).astype(np.int16).tobytes())
+    return destino
+
+
+def eventos_sfx(segs, starts, ends, tiempos):
+    ev = [(starts[i], "whoosh") for i in range(1, len(segs))]
+    for i, s in enumerate(segs):
+        v = s.get("visual", {}); s0, s1 = starts[i], ends[i]
+        if v.get("stamp"):
+            ev.append((s0 + (s1 - s0) * 0.6, "pop"))
+        if v.get("tipo") == "pregunta":
+            ev.append((word_time(tiempos[i], v.get("en"), s0 + (s1 - s0) * 0.75) if v.get("en") else s0 + (s1 - s0) * 0.75, "ding"))
+        if v.get("tipo") == "calculo":
+            ln = v["lineas"][-1]
+            ev.append((word_time(tiempos[i], ln.get("en"), s1 - 0.8) if ln.get("en") else s1 - 0.8, "ding"))
+    return ev
+
+
+def barra(fr, t, total):
+    d = ImageDraw.Draw(fr)
+    d.rectangle((0, H - 10, W, H), fill=FAINT)
+    d.rectangle((0, H - 10, int(W * clamp(t / total)), H), fill=RED)
+
+
 # ---------- main ----------
 def main(spec_path):
     spec = json.loads(Path(spec_path).read_text("utf-8"))
@@ -291,8 +523,11 @@ def main(spec_path):
         })
 
     nframes = int(total * FPS)
+    audio = out / "voz.mp3"
+    if spec.get("sfx", True) and os.environ.get("SFX", "1") != "0":
+        audio = mezclar_audio(out / "voz.mp3", eventos_sfx(segs, starts, ends, tiempos), total, out / "mezcla.wav")
     ff = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24",
-                           "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-i", str(out / "voz.mp3"),
+                           "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-i", str(audio),
                            "-c:v", "libx264", "-preset", "veryfast", "-crf", "26", "-pix_fmt", "yuv420p",
                            "-af", "apad", "-c:a", "aac", "-b:a", "96k", "-shortest", "-movflags", "+faststart",
                            str(out / f"{spec['id']}.mp4")], stdin=subprocess.PIPE)
@@ -310,6 +545,7 @@ def main(spec_path):
         if P["num"]:
             paste_anim(fr, P["num"], (W - 40 - 32, ty), t, s0 + 0.15)
         visual(fr, segs[i]["visual"], t, s0, s1, tiempos[i])
+        barra(fr, t, total)
         ff.stdin.write(fr.convert("RGB").tobytes())
     ff.stdin.close(); ff.wait()
     # miniatura
@@ -319,4 +555,5 @@ def main(spec_path):
 
 
 if __name__ == "__main__":
+    sys.path.insert(0, str(HERE))
     main(sys.argv[1])
